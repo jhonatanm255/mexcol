@@ -15,6 +15,7 @@ import {
 } from 'firebase/firestore';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
+import { z } from 'zod';
 
 export async function validateCoupon(formData: FormData) {
   const couponCode = formData.get('coupon') as string;
@@ -78,6 +79,44 @@ export async function generateCoupon(durationDays: 15 | 30) {
     return { error: 'Failed to generate coupon.' };
   }
 }
+
+const ManualCouponSchema = z.object({
+  code: z.string().min(3, "Code must be at least 3 characters long."),
+  duration: z.enum(["15", "30"]),
+});
+
+export async function createManualCoupon(data: z.infer<typeof ManualCouponSchema>) {
+  try {
+    const { code, duration } = ManualCouponSchema.parse(data);
+    const durationDays = parseInt(duration, 10);
+
+    // Check if coupon code already exists
+    const couponsRef = collection(db, 'coupons');
+    const q = query(couponsRef, where('code', '==', code.trim()));
+    const querySnapshot = await getDocs(q);
+
+    if (!querySnapshot.empty) {
+      return { error: `Coupon code "${code}" already exists.` };
+    }
+
+    await addDoc(collection(db, 'coupons'), {
+      code: code.trim(),
+      durationDays: durationDays,
+      isActive: true,
+      createdAt: serverTimestamp(),
+    });
+
+    revalidatePath('/admin/dashboard');
+    return { success: `Coupon "${code}" created successfully.` };
+  } catch (error) {
+    console.error('Error creating manual coupon:', error);
+    if (error instanceof z.ZodError) {
+      return { error: 'Invalid data provided.'}
+    }
+    return { error: 'Failed to create coupon.' };
+  }
+}
+
 
 export async function updateCouponStatus(id: string, isActive: boolean) {
   try {
