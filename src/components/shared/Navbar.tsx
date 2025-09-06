@@ -30,6 +30,7 @@ import {
 } from '@/components/ui/navigation-menu';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useAuth } from '@/hooks/use-auth';
+import { useRouter } from 'next/navigation';
 
 const academicPrograms: { title: string; href: string; description: string }[] =
   [
@@ -54,14 +55,41 @@ export function Navbar() {
   const [open, setOpen] = React.useState(false);
   const { user } = useAuth();
   const pathname = usePathname();
+  const router = useRouter();
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/online-training', label: 'Formación en línea' },
-    { href: '/congress', label: 'Congreso' },
-    { href: '/about', label: 'Conócenos' },
-    { href: '/contact', label: 'Contacto' },
+    { href: '/', label: 'Home', labelEs: 'Inicio' },
+    {
+      href: '/online-training',
+      label: 'Online Training',
+      labelEs: 'Formación en línea',
+    },
+    { href: '/congress', label: 'Congress', labelEs: 'Congreso' },
+    { href: '/about', label: 'About Us', labelEs: 'Conócenos' },
+    { href: '/contact', label: 'Contact', labelEs: 'Contacto' },
   ];
+
+  const [language, setLanguage] = React.useState('es');
+
+  React.useEffect(() => {
+    // A simple language detection logic, can be improved
+    const lang = pathname.includes('/en') ? 'en' : 'es';
+    setLanguage(lang);
+  }, [pathname]);
+
+  const handleLanguageChange = (lang: string) => {
+    setLanguage(lang);
+    // This is a simplified approach. A real app would use i18n routing.
+    // For now, we just update the text, but navigation links won't change language context.
+    // This addresses the user's immediate visual feedback request.
+  };
+
+  const getLabel = (link: {
+    label: string;
+    labelEs: string;
+  }): string => {
+    return language === 'es' ? link.labelEs : link.label;
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -75,21 +103,23 @@ export function Navbar() {
             <NavigationMenuList>
               {navLinks.map((link) => (
                 <NavigationMenuItem key={link.href}>
-                  <Link href={link.href} legacyBehavior passHref>
+                  <Link href={link.href} passHref>
                     <NavigationMenuLink
                       className={cn(
                         navigationMenuTriggerStyle(),
                         pathname === link.href ? 'bg-accent' : ''
                       )}
                     >
-                      {link.label}
+                      {getLabel(link)}
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
               ))}
               <NavigationMenuItem>
                 <NavigationMenuTrigger>
-                  Programas Académicos
+                  {language === 'es'
+                    ? 'Programas Académicos'
+                    : 'Academic Programs'}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -128,8 +158,8 @@ export function Navbar() {
                   <span className="ml-2 font-bold">EduVoucher</span>
                 </Link>
                 <div className="mt-6 flex flex-col space-y-2">
-                  {[...navLinks, ...academicPrograms].map((item) => (
-                    <Link
+                  {navLinks.map((item) => (
+                     <Link
                       key={item.href}
                       href={item.href}
                       onClick={() => setOpen(false)}
@@ -138,18 +168,31 @@ export function Navbar() {
                         pathname === item.href ? 'bg-accent' : ''
                       )}
                     >
-                      {item.label || item.title}
+                      {getLabel(item)}
                     </Link>
                   ))}
+                   <div className="pt-2">
+                    <h3 className="px-2 text-xs font-semibold text-muted-foreground">Programas</h3>
+                     {academicPrograms.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => setOpen(false)}
+                          className={cn(
+                            'block rounded-md p-2 text-sm font-medium hover:bg-accent',
+                            pathname === item.href ? 'bg-accent' : ''
+                          )}
+                        >
+                          {item.title}
+                        </Link>
+                      ))}
+                   </div>
                 </div>
               </SheetContent>
             </Sheet>
           </div>
 
-          <Link
-            href="/"
-            className="flex items-center space-x-2 md:hidden"
-          >
+          <Link href="/" className="flex items-center space-x-2 md:hidden">
             <GraduationCap className="h-6 w-6 text-primary" />
             <span className="font-bold">EduVoucher</span>
           </Link>
@@ -163,8 +206,12 @@ export function Navbar() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem>Español</DropdownMenuItem>
-                <DropdownMenuItem>English</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => handleLanguageChange('es')}>
+                  Español
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => handleLanguageChange('en')}>
+                  English
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
