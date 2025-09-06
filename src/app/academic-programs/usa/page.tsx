@@ -40,8 +40,8 @@ export default function USAPage() {
             src="https://picsum.photos/1200/400?random=12"
             alt="USA landmark"
             data-ai-hint="USA landmark"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
           />
            <div className="absolute inset-0 bg-primary/30" />
         </div>

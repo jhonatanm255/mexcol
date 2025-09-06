@@ -40,8 +40,8 @@ export default function MexicoPage() {
             src="https://picsum.photos/1200/400?random=11"
             alt="Monumento icónico de México"
             data-ai-hint="Mexico landmark"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
           />
            <div className="absolute inset-0 bg-primary/30" />
         </div>
