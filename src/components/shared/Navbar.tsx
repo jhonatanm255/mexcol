@@ -103,16 +103,16 @@ export function Navbar() {
             <NavigationMenuList>
               {navLinks.map((link) => (
                 <NavigationMenuItem key={link.href}>
-                  <Link href={link.href} legacyBehavior passHref>
-                    <NavigationMenuLink
+                  <NavigationMenuLink asChild active={pathname === link.href}>
+                    <Link
+                      href={link.href}
                       className={cn(
-                        navigationMenuTriggerStyle(),
-                        pathname === link.href ? 'bg-accent' : ''
+                        navigationMenuTriggerStyle()
                       )}
                     >
                       {getLabel(link)}
-                    </NavigationMenuLink>
-                  </Link>
+                    </Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
               ))}
               <NavigationMenuItem>
