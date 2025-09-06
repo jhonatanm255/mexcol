@@ -25,7 +25,7 @@ import { Loader2 } from "lucide-react";
 export default function CouponGenerator() {
   const [isPending, startTransition] = useTransition();
   const { toast } = useToast();
-  const { register, handleSubmit, setValue, watch } = useForm<{ duration: "15" | "30" }>({
+  const { handleSubmit, setValue, watch } = useForm<{ duration: "15" | "30" }>({
     defaultValues: { duration: "15" },
   });
   const duration = watch("duration");
@@ -48,12 +48,6 @@ export default function CouponGenerator() {
       }
     });
   };
-  
-  // Registering the field for react-hook-form
-  React.useEffect(() => {
-    register('duration');
-  }, [register]);
-
 
   return (
     <Card>
