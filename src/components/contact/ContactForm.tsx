@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
-import { useFormState, useForm } from "react-hook-form";
+import { useTransition } from "react";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 
@@ -29,15 +29,9 @@ const contactSchema = z.object({
 
 type ContactFormValues = z.infer<typeof contactSchema>;
 
-const initialState = {
-  message: "",
-  errors: {},
-  success: false,
-};
-
 export function ContactForm() {
+  const [isPending, startTransition] = useTransition();
   const { toast } = useToast();
-  const [state, formAction] = useFormState(submitContactForm, initialState);
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -47,21 +41,30 @@ export function ContactForm() {
     },
   });
 
-  useEffect(() => {
-    if (state.success) {
-      toast({
-        title: "Success!",
-        description: state.message,
-      });
-      form.reset();
-    } else if (state.message && Object.keys(state.errors).length > 0) {
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: state.message,
-      });
-    }
-  }, [state, toast, form]);
+  const onSubmit = (data: ContactFormValues) => {
+    startTransition(async () => {
+      const formData = new FormData();
+      formData.append("name", data.name);
+      formData.append("email", data.email);
+      formData.append("message", data.message);
+
+      const result = await submitContactForm(null, formData);
+
+      if (result.success) {
+        toast({
+          title: "Success!",
+          description: result.message,
+        });
+        form.reset();
+      } else if (result.message) {
+        toast({
+          variant: "destructive",
+          title: "Error",
+          description: result.message,
+        });
+      }
+    });
+  };
 
   return (
     <Card>
@@ -70,7 +73,7 @@ export function ContactForm() {
       </CardHeader>
       <CardContent>
         <Form {...form}>
-          <form action={formAction} className="space-y-6">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
               control={form.control}
               name="name"
@@ -114,8 +117,8 @@ export function ContactForm() {
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full" disabled={form.formState.isSubmitting}>
-               {form.formState.isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            <Button type="submit" className="w-full" disabled={isPending}>
+               {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               Submit
             </Button>
           </form>
