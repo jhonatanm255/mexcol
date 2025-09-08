@@ -30,42 +30,39 @@ type LoginFormValues = z.infer<typeof loginSchema>;
 
 export default function LoginPage() {
   const router = useRouter();
-  const { user, login } = useAuth();
+  const { user, loading, login } = useAuth();
   const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+  
 
   useEffect(() => {
-    if (user) {
-      router.push('/admin/dashboard');
+    if (!loading && user) {
+      router.replace('/admin/dashboard');
     }
-  }, [user, router]);
+  }, [user, loading, router]);
 
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
   });
 
   const onSubmit = async (data: LoginFormValues) => {
-    setLoading(true);
     setError(null);
     try {
       await login(data.email, data.password);
-      router.push('/admin/dashboard');
+      router.replace('/admin/dashboard');
     } catch (err: any) {
       setError(err.message || 'Failed to log in. Please check your credentials.');
-    } finally {
-      setLoading(false);
     }
   };
 
-  if (user) {
+  if (loading || user) {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center p-4">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
-        <p className="mt-2 text-muted-foreground">Redirecting to dashboard...</p>
+        <p className="mt-2 text-muted-foreground">Redirecting...</p>
       </div>
     );
   }
@@ -112,8 +109,8 @@ export default function LoginPage() {
             )}
           </CardContent>
           <CardFooter>
-            <Button type="submit" className="w-full" disabled={loading}>
-              {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            <Button type="submit" className="w-full" disabled={isSubmitting}>
+              {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               Login
             </Button>
           </CardFooter>

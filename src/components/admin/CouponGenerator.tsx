@@ -18,96 +18,70 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
-import { generateCoupon, createManualCoupon } from "@/lib/actions/coupon.actions";
+import { createManualCoupon } from "@/lib/actions/coupon.actions";
 import { Loader2 } from "lucide-react";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-
-const AiCouponSchema = z.object({
-  duration: z.enum(["15", "30"]),
-});
-type AiCouponFormValues = z.infer<typeof AiCouponSchema>;
+import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 
 const ManualCouponSchema = z.object({
   code: z.string().min(3, "Code must be at least 3 characters long."),
   duration: z.enum(["15", "30"]),
+  videoSourceType: z.enum(['upload', 'youtube']),
+  videoFile: z.any().optional(),
+  youtubeLink: z.string().optional(),
+}).refine(data => {
+  if (data.videoSourceType === 'youtube') {
+    return !!data.youtubeLink && z.string().url().safeParse(data.youtubeLink).success;
+  }
+  return true;
+}, {
+  message: "A valid YouTube URL is required.",
+  path: ["youtubeLink"],
+}).refine(data => {
+    if (data.videoSourceType === 'upload') {
+        return data.videoFile instanceof FileList && data.videoFile.length > 0;
+    }
+    return true;
+}, {
+    message: "A video file is required for upload.",
+    path: ["videoFile"],
 });
+
 type ManualCouponFormValues = z.infer<typeof ManualCouponSchema>;
 
 
-function AiCouponForm() {
-  const [isPending, startTransition] = useTransition();
-  const { toast } = useToast();
-  const form = useForm<AiCouponFormValues>({
-    resolver: zodResolver(AiCouponSchema),
-    defaultValues: { duration: "15" },
-  });
-
-  const onSubmit = (data: AiCouponFormValues) => {
-    startTransition(async () => {
-      const durationDays = parseInt(data.duration, 10) as 15 | 30;
-      const result = await generateCoupon(durationDays);
-      if (result.success) {
-        toast({ title: "Success", description: result.success });
-        form.reset();
-      } else if (result.error) {
-        toast({ variant: "destructive", title: "Error", description: result.error });
-      }
-    });
-  };
-
-  return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <FormField
-          control={form.control}
-          name="duration"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Coupon Duration (Days)</FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value} disabled={isPending}>
-                <FormControl>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select duration" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value="15">15 Days</SelectItem>
-                  <SelectItem value="30">30 Days</SelectItem>
-                </SelectContent>
-              </Select>
-            </FormItem>
-          )}
-        />
-        <Button type="submit" className="w-full" disabled={isPending}>
-          {isPending ? (
-            <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Generating...
-            </>
-          ) : (
-            "Generate with AI"
-          )}
-        </Button>
-      </form>
-    </Form>
-  );
-}
-
-function ManualCouponForm() {
+export default function CouponGenerator() {
     const [isPending, startTransition] = useTransition();
     const { toast } = useToast();
     const form = useForm<ManualCouponFormValues>({
         resolver: zodResolver(ManualCouponSchema),
-        defaultValues: { code: "", duration: "15" },
+        defaultValues: { 
+            code: "", 
+            duration: "15",
+            videoSourceType: 'upload',
+            youtubeLink: '',
+        },
     });
+
+    const videoSourceType = form.watch('videoSourceType');
 
     const onSubmit = (data: ManualCouponFormValues) => {
         startTransition(async () => {
-            const result = await createManualCoupon(data);
+            const formData = new FormData();
+            formData.append('code', data.code);
+            formData.append('duration', data.duration);
+            formData.append('videoSourceType', data.videoSourceType);
+            if (data.videoSourceType === 'upload' && data.videoFile) {
+              formData.append('videoFile', data.videoFile[0]);
+            } else if (data.videoSourceType === 'youtube' && data.youtubeLink) {
+              formData.append('youtubeLink', data.youtubeLink);
+            }
+
+            const result = await createManualCoupon(formData);
+            
             if (result.success) {
                 toast({ title: "Success", description: result.success });
                 form.reset();
@@ -118,80 +92,136 @@ function ManualCouponForm() {
     };
 
     return (
-        <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                <FormField
+      <Card>
+        <CardHeader>
+          <CardTitle>Create Coupon</CardTitle>
+          <CardDescription>
+            Create a new coupon and associate a video with it.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                  <FormField
+                      control={form.control}
+                      name="code"
+                      render={({ field }) => (
+                          <FormItem>
+                              <FormLabel>Coupon Code</FormLabel>
+                              <FormControl>
+                                  <Input placeholder="e.g. MANUALCODE2024" {...field} disabled={isPending} />
+                              </FormControl>
+                              <FormMessage />
+                          </FormItem>
+                      )}
+                  />
+                  <FormField
+                      control={form.control}
+                      name="duration"
+                      render={({ field }) => (
+                          <FormItem>
+                          <FormLabel>Coupon Duration (Days)</FormLabel>
+                          <Select onValueChange={field.onChange} defaultValue={field.value} disabled={isPending}>
+                              <FormControl>
+                              <SelectTrigger>
+                                  <SelectValue placeholder="Select duration" />
+                              </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                              <SelectItem value="15">15 Days</SelectItem>
+                              <SelectItem value="30">30 Days</SelectItem>
+                              </SelectContent>
+                          </Select>
+                          </FormItem>
+                      )}
+                  />
+
+                  <FormField
                     control={form.control}
-                    name="code"
+                    name="videoSourceType"
                     render={({ field }) => (
+                      <FormItem className="space-y-3">
+                        <FormLabel>Video Source</FormLabel>
+                        <FormControl>
+                          <RadioGroup
+                            onValueChange={field.onChange}
+                            defaultValue={field.value}
+                            className="flex flex-col space-y-1"
+                            disabled={isPending}
+                          >
+                            <FormItem className="flex items-center space-x-3 space-y-0">
+                              <FormControl>
+                                <RadioGroupItem value="upload" />
+                              </FormControl>
+                              <FormLabel className="font-normal">
+                                Upload Video
+                              </FormLabel>
+                            </FormItem>
+                            <FormItem className="flex items-center space-x-3 space-y-0">
+                              <FormControl>
+                                <RadioGroupItem value="youtube" />
+                              </FormControl>
+                              <FormLabel className="font-normal">
+                                YouTube Link
+                              </FormLabel>
+                            </FormItem>
+                          </RadioGroup>
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  {videoSourceType === 'upload' && (
+                    <FormField
+                      control={form.control}
+                      name="videoFile"
+                      render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Coupon Code</FormLabel>
-                            <FormControl>
-                                <Input placeholder="e.g. MANUALCODE2024" {...field} disabled={isPending} />
-                            </FormControl>
-                             <FormMessage />
+                          <FormLabel>Video File</FormLabel>
+                          <FormControl>
+                            <Input 
+                              type="file" 
+                              accept="video/*" 
+                              disabled={isPending}
+                              onChange={(e) => field.onChange(e.target.files)}
+                            />
+                          </FormControl>
+                          <FormMessage />
                         </FormItem>
-                    )}
-                />
-                 <FormField
-                    control={form.control}
-                    name="duration"
-                    render={({ field }) => (
+                      )}
+                    />
+                  )}
+
+                  {videoSourceType === 'youtube' && (
+                    <FormField
+                      control={form.control}
+                      name="youtubeLink"
+                      render={({ field }) => (
                         <FormItem>
-                        <FormLabel>Coupon Duration (Days)</FormLabel>
-                        <Select onValueChange={field.onChange} defaultValue={field.value} disabled={isPending}>
-                            <FormControl>
-                            <SelectTrigger>
-                                <SelectValue placeholder="Select duration" />
-                            </SelectTrigger>
-                            </FormControl>
-                            <SelectContent>
-                            <SelectItem value="15">15 Days</SelectItem>
-                            <SelectItem value="30">30 Days</SelectItem>
-                            </SelectContent>
-                        </Select>
+                          <FormLabel>YouTube URL</FormLabel>
+                          <FormControl>
+                            <Input placeholder="https://www.youtube.com/watch?v=..." {...field} disabled={isPending} />
+                          </FormControl>
+                          <FormMessage />
                         </FormItem>
-                    )}
-                />
-                <Button type="submit" className="w-full" disabled={isPending}>
-                    {isPending ? (
-                        <>
-                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                            Creating...
-                        </>
-                    ) : (
-                        "Create Coupon"
-                    )}
-                </Button>
-            </form>
-        </Form>
+                      )}
+                    />
+                  )}
+
+                  <Button type="submit" className="w-full" disabled={isPending}>
+                      {isPending ? (
+                          <>
+                              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                              Creating...
+                          </>
+                      ) : (
+                          "Create Coupon"
+                      )}
+                  </Button>
+              </form>
+          </Form>
+        </CardContent>
+      </Card>
     );
-}
-
-
-export default function CouponGenerator() {
-  return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Generate Coupon</CardTitle>
-        <CardDescription>
-          Create a new coupon manually or generate one using AI.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Tabs defaultValue="ai" className="w-full">
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="ai">Generate with AI</TabsTrigger>
-            <TabsTrigger value="manual">Create Manually</TabsTrigger>
-          </TabsList>
-          <TabsContent value="ai" className="pt-4">
-            <AiCouponForm />
-          </TabsContent>
-          <TabsContent value="manual" className="pt-4">
-            <ManualCouponForm />
-          </TabsContent>
-        </Tabs>
-      </CardContent>
-    </Card>
-  );
 }
