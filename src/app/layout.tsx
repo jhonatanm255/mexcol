@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { AuthProvider } from '@/components/auth-provider';
 import { Footer } from '@/components/shared/Footer';
