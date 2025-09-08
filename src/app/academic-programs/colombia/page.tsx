@@ -44,7 +44,8 @@ export default function ColombiaPage() {
             src="https://picsum.photos/1200/400?random=10"
             alt="Paisaje de Colombia"
             data-ai-hint="Colombia landscape"
-            fill
+            width={1200}
+            height={400}
             className="object-cover"
           />
           <div className="absolute inset-0 bg-primary/30" />

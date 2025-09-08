@@ -41,7 +41,8 @@ export default function ContactPage() {
                 src="https://picsum.photos/800/400"
                 data-ai-hint="world map"
                 alt="Map showing our location"
-                fill
+                width={800}
+                height={400}
                 className="object-cover"
               />
           </div>

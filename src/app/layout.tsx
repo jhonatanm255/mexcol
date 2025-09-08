@@ -4,7 +4,8 @@ import { Footer } from '@/components/shared/Footer';
 import { Navbar } from '@/components/shared/Navbar';
 import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
-
+import { ptSans } from '@/app/fonts';
+import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'EduVoucher - Professional Online Education',
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className={cn('font-body', ptSans.variable)}>
         <AuthProvider>
           <div className="flex min-h-screen flex-col">
             <Navbar />

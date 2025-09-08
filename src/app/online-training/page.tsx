@@ -76,7 +76,8 @@ export default function OnlineTrainingPage() {
                     src="https://picsum.photos/600/400?random=15" 
                     alt="Persona estudiando en linea" 
                     data-ai-hint="online learning"
-                    fill
+                    width={600}
+                    height={400}
                     className="object-cover"
                 />
             </div>

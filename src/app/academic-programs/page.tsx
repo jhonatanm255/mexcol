@@ -50,7 +50,8 @@ export default function AcademicProgramsPage() {
                     src={program.image}
                     alt={`Image for ${program.name} program`}
                     data-ai-hint={program.dataAiHint}
-                    fill
+                    width={600}
+                    height={400}
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>

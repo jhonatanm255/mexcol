@@ -11,7 +11,14 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { GraduationCap, BookOpen, Video, Award } from 'lucide-react';
-import CouponForm from '@/components/home/CouponForm';
+import dynamic from 'next/dynamic';
+import { Skeleton } from '@/components/ui/skeleton';
+
+const CouponForm = dynamic(() => import('@/components/home/CouponForm'), {
+  ssr: false,
+  loading: () => <Skeleton className="h-10 w-full" />,
+});
+
 
 export default function Home() {
   const [language, setLanguage] = useState('es');
