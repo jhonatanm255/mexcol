@@ -30,24 +30,29 @@ import {
 } from '@/components/ui/navigation-menu';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useAuth } from '@/hooks/use-auth';
-import { useRouter } from 'next/navigation';
 
-const academicPrograms: { title: string; href: string; description: string }[] =
+const academicPrograms: { title: string; href: string; description: string, titleEs: string, descriptionEs: string }[] =
   [
     {
       title: 'USA Program',
       href: '/academic-programs/usa',
       description: 'Explore our academic offerings available in the USA.',
+      titleEs: 'Programa USA',
+      descriptionEs: 'Explora nuestras ofertas académicas disponibles en USA.'
     },
     {
       title: 'Mexico Program',
       href: '/academic-programs/mexico',
-      description: 'Descubre nuestros programas académicos en México.',
+      description: 'Discover our academic programs in Mexico.',
+      titleEs: 'Programa México',
+      descriptionEs: 'Descubre nuestros programas académicos en México.'
     },
     {
       title: 'Colombia Program',
       href: '/academic-programs/colombia',
-      description: 'Explora nuestros programas académicos en Colombia.',
+      description: 'Explore our academic programs in Colombia.',
+      titleEs: 'Programa Colombia',
+      descriptionEs: 'Explora nuestros programas académicos en Colombia.'
     },
   ];
 
@@ -55,7 +60,6 @@ export function Navbar() {
   const [open, setOpen] = React.useState(false);
   const { user } = useAuth();
   const pathname = usePathname();
-  const router = useRouter();
 
   const navLinks = [
     { href: '/', label: 'Home', labelEs: 'Inicio' },
@@ -72,17 +76,25 @@ export function Navbar() {
   const [language, setLanguage] = React.useState('es');
 
   React.useEffect(() => {
-    // A simple language detection logic, can be improved
-    const lang = pathname.includes('/en') ? 'en' : 'es';
-    setLanguage(lang);
-  }, [pathname]);
+    // This effect can be enhanced to read from localStorage or browser settings
+    // For now, it defaults to Spanish
+  }, []);
 
   const handleLanguageChange = (lang: string) => {
     setLanguage(lang);
-    // This is a simplified approach. A real app would use i18n routing.
-    // For now, we just update the text, but navigation links won't change language context.
-    // This addresses the user's immediate visual feedback request.
+    if(typeof window !== 'undefined') {
+        localStorage.setItem('language', lang);
+    }
   };
+
+  React.useEffect(() => {
+    if(typeof window !== 'undefined') {
+        const storedLang = localStorage.getItem('language');
+        if (storedLang) {
+            setLanguage(storedLang);
+        }
+    }
+  }, []);
 
   const getLabel = (link: {
     label: string;
@@ -90,6 +102,8 @@ export function Navbar() {
   }): string => {
     return language === 'es' ? link.labelEs : link.label;
   };
+  
+  const isAdminPage = pathname.startsWith('/admin/dashboard');
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -124,10 +138,10 @@ export function Navbar() {
                     {academicPrograms.map((program) => (
                       <ListItem
                         key={program.title}
-                        title={program.title}
+                        title={language === 'es' ? program.titleEs : program.title}
                         href={program.href}
                       >
-                        {program.description}
+                        {language === 'es' ? program.descriptionEs : program.description}
                       </ListItem>
                     ))}
                   </ul>
@@ -181,7 +195,7 @@ export function Navbar() {
                             pathname === item.href ? 'bg-accent' : ''
                           )}
                         >
-                          {item.title}
+                           {language === 'es' ? item.titleEs : item.title}
                         </Link>
                       ))}
                    </div>
@@ -213,12 +227,14 @@ export function Navbar() {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Button asChild variant="ghost" size="icon">
-              <Link href={user ? '/admin/dashboard' : '/admin/login'}>
-                <UserCog className="h-5 w-5" />
-                <span className="sr-only">Admin Panel</span>
-              </Link>
-            </Button>
+            {isAdminPage && (
+              <Button asChild variant="ghost" size="icon">
+                <Link href="/admin/dashboard">
+                  <UserCog className="h-5 w-5 text-primary" />
+                  <span className="sr-only">Admin Panel</span>
+                </Link>
+              </Button>
+            )}
           </nav>
         </div>
       </div>
@@ -233,7 +249,8 @@ const ListItem = React.forwardRef<
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
+        <Link
+          href={props.href || ''}
           ref={ref}
           className={cn(
             'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
@@ -245,7 +262,7 @@ const ListItem = React.forwardRef<
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
-        </a>
+        </Link>
       </NavigationMenuLink>
     </li>
   );

@@ -1,17 +1,10 @@
 import type { Metadata } from 'next';
-import { PT_Sans } from 'next/font/google';
 import { AuthProvider } from '@/components/auth-provider';
 import { Footer } from '@/components/shared/Footer';
 import { Navbar } from '@/components/shared/Navbar';
 import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
 
-const ptSans = PT_Sans({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-pt-sans',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: 'EduVoucher - Professional Online Education',
@@ -25,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={ptSans.variable} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body>
         <AuthProvider>
           <div className="flex min-h-screen flex-col">

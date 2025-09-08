@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useFormStatus } from "react-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -10,15 +10,26 @@ import { validateCoupon } from "@/lib/actions/coupon.actions";
 
 function SubmitButton() {
   const { pending } = useFormStatus();
+  const [language, setLanguage] = useState('es');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedLang = localStorage.getItem('language');
+      if (storedLang) {
+        setLanguage(storedLang);
+      }
+    }
+  }, []);
+
   return (
     <Button type="submit" disabled={pending} className="w-full sm:w-auto">
       {pending ? (
         <>
           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-          Validating...
+          {language === 'es' ? 'Validando...' : 'Validating...'}
         </>
       ) : (
-        "Access Class"
+        language === 'es' ? 'Acceder a Clase' : 'Access Class'
       )}
     </Button>
   );
@@ -26,6 +37,16 @@ function SubmitButton() {
 
 export default function CouponForm() {
   const [error, setError] = useState<string | null>(null);
+  const [language, setLanguage] = useState('es');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedLang = localStorage.getItem('language');
+      if (storedLang) {
+        setLanguage(storedLang);
+      }
+    }
+  }, []);
 
   const handleSubmit = async (formData: FormData) => {
     const result = await validateCoupon(formData);
@@ -42,7 +63,7 @@ export default function CouponForm() {
         <Input
           type="text"
           name="coupon"
-          placeholder="Enter your coupon code"
+          placeholder={language === 'es' ? 'Ingresa tu código de cupón' : 'Enter your coupon code'}
           required
           className="flex-grow"
           aria-label="Coupon Code"

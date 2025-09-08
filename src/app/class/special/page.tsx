@@ -11,7 +11,6 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
 function VideoPlayer({ videoUrl, videoType }: { videoUrl: string; videoType: 'upload' | 'youtube' }) {
     if (videoType === 'youtube') {
-        // Extract YouTube video ID from URL
         const videoId = videoUrl.includes('youtu.be') 
           ? videoUrl.split('/').pop()?.split('?')[0]
           : new URL(videoUrl).searchParams.get('v');
@@ -21,10 +20,9 @@ function VideoPlayer({ videoUrl, videoType }: { videoUrl: string; videoType: 'up
         }
 
         return (
-            <div className="aspect-video w-full">
+            <div className="w-full aspect-video">
                 <iframe
-                    width="100%"
-                    height="100%"
+                    className="w-full h-full"
                     src={`https://www.youtube.com/embed/${videoId}`}
                     title="YouTube video player"
                     frameBorder="0"
@@ -37,7 +35,7 @@ function VideoPlayer({ videoUrl, videoType }: { videoUrl: string; videoType: 'up
     
     if (videoType === 'upload') {
         return (
-            <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
+            <div className="w-full aspect-video bg-muted rounded-lg flex items-center justify-center">
                 <video controls src={videoUrl} className="w-full h-full rounded-lg">
                     Your browser does not support the video tag.
                 </video>
@@ -68,7 +66,7 @@ function SpecialClassContent() {
 
   return (
     <div className="container mx-auto px-4 py-16 flex items-center justify-center min-h-[calc(100vh-8rem)]">
-      <Card className="max-w-lg w-full text-center">
+      <Card className="max-w-4xl w-full text-center">
         <CardHeader className="items-center">
           <CheckCircle className="h-16 w-16 text-green-500 mb-4" />
           <CardTitle className="font-headline text-3xl">Access Granted!</CardTitle>
@@ -80,13 +78,13 @@ function SpecialClassContent() {
           </p>
 
           {loading && (
-            <div className="aspect-video bg-muted rounded-lg flex items-center justify-center mb-6">
+            <div className="w-full aspect-video bg-muted rounded-lg flex items-center justify-center mb-6">
               <Loader2 className="h-8 w-8 animate-spin text-primary" />
             </div>
           )}
 
           {!loading && videoInfo?.videoUrl && videoInfo.videoType && (
-            <div className="mb-6">
+            <div className="mb-6 w-full">
                 <VideoPlayer videoUrl={videoInfo.videoUrl} videoType={videoInfo.videoType} />
             </div>
           )}
@@ -109,7 +107,7 @@ function SpecialClassContent() {
 
 export default function SpecialClassPage() {
     return (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div className="flex h-screen w-full items-center justify-center"><Loader2 className="h-8 w-8 animate-spin" /></div>}>
             <SpecialClassContent />
         </Suspense>
     )
