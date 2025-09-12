@@ -1,36 +1,26 @@
+
+'use client';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-
-const courses = [
-  {
-    title: 'USMLE Step 1 & 2 CK Prep Course',
-    description: 'A comprehensive review course designed to help international medical graduates excel in the USMLE exams.',
-    duration: '12 weeks',
-  },
-  {
-    title: 'Fellowship in Anti-Aging and Regenerative Medicine',
-    description: 'Advanced training for physicians on the latest in longevity science and regenerative therapies.',
-    duration: '18 months',
-  },
-  {
-    title: 'Medical English & Communication Skills',
-    description: 'Enhance your ability to communicate effectively in a US healthcare setting, focusing on patient interaction and medical terminology.',
-    duration: '6 weeks',
-  },
-];
+import { useLanguage } from '@/hooks/use-language';
+import { translations } from '@/lib/i18n';
 
 export default function USAPage() {
+  const { language } = useLanguage();
+  const t = translations[language].programUSA;
+  const { courses } = t;
+
   return (
     <div className="container mx-auto px-4 py-16">
       <section className="text-center">
         <h1 className="font-headline text-4xl font-bold tracking-tight md:text-5xl">
-          Academic Programs - USA
+          {t.title}
         </h1>
         <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-          Accredited programs and board preparation courses to help you achieve your career goals in the United States.
+          {t.subtitle}
         </p>
       </section>
 
@@ -50,7 +40,7 @@ export default function USAPage() {
 
        <section className="my-16">
         <h2 className="font-headline text-3xl font-bold text-center mb-12">
-          Our Featured US Programs
+          {t.featuredTitle}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses.map((course) => (
@@ -62,9 +52,9 @@ export default function USAPage() {
                 <p className="text-muted-foreground">{course.description}</p>
                  <div className="flex items-center text-sm text-muted-foreground">
                   <CheckCircle className="mr-2 h-4 w-4 text-green-500" />
-                  <span>Duration: {course.duration}</span>
+                  <span>{language === 'es' ? 'Duración' : 'Duration'}: {course.duration}</span>
                 </div>
-                <Button className="w-full">Enroll Today</Button>
+                <Button className="w-full">{t.enrollToday}</Button>
               </CardContent>
             </Card>
           ))}
@@ -73,7 +63,7 @@ export default function USAPage() {
 
       <div className="text-center mt-16">
         <Button asChild size="lg">
-          <Link href="/academic-programs">Back to Programs</Link>
+          <Link href="/academic-programs">{t.backToPrograms}</Link>
         </Button>
       </div>
     </div>

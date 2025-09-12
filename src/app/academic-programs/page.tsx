@@ -1,42 +1,49 @@
+
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-
-const programs = [
-  {
-    name: 'USA',
-    description: 'Explore our accredited programs available for students in the United States.',
-    image: 'https://picsum.photos/600/400?random=1',
-    dataAiHint: "USA flag",
-    href: '/academic-programs/usa',
-  },
-  {
-    name: 'México',
-    description: 'Descubre la oferta académica diseñada específicamente para nuestros estudiantes en México.',
-    image: 'https://picsum.photos/600/400?random=2',
-    dataAiHint: "Mexico landmark",
-    href: '/academic-programs/mexico',
-  },
-  {
-    name: 'Colombia',
-    description: 'Conoce los programas y certificaciones que tenemos para profesionales en Colombia.',
-    image: 'https://picsum.photos/600/400?random=3',
-    dataAiHint: "Colombia landscape",
-    href: '/academic-programs/colombia',
-  },
-];
+import { useLanguage } from '@/hooks/use-language';
+import { translations } from '@/lib/i18n';
 
 export default function AcademicProgramsPage() {
+  const { language } = useLanguage();
+  const t = translations[language].academicPrograms;
+
+  const programs = [
+    {
+      name: t.programs[0].name,
+      description: t.programs[0].description,
+      image: 'https://picsum.photos/600/400?random=1',
+      dataAiHint: "USA flag",
+      href: '/academic-programs/usa',
+    },
+    {
+      name: t.programs[1].name,
+      description: t.programs[1].description,
+      image: 'https://picsum.photos/600/400?random=2',
+      dataAiHint: "Mexico landmark",
+      href: '/academic-programs/mexico',
+    },
+    {
+      name: t.programs[2].name,
+      description: t.programs[2].description,
+      image: 'https://picsum.photos/600/400?random=3',
+      dataAiHint: "Colombia landscape",
+      href: '/academic-programs/colombia',
+    },
+  ];
+
   return (
     <div className="container mx-auto px-4 py-16">
       <section className="text-center">
         <h1 className="font-headline text-4xl font-bold tracking-tight md:text-5xl">
-          Programas Académicos
+          {t.title}
         </h1>
         <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-          Choose your region to discover tailored academic programs and certifications designed for your success.
+          {t.subtitle}
         </p>
       </section>
 
@@ -61,7 +68,7 @@ export default function AcademicProgramsPage() {
                 <p className="mt-2 text-muted-foreground">{program.description}</p>
                 <Button asChild className="mt-4">
                   <Link href={program.href}>
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                    {t.learnMore} <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </CardContent>

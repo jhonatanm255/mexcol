@@ -1,40 +1,26 @@
+
+'use client';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-
-const courses = [
-  {
-    title: 'Diplomado en Medicina Estética Avanzada',
-    description:
-      'Un programa intensivo para médicos que buscan especializarse en las técnicas más innovadoras de la medicina estética.',
-    duration: '6 meses',
-  },
-  {
-    title: 'Certificación en Farmacología Clínica',
-    description:
-      'Desarrolla competencias para la gestión y optimización de tratamientos farmacológicos en el entorno clínico.',
-    duration: '4 meses',
-  },
-  {
-    title: 'Curso de Actualización en Pediatría',
-    description:
-      'Repasa los últimos avances y guías de práctica clínica en la atención pediátrica para el médico general.',
-    duration: '8 semanas',
-  },
-];
+import { useLanguage } from '@/hooks/use-language';
+import { translations } from '@/lib/i18n';
 
 export default function ColombiaPage() {
+  const { language } = useLanguage();
+  const t = translations[language].programColombia;
+  const { courses } = t;
+
   return (
     <div className="container mx-auto px-4 py-16">
       <section className="text-center">
         <h1 className="font-headline text-4xl font-bold tracking-tight md:text-5xl">
-          Programas Académicos - Colombia
+          {t.title}
         </h1>
         <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-          Ofrecemos programas de vanguardia diseñados para fortalecer las
-          habilidades de los profesionales de la salud en Colombia.
+          {t.subtitle}
         </p>
       </section>
 
@@ -54,7 +40,7 @@ export default function ColombiaPage() {
 
       <section className="my-16">
         <h2 className="font-headline text-3xl font-bold text-center mb-12">
-          Nuestra Oferta Educativa
+          {t.featuredTitle}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses.map((course) => (
@@ -66,9 +52,9 @@ export default function ColombiaPage() {
                 <p className="text-muted-foreground">{course.description}</p>
                 <div className="flex items-center text-sm text-muted-foreground">
                   <CheckCircle className="mr-2 h-4 w-4 text-green-500" />
-                  <span>Duración: {course.duration}</span>
+                  <span>{language === 'es' ? 'Duración' : 'Duration'}: {course.duration}</span>
                 </div>
-                <Button className="w-full">Más Información</Button>
+                <Button className="w-full">{t.moreInfo}</Button>
               </CardContent>
             </Card>
           ))}
@@ -77,7 +63,7 @@ export default function ColombiaPage() {
 
       <div className="text-center mt-16">
         <Button asChild size="lg">
-          <Link href="/academic-programs">Volver a Programas</Link>
+          <Link href="/academic-programs">{t.backToPrograms}</Link>
         </Button>
       </div>
     </div>

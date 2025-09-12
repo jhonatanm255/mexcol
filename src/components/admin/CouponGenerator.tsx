@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useTransition } from "react";
@@ -25,6 +26,8 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
+import { useLanguage } from "@/hooks/use-language";
+import { translations } from "@/lib/i18n";
 
 const ManualCouponSchema = z.object({
   code: z.string().min(3, "Code must be at least 3 characters long."),
@@ -56,6 +59,9 @@ type ManualCouponFormValues = z.infer<typeof ManualCouponSchema>;
 export default function CouponGenerator() {
     const [isPending, startTransition] = useTransition();
     const { toast } = useToast();
+    const { language } = useLanguage();
+    const t = translations[language].adminDashboard.couponGenerator;
+
     const form = useForm<ManualCouponFormValues>({
         resolver: zodResolver(ManualCouponSchema),
         defaultValues: { 
@@ -83,7 +89,7 @@ export default function CouponGenerator() {
             const result = await createManualCoupon(formData);
             
             if (result.success) {
-                toast({ title: "Success", description: result.success });
+                toast({ title: t.createTitle, description: result.success });
                 form.reset();
             } else if (result.error) {
                 toast({ variant: "destructive", title: "Error", description: result.error });
@@ -94,9 +100,9 @@ export default function CouponGenerator() {
     return (
       <Card>
         <CardHeader>
-          <CardTitle>Create Coupon</CardTitle>
+          <CardTitle>{t.createTitle}</CardTitle>
           <CardDescription>
-            Create a new coupon and associate a video with it.
+            {t.createDescription}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -107,9 +113,9 @@ export default function CouponGenerator() {
                       name="code"
                       render={({ field }) => (
                           <FormItem>
-                              <FormLabel>Coupon Code</FormLabel>
+                              <FormLabel>{t.codeLabel}</FormLabel>
                               <FormControl>
-                                  <Input placeholder="e.g. MANUALCODE2024" {...field} disabled={isPending} />
+                                  <Input placeholder={t.codePlaceholder} {...field} disabled={isPending} />
                               </FormControl>
                               <FormMessage />
                           </FormItem>
@@ -120,16 +126,16 @@ export default function CouponGenerator() {
                       name="duration"
                       render={({ field }) => (
                           <FormItem>
-                          <FormLabel>Coupon Duration (Days)</FormLabel>
+                          <FormLabel>{t.durationLabel}</FormLabel>
                           <Select onValueChange={field.onChange} defaultValue={field.value} disabled={isPending}>
                               <FormControl>
                               <SelectTrigger>
-                                  <SelectValue placeholder="Select duration" />
+                                  <SelectValue placeholder={t.durationPlaceholder} />
                               </SelectTrigger>
                               </FormControl>
                               <SelectContent>
-                              <SelectItem value="15">15 Days</SelectItem>
-                              <SelectItem value="30">30 Days</SelectItem>
+                              <SelectItem value="15">{t.duration15}</SelectItem>
+                              <SelectItem value="30">{t.duration30}</SelectItem>
                               </SelectContent>
                           </Select>
                           </FormItem>
@@ -141,7 +147,7 @@ export default function CouponGenerator() {
                     name="videoSourceType"
                     render={({ field }) => (
                       <FormItem className="space-y-3">
-                        <FormLabel>Video Source</FormLabel>
+                        <FormLabel>{t.videoSourceLabel}</FormLabel>
                         <FormControl>
                           <RadioGroup
                             onValueChange={field.onChange}
@@ -154,7 +160,7 @@ export default function CouponGenerator() {
                                 <RadioGroupItem value="upload" />
                               </FormControl>
                               <FormLabel className="font-normal">
-                                Upload Video
+                                {t.uploadVideo}
                               </FormLabel>
                             </FormItem>
                             <FormItem className="flex items-center space-x-3 space-y-0">
@@ -162,7 +168,7 @@ export default function CouponGenerator() {
                                 <RadioGroupItem value="youtube" />
                               </FormControl>
                               <FormLabel className="font-normal">
-                                YouTube Link
+                                {t.youtubeLink}
                               </FormLabel>
                             </FormItem>
                           </RadioGroup>
@@ -178,7 +184,7 @@ export default function CouponGenerator() {
                       name="videoFile"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Video File</FormLabel>
+                          <FormLabel>{t.videoFileLabel}</FormLabel>
                           <FormControl>
                             <Input 
                               type="file" 
@@ -199,9 +205,9 @@ export default function CouponGenerator() {
                       name="youtubeLink"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>YouTube URL</FormLabel>
+                          <FormLabel>{t.youtubeUrlLabel}</FormLabel>
                           <FormControl>
-                            <Input placeholder="https://www.youtube.com/watch?v=..." {...field} disabled={isPending} />
+                            <Input placeholder={t.youtubeUrlPlaceholder} {...field} disabled={isPending} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -213,10 +219,10 @@ export default function CouponGenerator() {
                       {isPending ? (
                           <>
                               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                              Creating...
+                              {t.creatingButton}
                           </>
                       ) : (
-                          "Create Coupon"
+                          t.createButton
                       )}
                   </Button>
               </form>

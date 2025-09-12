@@ -1,25 +1,32 @@
+
+'use client';
 import Image from 'next/image';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { ContactForm } from '@/components/contact/ContactForm';
+import { useLanguage } from '@/hooks/use-language';
+import { translations } from '@/lib/i18n';
 
 export default function ContactPage() {
+  const { language } = useLanguage();
+  const t = translations[language].contact;
+
   return (
     <div className="container mx-auto px-4 py-16">
       <section className="text-center">
         <h1 className="font-headline text-4xl font-bold tracking-tight md:text-5xl">
-          Contacto (Contact Us)
+          {t.title}
         </h1>
         <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-          We're here to help. Reach out to us with any questions or inquiries.
+          {t.subtitle}
         </p>
       </section>
 
       <section className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="space-y-8">
           <div>
-            <h2 className="font-headline text-2xl font-semibold">Get in Touch</h2>
+            <h2 className="font-headline text-2xl font-semibold">{t.getInTouch}</h2>
             <p className="mt-2 text-muted-foreground">
-              Fill out the form and our team will get back to you within 24 hours.
+              {t.formDescription}
             </p>
           </div>
           <div className="space-y-4">

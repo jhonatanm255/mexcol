@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState, useTransition } from 'react';
@@ -36,6 +37,8 @@ import {
 import { deleteCoupon, updateCouponStatus } from '@/lib/actions/coupon.actions';
 import { useToast } from '@/hooks/use-toast';
 import { Skeleton } from '../ui/skeleton';
+import { useLanguage } from '@/hooks/use-language';
+import { translations } from '@/lib/i18n';
 
 interface Coupon {
   id: string;
@@ -70,6 +73,8 @@ function StatusSwitch({ coupon }: { coupon: Coupon }) {
 function DeleteButton({ couponId }: { couponId: string }) {
     const [isPending, startTransition] = useTransition();
     const { toast } = useToast();
+    const { language } = useLanguage();
+    const t = translations[language].adminDashboard.couponList;
 
     const handleDelete = () => {
         startTransition(async () => {
@@ -91,15 +96,15 @@ function DeleteButton({ couponId }: { couponId: string }) {
         </AlertDialogTrigger>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+            <AlertDialogTitle>{t.deleteDialogTitle}</AlertDialogTitle>
             <AlertDialogDescription>
-              This action cannot be undone. This will permanently delete the coupon.
+              {t.deleteDialogDescription}
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
+            <AlertDialogCancel>{t.cancel}</AlertDialogCancel>
             <AlertDialogAction onClick={handleDelete} className="bg-destructive hover:bg-destructive/90">
-                {isPending ? <Loader2 className="mr-2 h-4 w-4 animate-spin"/> : "Delete"}
+                {isPending ? <><Loader2 className="mr-2 h-4 w-4 animate-spin"/> {t.deleting}</> : t.delete}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
@@ -110,6 +115,8 @@ function DeleteButton({ couponId }: { couponId: string }) {
 export default function CouponList() {
   const [coupons, setCoupons] = useState<Coupon[]>([]);
   const [loading, setLoading] = useState(true);
+  const { language } = useLanguage();
+  const t = translations[language].adminDashboard.couponList;
 
   useEffect(() => {
     const q = query(collection(db, 'coupons'), orderBy('createdAt', 'desc'));
@@ -134,20 +141,20 @@ export default function CouponList() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Coupon List</CardTitle>
+        <CardTitle>{t.title}</CardTitle>
         <CardDescription>
-          A real-time list of all generated coupons.
+          {t.description}
         </CardDescription>
       </CardHeader>
       <CardContent>
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Coupon Code</TableHead>
-              <TableHead>Duration</TableHead>
-              <TableHead>Created At</TableHead>
-              <TableHead>Status</TableHead>
-              <TableHead className="text-right">Actions</TableHead>
+              <TableHead>{t.codeHeader}</TableHead>
+              <TableHead>{t.durationHeader}</TableHead>
+              <TableHead>{t.createdHeader}</TableHead>
+              <TableHead>{t.statusHeader}</TableHead>
+              <TableHead className="text-right">{t.actionsHeader}</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -171,7 +178,7 @@ export default function CouponList() {
                   </TableCell>
                   <TableCell>
                     <Badge variant={coupon.isActive ? 'default' : 'secondary'} className={coupon.isActive ? 'bg-green-500/20 text-green-700 border-green-500/30' : ''}>
-                      {coupon.isActive ? 'Active' : 'Inactive'}
+                      {coupon.isActive ? t.statusActive : t.statusInactive}
                     </Badge>
                   </TableCell>
                   <TableCell className="flex justify-end items-center gap-2">
@@ -183,7 +190,7 @@ export default function CouponList() {
             ) : (
               <TableRow>
                 <TableCell colSpan={5} className="h-24 text-center">
-                  No coupons found. Generate one to get started.
+                  {t.noCoupons}
                 </TableCell>
               </TableRow>
             )}

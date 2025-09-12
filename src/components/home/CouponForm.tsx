@@ -36,6 +36,7 @@ export default function CouponForm() {
   const t = translations[language].coupon;
 
   const handleSubmit = async (formData: FormData) => {
+    formData.append('language', language);
     const result = await validateCoupon(formData);
     if (result?.error) {
       setError(result.error);
@@ -60,7 +61,7 @@ export default function CouponForm() {
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
-          <AlertTitle>Error</AlertTitle>
+          <AlertTitle>{language === 'es' ? 'Error' : 'Error'}</AlertTitle>
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}

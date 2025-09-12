@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -20,6 +21,8 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { AlertCircle, Loader2, GraduationCap } from 'lucide-react';
+import { useLanguage } from '@/hooks/use-language';
+import { translations } from '@/lib/i18n';
 
 const loginSchema = z.object({
   email: z.string().email({ message: 'Invalid email address.' }),
@@ -31,9 +34,10 @@ type LoginFormValues = z.infer<typeof loginSchema>;
 export default function LoginPage() {
   const router = useRouter();
   const { user, loading, login } = useAuth();
+  const { language } = useLanguage();
+  const t = translations[language].adminLogin;
   const [error, setError] = useState<string | null>(null);
   
-
   useEffect(() => {
     if (!loading && user) {
       router.replace('/admin/dashboard');
@@ -62,7 +66,7 @@ export default function LoginPage() {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center p-4">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
-        <p className="mt-2 text-muted-foreground">Redirecting...</p>
+        <p className="mt-2 text-muted-foreground">{t.redirecting}</p>
       </div>
     );
   }
@@ -74,19 +78,19 @@ export default function LoginPage() {
           <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-secondary mb-4">
             <GraduationCap className="h-8 w-8 text-primary" />
           </div>
-          <CardTitle className="text-2xl font-headline">Admin Login</CardTitle>
+          <CardTitle className="text-2xl font-headline">{t.title}</CardTitle>
           <CardDescription>
-            Enter your credentials to access the dashboard.
+            {t.description}
           </CardDescription>
         </CardHeader>
         <form onSubmit={handleSubmit(onSubmit)}>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">{t.emailLabel}</Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="admin@example.com"
+                placeholder={t.emailPlaceholder}
                 {...register('email')}
               />
               {errors.email && (
@@ -94,7 +98,7 @@ export default function LoginPage() {
               )}
             </div>
             <div className="space-y-2">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">{t.passwordLabel}</Label>
               <Input id="password" type="password" {...register('password')} />
               {errors.password && (
                 <p className="text-sm text-destructive">{errors.password.message}</p>
@@ -103,15 +107,19 @@ export default function LoginPage() {
             {error && (
               <Alert variant="destructive">
                 <AlertCircle className="h-4 w-4" />
-                <AlertTitle>Login Failed</AlertTitle>
+                <AlertTitle>{t.loginFailedTitle}</AlertTitle>
                 <AlertDescription>{error}</AlertDescription>
               </Alert>
             )}
           </CardContent>
           <CardFooter>
             <Button type="submit" className="w-full" disabled={isSubmitting}>
-              {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-              Login
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  {t.loggingIn}
+                </>
+              ) : t.loginButton}
             </Button>
           </CardFooter>
         </form>

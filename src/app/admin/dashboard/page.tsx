@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect } from 'react';
@@ -7,9 +8,13 @@ import { Button } from '@/components/ui/button';
 import { Loader2, LogOut } from 'lucide-react';
 import CouponGenerator from '@/components/admin/CouponGenerator';
 import CouponList from '@/components/admin/CouponList';
+import { useLanguage } from '@/hooks/use-language';
+import { translations } from '@/lib/i18n';
 
 export default function DashboardPage() {
   const { user, loading, logout } = useAuth();
+  const { language } = useLanguage();
+  const t = translations[language].adminDashboard;
   const router = useRouter();
 
   useEffect(() => {
@@ -30,14 +35,14 @@ export default function DashboardPage() {
     <div className="container mx-auto px-4 py-8">
       <header className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
         <div>
-          <h1 className="text-3xl font-bold font-headline">Admin Dashboard</h1>
+          <h1 className="text-3xl font-bold font-headline">{t.title}</h1>
           <p className="text-muted-foreground">
-            Welcome, {user.email}. Manage your coupons below.
+            {t.welcome.replace('{email}', user.email || '')}
           </p>
         </div>
         <Button variant="outline" onClick={logout}>
           <LogOut className="mr-2 h-4 w-4" />
-          Logout
+          {t.logout}
         </Button>
       </header>
 

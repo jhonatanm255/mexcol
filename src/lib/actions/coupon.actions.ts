@@ -18,11 +18,15 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
+import { translations } from '@/lib/i18n';
 
 export async function validateCoupon(formData: FormData) {
   const couponCode = formData.get('coupon') as string;
+  const lang = formData.get('language') as 'en' | 'es' || 'en';
+  const t = translations[lang].coupon.errors;
+
   if (!couponCode) {
-    return { error: 'Coupon code cannot be empty.' };
+    return { error: t.empty };
   }
 
   try {
@@ -35,7 +39,7 @@ export async function validateCoupon(formData: FormData) {
     const querySnapshot = await getDocs(q);
 
     if (querySnapshot.empty) {
-      return { error: 'Invalid or expired coupon code.' };
+      return { error: t.invalid };
     }
 
     const couponDoc = querySnapshot.docs[0];
@@ -48,14 +52,13 @@ export async function validateCoupon(formData: FormData) {
     expiryDate.setDate(expiryDate.getDate() + durationDays);
 
     if (now > expiryDate) {
-      // Optional: Update status in DB if expired
       await updateDoc(doc(db, 'coupons', couponDoc.id), { isActive: false });
-      return { error: 'This coupon has expired.' };
+      return { error: t.expired };
     }
 
   } catch (error) {
     console.error('Error validating coupon:', error);
-    return { error: 'An unexpected error occurred. Please try again.' };
+    return { error: t.unexpected };
   }
 
   redirect(`/class/special?code=${couponCode.trim()}`);
@@ -78,7 +81,6 @@ export async function createManualCoupon(formData: FormData) {
     const { code, duration, videoSourceType, videoFile, youtubeLink } = validatedData;
     const durationDays = parseInt(duration, 10);
     
-    // Check if coupon code already exists
     const couponsRef = collection(db, 'coupons');
     const q = query(couponsRef, where('code', '==', code.trim()));
     const querySnapshot = await getDocs(q);
@@ -143,9 +145,9 @@ export async function deleteCoupon(id: string) {
   }
 }
 
-export async function getCouponVideo(code: string): Promise<{ videoUrl: string | null; videoType: 'upload' | 'youtube' | null, error?: string }> {
+export async function getCouponVideo(code: string): Promise<{ videoUrl: string | null; videoType: 'upload' | 'youtube' | null, error?: 'no-code' | 'not-found' | 'failed' | 'invalid-url' }> {
     if (!code) {
-        return { videoUrl: null, videoType: null, error: 'No coupon code provided.' };
+        return { videoUrl: null, videoType: null, error: 'no-code' };
     }
 
     try {
@@ -154,7 +156,7 @@ export async function getCouponVideo(code: string): Promise<{ videoUrl: string |
         const querySnapshot = await getDocs(q);
 
         if (querySnapshot.empty) {
-            return { videoUrl: null, videoType: null, error: 'Coupon not found.' };
+            return { videoUrl: null, videoType: null, error: 'not-found' };
         }
 
         const couponData = querySnapshot.docs[0].data();
@@ -164,6 +166,6 @@ export async function getCouponVideo(code: string): Promise<{ videoUrl: string |
         };
     } catch (error) {
         console.error('Error fetching coupon video:', error);
-        return { videoUrl: null, videoType: null, error: 'Failed to fetch video.' };
+        return { videoUrl: null, videoType: null, error: 'failed' };
     }
 }
