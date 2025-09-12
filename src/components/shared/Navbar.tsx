@@ -175,7 +175,7 @@ export function Navbar() {
 
           <Link href="/" className="flex items-center space-x-2 md:hidden">
             <GraduationCap className="h-6 w-6 text-primary" />
-            <span className="font-bold">EduVoucher</span>
+            <span className="font-bold">Instituto MEXCOL</span>
           </Link>
 
           <nav className="flex items-center space-x-2">
