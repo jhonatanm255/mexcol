@@ -1,3 +1,4 @@
+
 'use client';
 
 import * as React from 'react';
@@ -6,7 +7,6 @@ import { usePathname } from 'next/navigation';
 import {
   GraduationCap,
   Menu,
-  ChevronDown,
   Globe,
   UserCog,
 } from 'lucide-react';
@@ -30,77 +30,48 @@ import {
 } from '@/components/ui/navigation-menu';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useAuth } from '@/hooks/use-auth';
+import { useLanguage } from '@/hooks/use-language';
+import { translations } from '@/lib/i18n';
 
-const academicPrograms: { title: string; href: string; description: string, titleEs: string, descriptionEs: string }[] =
-  [
-    {
-      title: 'USA Program',
-      href: '/academic-programs/usa',
-      description: 'Explore our academic offerings available in the USA.',
-      titleEs: 'Programa USA',
-      descriptionEs: 'Explora nuestras ofertas académicas disponibles en USA.'
-    },
-    {
-      title: 'Mexico Program',
-      href: '/academic-programs/mexico',
-      description: 'Discover our academic programs in Mexico.',
-      titleEs: 'Programa México',
-      descriptionEs: 'Descubre nuestros programas académicos en México.'
-    },
-    {
-      title: 'Colombia Program',
-      href: '/academic-programs/colombia',
-      description: 'Explore our academic programs in Colombia.',
-      titleEs: 'Programa Colombia',
-      descriptionEs: 'Explora nuestros programas académicos en Colombia.'
-    },
-  ];
+const ListItem = React.forwardRef<
+  React.ElementRef<'a'>,
+  React.ComponentPropsWithoutRef<'a'>
+>(({ className, title, children, ...props }, ref) => {
+  return (
+    <li>
+      <NavigationMenuLink asChild>
+        <Link
+          href={props.href || ''}
+          ref={ref}
+          className={cn(
+            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+            className
+          )}
+          {...props}
+        >
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
+        </Link>
+      </NavigationMenuLink>
+    </li>
+  );
+});
+ListItem.displayName = 'ListItem';
 
 export function Navbar() {
   const [open, setOpen] = React.useState(false);
   const { user } = useAuth();
   const pathname = usePathname();
+  const { language, setLanguage } = useLanguage();
+  const t = translations[language].navbar;
+  
+  const navLinks = t.navLinks;
+  const academicPrograms = t.academicPrograms;
 
-  const navLinks = [
-    { href: '/', label: 'Home', labelEs: 'Inicio' },
-    {
-      href: '/online-training',
-      label: 'Online Training',
-      labelEs: 'Formación en línea',
-    },
-    { href: '/congress', label: 'Congress', labelEs: 'Congreso' },
-    { href: '/about', label: 'About Us', labelEs: 'Conócenos' },
-    { href: '/contact', label: 'Contact', labelEs: 'Contacto' },
-  ];
-
-  const [language, setLanguage] = React.useState('es');
-
-  React.useEffect(() => {
-    // This effect can be enhanced to read from localStorage or browser settings
-    // For now, it defaults to Spanish
-  }, []);
-
-  const handleLanguageChange = (lang: string) => {
+  const handleLanguageChange = (lang: 'en' | 'es') => {
     setLanguage(lang);
-    if(typeof window !== 'undefined') {
-        localStorage.setItem('language', lang);
-    }
-  };
-
-  React.useEffect(() => {
-    if(typeof window !== 'undefined') {
-        const storedLang = localStorage.getItem('language');
-        if (storedLang) {
-            setLanguage(storedLang);
-        }
-    }
-  }, []);
-
-  const getLabel = (link: {
-    label: string;
-    labelEs: string;
-  }): string => {
-    return language === 'es' ? link.labelEs : link.label;
   };
   
   const isAdminPage = pathname.startsWith('/admin/dashboard');
@@ -122,26 +93,24 @@ export function Navbar() {
                       className={navigationMenuTriggerStyle()}
                       active={pathname === link.href}
                     >
-                      {getLabel(link)}
+                      {link.label}
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
               ))}
               <NavigationMenuItem>
                 <NavigationMenuTrigger>
-                  {language === 'es'
-                    ? 'Programas Académicos'
-                    : 'Academic Programs'}
+                  {t.academicProgramsTitle}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                     {academicPrograms.map((program) => (
                       <ListItem
                         key={program.title}
-                        title={language === 'es' ? program.titleEs : program.title}
+                        title={program.title}
                         href={program.href}
                       >
-                        {language === 'es' ? program.descriptionEs : program.description}
+                        {program.description}
                       </ListItem>
                     ))}
                   </ul>
@@ -180,11 +149,11 @@ export function Navbar() {
                         pathname === item.href ? 'bg-accent' : ''
                       )}
                     >
-                      {getLabel(item)}
+                      {item.label}
                     </Link>
                   ))}
                    <div className="pt-2">
-                    <h3 className="px-2 text-xs font-semibold text-muted-foreground">Programas</h3>
+                    <h3 className="px-2 text-xs font-semibold text-muted-foreground">{t.academicProgramsTitle}</h3>
                      {academicPrograms.map((item) => (
                         <Link
                           key={item.href}
@@ -195,7 +164,7 @@ export function Navbar() {
                             pathname === item.href ? 'bg-accent' : ''
                           )}
                         >
-                           {language === 'es' ? item.titleEs : item.title}
+                           {item.title}
                         </Link>
                       ))}
                    </div>
@@ -241,30 +210,3 @@ export function Navbar() {
     </header>
   );
 }
-
-const ListItem = React.forwardRef<
-  React.ElementRef<'a'>,
-  React.ComponentPropsWithoutRef<'a'>
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <Link
-          href={props.href || ''}
-          ref={ref}
-          className={cn(
-            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </Link>
-      </NavigationMenuLink>
-    </li>
-  );
-});
-ListItem.displayName = 'ListItem';
