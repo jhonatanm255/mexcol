@@ -1,6 +1,10 @@
 
 export const translations = {
   en: {
+    metadata: {
+      title: 'Instituto MEXCOL - Professional Online Education',
+      description: 'Unlock your potential with our expert-led online courses. Enter a voucher to access special classes.',
+    },
     navbar: {
       navLinks: [
         { href: '/', label: 'Home' },
@@ -29,7 +33,7 @@ export const translations = {
       ],
     },
     hero: {
-        title: 'Unlock Your Potential with EduVoucher',
+        title: 'Unlock Your Potential with Instituto MEXCOL',
         subtitle: 'Discover a world of knowledge with our premium online courses. Access exclusive content and start your learning journey today.',
         explorePrograms: 'Explore Programs',
         contactUs: 'Contact Us',
@@ -321,9 +325,23 @@ export const translations = {
             deleting: 'Deleting...',
             noCoupons: 'No coupons found. Generate one to get started.',
         }
+    },
+    terms: {
+        title: 'Terms and Conditions',
+        lastUpdated: 'Last Updated: July 26, 2024',
+        p1: 'Welcome to Instituto MEXCOL. These Terms and Conditions ("Terms") govern your use of our website and the services offered. By accessing or using our services, you agree to be bound by these Terms.',
+        p2: 'You may use our services for personal, non-commercial purposes only. You agree not to misuse the services or help anyone else to do so. You are responsible for any content you provide and for any consequences thereof.',
+        p3: 'All content provided on the website, including text, graphics, logos, images, as well as the compilation thereof, and any software used on the site, is the property of Instituto MEXCOL or its suppliers and protected by copyright and other laws.',
+        p4: 'Our services are provided "as is." Instituto MEXCOL makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.',
+        p5: 'In no event shall Instituto MEXCOL or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on our website.',
+        p6: 'We reserve the right to modify these terms at any time. We will notify you of any changes by posting the new Terms and Conditions on this page. You are advised to review this page periodically for any changes.',
     }
   },
   es: {
+    metadata: {
+      title: 'Instituto MEXCOL - Educación Profesional en Línea',
+      description: 'Desbloquea tu potencial con nuestros cursos en línea dirigidos por expertos. Ingresa un cupón para acceder a clases especiales.',
+    },
     navbar: {
       navLinks: [
         { href: '/', label: 'Inicio' },
@@ -352,7 +370,7 @@ export const translations = {
       ],
     },
     hero: {
-        title: 'Desbloquea tu Potencial con EduVoucher',
+        title: 'Desbloquea tu Potencial con Instituto MEXCOL',
         subtitle: 'Descubre un mundo de conocimiento con nuestros cursos en línea premium. Accede a contenido exclusivo y comienza tu viaje de aprendizaje hoy.',
         explorePrograms: 'Explorar Programas',
         contactUs: 'Contáctanos',
@@ -644,6 +662,16 @@ export const translations = {
             deleting: 'Eliminando...',
             noCoupons: 'No se encontraron cupones. Genera uno para empezar.',
         }
+    },
+    terms: {
+        title: 'Términos y Condiciones',
+        lastUpdated: 'Última Actualización: 26 de Julio, 2024',
+        p1: 'Bienvenido al Instituto MEXCOL. Estos Términos y Condiciones ("Términos") rigen el uso de nuestro sitio web y los servicios ofrecidos. Al acceder o utilizar nuestros servicios, usted acepta estar sujeto a estos Términos.',
+        p2: 'Puede utilizar nuestros servicios únicamente con fines personales y no comerciales. Usted se compromete a no hacer un mal uso de los servicios ni a ayudar a nadie más a hacerlo. Usted es responsable de cualquier contenido que proporcione y de las consecuencias del mismo.',
+        p3: 'Todo el contenido proporcionado en el sitio web, incluidos textos, gráficos, logotipos, imágenes, así como la compilación de los mismos, y cualquier software utilizado en el sitio, es propiedad del Instituto MEXCOL o sus proveedores y está protegido por derechos de autor y otras leyes.',
+        p4: 'Nuestros servicios se proporcionan "tal cual". El Instituto MEXCOL no ofrece garantías, expresas o implícitas, y por la presente renuncia y niega todas las demás garantías, incluidas, entre otras, las garantías implícitas o condiciones de comerciabilidad, idoneidad para un propósito particular o no infracción de la propiedad intelectual u otra violación de derechos.',
+        p5: 'En ningún caso el Instituto MEXCOL o sus proveedores serán responsables de los daños (incluidos, entre otros, los daños por pérdida de datos o ganancias, o por interrupción del negocio) que surjan del uso o la imposibilidad de usar los materiales en nuestro sitio web.',
+        p6: 'Nos reservamos el derecho de modificar estos términos en cualquier momento. Le notificaremos cualquier cambio publicando los nuevos Términos y Condiciones en esta página. Se le aconseja que revise esta página periódicamente para detectar cualquier cambio.',
     }
   },
 };

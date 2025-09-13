@@ -26,7 +26,7 @@ export default function AboutPage() {
       <section className="my-16">
         <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-xl">
           <Image
-            src="https://picsum.photos/1200/400"
+            src="https://picsum.photos/seed/about-main/1200/400"
             alt="A diverse group of people collaborating"
             data-ai-hint="team collaboration"
             width={1200}

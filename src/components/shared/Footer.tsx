@@ -1,5 +1,6 @@
+
 import Link from 'next/link';
-import { GraduationCap, Twitter, Facebook, Linkedin } from 'lucide-react';
+import { GraduationCap, Facebook, Instagram } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -9,7 +10,7 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center space-x-2">
               <GraduationCap className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold">EduVoucher</span>
+              <span className="text-xl font-bold">Instituto MEXCOL</span>
             </Link>
             <p className="mt-4 text-muted-foreground max-w-sm">
               Empowering students worldwide with accessible, high-quality online
@@ -36,6 +37,11 @@ export function Footer() {
                   Programs
                 </Link>
               </li>
+               <li>
+                <Link href="/terms" className="text-muted-foreground hover:text-primary">
+                  Terms and Conditions
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -44,22 +50,18 @@ export function Footer() {
             </h3>
             <div className="mt-4 flex space-x-4">
               <Link href="#" className="text-muted-foreground hover:text-primary">
-                <Twitter />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary">
                 <Facebook />
                 <span className="sr-only">Facebook</span>
               </Link>
               <Link href="#" className="text-muted-foreground hover:text-primary">
-                <Linkedin />
-                <span className="sr-only">LinkedIn</span>
+                <Instagram />
+                <span className="sr-only">Instagram</span>
               </Link>
             </div>
           </div>
         </div>
         <div className="mt-8 border-t pt-8 text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} EduVoucher. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Instituto MEXCOL. All rights reserved.</p>
         </div>
       </div>
     </footer>

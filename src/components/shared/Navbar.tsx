@@ -74,7 +74,7 @@ export function Navbar() {
     setLanguage(lang);
   };
   
-  const isAdminPage = pathname.startsWith('/admin/dashboard');
+  const isAdminPage = pathname.startsWith('/admin');
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -82,7 +82,7 @@ export function Navbar() {
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <GraduationCap className="h-6 w-6 text-primary" />
-            <span className="font-bold">EduVoucher</span>
+            <span className="font-bold">Instituto MEXCOL</span>
           </Link>
           <NavigationMenu>
             <NavigationMenuList>
@@ -136,7 +136,7 @@ export function Navbar() {
                   onClick={() => setOpen(false)}
                 >
                   <GraduationCap className="h-6 w-6 text-primary" />
-                  <span className="ml-2 font-bold">EduVoucher</span>
+                  <span className="ml-2 font-bold">Instituto MEXCOL</span>
                 </Link>
                 <div className="mt-6 flex flex-col space-y-2">
                   {navLinks.map((item) => (
@@ -196,11 +196,11 @@ export function Navbar() {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {isAdminPage && (
-              <Button asChild variant="ghost" size="icon">
+            {isAdminPage && user && (
+              <Button asChild variant="outline" size="sm">
                 <Link href="/admin/dashboard">
-                  <UserCog className="h-5 w-5 text-primary" />
-                  <span className="sr-only">Admin Panel</span>
+                  <UserCog className="mr-2 h-4 w-4" />
+                  Admin Panel
                 </Link>
               </Button>
             )}
