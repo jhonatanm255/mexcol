@@ -62,7 +62,7 @@ ListItem.displayName = 'ListItem';
 
 export function Navbar() {
   const [open, setOpen] = React.useState(false);
-  const { user } = useAuth();
+  const { user, loading } = useAuth();
   const pathname = usePathname();
   const { language, setLanguage } = useLanguage();
   const t = translations[language].navbar;
@@ -75,6 +75,14 @@ export function Navbar() {
   };
   
   const isAdminPage = pathname.startsWith('/admin');
+
+  if (loading) {
+    return (
+       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container flex h-16 items-center"></div>
+      </header>
+    )
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -196,7 +204,7 @@ export function Navbar() {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {isAdminPage && user && (
+            {user && isAdminPage && (
               <Button asChild variant="outline" size="sm">
                 <Link href="/admin/dashboard">
                   <UserCog className="mr-2 h-4 w-4" />
