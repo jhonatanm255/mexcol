@@ -335,6 +335,18 @@ export const translations = {
         p4: 'Our services are provided "as is." Instituto MEXCOL makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.',
         p5: 'In no event shall Instituto MEXCOL or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on our website.',
         p6: 'We reserve the right to modify these terms at any time. We will notify you of any changes by posting the new Terms and Conditions on this page. You are advised to review this page periodically for any changes.',
+    },
+    footer: {
+      description: 'Empowering students worldwide with accessible, high-quality online education.',
+      quickLinks: {
+        title: 'Quick Links',
+        about: 'About Us',
+        contact: 'Contact',
+        programs: 'Programs',
+        terms: 'Terms and Conditions'
+      },
+      followUs: 'Follow Us',
+      copyright: '© {year} Instituto MEXCOL. All rights reserved.'
     }
   },
   es: {
@@ -672,6 +684,18 @@ export const translations = {
         p4: 'Nuestros servicios se proporcionan "tal cual". El Instituto MEXCOL no ofrece garantías, expresas o implícitas, y por la presente renuncia y niega todas las demás garantías, incluidas, entre otras, las garantías implícitas o condiciones de comerciabilidad, idoneidad para un propósito particular o no infracción de la propiedad intelectual u otra violación de derechos.',
         p5: 'En ningún caso el Instituto MEXCOL o sus proveedores serán responsables de los daños (incluidos, entre otros, los daños por pérdida de datos o ganancias, o por interrupción del negocio) que surjan del uso o la imposibilidad de usar los materiales en nuestro sitio web.',
         p6: 'Nos reservamos el derecho de modificar estos términos en cualquier momento. Le notificaremos cualquier cambio publicando los nuevos Términos y Condiciones en esta página. Se le aconseja que revise esta página periódicamente para detectar cualquier cambio.',
+    },
+    footer: {
+      description: 'Empoderando a estudiantes de todo el mundo con educación en línea accesible y de alta calidad.',
+      quickLinks: {
+        title: 'Enlaces Rápidos',
+        about: 'Conócenos',
+        contact: 'Contacto',
+        programs: 'Programas',
+        terms: 'Términos y Condiciones'
+      },
+      followUs: 'Síguenos',
+      copyright: '© {year} Instituto MEXCOL. Todos los derechos reservados.'
     }
   },
 };
