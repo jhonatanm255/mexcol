@@ -5,14 +5,15 @@ import { Footer } from '@/components/shared/Footer';
 import { Navbar } from '@/components/shared/Navbar';
 import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
-import { ptSans } from '@/app/fonts';
+import { inter } from '@/app/fonts';
 import { cn } from '@/lib/utils';
 import { LanguageProvider } from '@/hooks/use-language';
 import { translations } from '@/lib/i18n';
 import { headers } from 'next/headers';
+import RouteProgress from '@/components/shared/RouteProgress';
 
-export function generateMetadata(): Metadata {
-  const heads = headers();
+export async function generateMetadata(): Promise<Metadata> {
+  const heads = await headers();
   const lang = heads.get('accept-language')?.startsWith('es') ? 'es' : 'en';
   const t = translations[lang];
 
@@ -31,10 +32,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn('font-body', ptSans.variable)}>
+      <body className={cn('font-body', inter.variable)}>
         <LanguageProvider>
           <AuthProvider>
             <div className="flex min-h-screen flex-col">
+              <RouteProgress />
               <Navbar />
               <main className="flex-grow">{children}</main>
               <Footer />

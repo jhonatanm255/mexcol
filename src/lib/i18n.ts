@@ -11,32 +11,134 @@ export const translations = {
         { href: '/online-training', label: 'Online Training' },
         { href: '/congress', label: 'Congress' },
         { href: '/about', label: 'About Us' },
+        { href: '/about#team', label: 'Directors & Medical Staff' },
         { href: '/contact', label: 'Contact' },
       ],
       academicProgramsTitle: 'Academic Programs',
       academicPrograms: [
         {
-          title: 'USA Program',
-          href: '/academic-programs/usa',
-          description: 'Explore our academic offerings available in the USA.',
-        },
-        {
-          title: 'Mexico Program',
-          href: '/academic-programs/mexico',
-          description: 'Discover our academic programs in Mexico.',
-        },
-        {
-          title: 'Colombia Program',
-          href: '/academic-programs/colombia',
-          description: 'Explore our academic programs in Colombia.',
+          title: 'Go to Academic Programs',
+          href: '/academic-programs',
+          description: 'Mex • Col • USA – Academic Programs',
         },
       ],
     },
     hero: {
-        title: 'Unlock Your Potential with Instituto MEXCOL',
-        subtitle: 'Discover a world of knowledge with our premium online courses. Access exclusive content and start your learning journey today.',
+        title: 'Mex-Col-USA Institute',
+        subtitle: 'Continuing Education in Aesthetic Medicine',
         explorePrograms: 'Explore Programs',
         contactUs: 'Contact Us',
+    },
+    home: {
+      hero: {
+        main: 'Mex-Col-USA Institute',
+        sub: 'Continuing Education in Aesthetic Medicine',
+      },
+      onlineTraining: {
+        title: 'Online Training',
+        intro: 'Join this unique learning experience designed to provide you with practical tools you can immediately apply. Connect from anywhere and access exclusive content prepared by experts.',
+        viewRecorded: 'View Recorded Courses',
+      },
+      featuredPrograms: {
+        title: 'Our International Programs',
+        cards: [
+          {
+            country: 'USA',
+            course: 'Master Class – 4 Techniques: Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads',
+            image: 'https://picsum.photos/seed/usa/600/400',
+          },
+          {
+            country: 'Mexico',
+            course: 'Intravenous Therapy, Chelation, and Principles of Applied Regenerative Medicine',
+            image: 'https://picsum.photos/seed/mex/600/400',
+          },
+          {
+            country: 'Colombia',
+            course: 'Mini 3-Point Rejuvenation Lifting Techniques',
+            image: 'https://picsum.photos/seed/col/600/400',
+          },
+        ],
+        viewMore: 'View More Programs',
+      },
+      testimonials: {
+        title: 'What Our Students Say',
+        sub: 'Over 1,500 Reviews',
+        items: [
+          {
+            name: 'Mariana Florez',
+            location: 'Bogotá',
+            program: 'Master Class in Facial Harmonization with Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads',
+            text: 'I took the facial harmonization course in Bogotá, Colombia, with Mex-Col Institute. It was an extremely enriching experience. Having previously completed a master’s in aesthetic medicine, this course allowed me to consolidate my knowledge and gain greater confidence applying theory in my clinical practice with patients.',
+          },
+          {
+            name: 'Vicky Sanz',
+            location: 'Mexico City',
+            program: 'Master Class in Facial Harmonization with Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads',
+            text: 'Highly recommended. I took the course in Mexico City. The doctor is extremely knowledgeable and explains procedures, techniques, and dosages clearly. They ensure that you learn and understand the material. I highly recommend the institute.',
+          },
+          {
+            name: 'Miguel Castillo',
+            location: 'Mexico City',
+            program: 'Intravenous Therapy, Chelation, and Principles of Applied Regenerative Medicine',
+            text: 'I took the IV Therapy and Chelation course and I recommend it 100%. Excellent instructor and very good learning in regenerative and alternative medicine!',
+          },
+          {
+            name: 'Cinthia Funes',
+            location: 'Online',
+            program: 'Intravenous Therapy, Chelation, and Principles of Applied Regenerative Medicine',
+            text: 'I took the online course. Very complete and clear information. I appreciated receiving supplier details. 100% reliable.',
+          },
+          {
+            name: 'Cristhian Ramirez',
+            location: 'Los Angeles',
+            program: 'Master Class – 4 Techniques: Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads',
+            text: 'A great course to start in the filler field.',
+          },
+        ],
+        viewAll: 'View All Testimonials',
+        leaveReview: 'Leave a Testimonial',
+        facebook: 'Facebook',
+        googleMx: 'Google MX',
+        googleUsa: 'Google USA',
+      },
+      brands: {
+        title: 'Trusted By',
+        optional: 'We have strategic partnerships with industry leaders.',
+        logos: [
+          'Allergan', 'Botox', 'Juvederm', 'Harmonyca', 'Belotero', 'Radiesse', 'Merz', 'Xeomeen', 'American Alliance'
+        ],
+      },
+      contact: {
+        title: 'Contact',
+        intro: 'We are present in 3 countries to assist you',
+        viewLocations: 'View All Locations',
+        locations: {
+          mx: {
+            title: 'Mexico City',
+            address: 'Av. Uno #18, Colonia San Pedro de los Pinos, Benito Juárez, 03800',
+          },
+          usaOrlando: {
+            title: 'Orlando (Admin Office)',
+            address: '2180 Central Florida Parkway, Suite A2, Orlando, FL 32837',
+          },
+          usaHouston: {
+            title: 'Houston',
+            address: '2307 S Texas 6, Houston, TX 77077',
+          },
+          usaPresence: 'Presence: Los Angeles and Miami',
+          coBogota: {
+            title: 'Bogotá (Admin Office)',
+            address: 'Carrera 4 Este #14-04, 2nd Floor, Sector La Esmeralda, Tocancipá, Cundinamarca',
+          },
+        },
+        followUs: {
+          title: 'Follow Us',
+          facebook: 'Facebook',
+          instagram: 'Instagram',
+          tiktok: 'TikTok',
+          youtube: 'YouTube',
+        }
+      }
     },
     whyChooseUs: {
         title: 'Why Choose Us?',
@@ -102,22 +204,62 @@ export const translations = {
     },
     academicPrograms: {
         title: 'Academic Programs',
-        subtitle: 'Choose your region to discover tailored academic programs and certifications designed for your success.',
-        programs: [
-            {
-                name: 'USA',
-                description: 'Explore our accredited programs available for students in the United States.',
-            },
-            {
-                name: 'México',
-                description: 'Discover the academic offerings designed specifically for our students in Mexico.',
-            },
-            {
-                name: 'Colombia',
-                description: 'Learn about the programs and certifications we have for professionals in Colombia.',
-            },
-        ],
-        learnMore: 'Learn More',
+        subtitle: 'International training with specialized, hands-on, and up-to-date programs in the USA, Mexico, and Colombia.',
+        description: 'International academic section paragraph text',
+        heroHeadline: 'Mex • Col • USA – Academic Programs',
+        heroSubheadline: 'International training with specialized, hands-on, and up-to-date programs in the USA, Mexico, and Colombia.',
+        tabs: { usa: 'USA', mexico: 'Mexico', colombia: 'Colombia' },
+        cta: 'Learn More',
+        countries: {
+          usa: {
+            courses: [
+              {
+                title: 'Master Class: 4 Techniques – Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads',
+                description: 'Learn advanced facial harmonization techniques with professional results.',
+              },
+              {
+                title: 'Intravenous Therapy, Chelation, and Principles of Applied Regenerative Medicine',
+                description: 'Explore chelation and the fundamentals of regenerative medicine.',
+              },
+              {
+                title: 'Phlebotomy Technician Course',
+                description: 'Hands-on training in safe, professional blood extraction techniques.',
+              },
+            ],
+          },
+          mexico: {
+            courses: [
+              {
+                title: 'Course in Moderation, Profiling, and Facial Harmonization – Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads',
+                description: 'Learn advanced facial harmonization techniques for natural, precise results.',
+              },
+              {
+                title: 'Intravenous Therapy, Chelation, and Principles of Applied Regenerative Medicine',
+                description: 'Master chelation and regenerative medicine fundamentals applied to aesthetic treatments.',
+              },
+              {
+                title: 'Mini 3-Point Lifting Rejuvenation Techniques Course',
+                description: 'Training in strategic facial lifting techniques for visible, natural rejuvenation.',
+              },
+            ],
+          },
+          colombia: {
+            courses: [
+              {
+                title: 'Master Class in Facial Modeling, Profiling, and Harmonization – Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads',
+                description: 'Learn advanced facial harmonization techniques for professional, natural results.',
+              },
+              {
+                title: 'Online Course: Intravenous Therapy, Chelation, and Principles of Applied Regenerative Medicine',
+                description: 'Master chelation and regenerative medicine fundamentals from anywhere, online.',
+              },
+              {
+                title: 'Mini 3-Point Lifting Rejuvenation Techniques Course',
+                description: 'Practical training in strategic facial lifting techniques for visible rejuvenation.',
+              },
+            ],
+          },
+        },
     },
     programUSA: {
         title: 'Academic Programs - USA',
@@ -240,14 +382,19 @@ export const translations = {
     contact: {
         title: 'Contact Us',
         subtitle: "We're here to help. Reach out to us with any questions or inquiries.",
+        heroTitle: 'Contact us in your country',
         getInTouch: 'Get in Touch',
         formDescription: 'Fill out the form and our team will get back to you within 24 hours.',
         form: {
             title: 'Send us a Message',
             nameLabel: 'Full Name',
             namePlaceholder: 'John Doe',
+            countryLabel: 'Country',
+            countryPlaceholder: 'Select your country',
             emailLabel: 'Email Address',
             emailPlaceholder: 'you@example.com',
+            phoneLabel: 'Phone',
+            phonePlaceholder: '+1 555 123 4567',
             messageLabel: 'Message',
             messagePlaceholder: 'Tell us how we can help...',
             submit: 'Submit',
@@ -256,6 +403,24 @@ export const translations = {
             successMessage: 'Thank you for your message! We will get back to you shortly.',
             errorTitle: 'Error',
             errorMessage: 'Please correct the errors and try again.'
+        },
+        countries: {
+          usa: 'USA',
+          mexico: 'Mexico',
+          colombia: 'Colombia'
+        },
+        followUs: {
+          title: 'Follow Us',
+          facebook: 'Facebook',
+          instagram: 'Instagram',
+          tiktok: 'TikTok',
+          youtube: 'YouTube',
+          links: {
+            facebook: '#',
+            instagram: '#',
+            tiktok: '#',
+            youtube: '#'
+          }
         }
     },
     specialClass: {
@@ -335,6 +500,7 @@ export const translations = {
         p4: 'Our services are provided "as is." Instituto MEXCOL makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.',
         p5: 'In no event shall Instituto MEXCOL or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on our website.',
         p6: 'We reserve the right to modify these terms at any time. We will notify you of any changes by posting the new Terms and Conditions on this page. You are advised to review this page periodically for any changes.',
+        p7: 'of which can be executed within a period of 30 days.',
     },
     footer: {
       description: 'Empowering students worldwide with accessible, high-quality online education.',
@@ -351,8 +517,8 @@ export const translations = {
   },
   es: {
     metadata: {
-      title: 'Instituto MEXCOL - Educación Profesional en Línea',
-      description: 'Desbloquea tu potencial con nuestros cursos en línea dirigidos por expertos. Ingresa un cupón para acceder a clases especiales.',
+      title: 'Instituto Mex - Col - USA.',
+      description: 'Educación continua en medicina estética.',
     },
     navbar: {
       navLinks: [
@@ -360,32 +526,134 @@ export const translations = {
         { href: '/online-training', label: 'Formación en línea' },
         { href: '/congress', label: 'Congreso' },
         { href: '/about', label: 'Conócenos' },
+        { href: '/about#team', label: 'Directores & Staff Médico' },
         { href: '/contact', label: 'Contacto' },
       ],
       academicProgramsTitle: 'Programas Académicos',
       academicPrograms: [
         {
-          title: 'Programa USA',
-          href: '/academic-programs/usa',
-          description: 'Explora nuestras ofertas académicas disponibles en USA.',
-        },
-        {
-          title: 'Programa México',
-          href: '/academic-programs/mexico',
-          description: 'Descubre nuestros programas académicos en México.',
-        },
-        {
-          title: 'Programa Colombia',
-          href: '/academic-programs/colombia',
-          description: 'Explora nuestros programas académicos en Colombia.',
+          title: 'Ir a Programas Académicos',
+          href: '/academic-programs',
+          description: 'Mex • Col • USA – Programas Académicos',
         },
       ],
     },
     hero: {
-        title: 'Desbloquea tu Potencial con Instituto MEXCOL',
-        subtitle: 'Descubre un mundo de conocimiento con nuestros cursos en línea premium. Accede a contenido exclusivo y comienza tu viaje de aprendizaje hoy.',
+        title: 'Instituto Mex - Col - USA.',
+        subtitle: 'Educación continua en medicina estética.',
         explorePrograms: 'Explorar Programas',
         contactUs: 'Contáctanos',
+    },
+    home: {
+      hero: {
+        main: 'Instituto Mex - Col - USA.',
+        sub: 'Educación continua en medicina estética.',
+      },
+      onlineTraining: {
+        title: 'Formación en línea',
+        intro: 'Te invitamos a ser parte de esta experiencia única de aprendizaje, pensada para brindarte herramientas prácticas y aplicables de inmediato. Conéctate desde cualquier lugar y accede a contenidos exclusivos preparados por expertos.',
+        viewRecorded: 'Ver cursos Grabados',
+      },
+      featuredPrograms: {
+        title: 'Nuestros programas internacionales',
+        cards: [
+          {
+            country: 'USA',
+            course: 'Master class – 4 técnicas: toxina botulínica / ácido hialurónico / bioestimuladores / hilos PDO',
+            image: 'https://picsum.photos/seed/usa/600/400',
+          },
+          {
+            country: 'México',
+            course: 'Curso sueroterapia, quelación y principios de medicina regenerativa aplicada',
+            image: 'https://picsum.photos/seed/mex/600/400',
+          },
+          {
+            country: 'Colombia',
+            course: 'Curso con técnicas de rejuvenecimiento mini Lifting 3 puntos',
+            image: 'https://picsum.photos/seed/col/600/400',
+          },
+        ],
+        viewMore: 'Ver más programas',
+      },
+      testimonials: {
+        title: 'Lo que dicen nuestros alumnos',
+        sub: 'Tenemos más de 1.500 comentarios',
+        items: [
+          {
+            name: 'Mariana Florez',
+            location: 'Bogotá',
+            program: 'Master class en armonización facial con toxina botulínica / ácido hialurónico / bioestimuladores / hilos PDO',
+            text: 'Realicé el curso de armonización facial en Bogotá, Colombia, con el instituto MexCol. Fue una experiencia sumamente enriquecedora; este curso me permitió consolidar mis conocimientos y ganar mayor confianza al aplicar la teoría en mi práctica clínica con mis pacientes.',
+          },
+          {
+            name: 'Vicky Sanz',
+            location: 'CDMX',
+            program: 'Master class en armonización facial con toxina botulínica / ácido hialurónico / bioestimuladores / hilos PDO',
+            text: 'Súper recomendado el curso. Tomé el curso en la CDMX. El Dr. explica en forma detallada y comprensible los procedimientos, técnicas y dosificaciones. Se aseguran de que aprendas y comprendas los temas. Recomiendo ampliamente al instituto.',
+          },
+          {
+            name: 'Miguel Castillo',
+            location: 'CDMX',
+            program: 'Curso sueroterapia, quelación y principios de medicina regenerativa aplicada',
+            text: 'Realicé el curso de sueroterapia y quelación y lo recomiendo al 100%. Muy buen ponente y muy buen aprendizaje en medicina regenerativa y alternativa.',
+          },
+          {
+            name: 'Cinthia Funes',
+            location: 'Online',
+            program: 'Curso sueroterapia, quelación y principios de medicina regenerativa aplicada',
+            text: 'Tomé el curso online, muy completo y claro. Me agradó que nos enviaron los proveedores. Sin duda tomaría otros cursos con ellos: 100% confiables.',
+          },
+          {
+            name: 'Cristhian Ramirez',
+            location: 'Los Angeles',
+            program: 'Master class 4 técnicas: toxina botulínica / ácido hialurónico / bioestimuladores / hilos PDO',
+            text: 'Es un buen curso para iniciar en el medio de los filler.',
+          },
+        ],
+        viewAll: 'Ver todos los testimonios',
+        leaveReview: 'Dejar testimonio',
+        facebook: 'Facebook',
+        googleMx: 'Google MX',
+        googleUsa: 'Google USA',
+      },
+      brands: {
+        title: 'Confían en nosotros',
+        optional: 'Contamos con alianzas estratégicas con líderes en el sector.',
+        logos: [
+          'Allergan', 'Botox', 'Juvederm', 'Harmonyca', 'Belotero', 'Radiesse', 'Merz', 'Xeomeen', 'Alianza americana'
+        ],
+      },
+      contact: {
+        title: 'Contacto',
+        intro: 'Estamos en 3 países para atenderte',
+        viewLocations: 'Ver todas nuestras sedes',
+        locations: {
+          mx: {
+            title: 'Ciudad de México',
+            address: 'Av. Uno #18, Col. San Pedro de los Pinos, Benito Juárez, 03800',
+          },
+          usaOrlando: {
+            title: 'Orlando (Oficinas administrativas)',
+            address: '2180 Central Florida Parkway, Suite A2, Orlando, FL 32837',
+          },
+          usaHouston: {
+            title: 'Houston',
+            address: '2307 S Texas 6, Houston, TX 77077',
+          },
+          usaPresence: 'Presencia: Los Angeles y Miami',
+          coBogota: {
+            title: 'Bogotá (Oficina administrativa)',
+            address: 'Carrera 4 Este #14-04, Segundo piso, Sector La Esmeralda, Tocancipá, Cundinamarca',
+          },
+        },
+        followUs: {
+          title: 'Síguenos',
+          facebook: 'Facebook',
+          instagram: 'Instagram',
+          tiktok: 'TikTok',
+          youtube: 'YouTube',
+        }
+      }
     },
     whyChooseUs: {
         title: '¿Por Qué Elegirnos?',
@@ -451,22 +719,62 @@ export const translations = {
     },
     academicPrograms: {
         title: 'Programas Académicos',
-        subtitle: 'Elige tu región para descubrir programas académicos y certificaciones a medida diseñados para tu éxito.',
-        programs: [
-            {
-                name: 'USA',
-                description: 'Explora nuestros programas acreditados disponibles para estudiantes en los Estados Unidos.',
-            },
-            {
-                name: 'México',
-                description: 'Descubre la oferta académica diseñada específicamente para nuestros estudiantes en México.',
-            },
-            {
-                name: 'Colombia',
-                description: 'Conoce los programas y certificaciones que tenemos para profesionales en Colombia.',
-            },
-        ],
-        learnMore: 'Saber Más',
+        subtitle: 'Formación internacional con programas especializados, prácticos y actualizados en USA, México y Colombia.',
+        description: 'texto del parrafo de la seccion academica internacional',
+        heroHeadline: 'Mex • Col • USA – Programas Académicos',
+        heroSubheadline: 'Formación internacional con programas especializados, prácticos y actualizados en USA, México y Colombia.',
+        tabs: { usa: 'USA', mexico: 'México', colombia: 'Colombia' },
+        cta: 'Más información',
+        countries: {
+          usa: {
+            courses: [
+              {
+                title: 'Master class 4 técnicas “toxina botulinica/acido aluronico / bioestimuladores / hilos pdo”.',
+                description: 'Aprende técnicas avanzadas para armonización facial con resultados profesionales.',
+              },
+              {
+                title: 'Curso suero terapia quelación y principios de medicina regenerativa aplicada.',
+                description: 'Conoce la quelación y fundamentos de medicina regenerativa',
+              },
+              {
+                title: 'Curso técnico en Flebotomia.',
+                description: 'Capacitación práctica en técnicas de extracción de sangre seguras y profesionales.',
+              },
+            ],
+          },
+          mexico: {
+            courses: [
+              {
+                title: 'Curso de moderación perfilación y armonización facial con toxina botulinica/acido aluronico / bioestimuladores / hilos pdo.',
+                description: 'Aprende técnicas avanzadas para armonización facial con resultados naturales y precisos.',
+              },
+              {
+                title: 'Curso suero terapia quelación y principios de medicina regenerativa aplicada.',
+                description: 'Domina la quelación y los fundamentos de medicina regenerativa aplicados a tratamientos estéticos.',
+              },
+              {
+                title: 'Curso con técnicas de rejuvenecimiento mini Lifting 3 puntos.',
+                description: 'Capacitación en técnicas de lifting facial estratégicas para rejuvenecimiento visible y natural.',
+              },
+            ],
+          },
+          colombia: {
+            courses: [
+              {
+                title: 'Master class en moderación, perfilando y armonización facial con “toxina botulinica/acido aluronico / bioestimuladores / hilos pdo”.',
+                description: 'Aprende técnicas avanzadas de armonización facial para resultados profesionales y naturales.',
+              },
+              {
+                title: 'Curso suero terapia quelación y principios de medicina regenerativa aplicada online.',
+                description: 'Domina la quelación y fundamentos de medicina regenerativa desde cualquier lugar con modalidad online.',
+              },
+              {
+                title: 'Curso con técnicas de rejuvenecimiento mini Lifting 3 puntos.',
+                description: 'Capacitación práctica en técnicas de lifting facial estratégicas para un rejuvenecimiento visible.',
+              },
+            ],
+          },
+        },
     },
     programUSA: {
         title: 'Programas Académicos - USA',
@@ -542,7 +850,7 @@ export const translations = {
     },
     onlineTraining: {
         title: 'Formación en Línea',
-        subtitle: 'Accede a nuestra biblioteca de cursos en línea y aprende a tu propio ritmo con contenido de alta calidad creado por expertos.',
+        subtitle: 'Te invitamos a ser parte de esta experiencia única de aprendizaje, pensada para brindarte herramientas prácticas y aplicables de inmediato. Conéctate desde cualquier lugar y accede a contenidos exclusivos preparados por expertos.',
         categories: [
           {
             title: 'Cardiología',
@@ -589,14 +897,19 @@ export const translations = {
     contact: {
         title: 'Contacto',
         subtitle: "Estamos aquí para ayudar. Contáctanos con cualquier pregunta o consulta.",
+        heroTitle: 'Contáctanos en tu país',
         getInTouch: 'Ponte en Contacto',
         formDescription: 'Completa el formulario y nuestro equipo se pondrá en contacto contigo en 24 horas.',
         form: {
             title: 'Envíanos un Mensaje',
             nameLabel: 'Nombre Completo',
             namePlaceholder: 'Juan Pérez',
+            countryLabel: 'País',
+            countryPlaceholder: 'Selecciona tu país',
             emailLabel: 'Dirección de Correo Electrónico',
             emailPlaceholder: 'tu@ejemplo.com',
+            phoneLabel: 'Teléfono',
+            phonePlaceholder: '+52 55 1234 5678',
             messageLabel: 'Mensaje',
             messagePlaceholder: 'Dinos cómo podemos ayudarte...',
             submit: 'Enviar',
@@ -605,6 +918,24 @@ export const translations = {
             successMessage: '¡Gracias por tu mensaje! Nos pondremos en contacto contigo en breve.',
             errorTitle: 'Error',
             errorMessage: 'Por favor, corrige los errores e inténtalo de nuevo.'
+        },
+        countries: {
+          usa: 'USA',
+          mexico: 'México',
+          colombia: 'Colombia'
+        },
+        followUs: {
+          title: 'Síguenos',
+          facebook: 'Facebook',
+          instagram: 'Instagram',
+          tiktok: 'TikTok',
+          youtube: 'YouTube',
+          links: {
+            facebook: '#',
+            instagram: '#',
+            tiktok: '#',
+            youtube: '#'
+          }
         }
     },
     specialClass: {
@@ -684,6 +1015,7 @@ export const translations = {
         p4: 'Nuestros servicios se proporcionan "tal cual". El Instituto MEXCOL no ofrece garantías, expresas o implícitas, y por la presente renuncia y niega todas las demás garantías, incluidas, entre otras, las garantías implícitas o condiciones de comerciabilidad, idoneidad para un propósito particular o no infracción de la propiedad intelectual u otra violación de derechos.',
         p5: 'En ningún caso el Instituto MEXCOL o sus proveedores serán responsables de los daños (incluidos, entre otros, los daños por pérdida de datos o ganancias, o por interrupción del negocio) que surjan del uso o la imposibilidad de usar los materiales en nuestro sitio web.',
         p6: 'Nos reservamos el derecho de modificar estos términos en cualquier momento. Le notificaremos cualquier cambio publicando los nuevos Términos y Condiciones en esta página. Se le aconseja que revise esta página periódicamente para detectar cualquier cambio.',
+        p7: 'de los cuales se puede ejecutar en un plazo de 30 días.',
     },
     footer: {
       description: 'Empoderando a estudiantes de todo el mundo con educación en línea accesible y de alta calidad.',

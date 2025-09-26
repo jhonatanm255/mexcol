@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['var(--font-pt-sans)'],
-        headline: ['var(--font-pt-sans)'],
+        body: ['var(--font-inter)'],
+        headline: ['var(--font-inter)'],
       },
       colors: {
         background: 'rgb(var(--background) / <alpha-value>)',

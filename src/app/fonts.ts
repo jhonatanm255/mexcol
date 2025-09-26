@@ -1,8 +1,8 @@
-import { PT_Sans } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
-export const ptSans = PT_Sans({
-  weight: ['400', '700'],
+export const inter = Inter({
+  weight: ['400', '500', '600', '700', '800'],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-pt-sans',
+  variable: '--font-inter',
 });

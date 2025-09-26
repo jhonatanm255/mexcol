@@ -20,6 +20,7 @@ export default function TermsPage() {
             <p>{t.p4}</p>
             <p>{t.p5}</p>
             <p>{t.p6}</p>
+            <p>{t.p7}</p>
         </div>
       </div>
     </div>

@@ -1,10 +1,9 @@
 
 'use client';
-import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useLanguage } from '@/hooks/use-language';
 import { translations } from '@/lib/i18n';
 
@@ -12,70 +11,67 @@ export default function AcademicProgramsPage() {
   const { language } = useLanguage();
   const t = translations[language].academicPrograms;
 
-  const programs = [
-    {
-      name: t.programs[0].name,
-      description: t.programs[0].description,
-      image: 'https://picsum.photos/600/400?random=1',
-      dataAiHint: "USA flag",
-      href: '/academic-programs/usa',
-    },
-    {
-      name: t.programs[1].name,
-      description: t.programs[1].description,
-      image: 'https://picsum.photos/600/400?random=2',
-      dataAiHint: "Mexico landmark",
-      href: '/academic-programs/mexico',
-    },
-    {
-      name: t.programs[2].name,
-      description: t.programs[2].description,
-      image: 'https://picsum.photos/600/400?random=3',
-      dataAiHint: "Colombia landscape",
-      href: '/academic-programs/colombia',
-    },
+  const countries = [
+    { key: 'usa' as const, label: t.tabs.usa, image: 'https://picsum.photos/1200/400?random=21', ai: 'USA flag' },
+    { key: 'mexico' as const, label: t.tabs.mexico, image: 'https://picsum.photos/1200/400?random=22', ai: 'Mexico landmark' },
+    { key: 'colombia' as const, label: t.tabs.colombia, image: 'https://picsum.photos/1200/400?random=23', ai: 'Colombia landscape' },
   ];
 
   return (
-    <div className="container mx-auto px-4 py-16">
-      <section className="text-center">
-        <h1 className="font-headline text-4xl font-bold tracking-tight md:text-5xl">
-          {t.title}
-        </h1>
-        <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-          {t.subtitle}
-        </p>
+    <div className="container mx-auto px-4 py-10">
+      <section className="mb-10">
+        <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden">
+          <Image
+            src="https://picsum.photos/1600/500?random=20"
+            alt="Academic Programs hero"
+            data-ai-hint="Programs hero image"
+            width={1600}
+            height={500}
+            className="object-cover w-full h-full"
+          />
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+            <h1 className="font-headline text-white text-3xl md:text-4xl font-bold tracking-tight">{t.heroHeadline}</h1>
+            <p className="mt-3 max-w-3xl text-white/90">{t.heroSubheadline}</p>
+          </div>
+        </div>
+        <p className="mt-6 max-w-3xl mx-auto text-center text-muted-foreground">{t.description}</p>
       </section>
 
-      <section className="my-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {programs.map((program) => (
-            <Card key={program.name} className="overflow-hidden group">
-              <CardHeader className="p-0">
-                <div className="relative h-56 w-full">
-                  <Image
-                    src={program.image}
-                    alt={`Image for ${program.name} program`}
-                    data-ai-hint={program.dataAiHint}
-                    width={600}
-                    height={400}
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-              </CardHeader>
-              <CardContent className="p-6">
-                <CardTitle className="font-headline text-2xl">{program.name}</CardTitle>
-                <p className="mt-2 text-muted-foreground">{program.description}</p>
-                <Button asChild className="mt-4">
-                  <Link href={program.href}>
-                    {t.learnMore} <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+      <Tabs defaultValue={countries[0].key} className="w-full">
+        <div className="flex justify-center">
+          <TabsList>
+            {countries.map((c) => (
+              <TabsTrigger key={c.key} value={c.key}>{c.label}</TabsTrigger>
+            ))}
+          </TabsList>
         </div>
-      </section>
+
+        {countries.map((c) => {
+          const list = (t.countries as any)[c.key].courses as Array<{ title: string; description?: string }>; 
+          return (
+            <TabsContent key={c.key} value={c.key} className="mt-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {list.map((course) => (
+                  <Card key={course.title} className="h-full flex flex-col">
+                    <CardHeader>
+                      <CardTitle className="font-headline">{course.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="flex-1 flex flex-col">
+                      {course.description && (
+                        <p className="text-muted-foreground mb-4">{course.description}</p>
+                      )}
+                      <div className="mt-auto">
+                        <Button className="w-full">{t.cta}</Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+          );
+        })}
+      </Tabs>
     </div>
   );
 }

@@ -1,16 +1,13 @@
 
 'use client';
 import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import Link from 'next/link';
 import { useLanguage } from '@/hooks/use-language';
 import { translations } from '@/lib/i18n';
 
 export default function AboutPage() {
   const { language } = useLanguage();
   const t = translations[language].about;
-
-  const teamMembers = t.team;
 
   return (
     <div className="container mx-auto px-4 py-16">
@@ -37,27 +34,21 @@ export default function AboutPage() {
         </div>
       </section>
       
-      <section className="my-16">
-        <h2 className="font-headline text-3xl font-bold text-center mb-12">
+      <section className="my-16 text-center" id="team">
+        <h2 className="font-headline text-3xl font-bold mb-4">
           {t.teamTitle}
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member) => (
-            <Card key={member.name} className="text-center">
-              <CardHeader className="items-center">
-                <Avatar className="w-24 h-24 mb-4 border-4 border-primary/20">
-                  <AvatarImage src={`https://i.pravatar.cc/150?u=${member.name}`} alt={member.name} />
-                  <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
-                </Avatar>
-                <CardTitle className="font-headline">{member.name}</CardTitle>
-                <p className="text-sm text-primary font-medium">{member.role}</p>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground text-sm">{member.bio}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+          {language === 'es'
+            ? 'Conoce a detalle a nuestro equipo directivo y médico en la sección de Staff.'
+            : 'Learn more about our leadership and medical staff in the Staff section.'}
+        </p>
+        <Link
+          href="/staff"
+          className="inline-flex items-center rounded-md bg-primary px-6 py-3 text-white hover:opacity-90"
+        >
+          {language === 'es' ? 'Ver Directores y Staff' : 'View Directors & Staff'}
+        </Link>
       </section>
     </div>
   );

@@ -3,6 +3,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
+import PrefetchLink from '@/components/shared/PrefetchLink';
 import { usePathname } from 'next/navigation';
 import {
   GraduationCap,
@@ -32,6 +33,8 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useAuth } from '@/hooks/use-auth';
 import { useLanguage } from '@/hooks/use-language';
 import { translations } from '@/lib/i18n';
+import logo from '@/assets/Logo-USA-Verde.png';
+import Image from 'next/image';
 
 const ListItem = React.forwardRef<
   React.ElementRef<'a'>,
@@ -69,6 +72,9 @@ export function Navbar() {
   
   const navLinks = t.navLinks;
   const academicPrograms = t.academicPrograms;
+  const firstTwoLinks = navLinks.slice(0, 2);
+  const remainingLinks = navLinks.slice(2);
+  const staffLink = { href: '/staff', label: language === 'es' ? 'Staff' : 'Staff' };
 
   const handleLanguageChange = (lang: 'en' | 'es') => {
     setLanguage(lang);
@@ -88,15 +94,15 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <GraduationCap className="h-6 w-6 text-primary" />
+          <PrefetchLink href="/" className="mr-6 flex items-center space-x-2">
+            <Image className='h-12 w-12' src={logo} alt="Instituto MEXCOL"/>
             <span className="font-bold">Instituto MEXCOL</span>
-          </Link>
+          </PrefetchLink>
           <NavigationMenu>
             <NavigationMenuList>
-              {navLinks.map((link) => (
+              {firstTwoLinks.map((link) => (
                 <NavigationMenuItem key={link.href}>
-                  <Link href={link.href} passHref legacyBehavior>
+                  <Link href={link.href}>
                     <NavigationMenuLink
                       className={navigationMenuTriggerStyle()}
                       active={pathname === link.href}
@@ -107,23 +113,27 @@ export function Navbar() {
                 </NavigationMenuItem>
               ))}
               <NavigationMenuItem>
-                <NavigationMenuTrigger>
-                  {t.academicProgramsTitle}
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                    {academicPrograms.map((program) => (
-                      <ListItem
-                        key={program.title}
-                        title={program.title}
-                        href={program.href}
-                      >
-                        {program.description}
-                      </ListItem>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
+                <Link href="/academic-programs">
+                  <NavigationMenuLink
+                    className={navigationMenuTriggerStyle()}
+                    active={pathname === '/academic-programs'}
+                  >
+                    {t.academicProgramsTitle}
+                  </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
+              {[...remainingLinks, staffLink].map((link) => (
+                <NavigationMenuItem key={link.href}>
+                  <Link href={link.href}>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                      active={pathname === link.href}
+                    >
+                      {link.label}
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+              ))}
             </NavigationMenuList>
           </NavigationMenu>
         </div>
@@ -138,17 +148,17 @@ export function Navbar() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left">
-                <Link
+                <PrefetchLink
                   href="/"
                   className="flex items-center"
                   onClick={() => setOpen(false)}
                 >
                   <GraduationCap className="h-6 w-6 text-primary" />
                   <span className="ml-2 font-bold">Instituto MEXCOL</span>
-                </Link>
+                </PrefetchLink>
                 <div className="mt-6 flex flex-col space-y-2">
-                  {navLinks.map((item) => (
-                     <Link
+                  {firstTwoLinks.map((item) => (
+                    <PrefetchLink
                       key={item.href}
                       href={item.href}
                       onClick={() => setOpen(false)}
@@ -158,33 +168,40 @@ export function Navbar() {
                       )}
                     >
                       {item.label}
-                    </Link>
+                    </PrefetchLink>
                   ))}
-                   <div className="pt-2">
-                    <h3 className="px-2 text-xs font-semibold text-muted-foreground">{t.academicProgramsTitle}</h3>
-                     {academicPrograms.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          onClick={() => setOpen(false)}
-                          className={cn(
-                            'block rounded-md p-2 text-sm font-medium hover:bg-accent',
-                            pathname === item.href ? 'bg-accent' : ''
-                          )}
-                        >
-                           {item.title}
-                        </Link>
-                      ))}
-                   </div>
+                  <PrefetchLink
+                    href="/academic-programs"
+                    onClick={() => setOpen(false)}
+                    className={cn(
+                      'rounded-md p-2 text-sm font-medium hover:bg-accent',
+                      pathname === '/academic-programs' ? 'bg-accent' : ''
+                    )}
+                  >
+                    {t.academicProgramsTitle}
+                  </PrefetchLink>
+                  {[...remainingLinks, staffLink].map((item) => (
+                    <PrefetchLink
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                      className={cn(
+                        'rounded-md p-2 text-sm font-medium hover:bg-accent',
+                        pathname === item.href ? 'bg-accent' : ''
+                      )}
+                    >
+                      {item.label}
+                    </PrefetchLink>
+                  ))}
                 </div>
               </SheetContent>
             </Sheet>
           </div>
 
-          <Link href="/" className="flex items-center space-x-2 md:hidden">
+          <PrefetchLink href="/" className="flex items-center space-x-2 md:hidden">
             <GraduationCap className="h-6 w-6 text-primary" />
             <span className="font-bold">Instituto MEXCOL</span>
-          </Link>
+          </PrefetchLink>
 
           <nav className="flex items-center space-x-2">
             <DropdownMenu>
@@ -206,10 +223,10 @@ export function Navbar() {
 
             {user && isAdminPage && (
               <Button asChild variant="outline" size="sm">
-                <Link href="/admin/dashboard">
+                <PrefetchLink href="/admin/dashboard">
                   <UserCog className="mr-2 h-4 w-4" />
                   Admin Panel
-                </Link>
+                </PrefetchLink>
               </Button>
             )}
           </nav>

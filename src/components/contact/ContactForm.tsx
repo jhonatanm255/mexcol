@@ -26,7 +26,9 @@ import { translations } from "@/lib/i18n";
 
 const contactSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  country: z.string().min(2, { message: "Please select your country." }),
   email: z.string().email({ message: "Please enter a valid email." }),
+  phone: z.string().min(6, { message: "Please enter a valid phone number." }),
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 
@@ -42,7 +44,9 @@ export function ContactForm() {
     resolver: zodResolver(contactSchema),
     defaultValues: {
       name: "",
+      country: "",
       email: "",
+      phone: "",
       message: "",
     },
   });
@@ -51,7 +55,9 @@ export function ContactForm() {
     startTransition(async () => {
       const formData = new FormData();
       formData.append("name", data.name);
+      formData.append("country", data.country);
       formData.append("email", data.email);
+      formData.append("phone", data.phone);
       formData.append("message", data.message);
       formData.append("language", language);
 
@@ -96,12 +102,38 @@ export function ContactForm() {
             />
             <FormField
               control={form.control}
+              name="country"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t.countryLabel}</FormLabel>
+                  <FormControl>
+                    <Input placeholder={t.countryPlaceholder} {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
               name="email"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>{t.emailLabel}</FormLabel>
                   <FormControl>
                     <Input placeholder={t.emailPlaceholder} {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t.phoneLabel}</FormLabel>
+                  <FormControl>
+                    <Input placeholder={t.phonePlaceholder} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
