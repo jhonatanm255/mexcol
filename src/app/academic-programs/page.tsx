@@ -62,7 +62,7 @@ export default function AcademicProgramsPage() {
                         <p className="text-muted-foreground mb-4">{course.description}</p>
                       )}
                       <div className="mt-auto">
-                        <Button className="w-full">{t.cta}</Button>
+                        <Button className="w-full btn-modern">{t.cta}</Button>
                       </div>
                     </CardContent>
                   </Card>

@@ -51,10 +51,10 @@ export default function MexicoPage() {
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">{course.description}</p>
                  <div className="flex items-center text-sm text-muted-foreground">
-                  <CheckCircle className="mr-2 h-4 w-4 text-green-500" />
+                  <CheckCircle className="mr-2 h-4 w-4 text-primary" />
                   <span>{language === 'es' ? 'Duración' : 'Duration'}: {course.duration}</span>
                 </div>
-                <Button className="w-full">{t.enrollNow}</Button>
+                <Button className="w-full btn-modern">{t.enrollNow}</Button>
               </CardContent>
             </Card>
           ))}

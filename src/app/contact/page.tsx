@@ -74,7 +74,7 @@ export default function ContactPage() {
             {offices[selectedCountry].map((o) => (
               <Card key={`${selectedCountry}-${o.city}`} className="w-full">
                 <CardHeader>
-                  <CardTitle className="font-headline">{o.city}</CardTitle>
+                  <CardTitle className="font-headline text-foreground font-semibold">{o.city}</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3 text-sm text-muted-foreground">
                   <div className="flex items-start gap-3"><MapPin className="h-4 w-4 text-primary mt-1" /><span>{o.address}</span></div>

@@ -1,4 +1,3 @@
-
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -12,7 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { GraduationCap, BookOpen, Video, Award } from 'lucide-react';
+import { GraduationCap, BookOpen, Video, Award, Star, Quote, MapPin, Facebook } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Badge } from '@/components/ui/badge';
@@ -57,41 +56,45 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      <section className="relative h-[60vh] min-h-[500px] w-full">
-        <Image
-          src="https://picsum.photos/1920/1080"
-          alt="Students learning online"
-          data-ai-hint="online education"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background to-black/50" />
-        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-primary-foreground p-4">
-          <h1 className="font-headline text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
-            {th.hero.main}
-          </h1>
-          <p className="mt-4 max-w-3xl text-lg md:text-xl">
-            {th.hero.sub}
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-              <PrefetchLink href="/academic-programs">{t.hero.explorePrograms}</PrefetchLink>
-            </Button>
-            <Button asChild size="lg" variant="secondary">
-              <PrefetchLink href="/contact">{t.hero.contactUs}</PrefetchLink>
-            </Button>
+      <section className="relative h-[70vh] min-h-[600px] w-full section-modern">
+        {/* Organic background shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="organic-shape w-96 h-96 top-10 right-10 opacity-30"></div>
+          <div className="organic-shape w-80 h-80 bottom-20 left-10 opacity-20"></div>
+          <div className="organic-shape w-64 h-64 top-1/2 left-1/3 opacity-25"></div>
+        </div>
+        
+        <div className="hero-gradient absolute inset-0" />
+        
+        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center p-4">
+          <div className="max-w-5xl mx-auto">
+            <h1 className="font-headline text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl text-foreground mb-6">
+              {th.hero.main}
+            </h1>
+            <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground leading-relaxed">
+              {th.hero.sub}
+            </p>
+            <div className="mt-10 flex flex-wrap justify-center gap-6">
+              <Button asChild size="lg" className="btn-modern px-8 py-4 text-lg">
+                <PrefetchLink href="/academic-programs">{t.hero.explorePrograms}</PrefetchLink>
+              </Button>
+              <Button asChild size="lg" className="btn-modern px-8 py-4 text-lg">
+                <PrefetchLink href="/contact">{t.hero.contactUs}</PrefetchLink>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="online-training" className="py-16 md:py-24">
+      <section id="online-training" className="py-20 md:py-28 section-modern gradient-bg">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">{th.onlineTraining.title}</h2>
-            <p className="mt-4 text-lg text-muted-foreground">{th.onlineTraining.intro}</p>
-            <div className="mt-8">
-              <Button asChild size="lg">
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent mb-6">
+              {th.onlineTraining.title}
+            </h2>
+            <p className="mt-6 text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">{th.onlineTraining.intro}</p>
+            <div className="mt-10">
+              <Button asChild size="lg" className="btn-modern px-8 py-4 text-lg">
                 <PrefetchLink href="/online-training">{th.onlineTraining.viewRecorded}</PrefetchLink>
               </Button>
             </div>
@@ -99,143 +102,201 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="featured-programs" className="py-16 md:py-24 bg-secondary/30">
+      <section id="featured-programs" className="py-20 md:py-28 section-modern">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">{th.featuredPrograms.title}</h2>
+          <div className="text-center mb-16">
+            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent mb-4">
+              {th.featuredPrograms.title}
+            </h2>
           </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {th.featuredPrograms.cards.map((c, i) => (
-              <Card key={i} className="overflow-hidden">
-                <div className="relative h-48 w-full">
-                  <Image src={c.image} alt={c.country} fill className="object-cover" />
+              <Card key={i} className="modern-card overflow-hidden group">
+                <div className="relative h-56 w-full overflow-hidden">
+                  <Image src={c.image} alt={c.country} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-2">
-                    <Badge variant="secondary" className="text-xs">{c.country}</Badge>
+                <CardHeader className="pb-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <Badge variant="secondary" className="text-sm font-medium px-3 py-1">{c.country}</Badge>
                   </div>
-                  <CardTitle className="font-headline text-xl">{c.course}</CardTitle>
-                  <CardDescription></CardDescription>
+                  <CardTitle className="font-headline text-xl leading-tight">{c.course}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <Button asChild variant="outline" className="w-full">
-                    <PrefetchLink href="/academic-programs">{th.featuredPrograms.viewMore}</PrefetchLink>
-                  </Button>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{c.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
+          <div className="mt-12 text-center">
+            <Button asChild size="lg" className="btn-modern px-8 py-4 text-lg">
+              <PrefetchLink href="/academic-programs">{th.featuredPrograms.viewMore}</PrefetchLink>
+            </Button>
+          </div>
         </div>
       </section>
 
-      <section id="testimonials" className="py-16 md:py-24">
+      <section id="testimonials" className="py-20 md:py-28 section-modern gradient-bg">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">{th.testimonials.title}</h2>
-            <p className="mt-2 text-muted-foreground">{th.testimonials.sub}</p>
+          <div className="text-center mb-12">
+            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent mb-4">
+              {th.testimonials.title}
+            </h2>
+            <p className="text-lg text-muted-foreground">{th.testimonials.sub}</p>
           </div>
-          <div className="bg-muted rounded-lg p-4 md:px-14">
-            <Carousel opts={{ align: 'start', loop: false }}>
+          <div className="bg-white rounded-2xl p-6 md:px-16 shadow-lg">
+            <Carousel opts={{ align: 'start', loop: true }}>
               <CarouselContent>
                 {th.testimonials.items.map((it, idx) => (
-                  <CarouselItem key={idx} className="p-1 sm:basis-1/2 lg:basis-1/3">
-                    <Card className="h-full">
-                      <CardHeader className="pb-2">
-                        <CardTitle className="font-headline text-base">{it.name} · {it.location}</CardTitle>
-                        <CardDescription className="text-xs">{it.program}</CardDescription>
+                  <CarouselItem key={idx} className="p-2 sm:basis-1/2 lg:basis-1/3">
+                    <Card className="h-full border-0 shadow-sm hover:shadow-md transition-shadow duration-300 relative bg-white">
+                      {/* Quote icon */}
+                      <Quote className="absolute top-4 right-4 h-8 w-8 text-primary/20" />
+                      
+                      <CardHeader className="pb-3">
+                        <div className="flex items-center gap-1 mb-2">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                          ))}
+                        </div>
+                        <CardTitle className="font-headline text-base text-foreground font-semibold">{it.name} · {it.location}</CardTitle>
+                        <CardDescription className="text-xs font-medium text-primary">{it.program}</CardDescription>
                       </CardHeader>
                       <CardContent className="pt-0">
-                        <p className="text-sm leading-relaxed">{it.text}</p>
+                        <p className="text-sm leading-relaxed text-muted-foreground italic">{it.text}</p>
                       </CardContent>
                     </Card>
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
             </Carousel>
-            <div className="mt-6 flex flex-wrap gap-3 justify-center">
-              <Button asChild size="sm" variant="outline"><PrefetchLink href="#">{th.testimonials.viewAll}</PrefetchLink></Button>
-              <Button asChild size="sm" variant="outline"><PrefetchLink href="#">{th.testimonials.leaveReview}</PrefetchLink></Button>
-              <Button asChild size="sm" variant="outline"><PrefetchLink href="#">{th.testimonials.facebook}</PrefetchLink></Button>
-              <Button asChild size="sm" variant="outline"><PrefetchLink href="#">{th.testimonials.googleMx}</PrefetchLink></Button>
-              <Button asChild size="sm" variant="outline"><PrefetchLink href="#">{th.testimonials.googleUsa}</PrefetchLink></Button>
+            <div className="mt-8 flex flex-wrap gap-3 justify-center">
+              <Button asChild size="sm" variant="outline" className="hover:bg-blue-50 focus-modern border">
+                <PrefetchLink href="#" className="flex items-center gap-2">
+                  <Facebook className="h-4 w-4 text-blue-600" />
+                  {th.testimonials.facebook}
+                </PrefetchLink>
+              </Button>
+              <Button asChild size="sm" variant="outline" className="hover:bg-red-50 focus-modern border">
+                <PrefetchLink href="#" className="flex items-center gap-2">
+                  <svg className="h-4 w-4" viewBox="0 0 24 24">
+                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                  </svg>
+                  {th.testimonials.googleMx}
+                </PrefetchLink>
+              </Button>
+              <Button asChild size="sm" variant="outline" className="hover:bg-red-50 focus-modern border">
+                <PrefetchLink href="#" className="flex items-center gap-2">
+                  <svg className="h-4 w-4" viewBox="0 0 24 24">
+                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                  </svg>
+                  {th.testimonials.googleUsa}
+                </PrefetchLink>
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="brands" className="py-16 md:py-24 bg-secondary/30">
+      <section id="brands" className="py-20 md:py-28 section-modern">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">{th.brands.title}</h2>
-            <p className="mt-2 text-muted-foreground">{th.brands.optional}</p>
+          <div className="text-center mb-12">
+            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent mb-4">
+              {th.brands.title}
+            </h2>
+            <p className="text-lg text-muted-foreground">{th.brands.optional}</p>
           </div>
           <BrandMarquee />
         </div>
       </section>
 
-      <section id="contact-home" className="py-16 md:py-24">
+      <section id="contact-home" className="py-20 md:py-28 section-modern gradient-bg">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">{th.contact.title}</h2>
-            <p className="mt-2 text-muted-foreground">{th.contact.intro}</p>
-            <div className="mt-6">
-              <Button asChild><PrefetchLink href="/contact">{th.contact.viewLocations}</PrefetchLink></Button>
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent mb-4">
+              {th.contact.title}
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8">{th.contact.intro}</p>
+            <Button asChild className="btn-modern px-8 py-4 text-lg">
+              <PrefetchLink href="/contact">{th.contact.viewLocations}</PrefetchLink>
+            </Button>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="modern-card hover:shadow-lg transition-all duration-300">
               <CardHeader>
-                <CardTitle>{th.contact.locations.mx.title}</CardTitle>
+                <div className="text-center">
+                  <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
+                  <CardTitle className="text-primary">{th.contact.locations.mx.title}</CardTitle>
+                </div>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">{th.contact.locations.mx.address}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{th.contact.locations.mx.address}</p>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="modern-card hover:shadow-lg transition-all duration-300">
               <CardHeader>
-                <CardTitle>{th.contact.locations.usaOrlando.title}</CardTitle>
+                <div className="text-center">
+                  <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
+                  <CardTitle className="text-primary">{th.contact.locations.usaOrlando.title}</CardTitle>
+                </div>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">{th.contact.locations.usaOrlando.address}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{th.contact.locations.usaOrlando.address}</p>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="modern-card hover:shadow-lg transition-all duration-300">
               <CardHeader>
-                <CardTitle>{th.contact.locations.usaHouston.title}</CardTitle>
+                <div className="text-center">
+                  <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
+                  <CardTitle className="text-primary">{th.contact.locations.usaHouston.title}</CardTitle>
+                </div>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">{th.contact.locations.usaHouston.address}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{th.contact.locations.usaHouston.address}</p>
                 <p className="mt-2 text-xs text-muted-foreground">{th.contact.locations.usaPresence}</p>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="modern-card hover:shadow-lg transition-all duration-300">
               <CardHeader>
-                <CardTitle>{th.contact.locations.coBogota.title}</CardTitle>
+                <div className="text-center">
+                  <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
+                  <CardTitle className="text-primary">{th.contact.locations.coBogota.title}</CardTitle>
+                </div>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">{th.contact.locations.coBogota.address}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{th.contact.locations.coBogota.address}</p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
-      <section id="coupon" className="bg-primary py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-headline text-3xl text-white font-bold tracking-tight sm:text-4xl">
-              {t.coupon.title}
-            </h2>
-            <p className="mt-4 text-lg text-gray-200">
-              {t.coupon.subtitle}
-            </p>
-            <div className="mt-8">
-              <CouponForm />
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+     <section id="coupon" className="py-20 md:py-28 section-modern relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+       {/* Background shapes */}
+       <div className="absolute inset-0 overflow-hidden">
+         <div className="organic-shape w-96 h-96 top-10 left-10 opacity-10"></div>
+         <div className="organic-shape w-80 h-80 bottom-10 right-10 opacity-5"></div>
+       </div>
+       
+       <div className="container mx-auto px-4 relative z-10">
+         <div className="mx-auto max-w-3xl text-center">
+           <h2 className="font-headline text-4xl text-white font-bold tracking-tight sm:text-5xl mb-6">
+             {t.coupon.title}
+           </h2>
+           <p className="mt-6 text-xl text-gray-200 leading-relaxed">
+             {t.coupon.subtitle}
+           </p>
+           <div className="mt-10">
+             <CouponForm />
+           </div>
+         </div>
+       </div>
+     </section>
+   </div>
+ );
 }

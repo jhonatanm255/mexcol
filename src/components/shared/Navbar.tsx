@@ -28,6 +28,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
+  navigationMenuLinkStyle,
+  navigationMenuContainerStyle,
 } from '@/components/ui/navigation-menu';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useAuth } from '@/hooks/use-auth';
@@ -63,18 +65,100 @@ const ListItem = React.forwardRef<
 });
 ListItem.displayName = 'ListItem';
 
+// Componente para el underline deslizante
+function SlidingUnderline({ 
+  activeIndex, 
+  hoverIndex, 
+  containerRef 
+}: { 
+  activeIndex: number; 
+  hoverIndex: number | null;
+  containerRef: React.RefObject<HTMLDivElement> 
+}) {
+  const [activeUnderlineStyle, setActiveUnderlineStyle] = React.useState<React.CSSProperties>({});
+  const [hoverUnderlineStyle, setHoverUnderlineStyle] = React.useState<React.CSSProperties>({});
+
+  React.useEffect(() => {
+    if (containerRef.current && activeIndex >= 0) {
+      const container = containerRef.current;
+      const items = container.querySelectorAll('[data-nav-item]');
+      const activeItem = items[activeIndex] as HTMLElement;
+      
+      if (activeItem) {
+        const containerRect = container.getBoundingClientRect();
+        const itemRect = activeItem.getBoundingClientRect();
+        
+        setActiveUnderlineStyle({
+          left: itemRect.left - containerRect.left,
+          width: itemRect.width,
+          transition: 'all 0.3s ease-out'
+        });
+      }
+    }
+  }, [activeIndex, containerRef]);
+
+  React.useEffect(() => {
+    if (containerRef.current && hoverIndex !== null && hoverIndex >= 0) {
+      const container = containerRef.current;
+      const items = container.querySelectorAll('[data-nav-item]');
+      const hoverItem = items[hoverIndex] as HTMLElement;
+      
+      if (hoverItem) {
+        const containerRect = container.getBoundingClientRect();
+        const itemRect = hoverItem.getBoundingClientRect();
+        
+        setHoverUnderlineStyle({
+          left: itemRect.left - containerRect.left,
+          width: itemRect.width,
+          transition: 'all 0.2s ease-out'
+        });
+      }
+    } else {
+      setHoverUnderlineStyle({ opacity: 0 });
+    }
+  }, [hoverIndex, containerRef]);
+
+  return (
+    <>
+      {/* Underline activo */}
+      {activeIndex >= 0 && (
+        <div
+          className="absolute bottom-0 h-1 bg-primary rounded-full"
+          style={activeUnderlineStyle}
+        />
+      )}
+      {/* Underline hover */}
+      <div
+        className="absolute bottom-0 h-1 bg-primary/40 rounded-full"
+        style={hoverUnderlineStyle}
+      />
+    </>
+  );
+}
+
 export function Navbar() {
   const [open, setOpen] = React.useState(false);
+  const [hoverIndex, setHoverIndex] = React.useState<number | null>(null);
   const { user, loading } = useAuth();
   const pathname = usePathname();
   const { language, setLanguage } = useLanguage();
   const t = translations[language].navbar;
+  const navContainerRef = React.useRef<HTMLDivElement>(null);
   
   const navLinks = t.navLinks;
   const academicPrograms = t.academicPrograms;
   const firstTwoLinks = navLinks.slice(0, 2);
   const remainingLinks = navLinks.slice(2);
-  const staffLink = { href: '/staff', label: language === 'es' ? 'Staff' : 'Staff' };
+
+  // Crear array de todos los enlaces para el underline (sin staff)
+  const allNavLinks = [
+    ...firstTwoLinks,
+    { href: '/academic-programs', label: t.academicProgramsTitle },
+    ...remainingLinks
+  ];
+
+  // Encontrar el índice del enlace activo
+  const activeIndex = allNavLinks.findIndex(link => pathname === link.href);
 
   const handleLanguageChange = (lang: 'en' | 'es') => {
     setLanguage(lang);
@@ -96,45 +180,34 @@ export function Navbar() {
         <div className="mr-4 hidden md:flex">
           <PrefetchLink href="/" className="mr-6 flex items-center space-x-2">
             <Image className='h-12 w-12' src={logo} alt="Instituto MEXCOL"/>
-            <span className="font-bold">Instituto MEXCOL</span>
-          </PrefetchLink>
+{/*             <span className="font-bold">Instituto MEXCOL</span>
+ */}          </PrefetchLink>
           <NavigationMenu>
-            <NavigationMenuList>
-              {firstTwoLinks.map((link) => (
-                <NavigationMenuItem key={link.href}>
-                  <Link href={link.href}>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                      active={pathname === link.href}
-                    >
-                      {link.label}
+            <div ref={navContainerRef} className={cn(navigationMenuContainerStyle(), "relative")}>
+              <NavigationMenuList>
+                {allNavLinks.map((link, index) => (
+                  <NavigationMenuItem key={link.href}>
+                    <NavigationMenuLink asChild>
+                      <Link
+                        href={link.href}
+                        className={navigationMenuLinkStyle()}
+                        data-active={pathname === link.href}
+                        data-nav-item
+                        onMouseEnter={() => setHoverIndex(index)}
+                        onMouseLeave={() => setHoverIndex(null)}
+                      >
+                        {link.label}
+                      </Link>
                     </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-              ))}
-              <NavigationMenuItem>
-                <Link href="/academic-programs">
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}
-                    active={pathname === '/academic-programs'}
-                  >
-                    {t.academicProgramsTitle}
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              {[...remainingLinks, staffLink].map((link) => (
-                <NavigationMenuItem key={link.href}>
-                  <Link href={link.href}>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                      active={pathname === link.href}
-                    >
-                      {link.label}
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
+                  </NavigationMenuItem>
+                ))}
+              </NavigationMenuList>
+              <SlidingUnderline 
+                activeIndex={activeIndex} 
+                hoverIndex={hoverIndex}
+                containerRef={navContainerRef} 
+              />
+            </div>
           </NavigationMenu>
         </div>
 
@@ -147,14 +220,14 @@ export function Navbar() {
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left">
+              <SheetContent side="left" className="bg-gradient-to-b from-background to-muted/30">
                 <PrefetchLink
                   href="/"
                   className="flex items-center"
                   onClick={() => setOpen(false)}
                 >
                   <GraduationCap className="h-6 w-6 text-primary" />
-                  <span className="ml-2 font-bold">Instituto MEXCOL</span>
+                  <span className="ml-2 font-bold text-foreground">Instituto MEXCOL</span>
                 </PrefetchLink>
                 <div className="mt-6 flex flex-col space-y-2">
                   {firstTwoLinks.map((item) => (
@@ -163,8 +236,9 @@ export function Navbar() {
                       href={item.href}
                       onClick={() => setOpen(false)}
                       className={cn(
-                        'rounded-md p-2 text-sm font-medium hover:bg-accent',
-                        pathname === item.href ? 'bg-accent' : ''
+                        'rounded-lg p-3 text-sm font-medium transition-colors duration-200',
+                        'hover:bg-primary/10 hover:text-primary',
+                        pathname === item.href ? 'bg-primary/15 text-primary font-semibold' : 'text-foreground'
                       )}
                     >
                       {item.label}
@@ -174,20 +248,22 @@ export function Navbar() {
                     href="/academic-programs"
                     onClick={() => setOpen(false)}
                     className={cn(
-                      'rounded-md p-2 text-sm font-medium hover:bg-accent',
-                      pathname === '/academic-programs' ? 'bg-accent' : ''
+                      'rounded-lg p-3 text-sm font-medium transition-colors duration-200',
+                      'hover:bg-primary/10 hover:text-primary',
+                      pathname === '/academic-programs' ? 'bg-primary/15 text-primary font-semibold' : 'text-foreground'
                     )}
                   >
                     {t.academicProgramsTitle}
                   </PrefetchLink>
-                  {[...remainingLinks, staffLink].map((item) => (
+                  {remainingLinks.map((item) => (
                     <PrefetchLink
                       key={item.href}
                       href={item.href}
                       onClick={() => setOpen(false)}
                       className={cn(
-                        'rounded-md p-2 text-sm font-medium hover:bg-accent',
-                        pathname === item.href ? 'bg-accent' : ''
+                        'rounded-lg p-3 text-sm font-medium transition-colors duration-200',
+                        'hover:bg-primary/10 hover:text-primary',
+                        pathname === item.href ? 'bg-primary/15 text-primary font-semibold' : 'text-foreground'
                       )}
                     >
                       {item.label}
@@ -206,16 +282,24 @@ export function Navbar() {
           <nav className="flex items-center space-x-2">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Globe className="h-5 w-5" />
+                <Button variant="ghost" size="icon" className="hover:bg-primary/10">
+                  <span className="text-lg">{language === 'es' ? '🇪🇸' : '🇺🇸'}</span>
                   <span className="sr-only">Change language</span>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => handleLanguageChange('es')}>
+              <DropdownMenuContent align="end" className="bg-white border border-border/50 shadow-lg">
+                <DropdownMenuItem 
+                  onClick={() => handleLanguageChange('es')}
+                  className="hover:bg-primary/5 focus:bg-primary/5"
+                >
+                  <span className="mr-2">🇪🇸</span>
                   Español
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => handleLanguageChange('en')}>
+                <DropdownMenuItem 
+                  onClick={() => handleLanguageChange('en')}
+                  className="hover:bg-primary/5 focus:bg-primary/5"
+                >
+                  <span className="mr-2">🇺🇸</span>
                   English
                 </DropdownMenuItem>
               </DropdownMenuContent>

@@ -11,7 +11,7 @@ export const translations = {
         { href: '/online-training', label: 'Online Training' },
         { href: '/congress', label: 'Congress' },
         { href: '/about', label: 'About Us' },
-        { href: '/about#team', label: 'Directors & Medical Staff' },
+        { href: '/staff', label: 'Directors & Medical Staff' },
         { href: '/contact', label: 'Contact' },
       ],
       academicProgramsTitle: 'Academic Programs',
@@ -45,16 +45,19 @@ export const translations = {
           {
             country: 'USA',
             course: 'Master Class – 4 Techniques: Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads',
+            description: 'Learn advanced facial harmonization techniques with professional results through hands-on training.',
             image: 'https://picsum.photos/seed/usa/600/400',
           },
           {
             country: 'Mexico',
             course: 'Intravenous Therapy, Chelation, and Principles of Applied Regenerative Medicine',
+            description: 'Explore chelation therapy and the fundamentals of regenerative medicine in clinical practice.',
             image: 'https://picsum.photos/seed/mex/600/400',
           },
           {
             country: 'Colombia',
             course: 'Mini 3-Point Rejuvenation Lifting Techniques',
+            description: 'Master strategic facial lifting techniques for visible, natural rejuvenation results.',
             image: 'https://picsum.photos/seed/col/600/400',
           },
         ],
@@ -178,29 +181,75 @@ export const translations = {
     about: {
         title: 'About Us',
         subtitle: 'Our mission is to bridge knowledge gaps through innovative and accessible online education, connecting experts with learners across the globe.',
-        teamTitle: 'Directors & Medical Staff',
-        team: [
-            {
-                name: 'Dr. Evelyn Reed',
-                role: 'Founder & CEO',
-                bio: 'With over 20 years in education technology, Dr. Reed leads our mission to make learning accessible to all.',
+        hero: {
+            title: 'About Instituto MEXCOL',
+            subtitle: 'Leading the future of aesthetic medicine education worldwide',
+            cta: 'Explore Our Programs'
+        },
+        whoWeAre: {
+            title: 'Who We Are',
+            content: 'Instituto MEXCOL is a premier educational institution dedicated to advancing aesthetic medicine through comprehensive, hands-on training programs. We bring together world-class experts and cutting-edge techniques to provide students with the knowledge and skills needed to excel in this rapidly evolving field.'
+        },
+        endorsements: {
+            title: 'Industry Recognition',
+            items: [
+                'Accredited by international medical education boards',
+                'Recognized by leading aesthetic medicine associations',
+                'Featured in top medical journals and publications',
+                'Trusted by over 5,000 medical professionals worldwide'
+            ]
+        },
+        missionVision: {
+            title: 'Our Mission & Vision',
+            mission: {
+                title: 'Our Mission',
+                content: 'To provide exceptional education in aesthetic medicine through innovative teaching methods, practical training, and continuous support, empowering medical professionals to deliver safe, effective, and transformative treatments to their patients.'
             },
-            {
-                name: 'Juan Carlos Pérez',
-                role: 'Head of Academics (LATAM)',
-                bio: 'Specializing in curriculum development for Spanish-speaking regions, ensuring cultural and academic relevance.',
-            },
-            {
-                name: 'Michael Chen',
-                role: 'Chief Technology Officer',
-                bio: 'The architect of our robust learning platform, Michael is passionate about seamless user experiences.',
-            },
-            {
-                name: 'Sofia Gomez',
-                role: 'Director of Medical Programs',
-                bio: 'A licensed physician and educator, Dr. Gomez oversees all medical and healthcare-related programs.',
-            },
-        ]
+            vision: {
+                title: 'Our Vision',
+                content: 'To be the global leader in aesthetic medicine education, setting the standard for excellence in training, research, and professional development while fostering a community of skilled practitioners dedicated to advancing the field.'
+            }
+        },
+        impact: {
+            title: 'Our Impact',
+            metrics: [
+                { number: '5,000+', label: 'Medical Professionals Trained' },
+                { number: '15+', label: 'Years of Experience' },
+                { number: '3', label: 'Countries Served' }
+            ]
+        },
+        team: {
+            title: 'Meet Our Team',
+            content: 'Our diverse team of medical professionals and educators brings together decades of experience in aesthetic medicine, ensuring that every student receives world-class training and support.',
+            cta: 'Meet Our Directors & Staff',
+            members: [
+                {
+                    name: 'Dr. Evelyn Reed',
+                    role: 'Founder & CEO',
+                    bio: 'With over 20 years in education technology, Dr. Reed leads our mission to make learning accessible to all.',
+                },
+                {
+                    name: 'Juan Carlos Pérez',
+                    role: 'Head of Academics (LATAM)',
+                    bio: 'Specializing in curriculum development for Spanish-speaking regions, ensuring cultural and academic relevance.',
+                },
+                {
+                    name: 'Michael Chen',
+                    role: 'Chief Technology Officer',
+                    bio: 'The architect of our robust learning platform, Michael is passionate about seamless user experiences.',
+                },
+                {
+                    name: 'Sofia Gomez',
+                    role: 'Director of Medical Programs',
+                    bio: 'A licensed physician and educator, Dr. Gomez oversees all medical and healthcare-related programs.',
+                },
+            ]
+        },
+        finalCta: {
+            title: 'Ready to Start Your Journey?',
+            button: 'View Academic Programs'
+        },
+        teamTitle: 'Directors & Medical Staff'
     },
     academicPrograms: {
         title: 'Academic Programs',
@@ -526,7 +575,7 @@ export const translations = {
         { href: '/online-training', label: 'Formación en línea' },
         { href: '/congress', label: 'Congreso' },
         { href: '/about', label: 'Conócenos' },
-        { href: '/about#team', label: 'Directores & Staff Médico' },
+        { href: '/staff', label: 'Directores & Staff Médico' },
         { href: '/contact', label: 'Contacto' },
       ],
       academicProgramsTitle: 'Programas Académicos',
@@ -560,16 +609,19 @@ export const translations = {
           {
             country: 'USA',
             course: 'Master class – 4 técnicas: toxina botulínica / ácido hialurónico / bioestimuladores / hilos PDO',
+            description: 'Aprende técnicas avanzadas de armonización facial con resultados profesionales a través de capacitación práctica.',
             image: 'https://picsum.photos/seed/usa/600/400',
           },
           {
             country: 'México',
             course: 'Curso sueroterapia, quelación y principios de medicina regenerativa aplicada',
+            description: 'Explora la terapia de quelación y los fundamentos de medicina regenerativa en la práctica clínica.',
             image: 'https://picsum.photos/seed/mex/600/400',
           },
           {
             country: 'Colombia',
             course: 'Curso con técnicas de rejuvenecimiento mini Lifting 3 puntos',
+            description: 'Domina las técnicas de lifting facial estratégicas para resultados de rejuvenecimiento visibles y naturales.',
             image: 'https://picsum.photos/seed/col/600/400',
           },
         ],
@@ -693,29 +745,75 @@ export const translations = {
     about: {
         title: 'Conócenos',
         subtitle: 'Nuestra misión es cerrar brechas de conocimiento a través de una educación en línea innovadora y accesible, conectando a expertos con estudiantes de todo el mundo.',
-        teamTitle: 'Directores & Staff Médico',
-        team: [
-            {
-                name: 'Dr. Evelyn Reed',
-                role: 'Fundadora & CEO',
-                bio: 'Con más de 20 años en tecnología educativa, la Dra. Reed lidera nuestra misión de hacer que el aprendizaje sea accesible para todos.',
+        hero: {
+            title: 'Acerca del Instituto MEXCOL',
+            subtitle: 'Liderando el futuro de la educación en medicina estética a nivel mundial',
+            cta: 'Explorar Nuestros Programas'
+        },
+        whoWeAre: {
+            title: 'Quiénes Somos',
+            content: 'El Instituto MEXCOL es una institución educativa de primer nivel dedicada a avanzar en la medicina estética a través de programas de capacitación integrales y prácticos. Reunimos a expertos de clase mundial y técnicas de vanguardia para brindar a los estudiantes el conocimiento y las habilidades necesarias para sobresalir en este campo en rápida evolución.'
+        },
+        endorsements: {
+            title: 'Reconocimiento de la Industria',
+            items: [
+                'Acreditado por juntas internacionales de educación médica',
+                'Reconocido por las principales asociaciones de medicina estética',
+                'Destacado en las principales revistas y publicaciones médicas',
+                'Confiable para más de 5,000 profesionales médicos en todo el mundo'
+            ]
+        },
+        missionVision: {
+            title: 'Nuestra Misión y Visión',
+            mission: {
+                title: 'Nuestra Misión',
+                content: 'Proporcionar educación excepcional en medicina estética a través de métodos de enseñanza innovadores, capacitación práctica y apoyo continuo, empoderando a los profesionales médicos para brindar tratamientos seguros, efectivos y transformadores a sus pacientes.'
             },
-            {
-                name: 'Juan Carlos Pérez',
-                role: 'Director Académico (LATAM)',
-                bio: 'Especializado en el desarrollo de planes de estudio para regiones de habla hispana, asegurando la relevancia cultural y académica.',
-            },
-            {
-                name: 'Michael Chen',
-                role: 'Director de Tecnología',
-                bio: 'El arquitecto de nuestra robusta plataforma de aprendizaje, Michael es un apasionado de las experiencias de usuario fluidas.',
-            },
-            {
-                name: 'Sofia Gomez',
-                role: 'Directora de Programas Médicos',
-                bio: 'Médica y educadora licenciada, la Dra. Gómez supervisa todos los programas médicos y relacionados con la atención médica.',
-            },
-        ]
+            vision: {
+                title: 'Nuestra Visión',
+                content: 'Ser el líder global en educación de medicina estética, estableciendo el estándar de excelencia en capacitación, investigación y desarrollo profesional, mientras fomentamos una comunidad de practicantes calificados dedicados a avanzar en el campo.'
+            }
+        },
+        impact: {
+            title: 'Nuestro Impacto',
+            metrics: [
+                { number: '5,000+', label: 'Profesionales Médicos Capacitados' },
+                { number: '15+', label: 'Años de Experiencia' },
+                { number: '3', label: 'Países Atendidos' }
+            ]
+        },
+        team: {
+            title: 'Conoce a Nuestro Equipo',
+            content: 'Nuestro diverso equipo de profesionales médicos y educadores reúne décadas de experiencia en medicina estética, asegurando que cada estudiante reciba capacitación y apoyo de clase mundial.',
+            cta: 'Conoce a Nuestros Directores y Staff',
+            members: [
+                {
+                    name: 'Dr. Evelyn Reed',
+                    role: 'Fundadora & CEO',
+                    bio: 'Con más de 20 años en tecnología educativa, la Dra. Reed lidera nuestra misión de hacer que el aprendizaje sea accesible para todos.',
+                },
+                {
+                    name: 'Juan Carlos Pérez',
+                    role: 'Director Académico (LATAM)',
+                    bio: 'Especializado en el desarrollo de planes de estudio para regiones de habla hispana, asegurando la relevancia cultural y académica.',
+                },
+                {
+                    name: 'Michael Chen',
+                    role: 'Director de Tecnología',
+                    bio: 'El arquitecto de nuestra robusta plataforma de aprendizaje, Michael es un apasionado de las experiencias de usuario fluidas.',
+                },
+                {
+                    name: 'Sofia Gomez',
+                    role: 'Directora de Programas Médicos',
+                    bio: 'Médica y educadora licenciada, la Dra. Gómez supervisa todos los programas médicos y relacionados con la atención médica.',
+                },
+            ]
+        },
+        finalCta: {
+            title: '¿Listo para Comenzar tu Viaje?',
+            button: 'Ver Programas Académicos'
+        },
+        teamTitle: 'Directores & Staff Médico'
     },
     academicPrograms: {
         title: 'Programas Académicos',

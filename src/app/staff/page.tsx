@@ -18,8 +18,13 @@ export default function StaffPage() {
   const lang: Lang = language === "es" ? "es" : "en";
 
   const heroTitle: Record<Lang, string> = {
-    es: "Conoce a nuestros líderes",
-    en: "Meet Our Leaders",
+    es: "Directores y Staff Médico",
+    en: "Directors and Medical Staff",
+  };
+
+  const teamIntro: Record<Lang, string> = {
+    es: "Nuestro equipo de directores y especialistas médicos es el pilar de nuestra institución. Contamos con médicos estéticos, cirujanos plásticos, ingenieros biomédicos, todos líderes en investigación y práctica estética. Su experiencia garantiza la calidad de cada programa y permite transmitir las últimas actualizaciones en técnicas médicas y de belleza.",
+    en: "Our team of directors and medical specialists is the backbone of our institute. We have aesthetic doctors, plastic surgeons, and biomedical engineers—all leaders in research and aesthetic practice. Their expertise ensures the quality of each program and allows us to deliver the latest updates in medical and beauty techniques.",
   };
 
   const directorGeneral: Record<Lang, Person> = {
@@ -154,6 +159,13 @@ export default function StaffPage() {
         </div>
       </section>
 
+      {/* Introducción del equipo */}
+      <section className="mb-12 text-center">
+        <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          {teamIntro[lang]}
+        </p>
+      </section>
+
       {/* Destacados */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         {[directorGeneral[lang], medicalDirector[lang]].map((p) => (
@@ -184,10 +196,10 @@ export default function StaffPage() {
         ))}
       </section>
 
-      {/* Ponentes / Staff */}
+      {/* Especialistas Médicos */}
       <section>
         <h2 className="font-headline text-2xl font-semibold mb-6">
-          {lang === "es" ? "Ponentes / Staff" : "Speakers / Staff"}
+          {lang === "es" ? "Especialistas Médicos" : "Medical Specialists"}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {speakers[lang].map((s) => (
