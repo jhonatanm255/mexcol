@@ -40,7 +40,11 @@ export default function DashboardPage() {
             {t.welcome.replace('{email}', user.email || '')}
           </p>
         </div>
-        <Button variant="outline" onClick={logout}>
+        <Button 
+          variant="destructive" 
+          onClick={logout}
+          className="border-none bg-red-600 hover:bg-red-700 text-white"
+        >
           <LogOut className="mr-2 h-4 w-4" />
           {t.logout}
         </Button>

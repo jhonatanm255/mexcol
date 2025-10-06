@@ -256,8 +256,8 @@ export default function CongressPage() {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <div className="flex justify-center mb-4">
-              <div className="p-3 bg-lime-100 rounded-full">
-                <MapPin className="h-8 w-8 text-lime-600" />
+              <div className="p-3 bg-primary/10 rounded-full">
+                <MapPin className="h-8 w-8 text-primary" />
               </div>
             </div>
             <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4 text-foreground">
@@ -265,20 +265,20 @@ export default function CongressPage() {
             </h2>
           </div>
           
-          <Card className="border-lime-200 bg-lime-50/50">
+          <Card className="border-primary/20 bg-gradient-to-r from-primary to-primary/80 text-white">
             <CardContent className="p-8">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-lime-100 rounded-full flex-shrink-0">
-                  <Building className="h-6 w-6 text-lime-600" />
+                <div className="p-3 bg-white/10 rounded-full flex-shrink-0 backdrop-blur-sm">
+                  <Building className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-headline text-xl font-bold mb-2 text-foreground">
+                  <h3 className="font-headline text-xl font-bold mb-2 text-white">
                     {t.hotelName}
                   </h3>
-                  <p className="text-muted-foreground mb-4">
+                  <p className="text-white/90 mb-4">
                     {t.hotelAddress}
                   </p>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-2 text-sm text-white/80">
                     <MapPin className="h-4 w-4" />
                     <span>Ciudad de México, CDMX</span>
                   </div>
@@ -294,8 +294,8 @@ export default function CongressPage() {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <div className="flex justify-center mb-4">
-              <div className="p-3 bg-cyan-100 rounded-full">
-                <Camera className="h-8 w-8 text-cyan-600" />
+              <div className="p-3 bg-primary/10 rounded-full">
+                <Camera className="h-8 w-8 text-primary" />
               </div>
             </div>
             <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4 text-foreground">
@@ -303,11 +303,11 @@ export default function CongressPage() {
             </h2>
           </div>
           
-          <Card className="border-cyan-200 bg-cyan-50/50">
+          <Card className="border-primary/20 bg-primary/5">
             <CardContent className="p-8">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-cyan-100 rounded-full flex-shrink-0">
-                  <Camera className="h-6 w-6 text-cyan-600" />
+                <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
+                  <Camera className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                   <p className="text-muted-foreground text-lg leading-relaxed">

@@ -186,7 +186,7 @@ export default function StaffPage() {
                   <CardTitle className="font-headline">
                     {directorGeneral[lang].name}
                   </CardTitle>
-                  <p className="text-sm text-muted-foreground">{directorGeneral[lang].role}</p>
+                  <span className="text-sm text-muted-foreground bg-primary/10 px-3 py-1 rounded-full inline-block w-fit">{directorGeneral[lang].role}</span>
                 </CardHeader>
                 <CardContent className="pt-0 pb-6">
                   <p className="text-sm text-muted-foreground leading-relaxed">{directorGeneral[lang].bio}</p>
@@ -214,7 +214,7 @@ export default function StaffPage() {
                   <CardTitle className="font-headline">
                     {medicalDirector[lang].name}
                   </CardTitle>
-                  <p className="text-sm text-muted-foreground">{medicalDirector[lang].role}</p>
+                  <span className="text-sm text-muted-foreground bg-primary/10 px-3 py-1 rounded-full inline-block w-fit">{medicalDirector[lang].role}</span>
                 </CardHeader>
                 <CardContent className="pt-0 pb-6">
                   <p className="text-sm text-muted-foreground leading-relaxed">{medicalDirector[lang].bio}</p>

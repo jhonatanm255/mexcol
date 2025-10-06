@@ -123,13 +123,13 @@ function SlidingUnderline({
       {/* Underline activo */}
       {activeIndex >= 0 && (
         <div
-          className="absolute bottom-0 h-1 bg-primary rounded-full"
+          className="absolute -bottom-3 h-1 bg-primary rounded-full"
           style={activeUnderlineStyle}
         />
       )}
       {/* Underline hover */}
       <div
-        className="absolute bottom-0 h-1 bg-primary/40 rounded-full"
+        className="absolute -bottom-3 h-1 bg-primary/40 rounded-full"
         style={hoverUnderlineStyle}
       />
     </>

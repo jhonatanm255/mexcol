@@ -20,7 +20,9 @@ import {
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { AlertCircle, Loader2, GraduationCap } from 'lucide-react';
+import { AlertCircle, Loader2 } from 'lucide-react';
+import Image from 'next/image';
+import logoVerde from '@/assets/Logo-USA-Verde.png';
 import { useLanguage } from '@/hooks/use-language';
 import { translations } from '@/lib/i18n';
 
@@ -75,8 +77,14 @@ export default function LoginPage() {
     <div className="flex min-h-[calc(100vh-8rem)] items-center justify-center p-4">
       <Card className="w-full max-w-sm">
         <CardHeader className="text-center">
-          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-secondary mb-4">
-            <GraduationCap className="h-8 w-8 text-primary" />
+          <div className="mx-auto flex h-20 w-20 items-center justify-center mb-4">
+            <Image 
+              src={logoVerde} 
+              alt="Logo" 
+              width={64} 
+              height={64}
+              className="h-16 w-16"
+            />
           </div>
           <CardTitle className="text-2xl font-headline">{t.title}</CardTitle>
           <CardDescription>
