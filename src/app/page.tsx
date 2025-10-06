@@ -11,11 +11,12 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { GraduationCap, BookOpen, Video, Award, Star, Quote, MapPin, Facebook } from 'lucide-react';
+import { GraduationCap, BookOpen, Video, Award, Star, Quote, MapPin, Facebook, Ticket } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Badge } from '@/components/ui/badge';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 import BrandMarquee from '@/components/shared/BrandMarquee';
 import { useLanguage } from '@/hooks/use-language';
 import { translations } from '@/lib/i18n';
@@ -78,7 +79,7 @@ export default function Home() {
               <Button asChild size="lg" className="btn-modern px-8 py-4 text-lg">
                 <PrefetchLink href="/academic-programs">{t.hero.explorePrograms}</PrefetchLink>
               </Button>
-              <Button asChild size="lg" className="btn-modern px-8 py-4 text-lg">
+              <Button asChild size="lg" variant="secondary" className="btn-modern px-8 py-4 text-lg bg-foreground text-background hover:bg-foreground/90">
                 <PrefetchLink href="/contact">{t.hero.contactUs}</PrefetchLink>
               </Button>
             </div>
@@ -145,7 +146,10 @@ export default function Home() {
             <p className="text-lg text-muted-foreground">{th.testimonials.sub}</p>
           </div>
           <div className="bg-white rounded-2xl p-6 md:px-16 shadow-lg">
-            <Carousel opts={{ align: 'start', loop: true }}>
+            <Carousel 
+              opts={{ align: 'start', loop: true }} 
+              plugins={[Autoplay({ delay: 4000 })]}
+            >
               <CarouselContent>
                 {th.testimonials.items.map((it, idx) => (
                   <CarouselItem key={idx} className="p-2 sm:basis-1/2 lg:basis-1/3">
@@ -170,15 +174,20 @@ export default function Home() {
                 ))}
               </CarouselContent>
             </Carousel>
-            <div className="mt-8 flex flex-wrap gap-3 justify-center">
+            <div className="mt-8 text-center mb-4">
+              <p className="text-lg font-medium text-primary">
+                {th.testimonials.reviewsText}
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 justify-center">
               <Button asChild size="sm" variant="outline" className="hover:bg-blue-50 focus-modern border">
-                <PrefetchLink href="#" className="flex items-center gap-2">
+                <a href="https://web.facebook.com/profile.php?id=100064823553168&sk=reviews&_rdc=1&_rdr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <Facebook className="h-4 w-4 text-blue-600" />
                   {th.testimonials.facebook}
-                </PrefetchLink>
+                </a>
               </Button>
               <Button asChild size="sm" variant="outline" className="hover:bg-red-50 focus-modern border">
-                <PrefetchLink href="#" className="flex items-center gap-2">
+                <a href="https://www.google.com/maps/place/Instituto+MexCol/@19.3953309,-99.1871588,16z/data=!4m8!3m7!1s0x85d1ff6a4e5eaaab:0x6d6262102c03bff3!8m2!3d19.3953309!4d-99.1845839!9m1!1b1!16s%2Fg%2F11flrplb83?entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <svg className="h-4 w-4" viewBox="0 0 24 24">
                     <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                     <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -186,10 +195,10 @@ export default function Home() {
                     <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                   </svg>
                   {th.testimonials.googleMx}
-                </PrefetchLink>
+                </a>
               </Button>
               <Button asChild size="sm" variant="outline" className="hover:bg-red-50 focus-modern border">
-                <PrefetchLink href="#" className="flex items-center gap-2">
+                <a href="https://www.google.com/maps/place/Instituto+MexCol/@19.3953309,-99.1871588,16z/data=!4m8!3m7!1s0x85d1ff6a4e5eaaab:0x6d6262102c03bff3!8m2!3d19.3953309!4d-99.1845839!9m1!1b1!16s%2Fg%2F11flrplb83?entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <svg className="h-4 w-4" viewBox="0 0 24 24">
                     <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                     <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -197,7 +206,7 @@ export default function Home() {
                     <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                   </svg>
                   {th.testimonials.googleUsa}
-                </PrefetchLink>
+                </a>
               </Button>
             </div>
           </div>
@@ -232,7 +241,7 @@ export default function Home() {
               <CardHeader>
                 <div className="text-center">
                   <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <CardTitle className="text-primary">{th.contact.locations.mx.title}</CardTitle>
+                  <CardTitle className="text-foreground font-semibold">{th.contact.locations.mx.title}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
@@ -243,7 +252,7 @@ export default function Home() {
               <CardHeader>
                 <div className="text-center">
                   <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <CardTitle className="text-primary">{th.contact.locations.usaOrlando.title}</CardTitle>
+                  <CardTitle className="text-foreground font-semibold">{th.contact.locations.usaOrlando.title}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
@@ -254,7 +263,7 @@ export default function Home() {
               <CardHeader>
                 <div className="text-center">
                   <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <CardTitle className="text-primary">{th.contact.locations.usaHouston.title}</CardTitle>
+                  <CardTitle className="text-foreground font-semibold">{th.contact.locations.usaHouston.title}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
@@ -266,7 +275,7 @@ export default function Home() {
               <CardHeader>
                 <div className="text-center">
                   <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <CardTitle className="text-primary">{th.contact.locations.coBogota.title}</CardTitle>
+                  <CardTitle className="text-foreground font-semibold">{th.contact.locations.coBogota.title}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>
@@ -285,6 +294,9 @@ export default function Home() {
        
        <div className="container mx-auto px-4 relative z-10">
          <div className="mx-auto max-w-3xl text-center">
+           <div className="flex justify-center mb-4">
+             <Ticket className="h-12 w-12 text-white/80" />
+           </div>
            <h2 className="font-headline text-4xl text-white font-bold tracking-tight sm:text-5xl mb-6">
              {t.coupon.title}
            </h2>

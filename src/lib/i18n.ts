@@ -100,6 +100,7 @@ export const translations = {
         ],
         viewAll: 'View All Testimonials',
         leaveReview: 'Leave a Testimonial',
+        reviewsText: 'Check out our reviews on Google and Facebook',
         facebook: 'Facebook',
         googleMx: 'Google MX',
         googleUsa: 'Google USA',
@@ -265,14 +266,17 @@ export const translations = {
               {
                 title: 'Master Class: 4 Techniques – Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads',
                 description: 'Learn advanced facial harmonization techniques with professional results.',
+                image: 'https://picsum.photos/seed/usa-botox/400/300',
               },
               {
                 title: 'Intravenous Therapy, Chelation, and Principles of Applied Regenerative Medicine',
                 description: 'Explore chelation and the fundamentals of regenerative medicine.',
+                image: 'https://picsum.photos/seed/usa-terapia/400/300',
               },
               {
                 title: 'Phlebotomy Technician Course',
                 description: 'Hands-on training in safe, professional blood extraction techniques.',
+                image: 'https://picsum.photos/seed/usa-flebotomia/400/300',
               },
             ],
           },
@@ -281,14 +285,17 @@ export const translations = {
               {
                 title: 'Course in Moderation, Profiling, and Facial Harmonization – Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads',
                 description: 'Learn advanced facial harmonization techniques for natural, precise results.',
+                image: 'https://picsum.photos/seed/mex-botox/400/300',
               },
               {
                 title: 'Intravenous Therapy, Chelation, and Principles of Applied Regenerative Medicine',
                 description: 'Master chelation and regenerative medicine fundamentals applied to aesthetic treatments.',
+                image: 'https://picsum.photos/seed/mex-terapia/400/300',
               },
               {
                 title: 'Mini 3-Point Lifting Rejuvenation Techniques Course',
                 description: 'Training in strategic facial lifting techniques for visible, natural rejuvenation.',
+                image: 'https://picsum.photos/seed/mex-lifting/400/300',
               },
             ],
           },
@@ -297,14 +304,17 @@ export const translations = {
               {
                 title: 'Master Class in Facial Modeling, Profiling, and Harmonization – Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads',
                 description: 'Learn advanced facial harmonization techniques for professional, natural results.',
+                image: 'https://picsum.photos/seed/col-botox/400/300',
               },
               {
                 title: 'Online Course: Intravenous Therapy, Chelation, and Principles of Applied Regenerative Medicine',
                 description: 'Master chelation and regenerative medicine fundamentals from anywhere, online.',
+                image: 'https://picsum.photos/seed/col-terapia/400/300',
               },
               {
                 title: 'Mini 3-Point Lifting Rejuvenation Techniques Course',
                 description: 'Practical training in strategic facial lifting techniques for visible rejuvenation.',
+                image: 'https://picsum.photos/seed/col-lifting/400/300',
               },
             ],
           },
@@ -566,7 +576,7 @@ export const translations = {
   },
   es: {
     metadata: {
-      title: 'Instituto Mex - Col - USA.',
+      title: 'Instituto Mex - Col - USA',
       description: 'Educación continua en medicina estética.',
     },
     navbar: {
@@ -588,14 +598,14 @@ export const translations = {
       ],
     },
     hero: {
-        title: 'Instituto Mex - Col - USA.',
+        title: 'Instituto Mex - Col - USA',
         subtitle: 'Educación continua en medicina estética.',
         explorePrograms: 'Explorar Programas',
         contactUs: 'Contáctanos',
     },
     home: {
       hero: {
-        main: 'Instituto Mex - Col - USA.',
+        main: 'Instituto Mex - Col - Usa',
         sub: 'Educación continua en medicina estética.',
       },
       onlineTraining: {
@@ -664,6 +674,7 @@ export const translations = {
         ],
         viewAll: 'Ver todos los testimonios',
         leaveReview: 'Dejar testimonio',
+        reviewsText: 'Mira nuestras reseñas en Google y Facebook',
         facebook: 'Facebook',
         googleMx: 'Google MX',
         googleUsa: 'Google USA',
@@ -827,16 +838,19 @@ export const translations = {
           usa: {
             courses: [
               {
-                title: 'Master class 4 técnicas “toxina botulinica/acido aluronico / bioestimuladores / hilos pdo”.',
+                title: 'Master class 4 técnicas "toxina botulinica/acido aluronico / bioestimuladores / hilos pdo".',
                 description: 'Aprende técnicas avanzadas para armonización facial con resultados profesionales.',
+                image: 'https://picsum.photos/seed/usa-botox/400/300',
               },
               {
                 title: 'Curso suero terapia quelación y principios de medicina regenerativa aplicada.',
                 description: 'Conoce la quelación y fundamentos de medicina regenerativa',
+                image: 'https://picsum.photos/seed/usa-terapia/400/300',
               },
               {
                 title: 'Curso técnico en Flebotomia.',
                 description: 'Capacitación práctica en técnicas de extracción de sangre seguras y profesionales.',
+                image: 'https://picsum.photos/seed/usa-flebotomia/400/300',
               },
             ],
           },
@@ -845,30 +859,36 @@ export const translations = {
               {
                 title: 'Curso de moderación perfilación y armonización facial con toxina botulinica/acido aluronico / bioestimuladores / hilos pdo.',
                 description: 'Aprende técnicas avanzadas para armonización facial con resultados naturales y precisos.',
+                image: 'https://picsum.photos/seed/mex-botox/400/300',
               },
               {
                 title: 'Curso suero terapia quelación y principios de medicina regenerativa aplicada.',
                 description: 'Domina la quelación y los fundamentos de medicina regenerativa aplicados a tratamientos estéticos.',
+                image: 'https://picsum.photos/seed/mex-terapia/400/300',
               },
               {
                 title: 'Curso con técnicas de rejuvenecimiento mini Lifting 3 puntos.',
                 description: 'Capacitación en técnicas de lifting facial estratégicas para rejuvenecimiento visible y natural.',
+                image: 'https://picsum.photos/seed/mex-lifting/400/300',
               },
             ],
           },
           colombia: {
             courses: [
               {
-                title: 'Master class en moderación, perfilando y armonización facial con “toxina botulinica/acido aluronico / bioestimuladores / hilos pdo”.',
+                title: 'Master class en moderación, perfilando y armonización facial con "toxina botulinica/acido aluronico / bioestimuladores / hilos pdo".',
                 description: 'Aprende técnicas avanzadas de armonización facial para resultados profesionales y naturales.',
+                image: 'https://picsum.photos/seed/col-botox/400/300',
               },
               {
                 title: 'Curso suero terapia quelación y principios de medicina regenerativa aplicada online.',
                 description: 'Domina la quelación y fundamentos de medicina regenerativa desde cualquier lugar con modalidad online.',
+                image: 'https://picsum.photos/seed/col-terapia/400/300',
               },
               {
                 title: 'Curso con técnicas de rejuvenecimiento mini Lifting 3 puntos.',
                 description: 'Capacitación práctica en técnicas de lifting facial estratégicas para un rejuvenecimiento visible.',
+                image: 'https://picsum.photos/seed/col-lifting/400/300',
               },
             ],
           },

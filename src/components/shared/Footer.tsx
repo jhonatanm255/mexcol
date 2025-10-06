@@ -2,11 +2,11 @@
 'use client';
 
 import Link from 'next/link';
-import { GraduationCap, Facebook, Instagram } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
 import { translations } from '@/lib/i18n';
 import logo from '@/assets/Logo-USA-Blanco.png';
 import Image from 'next/image';
+import { FaFacebook, FaInstagram, FaYoutube, FaTiktok } from 'react-icons/fa';
 
 export function Footer() {
   const { language } = useLanguage();
@@ -19,7 +19,7 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center space-x-2">
               <Image className='h-12 w-12' src={logo} alt="Instituto MEXCOL"/>
-              <span className="text-xl font-bold">Instituto MEXCOL</span>
+              <span className="text-xl font-bold">Instituto Mex - Col - Usa</span>
             </Link>
             <p className="mt-4 text-white/70 max-w-sm">
               {t.description}
@@ -52,13 +52,21 @@ export function Footer() {
               {t.followUs}
             </h3>
             <div className="mt-4 flex space-x-4">
-              <Link href="#" className="text-white/70 hover:text-primary">
-                <Facebook />
+              <Link href="https://web.facebook.com/profile.php?id=100064823553168&_rdc=1&_rdr#" target="_blank" className="text-white/70 hover:text-primary transition-colors">
+                <FaFacebook className="h-6 w-6" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="text-white/70 hover:text-primary">
-                <Instagram />
+              <Link href="https://www.instagram.com/institutomexcolusa/?fbclid=IwY2xjawM32tFleHRuA2FlbQIxMABicmlkETFDRHc2QlJ4c3ptQkJhZk95AR5puV-240pMhD4PNqhO7EDPZiERJ12obf7HJKjV4bpYE4zyVPenQ2AOgKdlLg_aem_HG-fv_s3k4lfx73ByZ8H1Q#" target="_blank" className="text-white/70 hover:text-primary transition-colors">
+                <FaInstagram className="h-6 w-6" />
                 <span className="sr-only">Instagram</span>
+              </Link>
+              <Link href="https://www.youtube.com/@institutomexcol9788/featured" target="_blank" className="text-white/70 hover:text-primary transition-colors">
+                <FaYoutube className="h-6 w-6" />
+                <span className="sr-only">Youtube</span>
+              </Link>
+              <Link href="https://www.tiktok.com/@instituto.mex_col_usa" target="_blank" className="text-white/70 hover:text-primary transition-colors">
+                <FaTiktok className="h-6 w-6" />
+                <span className="sr-only">Tiktok</span>
               </Link>
             </div>
           </div>

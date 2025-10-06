@@ -48,12 +48,21 @@ export default function AcademicProgramsPage() {
         </div>
 
         {countries.map((c) => {
-          const list = (t.countries as any)[c.key].courses as Array<{ title: string; description?: string }>; 
+          const list = (t.countries as any)[c.key].courses as Array<{ title: string; description?: string; image?: string }>; 
           return (
             <TabsContent key={c.key} value={c.key} className="mt-10">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {list.map((course) => (
-                  <Card key={course.title} className="h-full flex flex-col">
+                  <Card key={course.title} className="h-full flex flex-col overflow-hidden group">
+                    <div className="relative h-48 w-full overflow-hidden">
+                      <Image 
+                        src={course.image || 'https://picsum.photos/400/300'} 
+                        alt={course.title} 
+                        fill 
+                        className="object-cover transition-transform duration-500 group-hover:scale-110" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
                     <CardHeader>
                       <CardTitle className="font-headline">{course.title}</CardTitle>
                     </CardHeader>

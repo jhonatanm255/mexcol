@@ -12,6 +12,8 @@ import img6 from '@/assets/logos-marcas/image-20250917-225915.png';
 import img7 from '@/assets/logos-marcas/image-20250917-235949.png';
 import img8 from '@/assets/logos-marcas/image-20250918-000534.png';
 import img9 from '@/assets/logos-marcas/logos 2.png';
+import logoMarca1 from '@/assets/logos-marcas/logo-marca-1.png';
+import logoMarca2 from '@/assets/logos-marcas/logo-marca-2.png';
 
 const logos: StaticImageData[] = [
   img1,
@@ -23,6 +25,8 @@ const logos: StaticImageData[] = [
   img7,
   img8,
   img9,
+  logoMarca1,
+  logoMarca2,
 ];
 
 export default function BrandMarquee() {

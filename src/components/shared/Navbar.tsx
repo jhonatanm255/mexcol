@@ -177,11 +177,16 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <div className="mr-4 hidden md:flex">
-          <PrefetchLink href="/" className="mr-6 flex items-center space-x-2">
+        {/* Logo - izquierda */}
+        <div className="hidden md:flex">
+          <PrefetchLink href="/" className="flex items-center space-x-2">
             <Image className='h-12 w-12' src={logo} alt="Instituto MEXCOL"/>
 {/*             <span className="font-bold">Instituto MEXCOL</span>
  */}          </PrefetchLink>
+        </div>
+
+        {/* Navegación - centro */}
+        <div className="hidden md:flex flex-1 justify-center">
           <NavigationMenu>
             <div ref={navContainerRef} className={cn(navigationMenuContainerStyle(), "relative")}>
               <NavigationMenuList>
@@ -211,8 +216,40 @@ export function Navbar() {
           </NavigationMenu>
         </div>
 
-        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-          <div className="md:hidden">
+        {/* Layout móvil con justify-between */}
+        <div className="flex flex-1 items-center justify-between md:hidden">
+          {/* Logo a la izquierda */}
+          <PrefetchLink href="/" className="flex items-center">
+            <Image className='h-10 w-10' src={logo} alt="Instituto MEXCOL"/>
+          </PrefetchLink>
+
+          {/* Controles a la derecha */}
+          <div className="flex items-center space-x-2">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon" className="hover:bg-primary/10">
+                  <span className="text-lg">{language === 'es' ? '🇪🇸' : '🇺🇸'}</span>
+                  <span className="sr-only">Change language</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="bg-white border border-border/50 shadow-lg">
+                <DropdownMenuItem 
+                  onClick={() => handleLanguageChange('es')}
+                  className="hover:bg-primary/5 focus:bg-primary/5"
+                >
+                  <span className="mr-2">🇪🇸</span>
+                  Español
+                </DropdownMenuItem>
+                <DropdownMenuItem 
+                  onClick={() => handleLanguageChange('en')}
+                  className="hover:bg-primary/5 focus:bg-primary/5"
+                >
+                  <span className="mr-2">🇺🇸</span>
+                  English
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
@@ -220,14 +257,14 @@ export function Navbar() {
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left" className="bg-gradient-to-b from-background to-muted/30">
+              <SheetContent side="left" className="bg-white">
                 <PrefetchLink
                   href="/"
                   className="flex items-center"
                   onClick={() => setOpen(false)}
                 >
-                  <GraduationCap className="h-6 w-6 text-primary" />
-                  <span className="ml-2 font-bold text-foreground">Instituto MEXCOL</span>
+                  <Image className='h-8 w-8 mr-2' src={logo} alt="Instituto MEXCOL"/>
+                  <span className="font-bold text-foreground">Instituto MEXCOL</span>
                 </PrefetchLink>
                 <div className="mt-6 flex flex-col space-y-2">
                   {firstTwoLinks.map((item) => (
@@ -273,47 +310,34 @@ export function Navbar() {
               </SheetContent>
             </Sheet>
           </div>
+        </div>
 
-          <PrefetchLink href="/" className="flex items-center space-x-2 md:hidden">
-            <GraduationCap className="h-6 w-6 text-primary" />
-            <span className="font-bold">Instituto MEXCOL</span>
-          </PrefetchLink>
-
-          <nav className="flex items-center space-x-2">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="hover:bg-primary/10">
-                  <span className="text-lg">{language === 'es' ? '🇪🇸' : '🇺🇸'}</span>
-                  <span className="sr-only">Change language</span>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="bg-white border border-border/50 shadow-lg">
-                <DropdownMenuItem 
-                  onClick={() => handleLanguageChange('es')}
-                  className="hover:bg-primary/5 focus:bg-primary/5"
-                >
-                  <span className="mr-2">🇪🇸</span>
-                  Español
-                </DropdownMenuItem>
-                <DropdownMenuItem 
-                  onClick={() => handleLanguageChange('en')}
-                  className="hover:bg-primary/5 focus:bg-primary/5"
-                >
-                  <span className="mr-2">🇺🇸</span>
-                  English
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            {user && isAdminPage && (
-              <Button asChild variant="outline" size="sm">
-                <PrefetchLink href="/admin/dashboard">
-                  <UserCog className="mr-2 h-4 w-4" />
-                  Admin Panel
-                </PrefetchLink>
+        {/* Idioma - derecha */}
+        <div className="hidden md:flex">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon" className="hover:bg-primary/10">
+                <span className="text-lg">{language === 'es' ? '🇪🇸' : '🇺🇸'}</span>
+                <span className="sr-only">Change language</span>
               </Button>
-            )}
-          </nav>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="bg-white border border-border/50 shadow-lg">
+              <DropdownMenuItem 
+                onClick={() => handleLanguageChange('es')}
+                className="hover:bg-primary/5 focus:bg-primary/5"
+              >
+                <span className="mr-2">🇪🇸</span>
+                Español
+              </DropdownMenuItem>
+              <DropdownMenuItem 
+                onClick={() => handleLanguageChange('en')}
+                className="hover:bg-primary/5 focus:bg-primary/5"
+              >
+                <span className="mr-2">🇺🇸</span>
+                English
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
     </header>
