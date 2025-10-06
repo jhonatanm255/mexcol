@@ -167,14 +167,15 @@ export default function StaffPage() {
       </section>
 
       {/* Destacados */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-        {[directorGeneral[lang], medicalDirector[lang]].map((p) => (
-          <Card key={p.name} className="overflow-hidden">
+      <section className="flex flex-col items-center gap-6 mb-12">
+        {/* Director General */}
+        <div className="w-[85%] max-w-4xl">
+          <Card className="overflow-hidden">
             <div className="grid grid-cols-1 sm:grid-cols-3">
               <div className="relative h-56 sm:h-full sm:col-span-1">
                 <Image
-                  src={p.photo}
-                  alt={p.name}
+                  src={directorGeneral[lang].photo}
+                  alt={directorGeneral[lang].name}
                   fill
                   sizes="(max-width: 640px) 100vw, 33vw"
                   className="object-cover"
@@ -183,17 +184,45 @@ export default function StaffPage() {
               <div className="sm:col-span-2">
                 <CardHeader>
                   <CardTitle className="font-headline">
-                    {p.name}
+                    {directorGeneral[lang].name}
                   </CardTitle>
-                  <p className="text-sm text-muted-foreground">{p.role}</p>
+                  <p className="text-sm text-muted-foreground">{directorGeneral[lang].role}</p>
                 </CardHeader>
                 <CardContent className="pt-0 pb-6">
-                  <p className="text-sm text-muted-foreground leading-relaxed">{p.bio}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{directorGeneral[lang].bio}</p>
                 </CardContent>
               </div>
             </div>
           </Card>
-        ))}
+        </div>
+
+        {/* Director Médico */}
+        <div className="w-[85%] max-w-4xl">
+          <Card className="overflow-hidden">
+            <div className="grid grid-cols-1 sm:grid-cols-3">
+              <div className="relative h-56 sm:h-full sm:col-span-1">
+                <Image
+                  src={medicalDirector[lang].photo}
+                  alt={medicalDirector[lang].name}
+                  fill
+                  sizes="(max-width: 640px) 100vw, 33vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="sm:col-span-2">
+                <CardHeader>
+                  <CardTitle className="font-headline">
+                    {medicalDirector[lang].name}
+                  </CardTitle>
+                  <p className="text-sm text-muted-foreground">{medicalDirector[lang].role}</p>
+                </CardHeader>
+                <CardContent className="pt-0 pb-6">
+                  <p className="text-sm text-muted-foreground leading-relaxed">{medicalDirector[lang].bio}</p>
+                </CardContent>
+              </div>
+            </div>
+          </Card>
+        </div>
       </section>
 
       {/* Especialistas Médicos */}

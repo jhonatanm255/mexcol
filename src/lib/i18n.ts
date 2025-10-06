@@ -419,23 +419,60 @@ export const translations = {
         requestInfo: 'Request Information'
     },
     congress: {
-        title: 'Annual Congress of Medical Sciences',
-        subtitle: 'Join thought leaders and professionals from around the world at our annual congress. Explore the latest trends and discoveries in medical science.',
-        eventDetails: 'Event Details',
-        date: 'Date',
-        dateValue: 'November 15-17, 2024',
-        location: 'Location',
-        locationValue: 'Metropolitan Convention Center',
-        registration: 'Registration',
-        registrationValue: 'Registration is now open',
-        registerNow: 'Register Now',
-        featuredSpeakers: 'Featured Speakers',
-        speakers: [
-            { name: 'Dr. Ana Torres', topic: 'Innovations in Immunotherapy' },
-            { name: 'Dr. Ben Carter', topic: 'The Future of AI in Diagnostics' },
-            { name: 'Dra. Sofia Reyes', topic: 'Advances in Robotic Surgery' },
-            { name: 'Dr. Kenji Tanaka', topic: 'Genomic Medicine and Patient Care' },
+        title: 'International Congress in Aesthetic and Holistic Medicine',
+        subtitle: 'We are delighted to welcome you!',
+        description: 'Our first international meeting in aesthetic and holistic medicine is organized by Instituto Mex-Col-USA, professionals in Aesthetic and Holistic Medicine, being pioneers in the area. It is an honor to present speakers with extensive international experience to contribute and provide feedback to professionals in this new era.',
+        mission: 'With the mission of nurturing and providing continuous education to our students from the different headquarters in Mexico, United States and Colombia, obtaining professional knowledge to be able to attend to the integral, emotional and physical part of the patient.',
+        targetAudience: 'Targeted to: General Physicians - Aesthetic Specialists - Dentists - Dermatologists - Surgeon Physicians - Aesthetic Physicians',
+        commitment: 'Our commitment: Update all professionals in the area of aesthetic and holistic medicine, interested in satisfying the strong demand in today\'s patients, optimizing processes and integrating various therapies of the new era',
+        presentations: 'Presentations',
+        presentationsList: [
+            'The power of laughter in holistic therapies and its influence on aesthetic pathologies',
+            'Oxidative stress and its influence on aesthetic medicine',
+            'Applied serotherapy in obesity and anti-aging',
+            'Plasma variants "autologous filler and growth factors" and their emotional benefit',
+            'Emotional biodecoding in overweight and aesthetic pathologies',
+            'Facial modeling and multi-syringe with hyaluronic acid (Allergan Laboratories)',
+            'Skin care products',
+            'Global and focal biostimulation with calcium hydroxyapatite (Radiesse)',
+            'Facial harmonization with botulinum toxin (Botox from Allergan laboratories)',
+            'Properties of quartz, the beauty gadget for the skin',
+            'Latest trends in aesthetic equipment "HIFU AND SCULPT"',
+            'Personal branding',
+            'The power of digital marketing in the medical and holistic sector'
         ],
+        endorsements: 'Endorsements',
+        endorsementsList: [
+            'Printed certificate for attendance and participation, issued by the congress committee',
+            'Certificate delivered via email, with official validity before STPS for attendance and update hours'
+        ],
+        benefits: 'Benefits',
+        benefitsList: [
+            'Access to all presentations',
+            'Commercial area visit',
+            'Participation in the raffle at the end of the congress',
+            'Continuous coffee break',
+            'Printed certificate for attendance and participation',
+            'Certificate with official validity before STPS'
+        ],
+        raffle: 'Raffle',
+        raffleItems: [
+            'One vial of botulinum toxin (Botox)',
+            'One box of hyaluronic acid (Juvederm Vycross)',
+            'Kit of 21 quartz and gems for personalized chakra alignment'
+        ],
+        preCongress: 'Pre-Congress Workshops',
+        preCongressWorkshops: [
+            'Integral Education with emotions in aesthetic pathologies',
+            'NLP Neurolinguistic programming focused on gaining and losing weight',
+            'Techniques with mesotherapy, facial, body and peeling'
+        ],
+        location: 'Location',
+        hotelName: 'Holiday Inn Plaza Universidad - Rioja Hall',
+        hotelAddress: 'Holiday Inn: Parroquia 1056, Sta Cruz Atoyac, Benito Juárez, 03310 Mexico City, CDMX',
+        tourism: 'Tourism',
+        tourismDescription: 'Mexico City is recognized for its extensive catalog of museums, places of interest, its great gastronomy and of course archaeological sites. On this visit, don\'t miss the opportunity to enjoy this wonderful city.',
+        registerNow: 'Register Now',
         backToHome: 'Back to Home'
     },
     contact: {
@@ -552,14 +589,173 @@ export const translations = {
     },
     terms: {
         title: 'Terms and Conditions',
-        lastUpdated: 'Last Updated: July 26, 2024',
-        p1: 'Welcome to Instituto MEXCOL. These Terms and Conditions ("Terms") govern your use of our website and the services offered. By accessing or using our services, you agree to be bound by these Terms.',
-        p2: 'You may use our services for personal, non-commercial purposes only. You agree not to misuse the services or help anyone else to do so. You are responsible for any content you provide and for any consequences thereof.',
-        p3: 'All content provided on the website, including text, graphics, logos, images, as well as the compilation thereof, and any software used on the site, is the property of Instituto MEXCOL or its suppliers and protected by copyright and other laws.',
-        p4: 'Our services are provided "as is." Instituto MEXCOL makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.',
-        p5: 'In no event shall Instituto MEXCOL or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on our website.',
-        p6: 'We reserve the right to modify these terms at any time. We will notify you of any changes by posting the new Terms and Conditions on this page. You are advised to review this page periodically for any changes.',
-        p7: 'of which can be executed within a period of 30 days.',
+        lastUpdated: 'Last Updated: January 1, 2025',
+        courseScheduling: {
+            title: 'COURSE SCHEDULING',
+            content: 'INSTITUTO MEX-COL-USA reserves the right to reschedule any course if the minimum required number of participants, set at ten (10) attendees, is not met.'
+        },
+        courseFees: {
+            title: 'COURSE FEES',
+            p1: 'The course fee will be communicated by INSTITUTO MEX-COL-USA upon the first commercial contact or information request from the interested party.',
+            p2: 'Prices may vary between participants depending on current commercial strategies at the time of the information request or course reservation.',
+            p3: 'Fees may differ among attendees within the same group due to currency, inclusion of gifts, materials, or products for hands-on practice.',
+            p4: 'THE CLIENT agrees to pay the full course fee before the start date of the course.',
+            p5: 'Any fees incurred through electronic payment platforms (e.g., PayPal) will be borne entirely by THE CLIENT, if applicable.'
+        },
+        refundPolicy: {
+            title: 'REFUND POLICY',
+            p1: 'Once payment has been made (total, partial, registration, deposit, or balance), no refunds will be issued under any circumstances.',
+            p2: 'THE CLIENT may reschedule their participation for a future date, either for the same course or another, in which case the fee will be adjusted according to current rates.',
+            p3: 'Instituto MEX-COL-USA hires international speakers and purchases products from top laboratories, covering expenses such as travel, flights, accommodation, speaker fees, certification issuance, materials, products, and other minor costs.'
+        },
+        gifts: {
+            title: 'GIFTS',
+            p1: 'INSTITUTO MEX-COL-USA may provide gifts at its sole discretion. Offered gifts are variable and subject to availability for each course (these will be given only on the assigned dates, communicated by the advisor or via message), including products, educational materials, supplies, or other items that enhance the learning process.',
+            p2: 'Gifts are non-transferable, non-refundable, and may only be used by the contract holder.',
+            p3: 'Not all participants are guaranteed gifts; allocation depends on commercial conditions established with the corresponding advisor.',
+            p4: 'Gifts cannot be reserved, replaced, or exchanged under any circumstances.',
+            p5: 'Gifts do not include any certification. If a participant wishes to obtain an internationally recognized certificate, they must pay the corresponding fee (varies by month; consult your advisor) plus taxes and achieve at least 80% on the final course evaluation. Participants seeking a certificate of attendance and participation (without evaluation) must attend the full course and pay the corresponding fee (varies by month; consult your advisor) plus taxes.'
+        },
+        certificates: {
+            title: 'CERTIFICATES',
+            p1: 'Certificate issuance requires passing an evaluation. If failed, an additional fee applies for each retake (varies by month; consult your advisor) plus taxes, and participants must achieve at least 80% on the final evaluation.',
+            p2: 'Certificates of attendance and participation issued by INSTITUTO MEX-COL-USA will be delivered at the end of the course. Reprints incur an additional fee (varies by month; consult your advisor) plus taxes.'
+        },
+        supportMaterial: {
+            title: 'SUPPORT MATERIAL',
+            content: 'At the end of each course, participants will receive supporting materials. These are informational tools designed to aid decision-making by trained professionals. Their use is strictly educational and does not replace professional clinical judgment.'
+        },
+        productsLaboratories: {
+            title: 'PRODUCTS, LABORATORIES & PROFESSIONAL RESPONSIBILITY',
+            p1: 'INSTITUTO MEX-COL-USA does not sell products or supplies related to treatments covered in its training programs.',
+            p2: 'THE CLIENT is solely responsible for any professional or technical services they provide directly or through third parties.',
+            p3: 'Use of INSTITUTO MEX-COL-USA facilities for treatments between participants is strictly prohibited. Courses are strictly educational and do not include performing treatments on individuals. The institution is not liable for any practices conducted in violation of this rule.',
+            p4: 'Any professional relationship THE CLIENT maintains with third parties (patients, suppliers, doctors, etc.) is their sole responsibility, without any link to INSTITUTO MEX-COL-USA.'
+        },
+        electronicAcceptance: {
+            title: 'VALIDITY OF ELECTRONIC ACCEPTANCE',
+            content: 'Any expression of consent or acceptance by THE CLIENT via electronic means (email, message, form, or digital platform) is valid and binding, equivalent to a handwritten signature under applicable law.'
+        },
+        jurisdiction: {
+            title: 'JURISDICTION',
+            content: 'Any disputes arising from this document, or from the professional services contract detailed above, shall be governed by the laws and competent courts of the United States of America, waiving any other jurisdiction that may apply due to current or future residence.'
+        },
+        modifications: {
+            title: 'MODIFICATIONS TO TERMS & CONDITIONS',
+            content: 'INSTITUTO MEX-COL-USA reserves the right to modify these Terms & Conditions at any time without prior notice. Changes apply only to services contracted after the modifications take effect.'
+        },
+        acceptance: {
+            title: 'ACCEPTANCE OF TERMS & CONDITIONS',
+            content: 'By making a payment or reservation through any method (bank deposit, card, transfer, PayPal, or cash), the client fully accepts INSTITUTO MEX-COL-USA\'s Terms & Conditions. Payment constitutes a binding expression of consent, without requiring a written signature. Upon payment, a receipt/note will be issued detailing the date, location, course name, gifts, and fees (subject to change based on the service purchased), confirming the client\'s implicit acceptance of these terms, which can be reviewed through the Federal Consumer Protection Agency.'
+        },
+        companyName: 'INSTITUTO MEX-COL-USA PROFESSIONALS IN AESTHETIC, BEAUTY & HOLISTIC MEDICINE LLC'
+    },
+    privacy: {
+        title: 'Privacy Notice',
+        lastUpdated: 'Last Updated: April 22, 2025',
+        introduction: 'In compliance with the provisions of the Federal Law on Protection of Personal Data Held by Private Parties ("The Law"), INSTITUTO MEXCOL PROFESIONALES EN MEDICINA ESTÉTICA Y HOLÍSTICA, S.C. (hereinafter "THE COMPANY") makes the following Privacy Notice available to its clients, suppliers, and the general public who provide their personal data, either jointly or separately:',
+        responsible: {
+            title: 'RESPONSIBLE PARTY',
+            content: 'Identity and Address: INSTITUTO MEXCOL PROFESIONALES EN MEDICINA ESTÉTICA Y HOLÍSTICA, S.C., located at Avenida Uno No. 18, Office 317, Colonia San Pedro de los Pinos, Alcaldía Benito Juárez, C.P. 03800, Mexico City, is responsible for collecting your personal data, managing its use, and ensuring its protection.'
+        },
+        purposes: {
+            title: 'PURPOSES',
+            content: 'Purpose of Personal Data Processing: Your personal data will be used for the following purposes:',
+            list: [
+                'Provide the services requested by you;',
+                'Inform you about changes or services related to what has been contracted or purchased;',
+                'Comply with obligations contracted with our clients;',
+                'Conduct internal studies on consumption habits.'
+            ]
+        },
+        dataCollection: {
+            title: 'DATA WE COLLECT',
+            information: 'Information Collected from Data Subjects: We may collect personal data in various ways: directly from you, when you visit our website or use our online services, or from other lawful sources.',
+            directPersonal: {
+                title: 'Directly Provided Personal Data:',
+                content: 'Collected when you provide information to receive a service. Examples include:',
+                list: [
+                    'Full name',
+                    'Official identification',
+                    'Educational degree',
+                    'Email',
+                    'Landline phone',
+                    'Mobile phone'
+                ]
+            },
+            directFinancial: {
+                title: 'Directly Provided Financial Data:',
+                content: 'Examples include:',
+                list: [
+                    'Bank accounts',
+                    'Account statements',
+                    'Property tax information',
+                    'Credit history',
+                    'Tax information',
+                    'Retirement accounts (Afores)',
+                    'Driver\'s license',
+                    'Real estate'
+                ]
+            },
+            onlineData: {
+                title: 'Data Collected from Website Visits or Online Services:',
+                personal: 'Personal: full name, educational degree, email, landline, mobile',
+                financial: 'Financial: bank accounts, account statements, property tax info, credit history, tax info, retirement accounts, driver\'s license, real estate'
+            },
+            sensitiveData: {
+                title: 'Sensitive Personal Data:',
+                content: 'Examples include:',
+                list: [
+                    'Nationality',
+                    'Immigration status'
+                ]
+            },
+            videoRecording: {
+                title: 'Video Recording:',
+                content: 'THE COMPANY may monitor virtual training sessions, capturing images and audio for security, attendance, and supervision purposes. No additional personally identifiable data will be collected, and privacy will be respected. Recorded content will only be stored if irregularities or illegal actions are detected, which may lead to legal action.'
+            }
+        },
+        consent: {
+            title: 'CONSENT',
+            content: 'Consent: By providing your personal data through any means, you tacitly and expressly consent to its processing as described in this Privacy Notice. You also authorize THE COMPANY to use your personal data jointly or separately to identify, locate, communicate with, and inform you regarding all aspects related to the services provided.'
+        },
+        dataLimitation: {
+            title: 'OPTIONS TO LIMIT DATA USE OR DISCLOSURE',
+            p1: 'If you do not want your personal data processed as described, please notify us directly at THE COMPANY\'s address, by email at gerencia@institutomexcol.com, or by calling +52 55 2593 6885.',
+            p2: 'If you object to the processing of your personal data, note that access to communications or agreements related to services may require a personal visit or a legally authorized representative.',
+            p3: 'Data from public sources may be processed without consent, provided the information is publicly accessible.',
+            p4: 'If THE COMPANY does not receive your objection via email or phone, it will be assumed you tacitly and expressly authorize the processing of your personal data.'
+        },
+        arcoRights: {
+            title: 'RIGHTS OF ACCESS, RECTIFICATION, CANCELLATION, AND OPPOSITION (ARCO RIGHTS)',
+            p1: 'You have the right to know what data we have collected, how it is used (Access), request corrections (Rectification), request deletion (Cancellation), or object to its use for specific purposes (Opposition).',
+            p2: 'To exercise your ARCO rights, submit a written request to THE COMPANY at its address, via email gerencia@institutomexcol.com, or by calling +52 55 2593 6885. Requests must include:',
+            list: [
+                'Name and address for response',
+                'Documents proving identity or legal representation',
+                'Clear description of the data and rights requested',
+                'Any additional information to help locate the data'
+            ],
+            p3: 'THE COMPANY will respond within 15 business days.',
+            p4: 'Information will only be provided personally or through an authorized legal representative.'
+        },
+        dataTransfer: {
+            title: 'DATA TRANSFER',
+            content: 'THE COMPANY may share personal data with third parties, including companies, organizations, and authorities, for:',
+            list: [
+                'Execution of legal acts necessary for service provision;',
+                'Compliance with public interest or legal obligations;',
+                'Recognition, exercise, or defense of legal rights;',
+                'Maintenance of contractual relationships;',
+                'Any other transfers permitted by law.'
+            ]
+        },
+        modifications: {
+            title: 'MODIFICATIONS TO THE PRIVACY NOTICE',
+            p1: 'THE COMPANY reserves the right to update this Privacy Notice at any time due to legal, internal, market, or regulatory changes.',
+            p2: 'Updated versions will be available on our website: http://www.institutomexcol.com',
+            p3: 'Last Updated: April 22, 2025'
+        }
     },
     footer: {
       description: 'Empowering students worldwide with accessible, high-quality online education.',
@@ -568,7 +764,8 @@ export const translations = {
         about: 'About Us',
         contact: 'Contact',
         programs: 'Programs',
-        terms: 'Terms and Conditions'
+        terms: 'Terms and Conditions',
+        privacy: 'Privacy Notice'
       },
       followUs: 'Follow Us',
       copyright: '© {year} Instituto MEXCOL. All rights reserved.'
@@ -993,23 +1190,60 @@ export const translations = {
         requestInfo: 'Solicitar Información'
     },
     congress: {
-        title: 'Congreso Anual de Ciencias Médicas',
-        subtitle: 'Únete a líderes de opinión y profesionales de todo el mundo en nuestro congreso anual. Explora las últimas tendencias y descubrimientos en la ciencia médica.',
-        eventDetails: 'Detalles del Evento',
-        date: 'Fecha',
-        dateValue: '15-17 de Noviembre, 2024',
-        location: 'Lugar',
-        locationValue: 'Centro de Convenciones Metropolitano',
-        registration: 'Inscripción',
-        registrationValue: 'La inscripción ya está abierta',
-        registerNow: 'Regístrate Ahora',
-        featuredSpeakers: 'Oradores Destacados',
-        speakers: [
-            { name: 'Dr. Ana Torres', topic: 'Innovaciones en Inmunoterapia' },
-            { name: 'Dr. Ben Carter', topic: 'El Futuro de la IA en Diagnósticos' },
-            { name: 'Dra. Sofia Reyes', topic: 'Avances en Cirugía Robótica' },
-            { name: 'Dr. Kenji Tanaka', topic: 'Medicina Genómica y Atención al Paciente' },
+        title: 'Congreso Internacional en Medicina Estética y Holística',
+        subtitle: '¡Estamos encantados de recibirte!',
+        description: 'En nuestro primer encuentro internacional en medicina estética y holística es organizado por Instituto Mex-Col-EEUU Profesionales en Medicina estética y Holísticas siendo pioneros en el área, es un honor presentar a ponentes con amplia experiencia internacional para aportar y retroalimentar al profesional en esta nueva era.',
+        mission: 'Teniendo como misión nutrir y atender una educación continua a nuestros alumnos desde las distintas sedes en México, Estados Unidos y Colombia, obteniendo los conocimientos profesionales para poder atender la parte integral, emocional y física del paciente.',
+        targetAudience: 'Dirigido a: Médicos generales - Especialistas estéticos - Odontólogos - Dermatólogos - Médico Cirujano - Médico estético',
+        commitment: 'Nuestro compromiso: Actualizar a todos los profesionales en el área de medicina estética y holística, interesados en satisfacer la fuerte demanda en pacientes del día de hoy, optimizando los procesos e integrando diversas terapias de la nueva era',
+        presentations: 'Ponencias',
+        presentationsList: [
+            'El poder de la risa en terapias holísticas y la influencia en patologías estéticas',
+            'Estrés oxidativo y la influencia en la medicina estética',
+            'Sueroterapia aplicada en obesidad y antienvejecimiento',
+            'Variantes del plasma "relleno autólogo y factores de crecimiento" y su beneficio emocional',
+            'Biodecodificación emocional en sobrepeso y patologías estéticas',
+            'Modelación facial y multi jeringa con ácido hialurónico (Laboratorios Allergan)',
+            'Productos para el cuidado de la piel',
+            'Bioestimulación global y focal con hidroxiapatita de calcio (Radiesse)',
+            'Armonización facial con toxina botulínica (Botox de laboratorios Allergan)',
+            'Propiedades del cuarzo, el gadget de belleza en la piel',
+            'Últimas tendencias en aparatología estética "HIFU Y SCULPT"',
+            'Marca personal',
+            'El poder del marketing digital en el sector médico y holístico'
         ],
+        endorsements: 'Respaldos',
+        endorsementsList: [
+            'Constancia impresa por asistencia y participación, emitida por el comité del congreso',
+            'Constancia entregada vía correo electrónico, con validez oficial ante la STPS por horas de asistencia y actualización'
+        ],
+        benefits: 'Beneficios',
+        benefitsList: [
+            'Acceso a todas las ponencias',
+            'Visita área comercial',
+            'Participación en la rifa al finalizar el congreso',
+            'Coffee break continuo',
+            'Constancia impresa por asistencia y participación',
+            'Constancia con validez oficial ante la STPS'
+        ],
+        raffle: 'Rifa',
+        raffleItems: [
+            'Un vial de toxina botulínica (Botox)',
+            'Una caja de ácido hialurónico (Juvederm Vycross)',
+            'Kit de 21 cuarzos y gemas para alineación de chakras personalizado'
+        ],
+        preCongress: 'Talleres Pre-Congreso',
+        preCongressWorkshops: [
+            'Educación Integral con las emociones en patologías estéticas',
+            'PNL Programación neurolingüística enfocada en subir y bajar de peso',
+            'Técnicas con mesoterapia, facial, corporal y peeling'
+        ],
+        location: 'Ubicación',
+        hotelName: 'Hotel Holiday Inn Plaza Universidad - Salón Rioja',
+        hotelAddress: 'Hotel Holiday Inn: Parroquia 1056, Sta Cruz Atoyac, Benito Juárez, 03310 Ciudad de México, CDMX',
+        tourism: 'Turismo',
+        tourismDescription: 'La ciudad de México es reconocida por su amplio catálogo en museos, sitios de interés, su gran gastronomía y claro sitios arqueológicos, en esta visita no pierdas la oportunidad de disfrutar esta maravillosa ciudad.',
+        registerNow: 'Regístrate Ahora',
         backToHome: 'Volver al Inicio'
     },
     contact: {
@@ -1126,14 +1360,173 @@ export const translations = {
     },
     terms: {
         title: 'Términos y Condiciones',
-        lastUpdated: 'Última Actualización: 26 de Julio, 2024',
-        p1: 'Bienvenido al Instituto MEXCOL. Estos Términos y Condiciones ("Términos") rigen el uso de nuestro sitio web y los servicios ofrecidos. Al acceder o utilizar nuestros servicios, usted acepta estar sujeto a estos Términos.',
-        p2: 'Puede utilizar nuestros servicios únicamente con fines personales y no comerciales. Usted se compromete a no hacer un mal uso de los servicios ni a ayudar a nadie más a hacerlo. Usted es responsable de cualquier contenido que proporcione y de las consecuencias del mismo.',
-        p3: 'Todo el contenido proporcionado en el sitio web, incluidos textos, gráficos, logotipos, imágenes, así como la compilación de los mismos, y cualquier software utilizado en el sitio, es propiedad del Instituto MEXCOL o sus proveedores y está protegido por derechos de autor y otras leyes.',
-        p4: 'Nuestros servicios se proporcionan "tal cual". El Instituto MEXCOL no ofrece garantías, expresas o implícitas, y por la presente renuncia y niega todas las demás garantías, incluidas, entre otras, las garantías implícitas o condiciones de comerciabilidad, idoneidad para un propósito particular o no infracción de la propiedad intelectual u otra violación de derechos.',
-        p5: 'En ningún caso el Instituto MEXCOL o sus proveedores serán responsables de los daños (incluidos, entre otros, los daños por pérdida de datos o ganancias, o por interrupción del negocio) que surjan del uso o la imposibilidad de usar los materiales en nuestro sitio web.',
-        p6: 'Nos reservamos el derecho de modificar estos términos en cualquier momento. Le notificaremos cualquier cambio publicando los nuevos Términos y Condiciones en esta página. Se le aconseja que revise esta página periódicamente para detectar cualquier cambio.',
-        p7: 'de los cuales se puede ejecutar en un plazo de 30 días.',
+        lastUpdated: 'Última Actualización: 1 de Enero, 2025',
+        courseScheduling: {
+            title: 'PROGRAMACIÓN DE CURSOS',
+            content: 'INSTITUTO MEX-COL-USA se reserva el derecho de reprogramar cualquier curso en caso de no alcanzarse el número mínimo de participantes requerido, el cual será de diez (10) asistentes.'
+        },
+        courseFees: {
+            title: 'COSTOS',
+            p1: 'El costo de los cursos será informado por INSTITUTO MEX-COL-USA desde el primer contacto comercial o solicitud de información por parte del interesado.',
+            p2: 'Los precios podrán variar entre participantes en atención a las estrategias comerciales vigentes al momento de la solicitud de información o de la formalización de la reserva.',
+            p3: 'Los costos no son iguales entre asistentes del mismo grupo, pudiendo diferir en divisa, inclusión de obsequios, materiales y productos destinados a la práctica.',
+            p4: 'EL CLIENTE se obliga a cubrir la totalidad del costo del curso antes de la fecha de inicio del mismo.',
+            p5: 'Cualquier comisión generada por el uso de plataformas de pago electrónicas (como PayPal) será asumida íntegramente por EL CLIENTE, en caso de que aplique.'
+        },
+        refundPolicy: {
+            title: 'POLÍTICA DE DEVOLUCIONES',
+            p1: 'Una vez realizado el pago (total, parcial, por concepto de inscripción, reserva o liquidación) no se realizarán devoluciones bajo ninguna circunstancia.',
+            p2: 'EL CLIENTE podrá reprogramar su participación para una futura fecha, ya sea para el mismo curso o para otro, en cuyo caso se ajustará el costo conforme a las tarifas vigentes.',
+            p3: 'Instituto MEX-COL-USA contrata a ponentes internacionales y adquiere los productos de los mejores laboratorios, lo que implica cubrir gastos como: Viáticos, vuelos, hospedajes, honorarios, registro de constancia, materiales, producto y otros gastos menores.'
+        },
+        gifts: {
+            title: 'OBSEQUIOS',
+            p1: 'INSTITUTO MEX-COL-USA podrá otorgar, a su entera discreción, los obsequios ofrecidos son de carácter variable y están sujetos a la disponibilidad correspondiente a cada curso (Estos se brindarán exclusivamente en las fechas previamente asignadas, mismas que le fueron comunicadas durante su interacción con el asesor o bien serán notificadas a través de mensaje), productos, material didáctico, insumos o cualquier otro elemento que contribuya al fortalecimiento del proceso educativo.',
+            p2: 'Los obsequios otorgados son intransferibles, no reembolsables y únicamente podrán ser utilizados por el titular del contrato.',
+            p3: 'No todos los asistentes serán acreedores a obsequios; su asignación dependerá de las condiciones comerciales establecidas con el asesor correspondiente.',
+            p4: 'Los obsequios no serán reservados, sustituidos, ni repuestos bajo ninguna circunstancia.',
+            p5: 'Se establece expresamente que, al tratarse de obsequios, los cursos en esta modalidad no incluyen constancia alguna. En caso de que el participante desee obtener una constancia con validez internacional, deberá cubrir el costo correspondiente (dependerá del mes y deberá consultarlo con su asesora) + Impuestos, además de cumplir con al menos el 80% de la puntuación establecida en la evaluación final del curso. Asimismo, si el participante desea obtener una constancia de asistencia y participación (misma que no está sujeta a evaluación alguna), deberá cumplir con el requisito de asistencia al curso en su totalidad y cubrir el costo correspondiente (dependerá del mes y deberá consultarlo con su asesora) + impuestos.'
+        },
+        certificates: {
+            title: 'CONSTANCIAS',
+            p1: 'La entrega de constancias estará condicionada a la aprobación de una evaluación. En caso de no aprobarla, se generará un cargo adicional por cada repetición correspondiente (dependerá del mes y deberá consultarlo con su asesora) + impuestos, además de cumplir con al menos el 80% de la puntuación establecida en la evaluación final del curso.',
+            p2: 'La constancia de asistencia y participación emitida por INSTITUTO MEX-COL-USA le será entregada al finalizar el curso, en caso de reimpresión esta tendrá un cargo adicional (dependerá del mes y deberá consultarlo con su asesora) + impuestos.'
+        },
+        supportMaterial: {
+            title: 'MATERIAL DE APOYO',
+            content: 'Al término de cada curso, se entregará el material de apoyo correspondiente. Dicho material no constituye asesoría médica, sino una herramienta informativa orientada a facilitar la toma de decisiones por parte de profesionales capacitados. Su uso es estrictamente formativo, investigativo y educativo, sin sustituir el criterio o juicio clínico del profesional de la salud.'
+        },
+        productsLaboratories: {
+            title: 'PRODUCTOS, LABORATORIOS Y RESPONSABILIDAD PROFESIONAL',
+            p1: 'INSTITUTO MEX-COL-USA no comercializa productos ni insumos relacionados con los tratamientos abordados en sus programas de formación.',
+            p2: 'EL CLIENTE será el único responsable por los servicios profesionales y técnicos que ofrezca o proporcione, ya sea directamente o a través de terceros contratados.',
+            p3: 'INSTITUTO MEX-COL-USA prohíbe estrictamente la utilización de sus instalaciones para la realización de tratamientos entre asistentes. La finalidad de los cursos impartidos es exclusivamente educativa y formativa, no contemplando en ningún caso la ejecución práctica de tratamientos sobre personas. La Institución no se responsabiliza por cualquier práctica realizada en contravención de esta disposición.',
+            p4: 'Toda relación profesional que EL CLIENTE mantenga con terceros (pacientes, proveedores, médicos u otros) será exclusivamente de su competencia y responsabilidad, sin que medie vínculo alguno con INSTITUTO MEX-COL-USA.'
+        },
+        electronicAcceptance: {
+            title: 'VALIDEZ DE MANIFESTACIONES ELECTRÓNICAS',
+            content: 'Cualquier manifestación de voluntad, aceptación o consentimiento otorgado por EL CLIENTE a través de medios electrónicos (correo, mensaje, formulario o plataforma digital) por parte de EL CLIENTE será considerada válida y vinculante, sustituyendo a la firma autógrafa conforme a lo establecido en la legislación aplicable.'
+        },
+        jurisdiction: {
+            title: 'JURISDICCIÓN',
+            content: 'Para cualquier controversia derivada del presente documento, así como en el contrato de prestación de servicios profesionales detallado en párrafos superiores, las partes se someten a las leyes y tribunales competentes de los Estados Unidos de América, renunciando a cualquier otro fuero que pudiera corresponderles en lo presente y/o futuro, o por razón de su domicilio actual y/o posterior.'
+        },
+        modifications: {
+            title: 'MODIFICACIONES A LOS TÉRMINOS Y CONDICIONES',
+            content: 'INSTITUTO MEX-COL-USA se reserva el derecho de modificar estos Términos y Condiciones en cualquier momento, sin previa notificación a EL CLIENTE. Las modificaciones se aplicarán únicamente a los servicios contratados con posterioridad a su entrada en vigor.'
+        },
+        acceptance: {
+            title: 'ACEPTACIÓN DE TÉRMINOS Y CONDICIONES',
+            content: 'Al realizar el pago o reservación por cualquier medio (depósito bancario, pago con tarjeta, transferencia, pago PayPal o en efectivo), el cliente acepta en su totalidad los Términos y Condiciones establecidos por INSTITUTO MEX-COL-USA, sin necesidad de firma escrita, y que dicho pago constituye una manifestación de voluntad vinculante. Al momento de su pago se le entregara recibo/nota en donde aclarara fecha, lugar, nombre del curso, obsequios, costos (estos datos pueden variar según el servicio adquirido), y confirma su aceptación de forma implícita en los términos y condiciones mismos que podrá revisar ante la Procuraduría Federal del Consumidor.'
+        },
+        companyName: 'INSTITUTO MEX-COL-USA PROFESIONALES EN MEDICINA ESTÉTICA, BELLEZA Y HOLISTICA LLC'
+    },
+    privacy: {
+        title: 'Aviso de Privacidad',
+        lastUpdated: 'Última Actualización: 22 de Abril, 2025',
+        introduction: 'En cumplimiento a lo dispuesto por la Ley Federal de Protección de Datos Personales en Posesión de los Particulares ("La Ley"), INSTITUTO MEXCOL PROFESIONALES EN MEDICINA ESTÉTICA Y HOLÍSTICA, S.C., (en lo subsecuente "LA EMPRESA"), pone a disposición de sus clientes, proveedores y público en general que por cualquier motivo proporcione sus datos personales, de manera conjunta o separada, el siguiente:',
+        responsible: {
+            title: 'RESPONSABLE',
+            content: 'Identidad y domicilio del responsable de recabar sus datos: INSTITUTO MEXCOL PROFESIONALES EN MEDICINA ESTÉTICA Y HOLÍSTICA, S.C., con domicilio en la calle Avenida uno número 18, Oficina 317, Colonia San Pedro de los Pinos, Alcaldía Benito Juárez, C.P. 03800, Ciudad de México, es responsable de recabar sus datos personales, del uso que se le dé a los mismos y de su protección, por conducto de INSTITUTO MEXCOL PROFESIONALES EN MEDICINA ESTÉTICA Y HOLÍSTICA, S.C.'
+        },
+        purposes: {
+            title: 'FINALIDADES',
+            content: 'Finalidad del tratamiento de sus datos personales: Sus datos personales serán utilizados para las siguientes finalidades:',
+            list: [
+                'Proveer los servicios requeridos por usted;',
+                'Informar sobre cambios o servicios que estén relacionados con el contratado o adquirido por el cliente;',
+                'Dar cumplimiento a obligaciones contraídas con nuestros clientes;',
+                'Realizar estudios internos sobre hábitos de consumo.'
+            ]
+        },
+        dataCollection: {
+            title: 'DATOS QUE SE RECABAN',
+            information: 'Información que se recabará de los titulares: Para las finalidades señaladas en el presente aviso de privacidad, podemos recabar sus datos personales de distintas formas: cuando usted nos los proporciona directamente; cuando visita nuestro sitio de Internet o utiliza nuestros servicios en línea, y cuando obtenemos información a través de otras fuentes que están permitidas por la ley.',
+            directPersonal: {
+                title: 'Datos personales que recabamos de forma directa:',
+                content: 'Recabamos sus datos personales de forma directa cuando usted mismo nos los proporciona por diversos medios, como cuando nos da información con objeto de que le prestemos un servicio. Los datos que obtenemos por este medio pueden ser, entre otros:',
+                list: [
+                    'Nombre completo.',
+                    'Exhibición de identificación oficial.',
+                    'Grado de estudios.',
+                    'Correo electrónico.',
+                    'Teléfono particular.',
+                    'Teléfono celular.'
+                ]
+            },
+            directFinancial: {
+                title: 'Datos patrimoniales qué se recaban de forma directa:',
+                content: 'Recabamos sus datos personales de forma directa cuando usted mismo nos los proporciona por diversos medios, como cuando nos da información con objeto de que le prestemos un servicio. Los datos que obtenemos por este medio pueden ser, entre otros:',
+                list: [
+                    'Cuentas Bancarias.',
+                    'Estados de cuenta.',
+                    'Prediales.',
+                    'Historial crediticio.',
+                    'Información fiscal.',
+                    'Afores.',
+                    'Licencia de conducir.',
+                    'Bienes inmuebles.'
+                ]
+            },
+            onlineData: {
+                title: 'Datos personales que recabamos cuando visita nuestro sitio de Internet o utiliza nuestros servicios en línea:',
+                personal: 'Nombre completo, Grado de Estudios, Correo electrónico, Teléfono particular, Teléfono celular',
+                financial: 'Cuentas Bancarias, Estados de cuenta, Prediales, Historial crediticio, Información fiscal, Afores, Licencia de conducir, Bienes inmuebles'
+            },
+            sensitiveData: {
+                title: 'Datos personales sensibles:',
+                content: 'Datos personales que recabamos:',
+                list: [
+                    'Nacionalidad',
+                    'Estatus migratorio'
+                ]
+            },
+            videoRecording: {
+                title: 'Videograbación:',
+                content: 'Asimismo, se hace de su conocimiento, que LA EMPRESA monitoreará las reuniones virtuales de los cursos de capacitación, que podrán captar imágenes y sonidos con fines de seguridad, vigilancia y asistencia de los mismos, sin que esto implique que se recaben datos personales adicionales que permitan asociar o identificar a los titulares de dichas imágenes, garantizando en todo momento las expectativas razonables de privacidad con estricto apego y respeto al honor de las personas videograbadas. El personal del monitoreo procederá a su almacenamiento únicamente en los casos en que identifique irregularidades o la posible comisión de ilícitos, que puedan derivar en el ejercicio de las acciones legales correspondientes.'
+            }
+        },
+        consent: {
+            title: 'CONSENTIMIENTO',
+            content: 'Consentimiento: Toda vez que los datos recabados resultan imprescindibles para los fines de LA EMPRESA para los servicios que prestará, en principio se entenderá que al proporcionar usted sus datos personales por cualquier medio, acepta tácita y expresamente su tratamiento en los términos establecidos en el presente aviso de privacidad. De igual manera, autoriza a LA EMPRESA, para que utilice conjunta o separadamente sus datos personales proporcionados para: identificarle, ubicarle, comunicarle, contactarle e informarle a través de cualquier medio permitido por la Ley, incluyendo los medios electrónicos, respecto de todo aspecto relativo a la prestación de servicios establecida entre El Responsable y El titular, de acuerdo con los términos establecidos en el presente Aviso de Privacidad.'
+        },
+        dataLimitation: {
+            title: 'OPCIONES Y MEDIOS PARA LIMITAR EL USO O DIVULGACIÓN DE DATOS',
+            p1: 'Si usted no desea que sus datos personales sean tratados para los fines señalados en el presente Aviso de Privacidad, mucho le agradeceremos hacerlo de nuestro conocimiento, directamente en el domicilio de LA EMPRESA o enviando su decisión al correo electrónico gerencia@institutomexcol.com o comunicarse a atención al cliente al número 55 2593 6885.',
+            p2: 'No obstante, en caso que usted decida manifestarnos su oposición al tratamiento de sus datos personales, deberá tomar en cuenta que esto implicará que, si desea conocer cualquier comunicación o Acuerdo relacionado con los asuntos de la prestación de servicios, deberá acudir al domicilio de LA EMPRESA, de manera personal o a través de Representante debidamente acreditado mediante carta poder y a satisfacción de LA EMPRESA.',
+            p3: 'En los casos en que LA EMPRESA, reciba de usted información que lo identifique o lo haga identificable a través de medios remotos o locales de comunicación electrónica, óptica y de otra tecnología, se entenderá que LA EMPRESA no requerirá su consentimiento para el tratamiento de sus datos personales, por tratarse de fuentes de acceso público, siempre que el sitio donde se encuentren los datos personales esté concebido para facilitar información al público y esté abierto a la consulta.',
+            p4: 'De igual manera, se entiende que, en caso que LA EMPRESA no reciba en el correo gerencia@institutomexcol.com o comunicarse a atención al cliente al número 55 2593 6885 su decisión en contrario se entenderá que existen signos inequívocos a través de los cuales usted otorga tácita y expresamente su autorización para el tratamiento de sus datos personales, en términos de lo estipulado en el artículo 8 de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.'
+        },
+        arcoRights: {
+            title: 'DERECHOS AL ACCESO, RECTIFICACIÓN, CANCELACIÓN Y OPOSICIÓN (DERECHOS ARCO)',
+            p1: 'Usted tiene derecho a conocer qué datos hemos recabado de su persona, para qué los utilizamos y las condiciones del uso que les damos (Acceso). Asimismo, es su derecho solicitar la corrección de su información personal en el caso de que ésta se encuentre desactualizada o sea inexacta o incompleta (Rectificación), que la eliminemos de nuestros registros o bases de datos cuando estime que no está siendo utilizada adecuadamente (Cancelación), así como oponerse al uso de sus datos personales para fines específicos (Oposición).',
+            p2: 'En caso de que resulte de su interés ejercer sus derechos ARCO, usted deberá presentar su solicitud por escrito dirigido a LA EMPRESA, ya sea directamente en su domicilio, o bien, podrá enviarla al correo electrónico gerencia@institutomexcol.com o comunicarse a atención al cliente al número 55 2593 6885. Dicha solicitud deberá contener lo siguiente:',
+            list: [
+                'El nombre del titular y la indicación del domicilio u otro medio en que desee le sea comunicada la respuesta a su solicitud;',
+                'Los documentos que acrediten la identidad o, en su caso, la representación legal del titular;',
+                'La descripción clara y precisa de los datos personales respecto de los que se busca ejercer alguno de los derechos antes mencionados, y',
+                'Cualquier otro elemento o documento que facilite la localización de los datos personales.'
+            ],
+            p3: 'La determinación que adopte LA EMPRESA respecto de la procedencia de su solicitud le será notificada dentro de los 15 días hábiles siguientes a la fecha en que se reciba su solicitud.',
+            p4: 'Es importante que tome en cuenta que, en su caso, la entrega de la información que usted requiera le será proporcionada únicamente de manera personal o a través de Representante Legal debidamente acreditado.'
+        },
+        dataTransfer: {
+            title: 'TRANSFERENCIA DE DATOS',
+            content: 'De conformidad con La Ley, le informamos que LA EMPRESA compartirá los datos personales que hemos recabado de usted con las personas, empresas, organizaciones y autoridades distintas a nosotros, que se ajusten a los siguientes fines:',
+            list: [
+                'La celebración de los diversos actos jurídicos necesarios para la obtención y prestación de los servicios;',
+                'Cuando la transferencia sea necesaria o legalmente exigida para la salvaguarda de un interés público, o para la procuración o administración de justicia;',
+                'Cuando la transferencia sea precisa para el reconocimiento, ejercicio o defensa de un derecho en un proceso judicial;',
+                'Cuando la transferencia sea precisa para el mantenimiento o cumplimiento de una relación jurídica entre el responsable y el titular;',
+                'Las demás que expresamente señale La Ley.'
+            ]
+        },
+        modifications: {
+            title: 'MODIFICACIONES AL AVISO DE PRIVACIDAD',
+            p1: 'LA EMPRESA se reserva el derecho de efectuar en cualquier momento modificaciones o actualizaciones al presente aviso de privacidad, para la atención de novedades legislativas o jurisprudenciales, políticas internas, nuevos requerimientos para la prestación u ofrecimiento de nuestros servicios o productos, prácticas del mercado, nuevos requerimientos y/o modificaciones que establezca La Ley.',
+            p2: 'Estas modificaciones estarán disponibles al público a través de nuestra página de Internet www.institutomexcol.com',
+            p3: 'Última actualización 22 de Abril de 2025.'
+        }
     },
     footer: {
       description: 'Empoderando a estudiantes de todo el mundo con educación en línea accesible y de alta calidad.',
@@ -1142,7 +1535,8 @@ export const translations = {
         about: 'Conócenos',
         contact: 'Contacto',
         programs: 'Programas',
-        terms: 'Términos y Condiciones'
+        terms: 'Términos y Condiciones',
+        privacy: 'Aviso de Privacidad'
       },
       followUs: 'Síguenos',
       copyright: '© {year} Instituto MEXCOL. Todos los derechos reservados.'

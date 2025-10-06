@@ -84,7 +84,7 @@ export default function ContactPage() {
               </Card>
             ))}
           </div>
-          <div>
+          {/* <div>
             <h3 className="font-headline text-xl font-semibold">{t.followUs.title}</h3>
             <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
               <a href="https://www.facebook.com/profile.php?id=100064823553168#" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:underline"><Facebook className="h-4 w-4" />{t.followUs.facebook}</a>
@@ -92,7 +92,7 @@ export default function ContactPage() {
               <a href="https://www.tiktok.com/@instituto.mex_col_usa" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:underline"><Music2 className="h-4 w-4" />{t.followUs.tiktok}</a>
               <a href="https://www.youtube.com/@institutomexcol9788/featured" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:underline"><Youtube className="h-4 w-4" />{t.followUs.youtube}</a>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

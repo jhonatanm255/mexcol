@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn('font-body', inter.variable)}>
+      <body className={cn('font-body', inter.variable)} suppressHydrationWarning>
         <LanguageProvider>
           <AuthProvider>
             <div className="flex min-h-screen flex-col">
