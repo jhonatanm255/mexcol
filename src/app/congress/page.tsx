@@ -37,9 +37,9 @@ export default function CongressPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 bg-gradient-to-r from-primary to-primary/80 text-white overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-r from-primary to-primary/80 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="container mx-auto relative z-10">
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center mb-6">
               <div className="p-4 bg-white/10 rounded-full backdrop-blur-sm">
@@ -60,8 +60,8 @@ export default function CongressPage() {
       </section>
 
       {/* Description Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
+      <section className="py-16">
+        <div className="container mx-auto px-4 max-w-4xl">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="font-headline text-3xl font-bold mb-6 text-foreground">
@@ -108,8 +108,8 @@ export default function CongressPage() {
       </section>
 
       {/* Presentations Section */}
-      <section className="py-16 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-6xl">
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
             <div className="flex justify-center mb-4">
               <div className="p-3 bg-primary/10 rounded-full">
@@ -141,8 +141,8 @@ export default function CongressPage() {
       </section>
 
       {/* Benefits and Endorsements */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
+      <section className="py-16">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Benefits */}
             <div>
@@ -190,8 +190,8 @@ export default function CongressPage() {
       </section>
 
       {/* Raffle Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-primary/10 to-primary/5">
-        <div className="container mx-auto max-w-4xl">
+      <section className="py-16 bg-gradient-to-r from-primary/10 to-primary/5">
+        <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
             <div className="flex justify-center mb-4">
               <div className="p-4 bg-primary/20 rounded-full">
@@ -219,8 +219,8 @@ export default function CongressPage() {
       </section>
 
       {/* Pre-Congress Workshops */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
+      <section className="py-16">
+        <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
             <div className="flex justify-center mb-4">
               <div className="p-3 bg-teal-100 rounded-full">
@@ -252,8 +252,8 @@ export default function CongressPage() {
       </section>
 
       {/* Location Section */}
-      <section className="py-16 px-4 bg-muted/30">
-        <div className="container mx-auto max-w-4xl">
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
             <div className="flex justify-center mb-4">
               <div className="p-3 bg-primary/10 rounded-full">
@@ -266,9 +266,9 @@ export default function CongressPage() {
           </div>
           
           <Card className="border-primary/20 bg-gradient-to-r from-primary to-primary/80 text-white">
-            <CardContent className="p-8">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-white/10 rounded-full flex-shrink-0 backdrop-blur-sm">
+            <CardContent className="p-8 text-center">
+              <div className="flex flex-col items-center gap-4">
+                <div className="p-3 bg-white/10 rounded-full backdrop-blur-sm">
                   <Building className="h-6 w-6 text-white" />
                 </div>
                 <div>
@@ -278,7 +278,7 @@ export default function CongressPage() {
                   <p className="text-white/90 mb-4">
                     {t.hotelAddress}
                   </p>
-                  <div className="flex items-center gap-2 text-sm text-white/80">
+                  <div className="flex items-center justify-center gap-2 text-sm text-white/80">
                     <MapPin className="h-4 w-4" />
                     <span>Ciudad de México, CDMX</span>
                   </div>
@@ -290,8 +290,8 @@ export default function CongressPage() {
       </section>
 
       {/* Tourism Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
+      <section className="py-16">
+        <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
             <div className="flex justify-center mb-4">
               <div className="p-3 bg-primary/10 rounded-full">
@@ -304,9 +304,9 @@ export default function CongressPage() {
           </div>
           
           <Card className="border-primary/20 bg-primary/5">
-            <CardContent className="p-8">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 rounded-full flex-shrink-0">
+            <CardContent className="p-8 text-center">
+              <div className="flex flex-col items-center gap-4">
+                <div className="p-3 bg-primary/10 rounded-full">
                   <Camera className="h-6 w-6 text-primary" />
                 </div>
                 <div>

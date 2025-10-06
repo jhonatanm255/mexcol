@@ -73,11 +73,11 @@ export function Footer() {
         </div>
         <div className="mt-8 border-t border-white/10 pt-8 text-center text-white/70">
           <p className="mb-4">{t.copyright.replace('{year}', new Date().getFullYear().toString())}</p>
-          <div className="flex justify-center items-center space-x-4">
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4">
             <Link href="/terms" className="text-white/70 hover:text-primary hover:underline">
               {t.quickLinks.terms}
             </Link>
-            <span className="text-white/50">|</span>
+            <span className="text-white/50 hidden sm:inline">|</span>
             <Link href="/privacy" className="text-white/70 hover:text-primary hover:underline">
               {t.quickLinks.privacy}
             </Link>

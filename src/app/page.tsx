@@ -285,7 +285,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-     <section id="coupon" className="py-20 md:py-28 section-modern relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+     <section id="coupon" className="py-20 md:py-28 section-modern relative overflow-hidden bg-gradient-to-r from-primary to-primary/80 text-white">
+       <div className="absolute inset-0 bg-black/20"></div>
        {/* Background shapes */}
        <div className="absolute inset-0 overflow-hidden">
          <div className="organic-shape w-96 h-96 top-10 left-10 opacity-10"></div>
@@ -294,13 +295,15 @@ export default function Home() {
        
        <div className="container mx-auto px-4 relative z-10">
          <div className="mx-auto max-w-3xl text-center">
-           <div className="flex justify-center mb-4">
-             <Ticket className="h-12 w-12 text-white/80" />
+           <div className="flex justify-center mb-6">
+             <div className="p-4 bg-white/10 rounded-full backdrop-blur-sm">
+               <Ticket className="h-12 w-12 text-white" />
+             </div>
            </div>
            <h2 className="font-headline text-4xl text-white font-bold tracking-tight sm:text-5xl mb-6">
              {t.coupon.title}
            </h2>
-           <p className="mt-6 text-xl text-gray-200 leading-relaxed">
+           <p className="mt-6 text-xl text-white/90 leading-relaxed">
              {t.coupon.subtitle}
            </p>
            <div className="mt-10">

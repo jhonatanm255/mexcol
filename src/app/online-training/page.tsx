@@ -53,21 +53,21 @@ export default function OnlineTrainingPage() {
         </div>
       </section>
       
-      <section className="my-16 bg-secondary p-8 rounded-lg">
+      <section className="my-16 bg-secondary p-6 md:p-8 rounded-lg">
         <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-                <h2 className="font-headline text-3xl font-bold">{t.readyToStart}</h2>
+            <div className="text-center md:text-left">
+                <h2 className="font-headline text-2xl md:text-3xl font-bold">{t.readyToStart}</h2>
                 <p className="mt-4 text-muted-foreground">{t.readySubtitle}</p>
-                <div className='mt-6 flex gap-4'>
-                    <Button asChild>
+                <div className='mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start'>
+                    <Button asChild className="w-full sm:w-auto">
                         <Link href="/academic-programs">{t.viewAllPrograms}</Link>
                     </Button>
-                    <Button asChild variant="outline">
+                    <Button asChild variant="outline" className="w-full sm:w-auto">
                         <Link href="/contact">{t.requestInfo}</Link>
                     </Button>
                 </div>
             </div>
-            <div className="relative h-64 w-full rounded-lg overflow-hidden">
+            <div className="relative h-64 w-full rounded-lg overflow-hidden order-first md:order-last">
                 <Image 
                     src="https://picsum.photos/600/400?random=15" 
                     alt="Persona estudiando en linea" 

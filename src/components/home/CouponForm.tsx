@@ -17,7 +17,7 @@ function SubmitButton() {
   const t = translations[language].coupon;
 
   return (
-    <Button type="submit" disabled={pending} className="w-full sm:w-auto">
+    <Button type="submit" disabled={pending} className="w-full sm:w-auto btn-modern bg-white text-white hover:bg-white/90 px-8 py-4 text-lg">
       {pending ? (
         <>
           <Loader2 className="mr-2 h-4 w-4 animate-spin" />

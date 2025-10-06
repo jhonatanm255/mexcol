@@ -169,7 +169,7 @@ export default function StaffPage() {
       {/* Destacados */}
       <section className="flex flex-col items-center gap-6 mb-12">
         {/* Director General */}
-        <div className="w-[85%] max-w-4xl">
+        <div className="w-full max-w-4xl">
           <Card className="overflow-hidden">
             <div className="grid grid-cols-1 sm:grid-cols-3">
               <div className="relative h-56 sm:h-full sm:col-span-1">
@@ -197,7 +197,7 @@ export default function StaffPage() {
         </div>
 
         {/* Director Médico */}
-        <div className="w-[85%] max-w-4xl">
+        <div className="w-full max-w-4xl">
           <Card className="overflow-hidden">
             <div className="grid grid-cols-1 sm:grid-cols-3">
               <div className="relative h-56 sm:h-full sm:col-span-1">
