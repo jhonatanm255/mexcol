@@ -7,7 +7,7 @@ import { translations } from '@/lib/i18n';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, Users, Globe, Award } from 'lucide-react';
+import { CheckCircle, Users, Globe, Award, ShieldCheck, GraduationCap, FileCheck, BadgeCheck } from 'lucide-react';
 
 export default function AboutPage() {
   const { language } = useLanguage();
@@ -62,18 +62,36 @@ export default function AboutPage() {
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-8">
             {t.endorsements.title}
           </h2>
-          <div className="grid gap-4">
-            {t.endorsements.items.map((item, index) => (
-              <Card key={index} className="border-l-4 border-l-primary">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
-                    <p className="text-muted-foreground leading-relaxed">{item}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          
+          {/* Primer párrafo descriptivo */}
+          <p className="text-muted-foreground leading-relaxed mb-6">
+            {t.endorsements.items[0]}
+          </p>
+
+          {/* Cards del medio (índices 1, 2, 3) sin borde izquierdo */}
+          <div className="grid gap-4 mb-6">
+            {t.endorsements.items.slice(1, 4).map((item, index) => {
+              const icons = [Award, Award, Award];
+              const Icon = icons[index];
+              return (
+                <Card key={index} className="hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-4">
+                      <div className="bg-primary/10 p-3 rounded-full">
+                        <Icon className="h-6 w-6 text-primary flex-shrink-0" />
+                      </div>
+                      <p className="text-muted-foreground leading-relaxed flex-1">{item}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
+
+          {/* Último párrafo descriptivo */}
+          <p className="text-primary leading-relaxed italic">
+            {t.endorsements.items[4]}
+          </p>
         </div>
       </section>
 
@@ -83,7 +101,7 @@ export default function AboutPage() {
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-12">
             {t.missionVision.title}
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-1 gap-8">
             <Card className="h-full">
               <CardContent className="p-8">
                 <h3 className="font-headline text-2xl font-bold mb-4 text-primary">
@@ -140,16 +158,21 @@ export default function AboutPage() {
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             {t.team.content}
           </p>
+          <Button asChild size="lg" className="btn-modern">
+            <Link href="/staff">
+              {t.team.cta}
+            </Link>
+          </Button>
         </div>
       </section>
 
       {/* Final CTA Section */}
       <section className="text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-headline text-md md:text-4xl font-semibold mb-6">
             {t.finalCta.title}
           </h2>
-          <Button asChild size="lg" className="btn-modern">
+          <Button asChild size="lg" variant="outline">
             <Link href="/academic-programs">
               {t.finalCta.button}
             </Link>

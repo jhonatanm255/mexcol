@@ -167,7 +167,7 @@ export default function StaffPage() {
       </section>
 
       {/* Destacados */}
-      <section className="flex flex-col items-center gap-6 mb-12">
+      <section className="flex items-center gap-6 mb-12">
         {/* Director General */}
         <div className="w-full max-w-4xl">
           <Card className="overflow-hidden">

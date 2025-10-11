@@ -192,12 +192,13 @@ export const translations = {
             content: 'Instituto MEXCOL is a premier educational institution dedicated to advancing aesthetic medicine through comprehensive, hands-on training programs. We bring together world-class experts and cutting-edge techniques to provide students with the knowledge and skills needed to excel in this rapidly evolving field.'
         },
         endorsements: {
-            title: 'Industry Recognition',
+            title: 'Accreditations and Endorsements',
             items: [
-                'Accredited by international medical education boards',
-                'Recognized by leading aesthetic medicine associations',
-                'Featured in top medical journals and publications',
-                'Trusted by over 5,000 medical professionals worldwide'
+                'Our continuing education courses are registered with the Ministry of Labor and Social Welfare (STPS) and have an agreement with the American Alliance of Aesthetic Medicine in the USA.',
+                'Diploma endorsed by the American Alliance of Aesthetic Medicine and SOPEME, valid in USA, Latin America, Caribbean, and Spain.',
+                'Certificate with curricular value issued and registered with STPS (Mexico).',
+                'Certificate of attendance issued by Instituto MexCol.',
+                'We are committed to your professional development and guarantee the quality of our programs.'
             ]
         },
         missionVision: {
@@ -222,7 +223,7 @@ export const translations = {
         team: {
             title: 'Meet Our Team',
             content: 'Our diverse team of medical professionals and educators brings together decades of experience in aesthetic medicine, ensuring that every student receives world-class training and support.',
-            cta: 'Meet Our Directors & Staff',
+            cta: 'Meet Our Full Medical Staff',
             members: [
                 {
                     name: 'Dr. Evelyn Reed',
@@ -954,46 +955,47 @@ export const translations = {
         title: 'Conócenos',
         subtitle: 'Nuestra misión es cerrar brechas de conocimiento a través de una educación en línea innovadora y accesible, conectando a expertos con estudiantes de todo el mundo.',
         hero: {
-            title: 'Acerca del Instituto MEXCOL',
-            subtitle: 'Liderando el futuro de la educación en medicina estética a nivel mundial',
-            cta: 'Explorar Nuestros Programas'
+            title: 'Formamos a los mejores profesionales en medicina estética',
+            subtitle: 'Más de 14 años capacitando médicos en 3 países con programas innovadores y práctica clínica real',
+            cta: 'Explorar Programas Académicos'
         },
         whoWeAre: {
             title: 'Quiénes Somos',
-            content: 'El Instituto MEXCOL es una institución educativa de primer nivel dedicada a avanzar en la medicina estética a través de programas de capacitación integrales y prácticos. Reunimos a expertos de clase mundial y técnicas de vanguardia para brindar a los estudiantes el conocimiento y las habilidades necesarias para sobresalir en este campo en rápida evolución.'
+            content: 'Contamos con especialistas internacionales en medicina estética e inteligencia emocional, que brindan conocimiento actualizado en técnicas médicas de belleza. Instituto MexCol, con sede en México, Colombia y ahora Estados Unidos, ofrece capacitaciones, talleres, diplomados y seminarios impartidos por expertos internacionales en cada área.'
         },
         endorsements: {
-            title: 'Reconocimiento de la Industria',
+            title: 'Avales y Respaldos',
             items: [
-                'Acreditado por juntas internacionales de educación médica',
-                'Reconocido por las principales asociaciones de medicina estética',
-                'Destacado en las principales revistas y publicaciones médicas',
-                'Confiable para más de 5,000 profesionales médicos en todo el mundo'
+                'Nuestros cursos de educación continua están registrados en la Secretaría del Trabajo y Previsión Social (STPS) y cuentan con convenio con la Alianza Americana de Medicina Estética en EE. UU.',
+                'Diploma avalado por Alianza Americana de Medicina Estética y SOPEME, válido en USA, Latinoamérica, Caribe y España.',
+                'Constancia con valor curricular emitida y registrada ante STPS (México).',
+                'Constancia de asistencia emitida por Instituto MexCol.',
+                'Nos comprometemos con tu desarrollo profesional y garantizamos la calidad de nuestros programas.'
             ]
         },
         missionVision: {
             title: 'Nuestra Misión y Visión',
             mission: {
                 title: 'Nuestra Misión',
-                content: 'Proporcionar educación excepcional en medicina estética a través de métodos de enseñanza innovadores, capacitación práctica y apoyo continuo, empoderando a los profesionales médicos para brindar tratamientos seguros, efectivos y transformadores a sus pacientes.'
+                content: 'INSTITUTO MEXCOL PROFESIONALES EN MEDICINA ESTÉTICA, BELLEZA Y HOLISTICA CON SEDE EN MÉXICO, EEUU Y COLOMBIA es una institución especializada en educación continúa para profesionales de las diferentes áreas de Medicina Estética, Belleza y Holistica que buscan estar a la vanguardia en tecnología y conocimientos en tratamientos de belleza facial y corporal. En nuestro instituto el alumno es lo más importante ya que nos ocupamos de que adquieran los conocimientos con exactitud para llevarlos a cabo en sus consultorios cabinas o spa, y así brindar a cada paciente las mejores técnicas de medicina estética y belleza siendo profesionales actualizados en estos tratamientos, por tal motivo instituto se siente responsable de la enseñanza en el ámbito de los profesionales y de la sociedad en general, mismo que nos lleva a proporcionar los conocimientos imprescindibles para una mejor formación personal, académica y profesional.'
             },
             vision: {
                 title: 'Nuestra Visión',
-                content: 'Ser el líder global en educación de medicina estética, estableciendo el estándar de excelencia en capacitación, investigación y desarrollo profesional, mientras fomentamos una comunidad de practicantes calificados dedicados a avanzar en el campo.'
+                content: 'Ser un Instituto líder y competitivo en la enseñanza en Medicina Estética Belleza y Holistica, comprometido con la excelencia académica y la calidad de todos nuestros servicios, actualizando al personal docente continuamente e incluso incorporando nuevos docentes para estar a la vanguardia en cada programa ofrecido, así siendo referente de calidad a nivel nacional e internacional, y lograr hacer presencia en América del sur, centro América, América del Norte y Europa.'
             }
         },
         impact: {
             title: 'Nuestro Impacto',
             metrics: [
-                { number: '5,000+', label: 'Profesionales Médicos Capacitados' },
+                { number: '10,000+', label: 'Profesionales Médicos Capacitados' },
                 { number: '15+', label: 'Años de Experiencia' },
                 { number: '3', label: 'Países Atendidos' }
             ]
         },
         team: {
-            title: 'Conoce a Nuestro Equipo',
-            content: 'Nuestro diverso equipo de profesionales médicos y educadores reúne décadas de experiencia en medicina estética, asegurando que cada estudiante reciba capacitación y apoyo de clase mundial.',
-            cta: 'Conoce a Nuestros Directores y Staff',
+            title: 'Nuestro Equipo',
+            content: 'Nuestro equipo de directores y especialistas médicos es el pilar de nuestra institución. Contamos con médicos estéticos, cirujanos plásticos, ingenieros biomédicos, todos líderes en investigación y práctica estética. Su experiencia garantiza la calidad de cada programa y permite transmitir las últimas actualizaciones en técnicas médicas y de belleza.',
+            cta: 'Conoce a todo nuestro Staff Médico',
             members: [
                 {
                     name: 'Dr. Evelyn Reed',
@@ -1018,7 +1020,7 @@ export const translations = {
             ]
         },
         finalCta: {
-            title: '¿Listo para Comenzar tu Viaje?',
+            title: '¿“Forma parte de nuestra comunidad médica y lleva tu práctica estética al siguiente nivel”.',
             button: 'Ver Programas Académicos'
         },
         teamTitle: 'Directores & Staff Médico'
