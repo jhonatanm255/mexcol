@@ -183,46 +183,46 @@ export const translations = {
         title: 'About Us',
         subtitle: 'Our mission is to bridge knowledge gaps through innovative and accessible online education, connecting experts with learners across the globe.',
         hero: {
-            title: 'About Instituto MEXCOL',
-            subtitle: 'Leading the future of aesthetic medicine education worldwide',
-            cta: 'Explore Our Programs'
+            title: 'We Train the Best Professionals in Aesthetic Medicine',
+            subtitle: 'Over 14 years training doctors across 3 countries with innovative programs and real clinical practice.',
+            cta: 'Explore Academic Programs'
         },
         whoWeAre: {
             title: 'Who We Are',
-            content: 'Instituto MEXCOL is a premier educational institution dedicated to advancing aesthetic medicine through comprehensive, hands-on training programs. We bring together world-class experts and cutting-edge techniques to provide students with the knowledge and skills needed to excel in this rapidly evolving field.'
+            content: 'We have international specialists in aesthetic medicine and emotional intelligence who provide up-to-date knowledge in medical beauty techniques. Instituto MexCol, with locations in Mexico, Colombia, and now the United States, offers training, workshops, diploma programs, and seminars delivered by international experts in each field.'
         },
         endorsements: {
-            title: 'Accreditations and Endorsements',
+            title: 'Endorsements & Accreditations',
             items: [
                 'Our continuing education courses are registered with the Ministry of Labor and Social Welfare (STPS) and have an agreement with the American Alliance of Aesthetic Medicine in the USA.',
                 'Diploma endorsed by the American Alliance of Aesthetic Medicine and SOPEME, valid in USA, Latin America, Caribbean, and Spain.',
                 'Certificate with curricular value issued and registered with STPS (Mexico).',
-                'Certificate of attendance issued by Instituto MexCol.',
+                'Attendance certificate issued by Instituto MexCol',
                 'We are committed to your professional development and guarantee the quality of our programs.'
             ]
         },
         missionVision: {
-            title: 'Our Mission & Vision',
+            title: 'Mission & Vision',
             mission: {
-                title: 'Our Mission',
-                content: 'To provide exceptional education in aesthetic medicine through innovative teaching methods, practical training, and continuous support, empowering medical professionals to deliver safe, effective, and transformative treatments to their patients.'
+                title: 'Mission',
+                content: 'INSTITUTO MEXCOL PROFESSIONALS IN AESTHETIC, BEAUTY & HOLISTIC MEDICINE, with locations in Mexico, the USA, and Colombia, is a specialized institution offering continuing education for professionals in various fields of Aesthetic, Beauty, and Holistic Medicine. Our goal is to keep professionals at the forefront of technology and knowledge in facial and body beauty treatments. At our institute, students are our top priority. We ensure they acquire the skills accurately to apply them in clinics, treatment rooms, or spas, providing patients with the best aesthetic medicine and beauty techniques. This responsibility extends to professional education and society at large, providing essential knowledge for personal, academic, and professional development.'
             },
             vision: {
-                title: 'Our Vision',
-                content: 'To be the global leader in aesthetic medicine education, setting the standard for excellence in training, research, and professional development while fostering a community of skilled practitioners dedicated to advancing the field.'
+                title: 'Vision',
+                content: 'To be a leading and competitive institute in Aesthetic, Beauty, and Holistic Medicine education, committed to academic excellence and the quality of all services. We continuously update our teaching staff and incorporate new instructors to stay at the forefront of every program offered, establishing ourselves as a benchmark of quality nationally and internationally, with presence across South America, Central America, North America, and Europe.'
             }
         },
         impact: {
             title: 'Our Impact',
             metrics: [
-                { number: '5,000+', label: 'Medical Professionals Trained' },
+                { number: '10,000+', label: 'Medical Professionals Trained' },
                 { number: '15+', label: 'Years of Experience' },
                 { number: '3', label: 'Countries Served' }
             ]
         },
         team: {
-            title: 'Meet Our Team',
-            content: 'Our diverse team of medical professionals and educators brings together decades of experience in aesthetic medicine, ensuring that every student receives world-class training and support.',
+            title: 'Team Intro',
+            content: 'Our team of directors and medical specialists is the backbone of our institute. We have aesthetic doctors, plastic surgeons, and biomedical engineers—all leaders in research and aesthetic practice. Their expertise ensures the quality of each program and allows us to deliver the latest updates in medical and beauty techniques.',
             cta: 'Meet Our Full Medical Staff',
             members: [
                 {
@@ -248,7 +248,7 @@ export const translations = {
             ]
         },
         finalCta: {
-            title: 'Ready to Start Your Journey?',
+            title: 'Join our medical community and take your aesthetic practice to the next level.',
             button: 'View Academic Programs'
         },
         teamTitle: 'Directors & Medical Staff'
@@ -1020,7 +1020,7 @@ export const translations = {
             ]
         },
         finalCta: {
-            title: '¿“Forma parte de nuestra comunidad médica y lleva tu práctica estética al siguiente nivel”.',
+            title: 'Forma parte de nuestra comunidad médica y lleva tu práctica estética al siguiente nivel.',
             button: 'Ver Programas Académicos'
         },
         teamTitle: 'Directores & Staff Médico'

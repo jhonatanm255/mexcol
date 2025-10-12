@@ -169,7 +169,7 @@ export default function AboutPage() {
       {/* Final CTA Section */}
       <section className="text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-headline text-md md:text-4xl font-semibold mb-6">
+          <h2 className="font-headline text-xl md:text-2xl font-semibold mb-6">
             {t.finalCta.title}
           </h2>
           <Button asChild size="lg" variant="outline">
