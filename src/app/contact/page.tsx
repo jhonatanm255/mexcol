@@ -16,15 +16,15 @@ export default function ContactPage() {
 
   const offices = {
     colombia: [
-      { city: 'Bogotá - oficinas administrativas', address: 'Carrera 4 este # 14-04 Segundo piso Sector la Esmeralda Tocancipá-cundinamarca', phone: '+57 1 234 5678', email: 'contacto@ejemplo.co' },
+      { city: 'Bogotá - oficinas administrativas', address: 'Carrera 4 este # 14-04 Segundo piso Sector la Esmeralda Tocancipá-cundinamarca', phone: '-', email: 'gerencia@institutomexcol.com' },
     ],
     mexico: [
-      { city: 'Ciudad de México', address: 'Av. Uno #18 Colonia San Pedro de los Pinos Delegación Benito Juárez Código Postal 03800', phone: '+52 55 1234 5678', email: 'contacto@ejemplo.mx' },
+      { city: 'Ciudad de México', address: 'Av. Uno #18 Colonia San Pedro de los Pinos Delegación Benito Juárez Código Postal 03800', phone: '+52 55 6630 8602 - +52 55 2593 6885', email: 'gerencia@institutomexcol.com' },
     ],
     usa: [
-      { city: 'Los Ángeles (Ejemplo)', address: '123 Sunset Blvd', phone: '+1 213 555 0100', email: 'contact@example.us' },
-      { city: 'Orlando (Ejemplo)', address: '456 Orange Ave', phone: '+1 407 555 0111', email: 'contact@example.us' },
-      { city: 'Houston (Ejemplo)', address: '789 Texas St', phone: '+1 713 555 0122', email: 'contact@example.us' },
+      { city: 'Presencia', address: ' En Los Angeles y Miami', phone: '+1 (407) 454-0524', email: 'gerencia@institutomexcol.com' },
+      { city: 'Orlando - Oficinas administrativas', address: '2180 Central Florida Parkway. Suite A2. Orlando FL 32837', phone: '+1 (407) 454-0524', email: 'gerencia@institutomexcol.com' },
+      { city: 'Houston - Sede', address: '2307 S Texas 6, Houston, TX 77077', phone: '+1 (407) 454-0524', email: 'gerencia@institutomexcol.com' },
     ],
   } as const;
 

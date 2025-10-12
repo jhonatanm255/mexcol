@@ -122,7 +122,7 @@ export const translations = {
             address: 'Av. Uno #18, Colonia San Pedro de los Pinos, Benito Juárez, 03800',
           },
           usaOrlando: {
-            title: 'Orlando (Admin Office)',
+            title: 'Orlando - Admin Office',
             address: '2180 Central Florida Parkway, Suite A2, Orlando, FL 32837',
           },
           usaHouston: {
@@ -131,7 +131,7 @@ export const translations = {
           },
           usaPresence: 'Presence: Los Angeles and Miami',
           coBogota: {
-            title: 'Bogotá (Admin Office)',
+            title: 'Bogotá - Admin Office',
             address: 'Carrera 4 Este #14-04, 2nd Floor, Sector La Esmeralda, Tocancipá, Cundinamarca',
           },
         },
@@ -894,7 +894,7 @@ export const translations = {
             address: 'Av. Uno #18, Col. San Pedro de los Pinos, Benito Juárez, 03800',
           },
           usaOrlando: {
-            title: 'Orlando (Oficinas administrativas)',
+            title: 'Orlando - Oficinas administrativas',
             address: '2180 Central Florida Parkway, Suite A2, Orlando, FL 32837',
           },
           usaHouston: {
@@ -903,7 +903,7 @@ export const translations = {
           },
           usaPresence: 'Presencia: Los Angeles y Miami',
           coBogota: {
-            title: 'Bogotá (Oficina administrativa)',
+            title: 'Bogotá - Oficina administrativa',
             address: 'Carrera 4 Este #14-04, Segundo piso, Sector La Esmeralda, Tocancipá, Cundinamarca',
           },
         },
