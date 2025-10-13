@@ -123,9 +123,9 @@ export default function Home() {
                   </div>
                   <CardTitle className="font-headline text-xl leading-tight">{c.course}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                {/* <CardContent>
                   <p className="text-muted-foreground text-sm leading-relaxed">{c.description}</p>
-                </CardContent>
+                </CardContent> */}
               </Card>
             ))}
           </div>
@@ -198,7 +198,7 @@ export default function Home() {
                 </a>
               </Button>
               <Button asChild size="sm" variant="outline" className="hover:bg-red-50 focus-modern border">
-                <a href="https://www.google.com/maps/place/Instituto+MexCol/@19.3953309,-99.1871588,16z/data=!4m8!3m7!1s0x85d1ff6a4e5eaaab:0x6d6262102c03bff3!8m2!3d19.3953309!4d-99.1845839!9m1!1b1!16s%2Fg%2F11flrplb83?entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <a href="https://www.google.com/maps/place/Instituto+Mexcol+Medicina+Est%C3%A9tica,+Belleza+y+Hol%C3%ADstica/@28.4500233,-81.3990457,17z/data=!4m17!1m10!3m9!1s0x88e77da778543991:0xbaca64c81f95f8b6!2sInstituto+Mexcol+Medicina+Est%C3%A9tica,+Belleza+y+Hol%C3%ADstica!8m2!3d28.4497642!4d-81.399351!10e5!14m1!1BCgIgAQ!16s%2Fg%2F11rvg6gl56!3m5!1s0x88e77da778543991:0xbaca64c81f95f8b6!8m2!3d28.4497642!4d-81.399351!16s%2Fg%2F11rvg6gl56?entry=ttu&g_ep=EgoyMDI1MTAwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <svg className="h-4 w-4" viewBox="0 0 24 24">
                     <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                     <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>

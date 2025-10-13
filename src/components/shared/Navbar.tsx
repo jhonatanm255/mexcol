@@ -69,67 +69,78 @@ ListItem.displayName = 'ListItem';
 function SlidingUnderline({ 
   activeIndex, 
   hoverIndex, 
-  containerRef 
+  containerRef,
+  language
 }: { 
   activeIndex: number; 
   hoverIndex: number | null;
-  containerRef: React.RefObject<HTMLDivElement> 
+  containerRef: React.RefObject<HTMLDivElement>;
+  language: 'en' | 'es';
 }) {
   const [activeUnderlineStyle, setActiveUnderlineStyle] = React.useState<React.CSSProperties>({});
   const [hoverUnderlineStyle, setHoverUnderlineStyle] = React.useState<React.CSSProperties>({});
 
   React.useEffect(() => {
-    if (containerRef.current && activeIndex >= 0) {
-      const container = containerRef.current;
-      const items = container.querySelectorAll('[data-nav-item]');
-      const activeItem = items[activeIndex] as HTMLElement;
-      
-      if (activeItem) {
-        const containerRect = container.getBoundingClientRect();
-        const itemRect = activeItem.getBoundingClientRect();
+    // Pequeño delay para asegurar que el DOM se ha actualizado después del cambio de idioma
+    const timer = setTimeout(() => {
+      if (containerRef.current && activeIndex >= 0) {
+        const container = containerRef.current;
+        const items = container.querySelectorAll('[data-nav-item]');
+        const activeItem = items[activeIndex] as HTMLElement;
         
-        setActiveUnderlineStyle({
-          left: itemRect.left - containerRect.left,
-          width: itemRect.width,
-          transition: 'all 0.3s ease-out'
-        });
+        if (activeItem) {
+          const containerRect = container.getBoundingClientRect();
+          const itemRect = activeItem.getBoundingClientRect();
+          
+          setActiveUnderlineStyle({
+            left: itemRect.left - containerRect.left,
+            width: itemRect.width,
+            transition: 'all 0.3s ease-out'
+          });
+        }
       }
-    }
-  }, [activeIndex, containerRef]);
+    }, 10);
+
+    return () => clearTimeout(timer);
+  }, [activeIndex, containerRef, language]);
 
   React.useEffect(() => {
-    if (containerRef.current && hoverIndex !== null && hoverIndex >= 0) {
-      const container = containerRef.current;
-      const items = container.querySelectorAll('[data-nav-item]');
-      const hoverItem = items[hoverIndex] as HTMLElement;
-      
-      if (hoverItem) {
-        const containerRect = container.getBoundingClientRect();
-        const itemRect = hoverItem.getBoundingClientRect();
+    const timer = setTimeout(() => {
+      if (containerRef.current && hoverIndex !== null && hoverIndex >= 0) {
+        const container = containerRef.current;
+        const items = container.querySelectorAll('[data-nav-item]');
+        const hoverItem = items[hoverIndex] as HTMLElement;
         
-        setHoverUnderlineStyle({
-          left: itemRect.left - containerRect.left,
-          width: itemRect.width,
-          transition: 'all 0.2s ease-out'
-        });
+        if (hoverItem) {
+          const containerRect = container.getBoundingClientRect();
+          const itemRect = hoverItem.getBoundingClientRect();
+          
+          setHoverUnderlineStyle({
+            left: itemRect.left - containerRect.left,
+            width: itemRect.width,
+            transition: 'all 0.2s ease-out'
+          });
+        }
+      } else {
+        setHoverUnderlineStyle({ opacity: 0 });
       }
-    } else {
-      setHoverUnderlineStyle({ opacity: 0 });
-    }
-  }, [hoverIndex, containerRef]);
+    }, 10);
+
+    return () => clearTimeout(timer);
+  }, [hoverIndex, containerRef, language]);
 
   return (
     <>
       {/* Underline activo */}
       {activeIndex >= 0 && (
         <div
-          className="absolute -bottom-3 h-1 bg-primary rounded-full"
+          className="absolute -bottom-3 h-1 bg-primary rounded-full pointer-events-none"
           style={activeUnderlineStyle}
         />
       )}
       {/* Underline hover */}
       <div
-        className="absolute -bottom-3 h-1 bg-primary/40 rounded-full"
+        className="absolute -bottom-3 h-1 bg-primary/40 rounded-full pointer-events-none"
         style={hoverUnderlineStyle}
       />
     </>
@@ -210,7 +221,8 @@ export function Navbar() {
               <SlidingUnderline 
                 activeIndex={activeIndex} 
                 hoverIndex={hoverIndex}
-                containerRef={navContainerRef} 
+                containerRef={navContainerRef}
+                language={language}
               />
             </div>
           </NavigationMenu>
@@ -235,14 +247,14 @@ export function Navbar() {
               <DropdownMenuContent align="end" className="bg-white border border-border/50 shadow-lg">
                 <DropdownMenuItem 
                   onClick={() => handleLanguageChange('es')}
-                  className="hover:bg-primary/5 focus:bg-primary/5"
+                  className="cursor-pointer hover:bg-teal-50 hover:text-teal-700 focus:bg-teal-50 focus:text-teal-700"
                 >
                   <span className="mr-2">🇪🇸</span>
                   Español
                 </DropdownMenuItem>
                 <DropdownMenuItem 
                   onClick={() => handleLanguageChange('en')}
-                  className="hover:bg-primary/5 focus:bg-primary/5"
+                  className="cursor-pointer hover:bg-teal-50 hover:text-teal-700 focus:bg-teal-50 focus:text-teal-700"
                 >
                   <span className="mr-2">🇺🇸</span>
                   English
@@ -324,14 +336,14 @@ export function Navbar() {
             <DropdownMenuContent align="end" className="bg-white border border-border/50 shadow-lg">
               <DropdownMenuItem 
                 onClick={() => handleLanguageChange('es')}
-                className="hover:bg-primary/5 focus:bg-primary/5"
+                className="cursor-pointer hover:bg-teal-50 hover:text-teal-700 focus:bg-teal-50 focus:text-teal-700"
               >
                 <span className="mr-2">🇪🇸</span>
                 Español
               </DropdownMenuItem>
               <DropdownMenuItem 
                 onClick={() => handleLanguageChange('en')}
-                className="hover:bg-primary/5 focus:bg-primary/5"
+                className="cursor-pointer hover:bg-teal-50 hover:text-teal-700 focus:bg-teal-50 focus:text-teal-700"
               >
                 <span className="mr-2">🇺🇸</span>
                 English

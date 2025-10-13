@@ -24,14 +24,14 @@ export const translations = {
       ],
     },
     hero: {
-        title: 'Mex-Col-USA Institute',
+        title: 'Institute Mex - Col - Usa',
         subtitle: 'Continuing Education in Aesthetic Medicine',
         explorePrograms: 'Explore Programs',
         contactUs: 'Contact Us',
     },
     home: {
       hero: {
-        main: 'Mex-Col-USA Institute',
+        main: 'Institute Mex - Col - Usa',
         sub: 'Continuing Education in Aesthetic Medicine',
       },
       onlineTraining: {
