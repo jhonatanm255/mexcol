@@ -25,15 +25,32 @@ export default function OnlineTrainingPage() {
   }));
 
   return (
-    <div className="container mx-auto px-4 py-16">
-      <section className="text-center">
-        <h1 className="font-headline text-4xl font-bold tracking-tight md:text-5xl">
-          {t.title}
-        </h1>
-        <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-          {t.subtitle}
-        </p>
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden mb-10">
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1600&auto=format&fit=crop"
+            alt="Capacitación en línea"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight mb-6">
+              {t.title}
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 mb-8 font-medium">
+              {t.subtitle}
+            </p>
+          </div>
+        </div>
       </section>
+      
+      <div className="container mx-auto px-4 pb-10">
 
       <section className="my-16">
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -79,7 +96,7 @@ export default function OnlineTrainingPage() {
             </div>
         </div>
       </section>
-
+      </div>
     </div>
   );
 }

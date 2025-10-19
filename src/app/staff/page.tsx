@@ -140,28 +140,33 @@ export default function StaffPage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-10">
-      {/* Hero */}
-      <section className="mb-10">
-        <div className="relative w-full h-48 md:h-64 rounded-xl overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+      {/* Hero Section */}
+      {/* <section className="relative h-[calc(100vh-4rem)] overflow-hidden mb-10"> */}
+      <section className="relative py-20 overflow-hidden mb-10">
+        <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop"
             alt="Staff hero"
-            width={1600}
-            height={640}
-            className="object-cover w-full h-full"
+            fill
+            className="object-cover"
+            priority
           />
-          <div className="absolute inset-0 bg-black/40" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <h1 className="font-headline text-white text-3xl md:text-4xl font-bold tracking-tight text-center px-4">
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight mb-6">
               {heroTitle[lang]}
             </h1>
-            <p className="text-white/90 text-lg md:text-xl mt-2 text-center px-4">
+            <p className="text-xl md:text-2xl text-white/90 mb-8 font-medium">
               {heroSubtitle[lang]}
             </p>
           </div>
         </div>
       </section>
+      
+      <div className="container mx-auto px-4 pb-10">
 
       {/* Introducción del equipo */}
       <section className="mb-12 text-center">
@@ -175,9 +180,9 @@ export default function StaffPage() {
         <h2 className="font-headline text-2xl font-semibold mb-6">
           {lang === "es" ? "Directores" : "Directors"}
         </h2>
-        <div className="flex items-stretch gap-6">
+        <div className="flex flex-col lg:flex-row items-stretch gap-6">
         {/* Director General */}
-        <div className="w-full max-w-4xl flex">
+        <div className="w-full lg:max-w-4xl flex">
           <Card className="overflow-hidden w-full">
             <div className="grid grid-cols-1 sm:grid-cols-3 h-full">
               <div className="relative h-56 sm:h-full sm:col-span-1">
@@ -218,7 +223,7 @@ export default function StaffPage() {
         </div>
 
         {/* Director Médico */}
-        <div className="w-full max-w-4xl flex">
+        <div className="w-full lg:max-w-4xl flex">
           <Card className="overflow-hidden w-full">
             <div className="grid grid-cols-1 sm:grid-cols-3 h-full">
               <div className="relative h-56 sm:h-full sm:col-span-1">
@@ -288,6 +293,7 @@ export default function StaffPage() {
           ))}
         </div>
       </section>
+      </div>
     </div>
   );
 }

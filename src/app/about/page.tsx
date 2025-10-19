@@ -14,35 +14,37 @@ export default function AboutPage() {
   const t = translations[language].about;
 
   return (
-    <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
       {/* Hero Section */}
-      <section className="text-center mb-16">
-        <div className="relative w-full h-96 rounded-xl overflow-hidden shadow-2xl mb-8">
+      <section className="relative py-20 overflow-hidden mb-16">
+        <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=1600&auto=format&fit=crop"
             alt="Medical professionals in training"
-            width={1600}
-            height={600}
-            className="object-cover w-full h-full"
+            fill
+            className="object-cover"
+            priority
           />
-          <div className="absolute inset-0 bg-black/40" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-white px-4">
-              <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight mb-4">
-                {t.hero.title}
-              </h1>
-              <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
-                {t.hero.subtitle}
-              </p>
-              <Button asChild size="lg" className="btn-modern">
-                <Link href="/academic-programs">
-                  {t.hero.cta}
-                </Link>
-              </Button>
-            </div>
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight mb-6">
+              {t.hero.title}
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 mb-8 font-medium">
+              {t.hero.subtitle}
+            </p>
+            <Button asChild size="lg" className="btn-modern bg-white text-white hover:bg-white/90 px-8 py-4 text-lg">
+              <Link href="/academic-programs">
+                {t.hero.cta}
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
+      
+      <div className="container mx-auto px-4 pb-16">
 
       {/* Who We Are Section */}
       <section className="mb-16">
@@ -166,19 +168,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-headline text-xl md:text-2xl font-semibold mb-6">
-            {t.finalCta.title}
-          </h2>
-          <Button asChild size="lg" variant="outline">
-            <Link href="/academic-programs">
-              {t.finalCta.button}
-            </Link>
-          </Button>
-        </div>
-      </section>
+        {/* Final CTA Section */}
+        <section className="text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-headline text-xl md:text-2xl font-semibold mb-6">
+              {t.finalCta.title}
+            </h2>
+            <Button asChild size="lg" variant="outline">
+              <Link href="/academic-programs">
+                {t.finalCta.button}
+              </Link>
+            </Button>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

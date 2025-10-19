@@ -18,25 +18,32 @@ export default function AcademicProgramsPage() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-10">
-      <section className="mb-10">
-        <div className="relative w-full h-64 md:h-80 rounded-xl overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden mb-10">
+        <div className="absolute inset-0">
           <Image
-            src="https://picsum.photos/1600/500?random=20"
+            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600&auto=format&fit=crop"
             alt="Academic Programs hero"
-            data-ai-hint="Programs hero image"
-            width={1600}
-            height={500}
-            className="object-cover w-full h-full"
+            fill
+            className="object-cover"
+            priority
           />
-          <div className="absolute inset-0 bg-black/40" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-            <h1 className="font-headline text-white text-3xl md:text-4xl font-bold tracking-tight">{t.heroHeadline}</h1>
-            <p className="mt-3 max-w-3xl text-white/90">{t.heroSubheadline}</p>
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight mb-6">
+              {t.heroHeadline}
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 mb-8 font-medium">
+              {t.heroSubheadline}
+            </p>
           </div>
         </div>
-        <p className="mt-6 max-w-3xl mx-auto text-center text-muted-foreground">{t.description}</p>
       </section>
+      
+      <div className="container mx-auto px-4 pb-10">
 
       <Tabs defaultValue={countries[0].key} className="w-full">
         <div className="flex justify-center">
@@ -81,6 +88,7 @@ export default function AcademicProgramsPage() {
           );
         })}
       </Tabs>
+      </div>
     </div>
   );
 }

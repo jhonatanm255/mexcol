@@ -16,38 +16,72 @@ export default function ContactPage() {
 
   const offices = {
     colombia: [
-      { city: 'Bogotá - oficinas administrativas', address: 'Carrera 4 este # 14-04 Segundo piso Sector la Esmeralda Tocancipá-cundinamarca', phone: '-', email: 'gerencia@institutomexcol.com' },
+      { 
+        city: language === 'es' ? 'Bogotá - oficinas administrativas' : 'Bogotá - Administrative Offices', 
+        address: 'Carrera 4 este # 14-04 Segundo piso Sector la Esmeralda Tocancipá-cundinamarca', 
+        phone: '-', 
+        email: 'gerencia@institutomexcol.com' 
+      },
     ],
     mexico: [
-      { city: 'Ciudad de México', address: 'Av. Uno #18 Colonia San Pedro de los Pinos Delegación Benito Juárez Código Postal 03800', phone: '+52 55 6630 8602 - +52 55 2593 6885', email: 'gerencia@institutomexcol.com' },
+      { 
+        city: language === 'es' ? 'Ciudad de México' : 'Mexico City', 
+        address: 'Av. Uno #18 Colonia San Pedro de los Pinos Delegación Benito Juárez Código Postal 03800', 
+        phone: '+52 55 6630 8602 - +52 55 2593 6885', 
+        email: 'gerencia@institutomexcol.com' 
+      },
     ],
     usa: [
-      { city: 'Presencia', address: ' En Los Angeles y Miami', phone: '+1 (407) 454-0524', email: 'gerencia@institutomexcol.com' },
-      { city: 'Orlando - Oficinas administrativas', address: '2180 Central Florida Parkway. Suite A2. Orlando FL 32837', phone: '+1 (407) 454-0524', email: 'gerencia@institutomexcol.com' },
-      { city: 'Houston - Sede', address: '2307 S Texas 6, Houston, TX 77077', phone: '+1 (407) 454-0524', email: 'gerencia@institutomexcol.com' },
+      { 
+        city: language === 'es' ? 'Presencia' : 'Presence', 
+        address: language === 'es' ? 'En Los Angeles y Miami' : 'In Los Angeles and Miami', 
+        phone: '+1 (407) 454-0524', 
+        email: 'gerencia@institutomexcol.com' 
+      },
+      { 
+        city: language === 'es' ? 'Orlando - Oficinas administrativas' : 'Orlando - Administrative Offices', 
+        address: '2180 Central Florida Parkway. Suite A2. Orlando FL 32837', 
+        phone: '+1 (407) 454-0524', 
+        email: 'gerencia@institutomexcol.com' 
+      },
+      { 
+        city: language === 'es' ? 'Houston - Sede' : 'Houston - Headquarters', 
+        address: '2307 S Texas 6, Houston, TX 77077', 
+        phone: '+1 (407) 454-0524', 
+        email: 'gerencia@institutomexcol.com' 
+      },
     ],
   } as const;
 
   const social = t.followUs.links;
 
   return (
-    <div className="container mx-auto px-4 py-10">
-      <section className="mb-10">
-        <div className="relative w-full h-48 md:h-64 rounded-xl overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden mb-10">
+        <div className="absolute inset-0">
           <Image
-            src="https://picsum.photos/1400/400?random=30"
+            src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=1600&auto=format&fit=crop"
             alt="Contact hero"
-            width={1400}
-            height={400}
-            className="object-cover w-full h-full"
+            fill
+            className="object-cover"
+            priority
           />
-          <div className="absolute inset-0 bg-black/40" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-            <h1 className="font-headline text-white text-3xl md:text-4xl font-bold tracking-tight">{t.heroTitle}</h1>
-            <p className="mt-3 max-w-3xl text-white/90">{t.subtitle}</p>
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight mb-6">
+              {t.heroTitle}
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 mb-8 font-medium">
+              {t.subtitle}
+            </p>
           </div>
         </div>
       </section>
+      
+      <div className="container mx-auto px-4 pb-10">
 
       <section>
         <Tabs
@@ -95,6 +129,7 @@ export default function ContactPage() {
           </div> */}
         </div>
       </section>
+      </div>
     </div>
   );
 }

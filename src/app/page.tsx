@@ -232,11 +232,19 @@ export default function Home() {
               {th.contact.title}
             </h2>
             <p className="text-lg text-muted-foreground mb-8">{th.contact.intro}</p>
-            <Button asChild className="btn-modern px-8 py-4 text-lg">
-              <PrefetchLink href="/contact">{th.contact.viewLocations}</PrefetchLink>
-            </Button>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+            <Card className="modern-card hover:shadow-lg transition-all duration-300">
+              <CardHeader>
+                <div className="text-center">
+                  <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
+                  <CardTitle className="text-foreground font-semibold">{th.contact.locations.coBogota.title}</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground leading-relaxed">{th.contact.locations.coBogota.address}</p>
+              </CardContent>
+            </Card>
             <Card className="modern-card hover:shadow-lg transition-all duration-300">
               <CardHeader>
                 <div className="text-center">
@@ -259,29 +267,11 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground leading-relaxed">{th.contact.locations.usaOrlando.address}</p>
               </CardContent>
             </Card>
-            <Card className="modern-card hover:shadow-lg transition-all duration-300">
-              <CardHeader>
-                <div className="text-center">
-                  <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <CardTitle className="text-foreground font-semibold">{th.contact.locations.usaHouston.title}</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground leading-relaxed">{th.contact.locations.usaHouston.address}</p>
-                <p className="mt-2 text-xs text-muted-foreground">{th.contact.locations.usaPresence}</p>
-              </CardContent>
-            </Card>
-            <Card className="modern-card hover:shadow-lg transition-all duration-300">
-              <CardHeader>
-                <div className="text-center">
-                  <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <CardTitle className="text-foreground font-semibold">{th.contact.locations.coBogota.title}</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground leading-relaxed">{th.contact.locations.coBogota.address}</p>
-              </CardContent>
-            </Card>
+          </div>
+          <div className="text-center">
+            <Button asChild size="lg" className="btn-modern px-8 py-4 text-lg">
+              <PrefetchLink href="/contact">{th.contact.viewLocations}</PrefetchLink>
+            </Button>
           </div>
         </div>
       </section>
