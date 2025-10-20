@@ -1,6 +1,7 @@
 
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -57,7 +58,7 @@ export default function AcademicProgramsPage() {
         </div>
 
         {countries.map((c) => {
-          const list = (t.countries as any)[c.key].courses as Array<{ title: string; description?: string; image?: string }>; 
+          const list = (t.countries as any)[c.key].courses as Array<{ title: string; description?: string; image?: string; slug?: string }>; 
           return (
             <TabsContent key={c.key} value={c.key} className="mt-10">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -80,7 +81,14 @@ export default function AcademicProgramsPage() {
                         <p className="text-muted-foreground mb-4">{course.description}</p>
                       )}
                       <div className="mt-auto">
-                        <Button className="w-full btn-modern">{t.cta}</Button>
+                        <Button 
+                          className="w-full btn-modern" 
+                          asChild
+                        >
+                          <a href={`/academic-programs/${c.key}/${course.slug || ''}`}>
+                            {t.cta}
+                          </a>
+                        </Button>
                       </div>
                     </CardContent>
                   </Card>
