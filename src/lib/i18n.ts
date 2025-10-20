@@ -19,7 +19,7 @@ export const translations = {
         {
           title: 'Go to Academic Programs',
           href: '/academic-programs',
-          description: 'Mex • Col • USA – Academic Programs',
+          description: 'Mex - Col - Usa  Academic Programs',
         },
       ],
     },
@@ -257,9 +257,10 @@ export const translations = {
         title: 'Academic Programs',
         subtitle: 'International training with specialized, hands-on, and up-to-date programs in the USA, Mexico, and Colombia.',
         description: 'International academic section paragraph text',
-        heroHeadline: 'Mex • Col • USA – Academic Programs',
-        heroSubheadline: 'International training with specialized, hands-on, and up-to-date programs in the USA, Mexico, and Colombia.',
-        tabs: { usa: 'USA', mexico: 'Mexico', colombia: 'Colombia' },
+        heroHeadlineTop: 'Mex - Col - Usa',
+        heroHeadlineBottom: 'Academic Programs',
+        heroSubheadline: 'International training with specialized, hands-on, and up-to-date programs in the Usa, Mexico, and Colombia.',
+        tabs: { usa: 'Usa', mexico: 'Mexico', colombia: 'Colombia' },
         cta: 'Learn More',
         countries: {
           usa: {
@@ -796,7 +797,7 @@ export const translations = {
       ],
     },
     hero: {
-        title: 'Instituto Mex - Col - USA',
+        title: 'Instituto Mex - Col - Usa',
         subtitle: 'Educación continua en medicina estética.',
         explorePrograms: 'Explorar Programas',
         contactUs: 'Contáctanos',
@@ -1029,9 +1030,10 @@ export const translations = {
         title: 'Programas Académicos',
         subtitle: 'Formación internacional con programas especializados, prácticos y actualizados en USA, México y Colombia.',
         description: 'texto del parrafo de la seccion academica internacional',
-        heroHeadline: 'Mex • Col • USA – Programas Académicos',
-        heroSubheadline: 'Formación internacional con programas especializados, prácticos y actualizados en USA, México y Colombia.',
-        tabs: { usa: 'USA', mexico: 'México', colombia: 'Colombia' },
+        heroHeadlineTop: 'Mex - Col - Usa',
+        heroHeadlineBottom: 'Programas Académicos',
+        heroSubheadline: 'Formación internacional con programas especializados, prácticos y actualizados en Usa, México y Colombia.',
+        tabs: { usa: 'Usa', mexico: 'México', colombia: 'Colombia' },
         cta: 'Más información',
         countries: {
           usa: {
