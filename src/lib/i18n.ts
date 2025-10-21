@@ -1486,7 +1486,12 @@ export const translations = {
                 targetAudience: {
                   title: 'Curso Dirigido:',
                   highlighted: 'Médicos y odontólogos',
-                  description: 'A nivel mundial, se han presentado numerosas complicaciones en tratamientos de medicina estética, muchas de ellas ocasionadas por ser realizados por personal no idóneo ni capacitado para llevar a cabo estos procedimientos.\n\nEn el INSTITUTO MEX-COL-USA asumimos con responsabilidad el reto de contribuir a que estas negligencias no ocurran en ninguna parte del mundo.\n\nPor ello, estamos comprometidos en la formación y capacitación de profesionales médicos, sus diferentes especialidades y odontólogos, garantizando que cada tratamiento sea realizado con los más altos estándares de seguridad, ética y conocimiento científico.\n\nNuestro objetivo es claro: formar especialistas preparados que cuiden la salud, la seguridad y el bienestar de los pacientes en cada procedimiento estético.'
+                  description: [
+                    'A nivel mundial, se han presentado numerosas complicaciones en tratamientos de medicina estética, muchas de ellas ocasionadas por ser realizados por personal no idóneo ni capacitado para llevar a cabo estos procedimientos.',
+                    'En el INSTITUTO MEX-COL-USA asumimos con responsabilidad el reto de contribuir a que estas negligencias no ocurran en ninguna parte del mundo.',
+                    'Por ello, estamos comprometidos en la formación y capacitación de profesionales médicos, sus diferentes especialidades y odontólogos, garantizando que cada tratamiento sea realizado con los más altos estándares de seguridad, ética y conocimiento científico.',
+                    'Nuestro objetivo es claro: formar especialistas preparados que cuiden la salud, la seguridad y el bienestar de los pacientes en cada procedimiento estético.'
+                  ]
                 },
                 objectives: [
                   'Adquiere conocimientos completos sobre protocolos, indicaciones, contraindicaciones y manejo de eventos adversos en cada una de las técnicas más innovadoras en medicina estética:',

@@ -111,9 +111,19 @@ export default function CourseDetailPage() {
                       {(courseDetails as any).targetAudience.highlighted}
                     </p>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {(courseDetails as any).targetAudience.description}
-                  </p>
+                  <div className="space-y-3">
+                    {Array.isArray((courseDetails as any).targetAudience.description) ? (
+                      (courseDetails as any).targetAudience.description.map((paragraph: string, idx: number) => (
+                        <p key={idx} className="text-sm text-muted-foreground leading-relaxed">
+                          {paragraph}
+                        </p>
+                      ))
+                    ) : (
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {(courseDetails as any).targetAudience.description}
+                      </p>
+                    )}
+                  </div>
                 </CardContent>
               </Card>
             )}
