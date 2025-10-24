@@ -111,9 +111,13 @@ export default function CourseDetailPage() {
                       {(courseDetails as any).targetAudience.highlighted}
                     </p>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {(courseDetails as any).targetAudience.description}
-                  </p>
+                  <div className="space-y-3">
+                    {(courseDetails as any).targetAudience.description.split('\n\n').map((paragraph: string, idx: number) => (
+                      <p key={idx} className="text-sm text-muted-foreground leading-relaxed">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             )}
@@ -221,15 +225,15 @@ export default function CourseDetailPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6 pt-6">
-                  <p className="text-muted-foreground leading-relaxed">
-                    En la medicina estética, la elección del producto es tan importante como la técnica aplicada, ya que de ello dependen la seguridad del paciente y la efectividad de los resultados.
-                  </p>
+                  {(courseDetails as any).productQuality.description && (
+                    (courseDetails as any).productQuality.description.split('\n\n').map((paragraph: string, idx: number) => (
+                      <p key={idx} className="text-muted-foreground leading-relaxed">
+                        {paragraph}
+                      </p>
+                    ))
+                  )}
                   
-                  <p className="text-muted-foreground leading-relaxed">
-                    Por esta razón, en el Instituto Mex-Col-Usa trabajamos exclusivamente con los tres mejores laboratorios a nivel mundial, reconocidos por su innovación, trayectoria y altos estándares de calidad.
-                  </p>
-                  
-                  {(courseDetails as any).productQuality.certifications && (
+                  {(courseDetails as any).productQuality.certifications && (courseDetails as any).productQuality.certifications.length > 0 && (
                     <div className="space-y-3">
                       <p className="font-semibold text-sm">
                         {language === 'es' ? 'Todos nuestros productos cuentan con registro y certificaciones oficiales de las principales entidades regulatorias internacionales, tales como:' : 'All our products have official registration and certifications from the main international regulatory entities, such as:'}
@@ -251,10 +255,12 @@ export default function CourseDetailPage() {
                     </p>
                   )}
 
-                  {/* Products Carousel */}
-                  <div className="mt-8 -mx-6">
-                    <ProductsMarquee />
-                  </div>
+                  {/* Products Carousel - Only show if there are certifications */}
+                  {(courseDetails as any).productQuality.certifications && (courseDetails as any).productQuality.certifications.length > 0 && (
+                    <div className="mt-8 -mx-6">
+                      <ProductsMarquee />
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             )}

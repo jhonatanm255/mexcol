@@ -20,6 +20,8 @@ import Autoplay from 'embla-carousel-autoplay';
 import BrandMarquee from '@/components/shared/BrandMarquee';
 import { useLanguage } from '@/hooks/use-language';
 import { translations } from '@/lib/i18n';
+import InicioBanner from '@/assets/portada-medicos-eu.jpg';
+import LogoUSAVerde from '@/assets/Logo-USA-Blanco.png';
 
 const CouponForm = dynamic(() => import('@/components/home/CouponForm'), {
   ssr: false,
@@ -58,30 +60,50 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <section className="relative h-[70vh] min-h-[600px] w-full section-modern">
-        {/* Organic background shapes */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="organic-shape w-96 h-96 top-10 right-10 opacity-30"></div>
-          <div className="organic-shape w-80 h-80 bottom-20 left-10 opacity-20"></div>
-          <div className="organic-shape w-64 h-64 top-1/2 left-1/3 opacity-25"></div>
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image 
+            src={InicioBanner} 
+            alt="Instituto MexCol Banner" 
+            fill
+            className="object-cover"
+            priority
+            quality={100}
+          />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         
-        <div className="hero-gradient absolute inset-0" />
-        
-        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center p-4">
-          <div className="max-w-5xl mx-auto">
-            <h1 className="font-headline text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl text-foreground mb-6">
-              {th.hero.main}
-            </h1>
-            <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground leading-relaxed">
-              {th.hero.sub}
-            </p>
-            <div className="mt-10 flex flex-wrap justify-center gap-6">
-              <Button asChild size="lg" className="btn-modern px-8 py-4 text-lg">
-                <PrefetchLink href="/academic-programs">{t.hero.explorePrograms}</PrefetchLink>
-              </Button>
-              <Button asChild size="lg" variant="secondary" className="btn-modern px-8 py-4 text-lg bg-foreground text-background hover:bg-foreground/90">
-                <PrefetchLink href="/contact">{t.hero.contactUs}</PrefetchLink>
-              </Button>
+        <div className="relative z-10 h-full container mx-auto px-4">
+          <div className="h-full flex flex-col justify-start py-4">
+            {/* Logo - izquierda y arriba */}
+            <div className="flex justify-start ml-12">
+              <div className="relative w-full max-w-xs h-72">
+                <Image 
+                  src={LogoUSAVerde} 
+                  alt="Instituto MexCol USA Logo" 
+                  fill
+                  className="object-contain drop-shadow-2xl"
+                  priority
+                />
+              </div>
+            </div>
+            
+            {/* Contenido de texto - izquierda y abajo */}
+            <div className="text-left max-w-2xl mt-6">
+              <h1 className="font-headline text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl text-white mb-3 drop-shadow-lg">
+                {th.hero.main}
+              </h1>
+              <p className="mt-3 text-base md:text-lg text-white/90 leading-relaxed drop-shadow-md max-w-xl">
+                {th.hero.sub}
+              </p>
+              <div className="mt-6 flex flex-wrap gap-4">
+                <Button asChild size="lg" className="btn-modern px-8 py-4 text-lg">
+                  <PrefetchLink href="/academic-programs">{t.hero.explorePrograms}</PrefetchLink>
+                </Button>
+                <Button asChild size="lg" variant="secondary" className="btn-modern px-8 py-4 text-lg bg-black text-white hover:bg-black/90">
+                  <PrefetchLink href="/contact">{t.hero.contactUs}</PrefetchLink>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -275,9 +297,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-     <section id="coupon" className="py-20 md:py-28 section-modern relative overflow-hidden bg-gradient-to-r from-primary to-primary/80 text-white">
+     {/*<section id="coupon" className="py-20 md:py-28 section-modern relative overflow-hidden bg-gradient-to-r from-primary to-primary/80 text-white">
        <div className="absolute inset-0 bg-black/20"></div>
-       {/* Background shapes */}
        <div className="absolute inset-0 overflow-hidden">
          <div className="organic-shape w-96 h-96 top-10 left-10 opacity-10"></div>
          <div className="organic-shape w-80 h-80 bottom-10 right-10 opacity-5"></div>
@@ -301,7 +322,7 @@ export default function Home() {
            </div>
          </div>
        </div>
-     </section>
+     </section>*/}
    </div>
  );
 }
