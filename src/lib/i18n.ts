@@ -266,7 +266,7 @@ export const translations = {
           usa: {
             courses: [
               {
-                title: 'Master Class: 4 Techniques – Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads',
+                title: 'Master Class 4 Techniques: Harmonization, Moderation and Facial Profiling "Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads"',
                 description: 'Learn advanced facial harmonization techniques with professional results.',
                 image: 'https://picsum.photos/seed/usa-botox/400/300',
                 slug: 'master-class-4-techniques',
@@ -278,57 +278,222 @@ export const translations = {
                 slug: 'intravenous-therapy-chelation',
               },
               {
+                title: 'Course with "Mini Lifting 3 Points" Rejuvenation Techniques (Minimally Invasive)',
+                description: 'Hands-on training in minimally invasive facial rejuvenation techniques.',
+                image: 'https://picsum.photos/seed/usa-lifting/400/300',
+                slug: 'phlebotomy-technician',
+              },
+              {
                 title: 'Phlebotomy Technician Course',
                 description: 'Hands-on training in safe, professional blood extraction techniques.',
                 image: 'https://picsum.photos/seed/usa-flebotomia/400/300',
-                slug: 'phlebotomy-technician',
+                slug: 'phlebotomy-course',
               },
             ],
             courseDetails: {
               'master-class-4-techniques': {
-                title: 'Master Class: 4 Techniques – Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads',
+                title: 'Master Class 4 Techniques: Harmonization, Moderation and Facial Profiling "Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads"',
                 subtitle: 'Advanced Facial Harmonization Training',
                 description: 'Comprehensive hands-on training in the four essential techniques of modern aesthetic medicine.',
                 heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop',
-                duration: '3 days',
-                schedule: 'Saturday-Sunday, 9:00 AM - 6:00 PM',
+                format: 'In-person',
+                duration: '2 days Theoretical - Demonstrative Practice',
+                schedule: '9:00 am - 6:00 pm Approx',
                 location: 'Los Angeles, CA',
                 price: 'Contact for pricing',
                 capacity: 'Limited to 12 participants',
-                overview: [],
-                objectives: [],
-                curriculum: [],
-                prerequisites: [],
+                certification: 'Yes',
+                targetAudience: {
+                  title: 'Course Directed To:',
+                  highlighted: 'We train the professionals who care for the beauty and health of the world',
+                  description: 'Physicians, dentists, nurses, medical assistants, phlebotomists, cosmetologists and/or aestheticians with responsible physician are welcome to train with us.\n\nWe also open our doors to associated medical listeners, international injectors and medical spa owners who seek to acquire the necessary knowledge to supervise and guide their team responsibly.\n\nWorldwide, numerous complications have occurred in aesthetic medicine treatments, many of them caused by unqualified personnel or without adequate training.\n\nAt INSTITUTO MEX-COL-USA we assume the commitment to change this reality.\n\nWe train prepared professionals, with solid ethical and scientific values, so that each aesthetic procedure is performed under the highest standards of safety, knowledge and responsibility.\n\nOur objective is clear: that each specialist trained with us becomes a guardian of the health, safety and well-being of their patients.'
+                },
+                curriculum: [
+                  {
+                    title: 'Day 1',
+                    topics: [
+                      'Acquire comprehensive knowledge about protocols, indications, contraindications and adverse event management in each of the most innovative aesthetic medicine techniques:',
+                      'Hyaluronic Acid - Master modeling techniques in: Rhinoplasty, Cheekbones, Nasolabial folds, Lips',
+                      'Botulinum Toxin - Learn to relax facial muscles to prevent and treat expression lines in: Forehead, Glabella, Eye contour, Bunny lines',
+                      'PDO Smooth or Mono Threads - Apply rejuvenation protocols with immediate lifting effect in: Jawline, Double chin, Abdomen, Buttocks, Other body areas',
+                      'Collagen Biostimulators - Know the main biostimulators available in the market and their application in: Arms, Abdomen, Legs, Buttocks, Neck, Face and more'
+                    ]
+                  },
+                  {
+                    title: 'Day 2',
+                    topics: [
+                      'Demonstrative practice. (Due to student regulations and licenses, it will not be possible to perform direct practices with patients. The activity will be carried out only demonstratively by the instructor).',
+                      'Delivery of participation certificates issued by the Instituto Mex-Col-Usa.',
+                      'Photographic record as evidence of the course.',
+                      'Final exam (a minimum grade of 80% is required to pass).',
+                      'Upon approval, a Diploma endorsed by the American Alliance of Aesthetic Medicine of the United States will be awarded.'
+                    ]
+                  }
+                ],
+                includes: [
+                  'Digital support material',
+                  'Specialized books and articles',
+                  'Informed consent forms',
+                  'Educational videos',
+                  'Patient assessment guides',
+                  'Other complementary resources',
+                  'Exclusive audiovisual content: Botulinum toxin application videos (Botox®), Hyaluronic acid application videos'
+                ],
+                accreditations: [
+                  'The courses and updates we teach as continuing education are registered with the Secretariat of Labor and Social Welfare (In Mexico). Upon completion of your training practice, an evaluation of knowledge, skills and dexterity will be applied, which is subject to the minimum score to obtain your certificate which is issued after INSTITUTO MEX-COL-USA has evaluated and reported that the evaluation was approved by each attendee. This must be approved with a minimum percentage of 80%',
+                  'Attendance and participation certificate: Issued by INSTITUTO MEX-COL-USA, certifies active participation and compliance with the theoretical-practical modules of the course, providing academic and training support.',
+                  'Diploma: Issued by the American Alliance of Aesthetic Medicine and SOPEME (Aesthetic Medicine Association of the United States), valid to authenticate training in the United States, Latin America, Caribbean and Spain as recognized continuing education.'
+                ],
+                productQuality: {
+                  title: 'Quality Products and Guaranteed Safety',
+                  description: 'In aesthetic medicine, the choice of product is as important as the applied technique, since the safety of the patient and the effectiveness of the results depend on it.\n\nFor this reason, at Instituto Mex-Col-Usa we work exclusively with the three best laboratories worldwide, recognized for their innovation, trajectory and high quality standards.',
+                  certifications: [
+                    'INVIMA (Colombia)',
+                    'FDA (United States)',
+                    'COFEPRIS (Mexico)',
+                    'And other competent health authorities globally'
+                  ],
+                  footer: 'In this way, we guarantee that each procedure is performed with safe, reliable and approved supplies, offering our students and patients the peace of mind of working with the best on the market.'
+                }
               },
               'intravenous-therapy-chelation': {
                 title: 'Serum Therapy-Chelation and Principles of Applied Regenerative Medicine Course',
                 subtitle: 'Advanced Regenerative Medicine Training',
                 description: 'Comprehensive training in intravenous therapy and chelation therapy techniques.',
                 heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop',
+                format: 'In-person',
                 duration: '2 days',
-                schedule: 'Saturday-Sunday, 9:00 AM - 5:00 PM',
+                schedule: '9:00 am - 6:00 pm approx',
                 location: 'Los Angeles, CA',
                 price: 'Contact for pricing',
-                capacity: 'Limited to 15 participants',
-                overview: [],
-                objectives: [],
-                curriculum: [],
-                prerequisites: [],
+                capacity: 'Limited to 10 participants',
+                certification: 'Yes',
+                targetAudience: {
+                  title: 'Course Directed To:',
+                  highlighted: 'Health professionals',
+                  description: 'Regenerative Medicine and Serum Therapy have proven to be areas of great impact on patient health and well-being. However, worldwide complications have occurred due to inadequate practice of these treatments, often performed by personnel without sufficient training.\n\nTherefore, our program is designed for health professionals, providing them with the tools and knowledge necessary to apply these therapies safely and effectively.\n\nAt INSTITUTO MEX-COL-USA we assume with responsibility the challenge of contributing so that these situations do not occur, promoting the correct training of all specialists involved in these practices.\n\nWe focus on preparing professionals who apply Regenerative Medicine and Serum Therapy with safety, ethics and excellence, always caring for the health and well-being of patients.'
+                },
+                curriculum: [
+                  {
+                    title: 'Day 1 in Serum Therapy',
+                    topics: [
+                      'In this Serum Therapy course, participants will acquire comprehensive knowledge about advanced techniques to optimize patient health, energy and well-being. You will learn to apply therapies that favor neurostimulation, cellular oxygenation and general revitalization, as well as specific treatments to strengthen the immune system, stimulate metabolism and combat signs of aging.',
+                      'In addition, you will learn the safe and effective use of key active principles, from vitamins and minerals to specialized compounds, understanding their biochemical, pharmacological properties and their therapeutic applications in conditions such as obesity, overweight, psoriasis, osteoarticular pain and autoimmune diseases.',
+                      'The course will also provide you with tools for heavy metal elimination, atheroma plaque reduction and cardiovascular health optimization, all with a focus on safety, ethics and clinical efficacy.',
+                      'Upon completion, you will be prepared to implement Serum Therapy protocols with a professional, safe and comprehensive patient well-being approach.'
+                    ]
+                  },
+                  {
+                    title: 'Day 2 in Regenerative Medicine',
+                    topics: [
+                      'In this second day, you will deepen the principles, processing and biological functions of regenerative therapies, learning their indications, medical uses, adequate doses and safety considerations. You will learn the fundamentals of cellular differentiation, angiogenesis and immunomodulation, as well as the practical application of Mesenchymal Stem Cells through audiovisual material.',
+                      'You will explore the biological functions of exosomes, their indications and safe use, and observe practical application examples through instructional videos. Likewise, you will become familiar with placenta implants, understanding their principles, indications, doses and safety profile, accompanied by practical demonstrations on video.',
+                      'The day also includes Serum Therapy sessions, addressing revitalizing, immunostimulating therapies, focused on obesity and overweight, and basic chelation for metal elimination, allowing you to integrate these protocols safely and effectively into your professional practice.',
+                      'Upon completion of this module, you will be prepared to apply advanced Regenerative Medicine and Serum Therapy techniques, combining theoretical and practical knowledge to offer safe, effective treatments oriented to comprehensive patient well-being.'
+                    ]
+                  }
+                ],
+                includes: [
+                  'Includes Reference and study material',
+                  'Live demonstrative practice'
+                ],
+                accreditations: [
+                  'The courses and updates we teach as continuing education are registered with the Secretariat of Labor and Social Welfare (In Mexico). Upon completion of your training practice, an evaluation of knowledge, skills and dexterity will be applied, which is subject to the minimum score to obtain your certificate which is issued after INSTITUTO MEX-COL-USA has evaluated and reported that the evaluation was approved by each attendee. This must be approved with a minimum percentage of 80%',
+                  'Attendance and participation certificate: Issued by INSTITUTO MEX-COL-USA, certifies active participation and compliance with the theoretical-practical modules of the course, providing academic and training support.',
+                  'Diploma: Issued by the American Alliance of Aesthetic Medicine and SOPEME (Aesthetic Medicine Association of the United States), valid to authenticate training in the United States, Latin America, Caribbean and Spain as recognized continuing education.'
+                ],
+                productQuality: {
+                  title: 'Quality Products and Guaranteed Safety',
+                  description: 'INSTITUTO MEX-COL-USA works with laboratories that support the guarantee and confidence in their products, ensuring quality in each of the practices carried out, and sharing information about these suppliers in our venues.\n\nIt is important to note that we do not sell products in our facilities or promote specific brands, since the acquisition choice must be free and responsible by the student. Each participant is responsible for verifying with whom to buy, as well as reviewing permits, records, local regulations and any other legal aspect in force in their city or country before acquiring any product.'
+                }
               },
               'phlebotomy-technician': {
+                title: 'Course with "Mini Lifting 3 Points" Rejuvenation Techniques (Minimally Invasive)',
+                subtitle: 'Professional Facial Rejuvenation Training',
+                description: 'Hands-on training in minimally invasive facial rejuvenation techniques.',
+                heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop',
+                format: 'In-person',
+                duration: '2 theoretical days 2 intensive practice days',
+                schedule: '9:00 am - 7:00 pm Approx',
+                location: 'Colombia - Mexico',
+                price: 'Contact for pricing',
+                capacity: 'Limited enrollment',
+                certification: 'Yes',
+                targetAudience: {
+                  title: 'Course Directed To:',
+                  highlighted: 'Medical professionals worldwide',
+                  description: 'The course "Mini Lifting Facial 3 Points Rejuvenation Technique" (Minimally Invasive) is designed for medical professionals worldwide who wish to expand their knowledge and perfect their skills in minimally invasive facial rejuvenation techniques.\n\nAesthetic doctors, dermatologists, plastic surgeons and dentists specialized in aesthetics can participate.\n\nThis program is ideal for those seeking to strengthen their professional profile, offer innovative treatments to their patients and stay at the forefront in the field of facial medical aesthetics. Although no previous experience in this specific technique is required, having previous clinical training will be valued.\n\nUpon completion of the course, participants will be trained to safely and effectively apply the Mini Lifting Facial 3 Points technique, achieving visible aesthetic results and increasing opportunities within their medical practice.\n\nThis course is taught only at our Colombia and Mexico venues, offering participants the opportunity to train in person in a professional environment fully equipped for safe practice of the technique.'
+                },
+                curriculum: [
+                  {
+                    title: 'Course Content',
+                    topics: [
+                      'Medical specialists in aesthetic medicine, dermatology, plastic surgery and aesthetic dentistry will be instructed to train in this innovative minimally invasive technique, designed to reverse up to 10 years of the facial aging process and offer immediate and visible results to their patients.',
+                      'The course combines advanced theoretical explanation, which includes a historical account of facial rejuvenation techniques, the study of facial figure and aspects to consider by facial areas, as well as the concept of facial beauty and aging. Participants will deepen facial anatomy and structures to consider, also evaluating current rhytidoplasty techniques and their disadvantages, to understand the advantages of minimally invasive procedures.',
+                      'In addition, patient assessment and appropriate selection according to their profile will be addressed, ensuring optimal and personalized results. Training includes applied surgical technique, clinical case review and supervised practice with patients, allowing doctors to apply the technique safely and effectively.',
+                      'Using three strategic facial points, through a proprietary and specialized methodology, doctors will learn to achieve rejuvenating effects comparable to surgical lifting, but without the need to resort to invasive procedures or major surgeries.',
+                      'This training provides participants with the necessary competencies to apply high-efficacy and precision treatments, strengthening their professional profile in aesthetic medicine and expanding opportunities to offer innovative and safe solutions to their patients.'
+                    ]
+                  }
+                ],
+                includes: [
+                  'Includes Reference and study material',
+                  'Personalized practice',
+                  'Practice supplies and materials'
+                ],
+                accreditations: [
+                  'The courses and updates we teach as continuing education are registered with the Secretariat of Labor and Social Welfare (In Mexico). Upon completion of your training practice, an evaluation of knowledge, skills and dexterity will be applied, which is subject to the minimum score to obtain your certificate which is issued after INSTITUTO MEX-COL-USA has evaluated and reported that the evaluation was approved by each attendee. This must be approved with a minimum percentage of 80%',
+                  'Attendance and participation certificate: Issued by INSTITUTO MEX-COL-USA, certifies active participation and compliance with the theoretical-practical modules of the course, providing academic and training support.',
+                  'Diploma: Issued by the American Alliance of Aesthetic Medicine and SOPEME (Aesthetic Medicine Association of the United States), valid to authenticate training in the United States, Latin America, Caribbean and Spain as recognized continuing education.'
+                ],
+                productQuality: {
+                  title: 'Quality Products, Supplies and Facilities with Guaranteed Safety',
+                  description: 'At INSTITUTO MEX-COL-USA we have first-class facilities, designed to offer a safe, hygienic and professional environment, where each practice and procedure is performed under the highest standards of quality and safety.\n\nOur commitment is to guarantee that each student can learn and practice in a reliable, equipped and prepared space to provide the best educational experience. Thus, we ensure that training takes place in a safe, professional and excellent environment, strengthening the learning and confidence of each participant.'
+                }
+              },
+              'phlebotomy-course': {
                 title: 'Phlebotomy Technician Course',
                 subtitle: 'Professional Blood Collection Training',
                 description: 'Hands-on training in safe, professional blood extraction techniques.',
                 heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop',
-                duration: '40 hours',
-                schedule: 'Flexible schedule available',
+                format: 'In-person',
+                duration: '2 days Theoretical - Practical',
+                schedule: '9:00 am - 5:00 pm Approx',
                 location: 'Los Angeles, CA',
                 price: 'Contact for pricing',
                 capacity: 'Limited enrollment',
-                overview: [],
-                objectives: [],
-                curriculum: [],
-                prerequisites: [],
+                certification: 'Yes',
+                idCard: 'Yes',
+                targetAudience: {
+                  title: 'Course Directed To:',
+                  highlighted: 'Health professionals',
+                  description: 'The phlebotomy course in the United States is aimed at all health professionals who wish to expand their knowledge and skills in blood sample extraction and handling. Nurses, doctors, laboratory technicians, medical assistants, paramedics, health science students and other professionals related to patient care can participate.\n\nThis program is ideal for those seeking to strengthen their professional profile, meet job requirements in clinics, hospitals or laboratories, or start a technical career within the American health system. No previous experience in phlebotomy is required, but having training or practice in clinical areas is valued.'
+                },
+                curriculum: [
+                  {
+                    title: 'Course Content',
+                    topics: [
+                      'The Phlebotomy Course is designed to provide participants with the theoretical and practical knowledge necessary to perform blood extractions safely, efficiently and professionally. Throughout the program, students will learn the fundamental principles of phlebotomy, puncture techniques and ethical and safety standards that must be followed in the clinical environment.',
+                      'During the course, essential topics such as introduction to phlebotomy, anatomical aspects of the venous system and general safety requirements in the work area will be addressed. Participants will learn step-by-step protocols and procedures, as well as the most common indications and contraindications in daily practice.',
+                      'The preparation of materials and instruments will also be studied, along with the correct venous puncture technique, ensuring safe practice for both the professional and the patient. In addition, general patient care after venipuncture, possible complications that may arise and the role of the phlebotomist within the health team will be addressed.',
+                      'The program includes guided exercises and live practices, where students will be able to apply the knowledge acquired under the supervision of specialized instructors. Finally, an evaluative exam will be carried out to certify the competencies acquired during the course.',
+                      'This course is aimed at professionals and students in the health area who wish to expand their clinical skills and strengthen their professional profile in the medical and hospital field.'
+                    ]
+                  }
+                ],
+                includes: [
+                  'Copy of the presentation in physical format',
+                  'Phlebotomy technician certificate',
+                  'ID Card valid for 2 years nationally',
+                  'Personalized practice'
+                ],
+                accreditations: [
+                  'Upon successful completion of the Phlebotomy Course, the participant receives triple certification that supports their training and allows them to practice with national recognition within the United States.',
+                  'Phlebotomy Technician Certificate - Accredits the theoretical and practical competencies acquired during the program, certifying that the participant is trained to perform blood extraction procedures professionally and safely.',
+                  'ID Card valid for 2 years nationally - Official identification that endorses the graduate as a certified phlebotomy technician, recognized throughout the United States territory and required by various medical institutions, clinics and laboratories.',
+                  'Attendance and participation certificate - Issued by INSTITUTO MEX-COL-USA, certifies active participation and compliance with the theoretical-practical modules of the course, providing academic and training support.',
+                  'This combination of documents guarantees the graduate solid, endorsed and recognized training, opening the possibility of working in hospitals, clinics, laboratories and health centers throughout the United States, with the confidence and support of an institution committed to professional excellence.'
+                ]
               },
             },
           },
@@ -1526,7 +1691,7 @@ export const translations = {
           usa: {
             courses: [
               {
-                title: 'Master class 4 técnicas "toxina botulinica/acido aluronico / bioestimuladores / hilos pdo".',
+                title: 'Master class 4 técnicas armonización, moderación y perfilación facial "toxina botulinica/acido aluronico / bioestimuladores / hilos pdo"',
                 description: 'Aprende técnicas avanzadas para armonización facial con resultados profesionales.',
                 image: 'https://picsum.photos/seed/usa-botox/400/300',
                 slug: 'master-class-4-techniques',
@@ -1538,57 +1703,222 @@ export const translations = {
                 slug: 'intravenous-therapy-chelation',
               },
               {
-                title: 'Curso técnico en Flebotomia.',
+                title: 'Curso con técnicas de rejuvenecimiento "Mini Lifting 3 puntos" (Minimamente invasivo)',
+                description: 'Capacitación práctica en técnicas de rejuvenecimiento facial mínimamente invasivas.',
+                image: 'https://picsum.photos/seed/usa-lifting/400/300',
+                slug: 'phlebotomy-technician',
+              },
+              {
+                title: 'Curso técnico en Flebotomía',
                 description: 'Capacitación práctica en técnicas de extracción de sangre seguras y profesionales.',
                 image: 'https://picsum.photos/seed/usa-flebotomia/400/300',
-                slug: 'phlebotomy-technician',
+                slug: 'phlebotomy-course',
               },
             ],
             courseDetails: {
               'master-class-4-techniques': {
-                title: 'Master class 4 técnicas "toxina botulinica/acido hialurónico / bioestimuladores / hilos pdo"',
+                title: 'Master class 4 técnicas armonización, moderación y perfilación facial "toxina botulinica/acido aluronico / bioestimuladores / hilos pdo"',
                 subtitle: 'Capacitación Avanzada en Armonización Facial',
                 description: 'Capacitación práctica integral en las cuatro técnicas esenciales de la medicina estética moderna.',
                 heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop',
-                duration: '3 días',
-                schedule: 'Sábado-Domingo, 9:00 AM - 6:00 PM',
+                format: 'Presencial',
+                duration: '2 días Teorico - Practico Demostrativo',
+                schedule: '9:00 am - 6:00 pm Aprox',
                 location: 'Los Angeles, CA',
                 price: 'Contactar para precios',
                 capacity: 'Limitado a 12 participantes',
-                overview: [],
-                objectives: [],
-                curriculum: [],
-                prerequisites: [],
+                certification: 'Sí',
+                targetAudience: {
+                  title: 'Curso Dirigido:',
+                  highlighted: 'Formamos a los profesionales que cuidan la belleza y la salud del mundo',
+                  description: 'Médicos, odontólogos, enfermeras, medical assistants, flebotomistas, cosmetólogas y/o esteticistas con médico responsable son bienvenidos a capacitarse con nosotros.\n\nTambién abrimos nuestras puertas a oyentes asociados médicos, inyectores internacionales y propietarios de spas médicos que buscan adquirir el conocimiento necesario para supervisar y guiar a su equipo con responsabilidad.\n\nA nivel mundial, se han presentado numerosas complicaciones en tratamientos de medicina estética, muchas de ellas ocasionadas por personal no idóneo o sin la capacitación adecuada.\n\nEn el INSTITUTO MEX-COL-USA asumimos el compromiso de cambiar esta realidad.\n\nFormamos profesionales preparados, con sólidos valores éticos y científicos, para que cada procedimiento estético se realice bajo los más altos estándares de seguridad, conocimiento y responsabilidad.\n\nNuestro objetivo es claro: que cada especialista formado con nosotros se convierta en un guardián de la salud, la seguridad y el bienestar de sus pacientes.'
+                },
+                curriculum: [
+                  {
+                    title: 'Día 1',
+                    topics: [
+                      'Adquiere conocimientos completos sobre protocolos, indicaciones, contraindicaciones y manejo de eventos adversos en cada una de las técnicas más innovadoras en medicina estética:',
+                      'Ácido Hialurónico - Domina técnicas de modelado en: Rinomodelación, Pómulos, Surcos nasogenianos, Labios',
+                      'Toxina Botulínica - Aprende a relajar los músculos faciales para prevenir y tratar líneas de expresión en: Frente, Entrecejo, Contorno de ojos, Bunny lines',
+                      'Hilos PDO Liso o Mono - Aplica protocolos de rejuvenecimiento con efecto lifting inmediato en: Contorno mandibular, Papada, Abdomen, Glúteos, Otras zonas corporales',
+                      'Bioestimuladores de Colágeno - Conoce los principales bioestimuladores disponibles en el mercado y su aplicación en: Brazos, Abdomen, Piernas, Glúteos, Cuello, Rostro y más'
+                    ]
+                  },
+                  {
+                    title: 'Día 2',
+                    topics: [
+                      'Práctica demostrativa. (Debido a regulaciones y licencias de los alumnos, no será posible realizar prácticas directas con pacientes. La actividad se llevará a cabo únicamente de manera demostrativa por parte del instructor).',
+                      'Entrega de constancias de participación emitidas por el Instituto Mex-Col-Usa.',
+                      'Registro fotográfico como evidencia del curso.',
+                      'Examen final (se requiere una calificación mínima del 80% para aprobar).',
+                      'En caso de aprobación, se otorgará Diploma avalado por la Alianza Americana de Medicina Estética de los Estados Unidos.'
+                    ]
+                  }
+                ],
+                includes: [
+                  'Material de apoyo digital',
+                  'Libros y artículos especializados',
+                  'Formatos de consentimiento informado',
+                  'Videos didácticos',
+                  'Guías para la valoración de pacientes',
+                  'Otros recursos complementarios',
+                  'Contenido audiovisual exclusivo: Videos de aplicación de toxina botulínica (Botox®), Videos de aplicación de ácido hialurónico'
+                ],
+                accreditations: [
+                  'Los cursos y actualizaciones que impartimos al ser educación continua están registrados en la secretaria del trabajo y previsión social (En Mexico). Al finalizar la práctica de su capacitación le será aplicada una evaluación de conocimiento, habilidades y destreza, la cual está sujeta al puntaje mínimo para obtener su certificado el cual se expide después de que INSTITUTO MEX-COL-USA haya evaluado y reportado que la evaluación fue aprobada por cada asistente. Misma que deberá ser aprobada con el porcentaje mínimo del 80%',
+                  'Constancia de asistencia y participación: Emitida por el INSTITUTO MEX-COL-USA, certifica la participación activa y el cumplimiento de los módulos teórico-prácticos del curso, brindando respaldo académico y formativo.',
+                  'Diploma: Emitido por la Alianza Americana de Medicina Estética y SOPEME (Asociación de Medicina Estética de los Estados Unidos), válido para autenticar la formación en Estados Unidos, Latinoamérica, Caribe y España como educación continua reconocida.'
+                ],
+                productQuality: {
+                  title: 'Productos de Calidad y Seguridad Garantizada',
+                  description: 'En la medicina estética, la elección del producto es tan importante como la técnica aplicada, ya que de ello dependen la seguridad del paciente y la efectividad de los resultados.\n\nPor esta razón, en el Instituto Mex-Col-Usa trabajamos exclusivamente con los tres mejores laboratorios a nivel mundial, reconocidos por su innovación, trayectoria y altos estándares de calidad.',
+                  certifications: [
+                    'INVIMA (Colombia)',
+                    'FDA (Estados Unidos)',
+                    'COFEPRIS (México)',
+                    'Y otras autoridades sanitarias competentes a nivel global'
+                  ],
+                  footer: 'De esta manera, garantizamos que cada procedimiento se realice con insumos seguros, confiables y aprobados, ofreciendo a nuestros estudiantes y pacientes la tranquilidad de trabajar con lo mejor del mercado.'
+                }
               },
               'intravenous-therapy-chelation': {
                 title: 'Curso suero terapia quelación y principios de medicina regenerativa aplicada',
                 subtitle: 'Capacitación Avanzada en Medicina Regenerativa',
                 description: 'Capacitación integral en técnicas de terapia intravenosa y quelación.',
                 heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop',
+                format: 'Presencial',
                 duration: '2 días',
-                schedule: 'Sábado-Domingo, 9:00 AM - 5:00 PM',
+                schedule: '9:00 am - 6:00 pm aprox',
                 location: 'Los Angeles, CA',
                 price: 'Contactar para precios',
-                capacity: 'Limitado a 15 participantes',
-                overview: [],
-                objectives: [],
-                curriculum: [],
-                prerequisites: [],
+                capacity: 'Limitado a 10 participantes',
+                certification: 'Sí',
+                targetAudience: {
+                  title: 'Curso Dirigido:',
+                  highlighted: 'Profesionales de la salud',
+                  description: 'La Medicina Regenerativa y la Sueroterapia han demostrado ser áreas de gran impacto en la salud y el bienestar de los pacientes. Sin embargo, a nivel mundial se han presentado complicaciones por la práctica inadecuada de estos tratamientos, muchas veces realizadas por personal sin la formación suficiente.\n\nPor ello, nuestro programa está diseñado para profesionales de la salud, brindándoles las herramientas y el conocimiento necesario para aplicar estas terapias de manera segura y eficaz.\n\nEn el INSTITUTO MEX-COL-USA asumimos con responsabilidad el reto de contribuir a que estas situaciones no ocurran, promoviendo la correcta capacitación de todos los especialistas involucrados en estas prácticas.\n\nNos enfocamos en preparar profesionales que apliquen la Medicina Regenerativa y Sueroterapia con seguridad, ética y excelencia, cuidando siempre la salud y el bienestar de los pacientes.'
+                },
+                curriculum: [
+                  {
+                    title: 'Día 1 en Sueroterapia',
+                    topics: [
+                      'En este curso de Sueroterapia, los participantes adquirirán conocimientos integrales sobre técnicas avanzadas para optimizar la salud, la energía y el bienestar de los pacientes. Aprenderás a aplicar terapias que favorecen la neuroestimulación, la oxigenación celular y la revitalización general, así como tratamientos específicos para fortalecer el sistema inmunológico, estimular el metabolismo y combatir los signos del envejecimiento.',
+                      'Además, conocerás el uso seguro y efectivo de principios activos clave, desde vitaminas y minerales hasta compuestos especializados, comprendiendo sus propiedades bioquímicas, farmacológicas y sus aplicaciones terapéuticas en condiciones como obesidad, sobrepeso, psoriasis, dolor osteoarticular y enfermedades autoinmunes.',
+                      'El curso también te brindará herramientas para la eliminación de metales pesados, la reducción de placa de ateroma y la optimización de la salud cardiovascular, todo con un enfoque en la seguridad, ética y eficacia clínica.',
+                      'Al finalizar, estarás preparado para implementar protocolos de Sueroterapia con un enfoque profesional, seguro y orientado al bienestar integral de tus pacientes.'
+                    ]
+                  },
+                  {
+                    title: 'Día 2 en Medicina Regenerativa',
+                    topics: [
+                      'En esta segunda jornada, profundizarás en los principios, procesamiento y funciones biológicas de las terapias regenerativas, aprendiendo sus indicaciones, usos en medicina, dosis adecuadas y consideraciones de seguridad. Conocerás los fundamentos de la diferenciación celular, angiogénesis e inmunomodulación, así como la aplicación práctica de Celulas Madre Mesenquimales a través de material audiovisual.',
+                      'Explorarás las funciones biológicas de los exosomas, sus indicaciones y uso seguro, y observarás ejemplos prácticos de aplicación mediante videos instructivos. Asimismo, te familiarizarás con los implantes de placenta, comprendiendo sus principios, indicaciones, dosis y perfil de seguridad, acompañados de demostraciones prácticas en video.',
+                      'El día incluye también sesiones de Sueroterapia, abordando terapias revitalizantes, inmunoestimulantes, enfocadas en obesidad y sobrepeso, y quelación básica para la eliminación de metales, permitiéndote integrar estos protocolos de manera segura y efectiva en tu práctica profesional.',
+                      'Al finalizar este módulo, estarás preparado para aplicar técnicas avanzadas de Medicina Regenerativa y Sueroterapia, combinando conocimiento teórico y práctico para ofrecer tratamientos seguros, eficaces y orientados al bienestar integral de tus pacientes.'
+                    ]
+                  }
+                ],
+                includes: [
+                  'Incluye Material de referencia y de estudio',
+                  'Practica demostrativa en vivo'
+                ],
+                accreditations: [
+                  'Los cursos y actualizaciones que impartimos al ser educación continua están registrados en la secretaria del trabajo y previsión social (En Mexico). Al finalizar la práctica de su capacitación le será aplicada una evaluación de conocimiento, habilidades y destreza, la cual está sujeta al puntaje mínimo para obtener su certificado el cual se expide después de que INSTITUTO MEX-COL-USA haya evaluado y reportado que la evaluación fue aprobada por cada asistente. Misma que deberá ser aprobada con el porcentaje mínimo del 80%',
+                  'Constancia de asistencia y participación: Emitida por el INSTITUTO MEX-COL-USA, certifica la participación activa y el cumplimiento de los módulos teórico-prácticos del curso, brindando respaldo académico y formativo.',
+                  'Diploma: Emitido por la Alianza Americana de Medicina Estética y SOPEME (Asociación de Medicina Estética de los Estados Unidos), válido para autenticar la formación en Estados Unidos, Latinoamérica, Caribe y España como educación continua reconocida.'
+                ],
+                productQuality: {
+                  title: 'Productos de Calidad y Seguridad Garantizada',
+                  description: 'El INSTITUTO MEX-COL-USA trabaja con laboratorios que respaldan la garantía y confianza en sus productos, asegurando la calidad en cada una de las prácticas realizadas, y compartiendo información sobre estos proveedores en nuestras sedes.\n\nEs importante destacar que no vendemos productos en nuestras instalaciones ni promocionamos marcas específicas, ya que la elección de adquisición debe ser libre y responsable por parte del alumno. Cada participante es responsable de verificar con quién comprar, así como de revisar permisos, registros, regulaciones locales y cualquier otro aspecto legal vigente en su ciudad o país antes de adquirir cualquier producto.'
+                }
               },
               'phlebotomy-technician': {
-                title: 'Curso técnico en Flebotomia',
+                title: 'Curso con técnicas de rejuvenecimiento "Mini Lifting 3 puntos" (Minimamente invasivo)',
+                subtitle: 'Capacitación Profesional en Rejuvenecimiento Facial',
+                description: 'Capacitación práctica en técnicas de rejuvenecimiento facial mínimamente invasivas.',
+                heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop',
+                format: 'Presencial',
+                duration: '2 días teóricos 2 días de práctica intensiva',
+                schedule: '9:00 am - 7:00 pm Aprox',
+                location: 'Colombia - México',
+                price: 'Contactar para precios',
+                capacity: 'Inscripción limitada',
+                certification: 'Sí',
+                targetAudience: {
+                  title: 'Curso Dirigido:',
+                  highlighted: 'Profesionales médicos de todo el mundo',
+                  description: 'El curso "Técnica de Rejuvenecimiento "Mini Lifting Facial 3 Puntos" (Minimamente invasivo) está diseñado para profesionales médicos de todo el mundo que deseen ampliar sus conocimientos y perfeccionar sus habilidades en técnicas de rejuvenecimiento facial mínimamente invasivas.\n\nPueden participar médicos estéticos, dermatólogos, cirujanos plásticos y odontólogos especializados en estética.\n\nEste programa es ideal para quienes buscan fortalecer su perfil profesional, ofrecer tratamientos innovadores a sus pacientes y mantenerse a la vanguardia en el campo de la estética médica facial. Aunque no se requiere experiencia previa en esta técnica específica, se valorará contar con formación clínica previa.\n\nAl finalizar el curso, los participantes estarán capacitados para aplicar de manera segura y efectiva la técnica de Mini Lifting Facial 3 Puntos, logrando resultados estéticos visibles y aumentando las oportunidades dentro de su práctica médica.\n\nEste curso se imparte únicamente en nuestras sedes de Colombia y México, ofreciendo a los participantes la oportunidad de capacitarse presencialmente en un entorno profesional y completamente equipado para la práctica segura de la técnica.'
+                },
+                curriculum: [
+                  {
+                    title: 'Contenido del curso',
+                    topics: [
+                      'Se instruirá a los médicos especialistas en medicina estética, dermatología, cirugía plástica y odontología estética a capacitarse en esta innovadora técnica mínimamente invasiva, diseñada para revertir hasta 10 años del proceso de envejecimiento facial y ofrecer resultados inmediatos y visibles a sus pacientes.',
+                      'El curso combina explicación teórica avanzada, que incluye un recuento histórico de las técnicas de rejuvenecimiento facial, el estudio de la figura facial y los aspectos a tener en cuenta por áreas faciales, así como el concepto de belleza facial y envejecimiento. Los participantes profundizarán en la anatomía facial y las estructuras a considerar, evaluando también las técnicas actuales de ritidoplastia y sus desventajas, para comprender las ventajas de los procedimientos mínimamente invasivos.',
+                      'Además, se abordará la valoración del paciente y la elección adecuada según su perfil, asegurando resultados óptimos y personalizados. La formación incluye técnica quirúrgica aplicada, revisión de casos clínicos y práctica supervisada con pacientes, lo que permite a los médicos aplicar la técnica de manera segura y efectiva.',
+                      'Utilizando tres puntos faciales estratégicos, mediante una metodología propia y especializada, los médicos aprenderán a lograr efectos rejuvenecedores comparables a un lifting quirúrgico, pero sin necesidad de recurrir a procedimientos invasivos ni cirugías mayores.',
+                      'Esta formación brinda a los participantes las competencias necesarias para aplicar tratamientos de alta eficacia y precisión, fortaleciendo su perfil profesional en medicina estética y ampliando las oportunidades de ofrecer soluciones innovadoras y seguras a sus pacientes.'
+                    ]
+                  }
+                ],
+                includes: [
+                  'Incluye Material de referencia y de estudio',
+                  'Practica personalizada',
+                  'Insumos y materiales de practicas'
+                ],
+                accreditations: [
+                  'Los cursos y actualizaciones que impartimos al ser educación continua están registrados en la secretaria del trabajo y previsión social (En Mexico). Al finalizar la práctica de su capacitación le será aplicada una evaluación de conocimiento, habilidades y destreza, la cual está sujeta al puntaje mínimo para obtener su certificado el cual se expide después de que INSTITUTO MEX-COL-USA haya evaluado y reportado que la evaluación fue aprobada por cada asistente. Misma que deberá ser aprobada con el porcentaje mínimo del 80%',
+                  'Constancia de asistencia y participación: Emitida por el INSTITUTO MEX-COL-USA, certifica la participación activa y el cumplimiento de los módulos teórico-prácticos del curso, brindando respaldo académico y formativo.',
+                  'Diploma: Emitido por la Alianza Americana de Medicina Estética y SOPEME (Asociación de Medicina Estética de los Estados Unidos), válido para autenticar la formación en Estados Unidos, Latinoamérica, Caribe y España como educación continua reconocida.'
+                ],
+                productQuality: {
+                  title: 'Productos insumos e instalaciones de Calidad y Seguridad Garantizada',
+                  description: 'En el INSTITUTO MEX-COL-USA contamos con instalaciones de primer nivel, diseñadas para ofrecer un entorno seguro, higiénico y profesional, donde cada práctica y procedimiento se realiza bajo los más altos estándares de calidad y seguridad.\n\nNuestro compromiso es garantizar que cada alumno pueda aprender y practicar en un espacio confiable, equipado y preparado para brindar la mejor experiencia educativa. Así, aseguramos que la formación se desarrolle en un ambiente seguro, profesional y de excelencia, fortaleciendo el aprendizaje y la confianza de cada participante.'
+                }
+              },
+              'phlebotomy-course': {
+                title: 'Curso técnico en Flebotomía',
                 subtitle: 'Capacitación Profesional en Extracción de Sangre',
                 description: 'Capacitación práctica en técnicas de extracción de sangre seguras y profesionales.',
                 heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop',
-                duration: '40 horas',
-                schedule: 'Horario flexible disponible',
+                format: 'Presencial',
+                duration: '2 días Teorico - Practico',
+                schedule: '9:00 am - 5:00 pm Aprox',
                 location: 'Los Angeles, CA',
                 price: 'Contactar para precios',
                 capacity: 'Inscripción limitada',
-                overview: [],
-                objectives: [],
-                curriculum: [],
-                prerequisites: [],
+                certification: 'Sí',
+                idCard: 'Sí',
+                targetAudience: {
+                  title: 'Curso Dirigido:',
+                  highlighted: 'Profesionales del área de la salud',
+                  description: 'El curso de flebotomía en Estados Unidos está dirigido a todos los profesionales del área de la salud que deseen ampliar sus conocimientos y habilidades en la extracción y manejo de muestras sanguíneas. Pueden participar enfermeros, médicos, técnicos de laboratorio, asistentes médicos, paramédicos, estudiantes de ciencias de la salud y otros profesionales relacionados con el cuidado del paciente.\n\nEste programa es ideal para quienes buscan fortalecer su perfil profesional, cumplir con requisitos laborales en clínicas, hospitales o laboratorios, o iniciar una carrera técnica dentro del sistema de salud estadounidense. No se requiere experiencia previa en flebotomía, pero se valora contar con formación o práctica en áreas clínicas.'
+                },
+                curriculum: [
+                  {
+                    title: 'Contenido del curso',
+                    topics: [
+                      'El Curso de Flebotomía está diseñado para proporcionar a los participantes los conocimientos teóricos y prácticos necesarios para realizar extracciones sanguíneas de manera segura, eficiente y profesional. A lo largo del programa, los estudiantes aprenderán los principios fundamentales de la flebotomía, las técnicas de punción y las normas éticas y de seguridad que deben seguirse en el entorno clínico.',
+                      'Durante el curso se abordarán temas esenciales como la introducción a la flebotomía, los aspectos anatómicos del sistema venoso y los requisitos generales de seguridad en el área de trabajo. Los participantes conocerán los protocolos y procedimientos paso a paso, así como las indicaciones y contraindicaciones más comunes en la práctica diaria.',
+                      'También se estudiará la preparación del material e instrumental, junto con la técnica correcta de punción venosa, garantizando una práctica segura tanto para el profesional como para el paciente. Además, se tratarán los cuidados generales del paciente después de la venopunción, las posibles complicaciones que pueden presentarse y el rol del flebotomista dentro del equipo de salud.',
+                      'El programa incluye ejercicios guiados y prácticas en vivo, donde los estudiantes podrán aplicar los conocimientos adquiridos bajo la supervisión de instructores especializados. Finalmente, se realizará un examen evaluativo para certificar las competencias adquiridas durante el curso.',
+                      'Este curso está orientado a profesionales y estudiantes del área de la salud que deseen ampliar sus habilidades clínicas y fortalecer su perfil profesional en el ámbito médico y hospitalario.'
+                    ]
+                  }
+                ],
+                includes: [
+                  'Copia de la presentación en físico',
+                  'Certificado de tecnico en flebotomia',
+                  'ID Card valido por 2 años a nivel nacional',
+                  'Practica personalizada'
+                ],
+                accreditations: [
+                  'Al finalizar satisfactoriamente el Curso de Flebotomía, el participante recibe una triple certificación que respalda su formación y le permite ejercer con reconocimiento a nivel nacional dentro de los Estados Unidos.',
+                  'Certificado de Técnico en Flebotomía - Acredita las competencias teóricas y prácticas adquiridas durante el programa, certificando que el participante está capacitado para realizar procedimientos de extracción sanguínea de manera profesional y segura.',
+                  'ID Card válida por 2 años a nivel nacional - Identificación oficial que avala al egresado como técnico certificado en flebotomía, reconocida en todo el territorio estadounidense y requerida por diversas instituciones médicas, clínicas y laboratorios.',
+                  'Constancia de asistencia y participación - Emitida por el INSTITUTO MEX-COL-USA, certifica la participación activa y el cumplimiento de los módulos teórico-prácticos del curso, brindando respaldo académico y formativo.',
+                  'Esta combinación de documentos garantiza al egresado una formación sólida, avalada y reconocida, abriendo la posibilidad de laborar en hospitales, clínicas, laboratorios y centros de salud en todo Estados Unidos, con la confianza y respaldo de una institución comprometida con la excelencia profesional.'
+                ]
               },
             },
           },
