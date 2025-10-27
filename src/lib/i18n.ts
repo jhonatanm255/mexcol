@@ -305,8 +305,8 @@ export const translations = {
                 certification: 'Yes',
                 targetAudience: {
                   title: 'Course Directed To:',
-                  highlighted: 'We train the professionals who care for the beauty and health of the world',
-                  description: 'Physicians, dentists, nurses, medical assistants, phlebotomists, cosmetologists and/or aestheticians with responsible physician are welcome to train with us.\n\nWe also open our doors to associated medical listeners, international injectors and medical spa owners who seek to acquire the necessary knowledge to supervise and guide their team responsibly.\n\nWorldwide, numerous complications have occurred in aesthetic medicine treatments, many of them caused by unqualified personnel or without adequate training.\n\nAt INSTITUTO MEX-COL-USA we assume the commitment to change this reality.\n\nWe train prepared professionals, with solid ethical and scientific values, so that each aesthetic procedure is performed under the highest standards of safety, knowledge and responsibility.\n\nOur objective is clear: that each specialist trained with us becomes a guardian of the health, safety and well-being of their patients.'
+                  highlighted: 'Physicians, dentists, nurses, medical assistants, phlebotomists, cosmetologists and/or aestheticians',
+                  description: 'We train the professionals who care for the beauty and health of the world\n\nPhysicians, dentists, nurses, medical assistants, phlebotomists, cosmetologists and/or aestheticians with responsible physician are welcome to train with us.\n\nWe also open our doors to associated medical listeners, international injectors and medical spa owners who seek to acquire the necessary knowledge to supervise and guide their team responsibly.\n\nWorldwide, numerous complications have occurred in aesthetic medicine treatments, many of them caused by unqualified personnel or without adequate training.\n\nAt INSTITUTO MEX-COL-USA we assume the commitment to change this reality.\n\nWe train prepared professionals, with solid ethical and scientific values, so that each aesthetic procedure is performed under the highest standards of safety, knowledge and responsibility.\n\nOur objective is clear: that each specialist trained with us becomes a guardian of the health, safety and well-being of their patients.'
                 },
                 curriculum: [
                   {
@@ -1730,8 +1730,8 @@ export const translations = {
                 certification: 'Sí',
                 targetAudience: {
                   title: 'Curso Dirigido:',
-                  highlighted: 'Formamos a los profesionales que cuidan la belleza y la salud del mundo',
-                  description: 'Médicos, odontólogos, enfermeras, medical assistants, flebotomistas, cosmetólogas y/o esteticistas con médico responsable son bienvenidos a capacitarse con nosotros.\n\nTambién abrimos nuestras puertas a oyentes asociados médicos, inyectores internacionales y propietarios de spas médicos que buscan adquirir el conocimiento necesario para supervisar y guiar a su equipo con responsabilidad.\n\nA nivel mundial, se han presentado numerosas complicaciones en tratamientos de medicina estética, muchas de ellas ocasionadas por personal no idóneo o sin la capacitación adecuada.\n\nEn el INSTITUTO MEX-COL-USA asumimos el compromiso de cambiar esta realidad.\n\nFormamos profesionales preparados, con sólidos valores éticos y científicos, para que cada procedimiento estético se realice bajo los más altos estándares de seguridad, conocimiento y responsabilidad.\n\nNuestro objetivo es claro: que cada especialista formado con nosotros se convierta en un guardián de la salud, la seguridad y el bienestar de sus pacientes.'
+                  highlighted: 'Médicos, odontólogos, enfermeras, medical assistants, flebotomistas, cosmetólogas y/o esteticistas',
+                  description: 'Formamos a los profesionales que cuidan la belleza y la salud del mundo\n\nMédicos, odontólogos, enfermeras, medical assistants, flebotomistas, cosmetólogas y/o esteticistas con médico responsable son bienvenidos a capacitarse con nosotros.\n\nTambién abrimos nuestras puertas a oyentes asociados médicos, inyectores internacionales y propietarios de spas médicos que buscan adquirir el conocimiento necesario para supervisar y guiar a su equipo con responsabilidad.\n\nA nivel mundial, se han presentado numerosas complicaciones en tratamientos de medicina estética, muchas de ellas ocasionadas por personal no idóneo o sin la capacitación adecuada.\n\nEn el INSTITUTO MEX-COL-USA asumimos el compromiso de cambiar esta realidad.\n\nFormamos profesionales preparados, con sólidos valores éticos y científicos, para que cada procedimiento estético se realice bajo los más altos estándares de seguridad, conocimiento y responsabilidad.\n\nNuestro objetivo es claro: que cada especialista formado con nosotros se convierta en un guardián de la salud, la seguridad y el bienestar de sus pacientes.'
                 },
                 curriculum: [
                   {
@@ -1756,13 +1756,16 @@ export const translations = {
                   }
                 ],
                 includes: [
-                  'Material de apoyo digital',
-                  'Libros y artículos especializados',
-                  'Formatos de consentimiento informado',
-                  'Videos didácticos',
-                  'Guías para la valoración de pacientes',
-                  'Otros recursos complementarios',
-                  'Contenido audiovisual exclusivo: Videos de aplicación de toxina botulínica (Botox®), Videos de aplicación de ácido hialurónico'
+                  'Material de apoyo digital:',
+                  '• Libros y artículos especializados',
+                  '• Formatos de consentimiento informado',
+                  '• Videos didácticos',
+                  '• Guías para la valoración de pacientes',
+                  '• Otros recursos complementarios',
+                  'Contenido audiovisual exclusivo:',
+                  '• Videos de aplicación de toxina botulínica (Botox®): marcación, técnicas de aplicación en pacientes masculinos y femeninos, y dosificación',
+                  '• Videos de aplicación de ácido hialurónico: labios, ojeras y otras áreas faciales',
+                  'Todo el material será enviado a los alumnos una vez finalizado el curso'
                 ],
                 accreditations: [
                   'Los cursos y actualizaciones que impartimos al ser educación continua están registrados en la secretaria del trabajo y previsión social (En Mexico). Al finalizar la práctica de su capacitación le será aplicada una evaluación de conocimiento, habilidades y destreza, la cual está sujeta al puntaje mínimo para obtener su certificado el cual se expide después de que INSTITUTO MEX-COL-USA haya evaluado y reportado que la evaluación fue aprobada por cada asistente. Misma que deberá ser aprobada con el porcentaje mínimo del 80%',

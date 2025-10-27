@@ -203,16 +203,27 @@ export default function CourseDetailPage() {
                     {language === 'es' ? 'El Curso Incluye' : 'Course Includes'}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {(courseDetails as any).includes.map((item: string, idx: number) => (
-                      <li key={idx} className="flex items-start gap-2 text-sm">
-                        <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
+                                 <CardContent>
+                   <ul className="space-y-2">
+                     {(courseDetails as any).includes.map((item: string, idx: number) => {
+                       const isBulletItem = item.startsWith('•');
+                       const displayText = isBulletItem ? item.substring(2) : item;
+                       const isTitle = !isBulletItem && (displayText.includes(':') || displayText.endsWith(':'));
+                       
+                       return (
+                         <li key={idx} className={isBulletItem ? "flex items-start gap-2 text-sm ml-6" : isTitle ? "flex items-start gap-2 text-sm font-semibold" : "flex items-start gap-2 text-sm"}>
+                           {isBulletItem && (
+                             <span className="text-primary mt-0.5 flex-shrink-0 font-bold">•</span>
+                           )}
+                           {!isBulletItem && (
+                             <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                           )}
+                           <span>{displayText}</span>
+                         </li>
+                       );
+                     })}
+                   </ul>
+                 </CardContent>
               </Card>
             )}
 

@@ -109,10 +109,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="online-training" className="py-20 md:py-28 section-modern gradient-bg">
+      <section id="online-training" className="py-20 md:py-28 section-modern" style={{backgroundColor: 'rgb(236 253 245)'}}>
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl text-center">
-            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent mb-6">
+            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl text-primary mb-6">
               {th.onlineTraining.title}
             </h2>
             <p className="mt-6 text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">{th.onlineTraining.intro}</p>
@@ -125,10 +125,12 @@ export default function Home() {
         </div>
       </section>
 
+{/*       <hr className="h-[1px] w-full border-0 bg-gradient-to-r from-transparent via-primary to-transparent" />
+ */}
       <section id="featured-programs" className="py-20 md:py-28 section-modern">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent mb-4">
+            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl text-primary mb-4">
               {th.featuredPrograms.title}
             </h2>
           </div>
@@ -159,10 +161,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="testimonials" className="py-20 md:py-28 section-modern gradient-bg">
+      <section id="testimonials" className="py-20 md:py-28 section-modern" style={{backgroundColor: 'rgb(236 253 245)'}}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent mb-4">
+            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl text-primary mb-4">
               {th.testimonials.title}
             </h2>
             <p className="text-lg text-muted-foreground">{th.testimonials.sub}</p>
@@ -238,7 +240,7 @@ export default function Home() {
       <section id="brands" className="py-20 md:py-28 section-modern">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent mb-4">
+            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl text-primary mb-4">
               {th.brands.title}
             </h2>
             <p className="text-lg text-muted-foreground">{th.brands.optional}</p>
@@ -247,10 +249,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact-home" className="py-20 md:py-28 section-modern gradient-bg">
+      <section id="contact-home" className="py-20 md:py-28 section-modern" style={{backgroundColor: 'rgb(236 253 245)'}}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent mb-4">
+            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl text-primary mb-4">
               {th.contact.title}
             </h2>
             <p className="text-lg text-muted-foreground mb-8">{th.contact.intro}</p>
@@ -324,5 +326,6 @@ export default function Home() {
        </div>
      </section>*/}
    </div>
+   
  );
 }

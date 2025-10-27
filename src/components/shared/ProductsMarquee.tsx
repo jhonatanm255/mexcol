@@ -56,6 +56,11 @@ export default function ProductsMarquee() {
         .animate-marquee-products:hover {
           animation-play-state: paused;
         }
+        @media (max-width: 768px) {
+          .animate-marquee-products {
+            animation: marquee-products 10s linear infinite;
+          }
+        }
       `}</style>
     </div>
   );
