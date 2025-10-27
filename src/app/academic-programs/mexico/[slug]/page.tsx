@@ -395,6 +395,17 @@ export default function CourseDetailPage() {
             </Card>
           </div>
         </div>
+
+        {/* Back to Programs Button at the end */}
+        <div className="mt-12 text-center">
+          <Link 
+            href="/academic-programs"
+            className="inline-flex items-center gap-2 text-foreground hover:text-[#10b981] transition-colors duration-200 underline-offset-4 hover:underline decoration-[#10b981]"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            {language === 'es' ? 'Volver a Programas' : 'Back to Programs'}
+          </Link>
+        </div>
       </div>
     </div>
   );
