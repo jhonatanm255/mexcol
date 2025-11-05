@@ -1,31 +1,61 @@
 export const contact = {
-title: 'Contacto',
-        intro: 'Estamos en 3 países para atenderte',
-        viewLocations: 'Ver todas nuestras sedes',
-        locations: {
-          mx: {
-            title: 'Ciudad de México',
-            address: 'Av. Uno #18, Col. San Pedro de los Pinos, Benito Juárez, 03800',
-          },
-          usaOrlando: {
-            title: 'Orlando - Oficinas administrativas',
-            address: '2180 Central Florida Parkway, Suite A2, Orlando, FL 32837',
-          },
-          usaHouston: {
-            title: 'Houston',
-            address: '2307 S Texas 6, Houston, TX 77077',
-          },
-          usaPresence: 'Presencia: Los Angeles y Miami',
-          coBogota: {
-            title: 'Bogotá - Oficina administrativa',
-            address: 'Carrera 4 Este #14-04, Segundo piso, Sector La Esmeralda, Tocancipá, Cundinamarca',
-          },
-        },
-        followUs: {
-          title: 'Síguenos',
-          facebook: 'Facebook',
-          instagram: 'Instagram',
-          tiktok: 'TikTok',
-          youtube: 'YouTube',
-        }
+  title: 'Contacto',
+  heroTitle: 'Contáctanos',
+  subtitle: 'Estamos aquí para ayudarte. Ponte en contacto con nosotros a través de cualquiera de nuestras oficinas.',
+  intro: 'Estamos en 3 países para atenderte',
+  viewLocations: 'Ver todas nuestras sedes',
+  countries: {
+    usa: 'USA',
+    mexico: 'México',
+    colombia: 'Colombia',
+  },
+  locations: {
+    mx: {
+      title: 'Ciudad de México',
+      address: 'Av. Uno #18, Col. San Pedro de los Pinos, Benito Juárez, 03800',
+    },
+    usaOrlando: {
+      title: 'Orlando - Oficinas administrativas',
+      address: '2180 Central Florida Parkway, Suite A2, Orlando, FL 32837',
+    },
+    usaHouston: {
+      title: 'Houston',
+      address: '2307 S Texas 6, Houston, TX 77077',
+    },
+    usaPresence: 'Presencia: Los Angeles y Miami',
+    coBogota: {
+      title: 'Bogotá - Oficina administrativa',
+      address: 'Carrera 4 Este #14-04, Segundo piso, Sector La Esmeralda, Tocancipá, Cundinamarca',
+    },
+  },
+  followUs: {
+    title: 'Síguenos',
+    facebook: 'Facebook',
+    instagram: 'Instagram',
+    tiktok: 'TikTok',
+    youtube: 'YouTube',
+    links: {
+      facebook: 'Facebook',
+      instagram: 'Instagram',
+      tiktok: 'TikTok',
+      youtube: 'YouTube',
+    },
+  },
+  form: {
+    title: 'Envíanos un mensaje',
+    nameLabel: 'Nombre',
+    namePlaceholder: 'Ingresa tu nombre',
+    countryLabel: 'País',
+    countryPlaceholder: 'Ingresa tu país',
+    emailLabel: 'Correo electrónico',
+    emailPlaceholder: 'Ingresa tu correo electrónico',
+    phoneLabel: 'Teléfono',
+    phonePlaceholder: 'Ingresa tu número de teléfono',
+    messageLabel: 'Mensaje',
+    messagePlaceholder: 'Ingresa tu mensaje',
+    submit: 'Enviar mensaje',
+    submitting: 'Enviando...',
+    successTitle: '¡Mensaje enviado exitosamente!',
+    errorTitle: 'Error al enviar mensaje',
+  },
 };

@@ -157,3 +157,7 @@ Solo necesitas:
 2. Importar `formatText` o `FormattedText` en tu componente
 3. ¡Listo!
 
+
+
+
+

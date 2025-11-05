@@ -37,12 +37,12 @@ title: 'Academic Programs',
             ],
             courseDetails: {
               'master-class-4-techniques': {
-                title: 'Master Class 4 Techniques: Harmonization, Moderation and Facial Profiling "Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads"',
+                title: 'Masterclass: 4 Facial Harmonization, Moderation, and Profiling Techniques “Botulinum Toxin / Hyaluronic Acid / Collagen Bio-Stimulators / PDO Threads”',
                 subtitle: 'Advanced Facial Harmonization Training',
                 description: 'Comprehensive hands-on training in the four essential techniques of modern aesthetic medicine.',
                 heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop',
                 format: 'In-person',
-                duration: '2 days Theoretical - Demonstrative Practice',
+                duration: '2 days Theoretical - Demonstrative Practical',
                 schedule: '9:00 am - 6:00 pm Approx',
                 location: 'Los Angeles, CA',
                 price: 'Contact for pricing',
@@ -51,54 +51,71 @@ title: 'Academic Programs',
                 targetAudience: {
                   title: 'Course Directed To:',
                   highlighted: 'Physicians, dentists, nurses, medical assistants, phlebotomists, cosmetologists and/or aestheticians',
-                  description: 'We train the professionals who care for the beauty and health of the world\n\nPhysicians, dentists, nurses, medical assistants, phlebotomists, cosmetologists and/or aestheticians with responsible physician are welcome to train with us.\n\nWe also open our doors to associated medical listeners, international injectors and medical spa owners who seek to acquire the necessary knowledge to supervise and guide their team responsibly.\n\nWorldwide, numerous complications have occurred in aesthetic medicine treatments, many of them caused by unqualified personnel or without adequate training.\n\nAt INSTITUTO MEX-COL-USA we assume the commitment to change this reality.\n\nWe train prepared professionals, with solid ethical and scientific values, so that each aesthetic procedure is performed under the highest standards of safety, knowledge and responsibility.\n\nOur objective is clear: that each specialist trained with us becomes a guardian of the health, safety and well-being of their patients.'
+                  description: 'We train the professionals who care for the beauty and health of the world\n\nPhysicians, dentists, nurses, medical assistants, phlebotomists, cosmetologists, and/or estheticians under medical supervision are welcome to train with us.\n\nWe also welcome associate medical observers, international injectors, and medical spa owners seeking the knowledge necessary to supervise and guide their teams responsibly.\n\nWorldwide, numerous complications have arisen in aesthetic medicine treatments, often due to unqualified personnel or insufficient training.\n\nAt **INSTITUTO MEX-COL-USA**, we are committed to changing this reality. We train professionals with solid ethical and scientific values so that every aesthetic procedure is performed under the highest standards of safety, knowledge, and responsibility.\n\nOur goal is clear: every specialist trained with us becomes a guardian of their patients’ health, safety, and well-being.'
                 },
                 curriculum: [
                   {
                     title: 'Day 1',
                     topics: [
-                      'Acquire comprehensive knowledge about protocols, indications, contraindications and adverse event management in each of the most innovative aesthetic medicine techniques:',
-                      'Hyaluronic Acid - Master modeling techniques in: Rhinoplasty, Cheekbones, Nasolabial folds, Lips',
-                      'Botulinum Toxin - Learn to relax facial muscles to prevent and treat expression lines in: Forehead, Glabella, Eye contour, Bunny lines',
-                      'PDO Smooth or Mono Threads - Apply rejuvenation protocols with immediate lifting effect in: Jawline, Double chin, Abdomen, Buttocks, Other body areas',
-                      'Collagen Biostimulators - Know the main biostimulators available in the market and their application in: Arms, Abdomen, Legs, Buttocks, Neck, Face and more'
+                      'Acquire comprehensive knowledge about protocols, indications, contraindications, and management of adverse events in each of the most innovative aesthetic medicine techniques:\n',
+                      '**Hyaluronic Acid**',
+                      'Master modeling techniques in:',
+                      'Rhinomodeling',
+                      'Cheeks',
+                      'Nasolabial folds',
+                      'Lips\n',
+                      '**Botulinum Toxin**',
+                      'Learn to relax facial muscles to prevent and treat expression lines in:',
+                      'Forehead',
+                      'Glabella (frown lines)',
+                      'Eye contour',
+                      'Bunny lines\n',
+                      '**PDO Smooth or Mono Threads**',
+                      'Apply rejuvenation protocols with immediate lifting effect in:',
+                      'Jawline',
+                      'Double chin',
+                      'Abdomen',
+                      'Glutes',
+                      'Other body areas\n',
+                      '**Collagen Biostimulators**',
+                      'Learn about the main bio-stimulators available in the market and their application in:',
+                      'Arms',
+                      'Abdomen',
+                      'Legs',
+                      'Glutes',
+                      'Neck',
+                      'Face and more'
                     ]
                   },
                   {
                     title: 'Day 2',
                     topics: [
-                      'Demonstrative practice. (Due to student regulations and licenses, it will not be possible to perform direct practices with patients. The activity will be carried out only demonstratively by the instructor).',
-                      'Delivery of participation certificates issued by the Instituto Mex-Col-Usa.',
-                      'Photographic record as evidence of the course.',
-                      'Final exam (a minimum grade of 80% is required to pass).',
-                      'Upon approval, a Diploma endorsed by the American Alliance of Aesthetic Medicine of the United States will be awarded.'
+                      '**Demonstrative Practice:**\n(Due to student regulations and licensing, direct patient practice will not be possible. The activity will be conducted solely as a demonstration by the instructor.)',
+                      '\nDelivery of Certificates of Participation issued by **Instituto Mex-Col-USA**.\n',
+                      'Photographic record as course documentation.\n',
+                      'Final Exam (a minimum score of 80% is required to pass).\n',
+                      'Upon passing, a diploma will be awarded, endorsed by the **American Alliance of Aesthetic Medicine (USA)**.'
                     ]
                   }
                 ],
                 includes: [
-                  'Digital support material',
+                  '**Digital Support Material**\n\nAt the end of the course, participants will receive a reference and study material package, which includes:',
                   'Specialized books and articles',
-                  'Informed consent forms',
-                  'Educational videos',
-                  'Patient assessment guides',
+                  'Informed consent templates',
+                  'Instructional videos',
+                  'Patient evaluation guides',
                   'Other complementary resources',
-                  'Exclusive audiovisual content: Botulinum toxin application videos (Botox®), Hyaluronic acid application videos'
+                  '\n**Exclusive Audiovisual Content:**',
+                  'Botulinum toxin (Botox®) application videos: marking, techniques for male and female patients, a dosing',
+                  'Hyaluronic acid application videos: lips, under-eye area, and other facial areas',
+                  '✨ All materials will be sent to students upon course completion'
                 ],
                 accreditations: [
-                  'The courses and updates we teach as continuing education are registered with the Secretariat of Labor and Social Welfare (In Mexico). Upon completion of your training practice, an evaluation of knowledge, skills and dexterity will be applied, which is subject to the minimum score to obtain your certificate which is issued after INSTITUTO MEX-COL-USA has evaluated and reported that the evaluation was approved by each attendee. This must be approved with a minimum percentage of 80%',
-                  'Attendance and participation certificate: Issued by INSTITUTO MEX-COL-USA, certifies active participation and compliance with the theoretical-practical modules of the course, providing academic and training support.',
-                  'Diploma: Issued by the American Alliance of Aesthetic Medicine and SOPEME (Aesthetic Medicine Association of the United States), valid to authenticate training in the United States, Latin America, Caribbean and Spain as recognized continuing education.'
+                  '**Accreditations and Institutional Support :**\n\nThe courses and updates we provide, being continuing education, are registered with the **Secretariat of Labor and Social Welfare (Mexico)**.\n\nUpon completing the practical training, participants will undergo an assessment of knowledge, skills, and proficiency. A minimum score is required to receive the certificate, which will be issued after **INSTITUTO MEX-COL-USA** evaluates and confirms that each participant passed with at least 80%.\n\n**Certificate of Attendance and Participation:** Issued by **INSTITUTO MEX-COL-USA**, certifying active participation and completion of the theoretical-practical course modules, providing academic and professional recognition.\n\n**Diploma:** Issued by the **American Alliance of Aesthetic Medicine** and **SOPEME (United States Aesthetic Medicine Association)**, valid to certify training in the United States, Latin America, Caribbean, and Spain as recognized continuing education.'
                 ],
                 productQuality: {
                   title: 'Quality Products and Guaranteed Safety',
-                  description: 'In aesthetic medicine, the choice of product is as important as the applied technique, since the safety of the patient and the effectiveness of the results depend on it.\n\nFor this reason, at Instituto Mex-Col-Usa we work exclusively with the three best laboratories worldwide, recognized for their innovation, trajectory and high quality standards.',
-                  certifications: [
-                    'INVIMA (Colombia)',
-                    'FDA (United States)',
-                    'COFEPRIS (Mexico)',
-                    'And other competent health authorities globally'
-                  ],
-                  footer: 'In this way, we guarantee that each procedure is performed with safe, reliable and approved supplies, offering our students and patients the peace of mind of working with the best on the market.'
+                  description: 'In aesthetic medicine, product choice is as important as technique since patient safety and treatment efficacy depend on it.\nFor this reason, **Instituto Mex-Col-USA** works exclusively with the three best laboratories worldwide, recognized for innovation, experience, and high-quality standards.\nAll our products have official registration and certifications from major international regulatory entities, such as:\n\n• INVIMA (Colombia)\n• FDA (United States)\n• COFEPRIS (Mexico)\n• And other competent global health authorities\n\nThis ensures that every procedure is performed with safe, reliable, and approved supplies, providing students and patients peace of mind in using the best products on the market.\n\n**Included Products:**\n• Hyaluronic Acid "Juvederm – Allergan"\n• Botulinum Toxin "Botox – Allergan"\n• PDO Threads "Smooth or Mono"\n• Bio-Stimulator "Harminyca or Radiesse"'
                 }
               },
               'intravenous-therapy-chelation': {

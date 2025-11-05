@@ -1,5 +1,5 @@
 export const home = {
-hero: {
+  hero: {
         main: 'Instituto Mex - Col - Usa',
         sub: 'Educación continua en medicina estética.',
       },

@@ -1,31 +1,61 @@
 export const contact = {
-title: 'Contact',
-        intro: 'We are present in 3 countries to assist you',
-        viewLocations: 'View All Locations',
-        locations: {
-          mx: {
-            title: 'Mexico City',
-            address: 'Av. Uno #18, Colonia San Pedro de los Pinos, Benito Juárez, 03800',
-          },
-          usaOrlando: {
-            title: 'Orlando - Admin Office',
-            address: '2180 Central Florida Parkway, Suite A2, Orlando, FL 32837',
-          },
-          usaHouston: {
-            title: 'Houston',
-            address: '2307 S Texas 6, Houston, TX 77077',
-          },
-          usaPresence: 'Presence: Los Angeles and Miami',
-          coBogota: {
-            title: 'Bogotá - Admin Office',
-            address: 'Carrera 4 Este #14-04, 2nd Floor, Sector La Esmeralda, Tocancipá, Cundinamarca',
-          },
-        },
-        followUs: {
-          title: 'Follow Us',
-          facebook: 'Facebook',
-          instagram: 'Instagram',
-          tiktok: 'TikTok',
-          youtube: 'YouTube',
-        }
+  title: 'Contact',
+  heroTitle: 'Contact Us',
+  subtitle: 'We are here to help you. Get in touch with us through any of our offices.',
+  intro: 'We are present in 3 countries to assist you',
+  viewLocations: 'View All Locations',
+  countries: {
+    usa: 'USA',
+    mexico: 'Mexico',
+    colombia: 'Colombia',
+  },
+  locations: {
+    mx: {
+      title: 'Mexico City',
+      address: 'Av. Uno #18, Colonia San Pedro de los Pinos, Benito Juárez, 03800',
+    },
+    usaOrlando: {
+      title: 'Orlando - Admin Office',
+      address: '2180 Central Florida Parkway, Suite A2, Orlando, FL 32837',
+    },
+    usaHouston: {
+      title: 'Houston',
+      address: '2307 S Texas 6, Houston, TX 77077',
+    },
+    usaPresence: 'Presence: Los Angeles and Miami',
+    coBogota: {
+      title: 'Bogotá - Admin Office',
+      address: 'Carrera 4 Este #14-04, 2nd Floor, Sector La Esmeralda, Tocancipá, Cundinamarca',
+    },
+  },
+  followUs: {
+    title: 'Follow Us',
+    facebook: 'Facebook',
+    instagram: 'Instagram',
+    tiktok: 'TikTok',
+    youtube: 'YouTube',
+    links: {
+      facebook: 'Facebook',
+      instagram: 'Instagram',
+      tiktok: 'TikTok',
+      youtube: 'YouTube',
+    },
+  },
+  form: {
+    title: 'Send us a message',
+    nameLabel: 'Name',
+    namePlaceholder: 'Enter your name',
+    countryLabel: 'Country',
+    countryPlaceholder: 'Enter your country',
+    emailLabel: 'Email',
+    emailPlaceholder: 'Enter your email',
+    phoneLabel: 'Phone',
+    phonePlaceholder: 'Enter your phone number',
+    messageLabel: 'Message',
+    messagePlaceholder: 'Enter your message',
+    submit: 'Send Message',
+    submitting: 'Sending...',
+    successTitle: 'Message sent successfully!',
+    errorTitle: 'Error sending message',
+  },
 };

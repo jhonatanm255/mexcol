@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { AuthProvider } from '@/components/auth-provider';
 import { Footer } from '@/components/shared/Footer';
 import { Navbar } from '@/components/shared/Navbar';
+import WhatsAppFloatButton from '@/components/shared/WhatsAppFloatButton';
 import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
 import { inter } from '@/app/fonts';
@@ -40,6 +41,7 @@ export default function RootLayout({
               <Navbar />
               <main className="flex-grow">{children}</main>
               <Footer />
+              <WhatsAppFloatButton />
             </div>
             <Toaster />
           </AuthProvider>

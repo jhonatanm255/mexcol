@@ -51,57 +51,71 @@ title: 'Programas Académicos',
                 targetAudience: {
                   title: 'Curso Dirigido:',
                   highlighted: 'Médicos, odontólogos, enfermeras, medical assistants, flebotomistas, cosmetólogas y/o esteticistas',
-                  description: 'Formamos a los profesionales que cuidan la belleza y la salud del mundo\n\nMédicos, odontólogos, enfermeras, medical assistants, flebotomistas, cosmetólogas y/o esteticistas con médico responsable son bienvenidos a capacitarse con nosotros.\n\nTambién abrimos nuestras puertas a oyentes asociados médicos, inyectores internacionales y propietarios de spas médicos que buscan adquirir el conocimiento necesario para supervisar y guiar a su equipo con responsabilidad.\n\nA nivel mundial, se han presentado numerosas complicaciones en tratamientos de medicina estética, muchas de ellas ocasionadas por personal no idóneo o sin la capacitación adecuada.\n\nEn el INSTITUTO MEX-COL-USA asumimos el compromiso de cambiar esta realidad.\n\nFormamos profesionales preparados, con sólidos valores éticos y científicos, para que cada procedimiento estético se realice bajo los más altos estándares de seguridad, conocimiento y responsabilidad.\n\nNuestro objetivo es claro: que cada especialista formado con nosotros se convierta en un guardián de la salud, la seguridad y el bienestar de sus pacientes.'
+                  description: 'Formamos a los profesionales que cuidan la belleza y la salud del mundo\n\nMédicos, odontólogos, enfermeras, medical assistants, flebotomistas, cosmetólogas y/o esteticistas con médico responsable son bienvenidos a capacitarse con nosotros.\n\nTambién abrimos nuestras puertas a oyentes asociados médicos, inyectores internacionales y propietarios de spas médicos que buscan adquirir el conocimiento necesario para supervisar y guiar a su equipo con responsabilidad.\n\nA nivel mundial, se han presentado numerosas complicaciones en tratamientos de medicina estética, muchas de ellas ocasionadas por personal no idóneo o sin la capacitación adecuada.\n\nEn el **INSTITUTO MEX-COL-USA** asumimos el compromiso de cambiar esta realidad.\n\nFormamos profesionales preparados, con sólidos valores éticos y científicos, para que cada procedimiento estético se realice bajo los más altos estándares de seguridad, conocimiento y responsabilidad.\n\nNuestro objetivo es claro: que cada especialista formado con nosotros se convierta en un guardián de la salud, la seguridad y el bienestar de sus pacientes.'
                 },
                 curriculum: [
                   {
                     title: 'Día 1',
                     topics: [
                       'Adquiere conocimientos completos sobre protocolos, indicaciones, contraindicaciones y manejo de eventos adversos en cada una de las técnicas más innovadoras en medicina estética:',
-                      'Ácido Hialurónico - Domina técnicas de modelado en: Rinomodelación, Pómulos, Surcos nasogenianos, Labios',
-                      'Toxina Botulínica - Aprende a relajar los músculos faciales para prevenir y tratar líneas de expresión en: Frente, Entrecejo, Contorno de ojos, Bunny lines',
-                      'Hilos PDO Liso o Mono - Aplica protocolos de rejuvenecimiento con efecto lifting inmediato en: Contorno mandibular, Papada, Abdomen, Glúteos, Otras zonas corporales',
-                      'Bioestimuladores de Colágeno - Conoce los principales bioestimuladores disponibles en el mercado y su aplicación en: Brazos, Abdomen, Piernas, Glúteos, Cuello, Rostro y más'
+                      '**Ácido Hialurónico**',
+                      'Domina técnicas de modelado en:',
+                      'Rinomodelación',
+                      'Pómulos',
+                      'Surcos nasogenianos',
+                      'Labios',
+                      '**Toxina Botulínica**',
+                      'Aprende a relajar los músculos faciales para prevenir y tratar líneas de expresión en:',
+                      'Frente',
+                      'Entrecejo',
+                      'Contorno de ojos',
+                      'Bunny lines',
+                      '**Hilos PDO Liso o Mono**',
+                      'Aplica protocolos de rejuvenecimiento con efecto lifting inmediato en:',
+                      'Contorno mandibular',
+                      'Papada',
+                      'Abdomen',
+                      'Glúteos',
+                      'Otras zonas corporales',
+                      '**Bioestimuladores de Colágeno**',
+                      'Conoce los principales bioestimuladores disponibles en el mercado y su aplicación en:',
+                      'Brazos',
+                      'Abdomen',
+                      'Piernas',
+                      'Glúteos',
+                      'Cuello',
+                      'Rostro y más'
                     ]
                   },
                   {
                     title: 'Día 2',
                     topics: [
-                      'Práctica demostrativa. (Debido a regulaciones y licencias de los alumnos, no será posible realizar prácticas directas con pacientes. La actividad se llevará a cabo únicamente de manera demostrativa por parte del instructor).',
-                      'Entrega de constancias de participación emitidas por el Instituto Mex-Col-Usa.',
-                      'Registro fotográfico como evidencia del curso.',
-                      'Examen final (se requiere una calificación mínima del 80% para aprobar).',
-                      'En caso de aprobación, se otorgará Diploma avalado por la Alianza Americana de Medicina Estética de los Estados Unidos.'
+                      '**Práctica Demostrativa:**\n(Debido a regulaciones y licencias de los alumnos, no será posible realizar prácticas directas con pacientes. La actividad se llevará a cabo únicamente de manera demostrativa por parte del instructor).\n',
+                      '\nEntrega de Certificados de Participación emitidos por **Instituto Mex-Col-USA**.\n',
+                      'Registro fotográfico como documentación del curso.\n',
+                      'Examen Final (se requiere una calificación mínima del 80% para aprobar).\n',
+                      'Al aprobar, se otorgará un diploma, avalado por la **Alianza Americana de Medicina Estética (EE.UU.)**.'
                     ]
                   }
                 ],
                 includes: [
-                  'Material de apoyo digital:',
-                  '• Libros y artículos especializados',
-                  '• Formatos de consentimiento informado',
-                  '• Videos didácticos',
-                  '• Guías para la valoración de pacientes',
-                  '• Otros recursos complementarios',
-                  'Contenido audiovisual exclusivo:',
-                  '• Videos de aplicación de toxina botulínica (Botox®): marcación, técnicas de aplicación en pacientes masculinos y femeninos, y dosificación',
-                  '• Videos de aplicación de ácido hialurónico: labios, ojeras y otras áreas faciales',
-                  'Todo el material será enviado a los alumnos una vez finalizado el curso'
+                  '**Material de Apoyo Digital**\nAl finalizar el curso, los participantes recibirán un paquete de material de referencia y estudio, que incluye:',
+                  'Libros y artículos especializados',
+                  'Formatos de consentimiento informado',
+                  'Videos instructivos',
+                  'Guías de evaluación de pacientes',
+                  'Otros recursos complementarios',
+                  '\n**Contenido Audiovisual Exclusivo:**',
+                  'Videos de aplicación de toxina botulínica (Botox®): marcación, técnicas para pacientes masculinos y femeninos, y dosificación',
+                  'Videos de aplicación de ácido hialurónico: labios, área bajo los ojos y otras áreas faciales',
+                  '✨ Todo el material será enviado a los estudiantes al finalizar el curso'
                 ],
                 accreditations: [
-                  'Los cursos y actualizaciones que impartimos al ser educación continua están registrados en la secretaria del trabajo y previsión social (En Mexico). Al finalizar la práctica de su capacitación le será aplicada una evaluación de conocimiento, habilidades y destreza, la cual está sujeta al puntaje mínimo para obtener su certificado el cual se expide después de que INSTITUTO MEX-COL-USA haya evaluado y reportado que la evaluación fue aprobada por cada asistente. Misma que deberá ser aprobada con el porcentaje mínimo del 80%',
-                  'Constancia de asistencia y participación: Emitida por el INSTITUTO MEX-COL-USA, certifica la participación activa y el cumplimiento de los módulos teórico-prácticos del curso, brindando respaldo académico y formativo.',
-                  'Diploma: Emitido por la Alianza Americana de Medicina Estética y SOPEME (Asociación de Medicina Estética de los Estados Unidos), válido para autenticar la formación en Estados Unidos, Latinoamérica, Caribe y España como educación continua reconocida.'
+                  '**Avales y Respaldo Institucional :**\n\nLos cursos y actualizaciones que proporcionamos, siendo educación continua, están registrados en la **Secretaría del Trabajo y Previsión Social (México)**.\n\nAl completar la capacitación práctica, los participantes serán evaluados en conocimientos, habilidades y destreza. Se requiere un puntaje mínimo para recibir el certificado, el cual será emitido después de que **INSTITUTO MEX-COL-USA** evalúe y confirme que cada participante aprobó con al menos 80%.\n\n**Constancia de Asistencia y Participación:** Emitida por **INSTITUTO MEX-COL-USA**, certificando la participación activa y el cumplimiento de los módulos teórico-prácticos del curso, brindando reconocimiento académico y profesional.\n\n**Diploma:** Emitido por la **Alianza Americana de Medicina Estética** y **SOPEME (Asociación de Medicina Estética de los Estados Unidos)**, válido para certificar la formación en Estados Unidos, Latinoamérica, Caribe y España como educación continua reconocida.'
                 ],
                 productQuality: {
                   title: 'Productos de Calidad y Seguridad Garantizada',
-                  description: 'En la medicina estética, la elección del producto es tan importante como la técnica aplicada, ya que de ello dependen la seguridad del paciente y la efectividad de los resultados.\n\nPor esta razón, en el Instituto Mex-Col-Usa trabajamos exclusivamente con los tres mejores laboratorios a nivel mundial, reconocidos por su innovación, trayectoria y altos estándares de calidad.',
-                  certifications: [
-                    'INVIMA (Colombia)',
-                    'FDA (Estados Unidos)',
-                    'COFEPRIS (México)',
-                    'Y otras autoridades sanitarias competentes a nivel global'
-                  ],
-                  footer: 'De esta manera, garantizamos que cada procedimiento se realice con insumos seguros, confiables y aprobados, ofreciendo a nuestros estudiantes y pacientes la tranquilidad de trabajar con lo mejor del mercado.'
+                  description: '**Productos de Calidad y Seguridad Garantizada:**\nEn la medicina estética, la elección del producto es tan importante como la técnica, ya que de ello dependen la seguridad del paciente y la eficacia del tratamiento.\nPor esta razón, **Instituto Mex-Col-USA** trabaja exclusivamente con los tres mejores laboratorios a nivel mundial, reconocidos por su innovación, experiencia y altos estándares de calidad.\nTodos nuestros productos cuentan con registro y certificaciones oficiales de las principales entidades regulatorias internacionales, tales como:\n• INVIMA (Colombia)\n• FDA (Estados Unidos)\n• COFEPRIS (México)\n• Y otras autoridades sanitarias competentes a nivel global\nEsto garantiza que cada procedimiento se realice con insumos seguros, confiables y aprobados, brindando a estudiantes y pacientes la tranquilidad de utilizar los mejores productos del mercado.\n\n**Productos Incluidos:**\n• Ácido Hialurónico "Juvederm – Allergan"\n• Toxina Botulínica "Botox – Allergan"\n• Hilos PDO "Smooth o Mono"\n• Bioestimulador "Harminyca o Radiesse"'
                 }
               },
               'intravenous-therapy-chelation': {

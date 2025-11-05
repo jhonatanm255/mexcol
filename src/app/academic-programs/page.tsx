@@ -7,10 +7,26 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useLanguage } from '@/hooks/use-language';
 import { translations } from '@/lib/i18n';
+import { useSearchParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 export default function AcademicProgramsPage() {
   const { language } = useLanguage();
   const t = translations[language].academicPrograms;
+  const searchParams = useSearchParams();
+  const countryParam = searchParams.get('country');
+  
+  const [selectedTab, setSelectedTab] = useState<'usa' | 'mexico' | 'colombia'>(
+    (countryParam === 'colombia' || countryParam === 'mexico' || countryParam === 'usa') 
+      ? countryParam 
+      : 'usa'
+  );
+
+  useEffect(() => {
+    if (countryParam === 'colombia' || countryParam === 'mexico' || countryParam === 'usa') {
+      setSelectedTab(countryParam);
+    }
+  }, [countryParam]);
 
   const countries = [
     { key: 'usa' as const, label: t.tabs.usa, image: 'https://picsum.photos/1200/400?random=21', ai: 'USA flag' },
@@ -48,7 +64,7 @@ export default function AcademicProgramsPage() {
       
       <div className="container mx-auto px-4 pb-10">
 
-      <Tabs defaultValue={countries[0].key} className="w-full">
+      <Tabs value={selectedTab} onValueChange={(value) => setSelectedTab(value as 'usa' | 'mexico' | 'colombia')} className="w-full">
         <div className="flex justify-center">
           <TabsList>
             {countries.map((c) => (

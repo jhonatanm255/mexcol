@@ -25,8 +25,10 @@ import {
   ClipboardList,
   CreditCard
 } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import { useLanguage } from '@/hooks/use-language';
 import { translations } from '@/lib/i18n';
+import { formatText } from '@/lib/utils/text-formatting';
 import ProductsMarquee from '@/components/shared/ProductsMarquee';
 
 export default function CourseDetailPage() {
@@ -41,7 +43,7 @@ export default function CourseDetailPage() {
       <div className="container mx-auto px-4 py-16 text-center">
         <h1 className="text-3xl font-bold mb-4">Course not found</h1>
         <Button asChild>
-          <Link href="/academic-programs">
+          <Link href="/academic-programs?country=usa">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Programs
           </Link>
@@ -71,7 +73,7 @@ export default function CourseDetailPage() {
               variant="ghost" 
               className="mb-6 text-white hover:text-white hover:bg-white/20 border border-white/20 hover:border-white/40 transition-all duration-300"
             >
-              <Link href="/academic-programs">
+              <Link href="/academic-programs?country=usa">
                 <ArrowLeft className="h-4 w-4" />
                 {language === 'es' ? 'Volver a Programas' : 'Back to Programs'}
               </Link>
@@ -94,8 +96,111 @@ export default function CourseDetailPage() {
 
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Sidebar - First on mobile, second on desktop */}
+          <div className="lg:col-span-1 order-1 lg:order-2">
+            <Card className="lg:sticky lg:top-4">
+              <CardHeader>
+                <CardTitle>{language === 'es' ? 'Información del Curso' : 'Course Information'}</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {(courseDetails as any).format && (
+                  <div className="flex items-start gap-3">
+                    <BookOpen className="h-5 w-5 text-primary mt-0.5" />
+                    <div>
+                      <p className="text-sm font-semibold">{language === 'es' ? 'Formato' : 'Format'}</p>
+                      <p className="text-sm text-muted-foreground">{(courseDetails as any).format}</p>
+                    </div>
+                  </div>
+                )}
+
+                {courseDetails.duration && (
+                  <div className="flex items-start gap-3">
+                    <Clock className="h-5 w-5 text-primary mt-0.5" />
+                    <div>
+                      <p className="text-sm font-semibold">{language === 'es' ? 'Duración' : 'Duration'}</p>
+                      <p className="text-sm text-muted-foreground">{courseDetails.duration}</p>
+                    </div>
+                  </div>
+                )}
+
+                {courseDetails.schedule && (
+                  <div className="flex items-start gap-3">
+                    <Calendar className="h-5 w-5 text-primary mt-0.5" />
+                    <div>
+                      <p className="text-sm font-semibold">{language === 'es' ? 'Horario' : 'Schedule'}</p>
+                      <p className="text-sm text-muted-foreground">{courseDetails.schedule}</p>
+                    </div>
+                  </div>
+                )}
+
+                {courseDetails.location && slug === 'phlebotomy-technician' && (
+                  <div className="flex items-start gap-3">
+                    <MapPin className="h-5 w-5 text-primary mt-0.5" />
+                    <div>
+                      <p className="text-sm font-semibold">{language === 'es' ? 'Ubicación' : 'Location'}</p>
+                      <p className="text-sm text-muted-foreground">{courseDetails.location}</p>
+                    </div>
+                  </div>
+                )}
+
+                {(courseDetails as any).certification && (
+                  <div className="flex items-start gap-3">
+                    <Award className="h-5 w-5 text-primary mt-0.5" />
+                    <div>
+                      <p className="text-sm font-semibold">{language === 'es' ? 'Certificación' : 'Certification'}</p>
+                      <p className="text-sm text-muted-foreground">{(courseDetails as any).certification}</p>
+                    </div>
+                  </div>
+                )}
+
+                {(courseDetails as any).idCard && (
+                  <div className="flex items-start gap-3">
+                    <CreditCard className="h-5 w-5 text-primary mt-0.5" />
+                    <div>
+                      <p className="text-sm font-semibold">{language === 'es' ? 'ID Card' : 'ID Card'}</p>
+                      <p className="text-sm text-muted-foreground">{(courseDetails as any).idCard}</p>
+                    </div>
+                  </div>
+                )}
+
+                <Separator />
+
+                {/* Inverted buttons: WhatsApp first, Enroll second */}
+                <Button 
+                  className="w-full btn-modern" 
+                  size="lg" 
+                  asChild
+                >
+                  <a 
+                    href={`https://wa.me/${language === 'es' ? '5215566308602' : '14074540524'}?text=${encodeURIComponent(
+                      language === 'es' 
+                        ? `¡Hola! Me encantaría recibir más información sobre el ${courseDetails.title} desde USA`
+                        : `Hello! I would love to receive more information about the ${courseDetails.title} from USA`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaWhatsapp className="w-7 h-7 mr-2" />
+                    {language === 'es' ? 'Solicitar Información' : 'Request Information'}
+                  </a>
+                </Button>
+
+                <Button 
+                  variant="outline" 
+                  className="w-full" 
+                  size="lg"
+                  asChild
+                >
+                  <Link href="/contact">
+                    {language === 'es' ? 'Inscribirse Ahora' : 'Enroll Now'}
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
           {/* Main Content */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 space-y-8 order-2 lg:order-1">
 
             {/* Target Audience */}
             {(courseDetails as any).targetAudience && (
@@ -115,7 +220,7 @@ export default function CourseDetailPage() {
                   <div className="space-y-3">
                     {(courseDetails as any).targetAudience.description.split('\n\n').map((paragraph: string, idx: number) => (
                       <p key={idx} className="text-sm text-muted-foreground leading-relaxed">
-                        {paragraph}
+                        {formatText(paragraph)}
                       </p>
                     ))}
                   </div>
@@ -158,38 +263,21 @@ export default function CourseDetailPage() {
                     <div key={idx} className="border-l-2 border-primary/30 pl-4">
                       <h4 className="font-semibold mb-2">{module.title}</h4>
                       <ul className="space-y-1">
-                        {module.topics.map((topic: string, topicIdx: number) => (
-                          <li key={topicIdx} className={`text-sm flex items-start gap-2 ${topicIdx === 0 ? 'text-primary font-semibold' : 'text-muted-foreground'}`}>
-                            {topicIdx !== 0 && <span className="text-primary">•</span>}
-                            <span className={topicIdx === 0 ? '' : ''}>{topic}</span>
+                        {module.topics.map((topic: string, topicIdx: number) => {
+                          const previousTopic = topicIdx > 0 ? module.topics[topicIdx - 1] : '';
+                          const hasNewLines = previousTopic && (previousTopic.includes('\\n\\n') || previousTopic.includes('\n\n') || previousTopic.endsWith('\\n\\n') || previousTopic.endsWith('\n\n'));
+                          const isNewSection = topic.startsWith('**') && topicIdx > 0;
+                          const hasSpacing = hasNewLines || isNewSection;
+                          return (
+                          <li key={topicIdx} className={`text-sm flex items-start gap-2 ${topicIdx === 0 ? 'text-primary font-semibold' : 'text-muted-foreground'} ${hasSpacing ? '!mt-8' : ''}`}>
+                            {topicIdx !== 0 && !topic.startsWith('**') && !topic.includes('Master modeling techniques in:') && !topic.includes('Domina técnicas de modelado en:') && !topic.includes('Learn to relax facial muscles to prevent and treat expression lines in:') && !topic.includes('Aprende a relajar los músculos faciales para prevenir y tratar líneas de expresión en:') && !topic.includes('Apply rejuvenation protocols with immediate lifting effect in:') && !topic.includes('Aplica protocolos de rejuvenecimiento con efecto lifting inmediato en:') && !topic.includes('Know the main biostimulators available in the market and their application in:') && !topic.includes('Conoce los principales bioestimuladores disponibles en el mercado y su aplicación en:') && !topic.includes('Learn about the main bio-stimulators available in the market and their application in:') && !topic.includes('Demonstrative Practice') && !topic.includes('Práctica Demostrativa') && !topic.includes('Delivery of Certificates') && !topic.includes('Entrega de Certificados') && !topic.includes('Photographic record') && !topic.includes('Registro fotográfico') && !topic.includes('Final Exam') && !topic.includes('Examen Final') && !topic.includes('Upon passing') && !topic.includes('Al aprobar') && <span className="text-primary">•</span>}
+                            <span className={`${topicIdx === 0 ? '' : ''} whitespace-pre-line`}>{formatText(topic)}</span>
                           </li>
-                        ))}
+                          );
+                        })}
                       </ul>
                     </div>
                   ))}
-                </CardContent>
-              </Card>
-            )}
-
-
-            {/* Accreditations */}
-            {(courseDetails as any).accreditations && (
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Award className="h-6 w-6 text-primary" />
-                    {language === 'es' ? 'Avales y Respaldos' : 'Accreditations'}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {(courseDetails as any).accreditations.map((accr: string, idx: number) => (
-                      <li key={idx} className="flex items-start gap-3 text-sm">
-                        <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                        <span>{accr}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </CardContent>
               </Card>
             )}
@@ -208,22 +296,46 @@ export default function CourseDetailPage() {
                      {(courseDetails as any).includes.map((item: string, idx: number) => {
                        const isBulletItem = item.startsWith('•');
                        const displayText = isBulletItem ? item.substring(2) : item;
-                       const isTitle = !isBulletItem && (displayText.includes(':') || displayText.endsWith(':'));
+                       const isTitle = !isBulletItem && (displayText.startsWith('**') || displayText.includes('**Digital Support Material**') || displayText.includes('**Material de Apoyo Digital**') || displayText.includes('**Exclusive Audiovisual Content:**') || displayText.includes('**Contenido Audiovisual Exclusivo:**'));
+                       const isIntroText = !isBulletItem && !isTitle && (displayText.includes('At the end of the course') || displayText.includes('Al finalizar el curso'));
+                       const isFinalText = !isBulletItem && displayText.startsWith('✨');
+                       const showIcon = !isTitle && !isIntroText && !isFinalText && !isBulletItem;
                        
                        return (
                          <li key={idx} className={isBulletItem ? "flex items-start gap-2 text-sm ml-6" : isTitle ? "flex items-start gap-2 text-sm font-semibold" : "flex items-start gap-2 text-sm"}>
                            {isBulletItem && (
                              <span className="text-primary mt-0.5 flex-shrink-0 font-bold">•</span>
                            )}
-                           {!isBulletItem && (
+                           {showIcon && (
                              <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                            )}
-                           <span>{displayText}</span>
+                           <span className={isTitle || isIntroText || isFinalText ? "whitespace-pre-line" : ""}>{formatText(displayText)}</span>
                          </li>
                        );
                      })}
                    </ul>
                  </CardContent>
+              </Card>
+            )}
+
+            {/* Accreditations */}
+            {(courseDetails as any).accreditations && (
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Award className="h-6 w-6 text-primary" />
+                    {language === 'es' ? 'Avales y Respaldos' : 'Accreditations'}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    {(courseDetails as any).accreditations.map((accr: string, idx: number) => (
+                      <div key={idx} className="text-sm whitespace-pre-line">
+                        {formatText(accr)}
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
               </Card>
             )}
 
@@ -238,33 +350,9 @@ export default function CourseDetailPage() {
                 </CardHeader>
                 <CardContent className="space-y-6 pt-6">
                   {(courseDetails as any).productQuality.description && (
-                    (courseDetails as any).productQuality.description.split('\n\n').map((paragraph: string, idx: number) => (
-                      <p key={idx} className="text-muted-foreground leading-relaxed">
-                        {paragraph}
-                      </p>
-                    ))
-                  )}
-                  
-                  {(courseDetails as any).productQuality.certifications && (courseDetails as any).productQuality.certifications.length > 0 && (
-                    <div className="space-y-3">
-                      <p className="font-semibold text-sm">
-                        {language === 'es' ? 'Todos nuestros productos cuentan con registro y certificaciones oficiales de las principales entidades regulatorias internacionales, tales como:' : 'All our products have official registration and certifications from the main international regulatory entities, such as:'}
-                      </p>
-                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                        {(courseDetails as any).productQuality.certifications.map((cert: string, idx: number) => (
-                          <li key={idx} className="flex items-center gap-2 text-sm">
-                            <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0" />
-                            <span className="font-medium">{cert}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    <div className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
+                      {formatText((courseDetails as any).productQuality.description)}
                     </div>
-                  )}
-
-                  {(courseDetails as any).productQuality.footer && (
-                    <p className="text-sm text-muted-foreground leading-relaxed italic border-l-4 border-primary pl-4">
-                      {(courseDetails as any).productQuality.footer}
-                    </p>
                   )}
 
                   {/* Products Carousel - Only show if there are certifications */}
@@ -318,109 +406,49 @@ export default function CourseDetailPage() {
               </Card>
             )}
           </div>
+        </div>
 
-          {/* Sidebar */}
-          <div className="lg:col-span-1">
-            <Card className="sticky top-4">
-              <CardHeader>
-                <CardTitle>{language === 'es' ? 'Información del Curso' : 'Course Information'}</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {(courseDetails as any).format && (
-                  <div className="flex items-start gap-3">
-                    <BookOpen className="h-5 w-5 text-primary mt-0.5" />
-                    <div>
-                      <p className="text-sm font-semibold">{language === 'es' ? 'Formato' : 'Format'}</p>
-                      <p className="text-sm text-muted-foreground">{(courseDetails as any).format}</p>
-                    </div>
-                  </div>
-                )}
-
-                {courseDetails.duration && (
-                  <div className="flex items-start gap-3">
-                    <Clock className="h-5 w-5 text-primary mt-0.5" />
-                    <div>
-                      <p className="text-sm font-semibold">{language === 'es' ? 'Duración' : 'Duration'}</p>
-                      <p className="text-sm text-muted-foreground">{courseDetails.duration}</p>
-                    </div>
-                  </div>
-                )}
-
-                {courseDetails.schedule && (
-                  <div className="flex items-start gap-3">
-                    <Calendar className="h-5 w-5 text-primary mt-0.5" />
-                    <div>
-                      <p className="text-sm font-semibold">{language === 'es' ? 'Horario' : 'Schedule'}</p>
-                      <p className="text-sm text-muted-foreground">{courseDetails.schedule}</p>
-                    </div>
-                  </div>
-                )}
-
-                {courseDetails.location && (
-                  <div className="flex items-start gap-3">
-                    <MapPin className="h-5 w-5 text-primary mt-0.5" />
-                    <div>
-                      <p className="text-sm font-semibold">{language === 'es' ? 'Ubicación' : 'Location'}</p>
-                      <p className="text-sm text-muted-foreground">{courseDetails.location}</p>
-                    </div>
-                  </div>
-                )}
-
-                {(courseDetails as any).certification && (
-                  <div className="flex items-start gap-3">
-                    <Award className="h-5 w-5 text-primary mt-0.5" />
-                    <div>
-                      <p className="text-sm font-semibold">{language === 'es' ? 'Certificación' : 'Certification'}</p>
-                      <p className="text-sm text-muted-foreground">{(courseDetails as any).certification}</p>
-                    </div>
-                  </div>
-                )}
-
-                {(courseDetails as any).idCard && (
-                  <div className="flex items-start gap-3">
-                    <CreditCard className="h-5 w-5 text-primary mt-0.5" />
-                    <div>
-                      <p className="text-sm font-semibold">{language === 'es' ? 'ID Card' : 'ID Card'}</p>
-                      <p className="text-sm text-muted-foreground">{(courseDetails as any).idCard}</p>
-                    </div>
-                  </div>
-                )}
-
-                <Separator />
-
-                <Button className="w-full btn-modern" size="lg" asChild>
-                  <Link href="/contact">
-                    {language === 'es' ? 'Inscribirse Ahora' : 'Enroll Now'}
-                  </Link>
-                </Button>
-
-                <Button 
-                  variant="outline" 
-                  className="w-full gap-2" 
-                  asChild
-                >
-                  <a 
-                    href={`https://wa.me/56950285079?text=${encodeURIComponent(`Hello, I want more information about the course: ${courseDetails.title}`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
+        {/* Duplicated Quick Info Buttons at the end - Mobile UX improvement */}
+        <div className="mt-12 lg:hidden">
+          <Card>
+            <CardContent className="pt-6 space-y-4">
+              <Button 
+                className="w-full btn-modern" 
+                size="lg" 
+                asChild
+              >
+                <a 
+                  href={`https://wa.me/${language === 'es' ? '5215566308602' : '14074540524'}?text=${encodeURIComponent(
+                    language === 'es' 
+                      ? `¡Hola! Me encantaría recibir más información sobre el curso: ${courseDetails.title} desde USA`
+                      : `Hello! I would love to receive more information about the course: ${courseDetails.title} from USA`
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   >
-                    <img 
-                      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-                      alt="WhatsApp" 
-                      className="w-4 h-4"
-                    />
+                    <FaWhatsapp className="w-7 h-7 mr-2" />
                     {language === 'es' ? 'Solicitar Información' : 'Request Information'}
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
+                </a>
+              </Button>
+
+              <Button 
+                variant="outline" 
+                className="w-full" 
+                size="lg"
+                asChild
+              >
+                <Link href="/contact">
+                  {language === 'es' ? 'Inscribirse Ahora' : 'Enroll Now'}
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Back to Programs Button at the end */}
         <div className="mt-12 text-center">
           <Link 
-            href="/academic-programs"
+            href="/academic-programs?country=usa"
             className="inline-flex items-center gap-2 text-foreground hover:text-[#10b981] transition-colors duration-200 underline-offset-4 hover:underline decoration-[#10b981]"
           >
             <ArrowLeft className="h-4 w-4" />
