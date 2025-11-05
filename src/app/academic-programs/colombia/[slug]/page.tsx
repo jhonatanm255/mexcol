@@ -256,17 +256,19 @@ export default function CourseDetailPage() {
                 <CardContent className="space-y-4">
                   {courseDetails.curriculum.map((module: any, idx: number) => (
                     <div key={idx} className="border-l-2 border-primary/30 pl-4">
-                      <h4 className="font-semibold mb-2">{module.title}</h4>
+                      <h4 className="font-semibold mb-2">{module.title.startsWith('**') ? formatText(module.title) : module.title}</h4>
                       <ul className="space-y-1">
                         {module.topics.map((topic: string, topicIdx: number) => {
                           const previousTopic = topicIdx > 0 ? module.topics[topicIdx - 1] : '';
                           const hasNewLines = previousTopic && (previousTopic.includes('\\n\\n') || previousTopic.includes('\n\n') || previousTopic.endsWith('\\n\\n') || previousTopic.endsWith('\n\n'));
                           const isNewSection = topic.startsWith('**') && topicIdx > 0;
                           const hasSpacing = hasNewLines || isNewSection;
+                          const isLongText = topic.includes('\n') && topic.length > 200;
+                          const showBullet = topicIdx !== 0 && !topic.startsWith('**') && !topic.includes('Master modeling techniques in:') && !topic.includes('Domina técnicas de modelado en:') && !topic.includes('Learn to relax facial muscles to prevent and treat expression lines in:') && !topic.includes('Aprende a relajar los músculos faciales para prevenir y tratar líneas de expresión en:') && !topic.includes('Apply rejuvenation protocols with immediate lifting effect in:') && !topic.includes('Aplica protocolos de rejuvenecimiento con efecto lifting inmediato en:') && !topic.includes('Know the main biostimulators available in the market and their application in:') && !topic.includes('Conoce los principales bioestimuladores disponibles en el mercado y su aplicación en:') && !topic.includes('Learn about the main bio-stimulators available in the market and their application in:') && !topic.includes('Demonstrative Practice') && !topic.includes('Práctica Demostrativa') && !topic.includes('Delivery of Certificates') && !topic.includes('Entrega de Certificados') && !topic.includes('Photographic record') && !topic.includes('Registro fotográfico') && !topic.includes('Final Exam') && !topic.includes('Examen Final') && !topic.includes('Upon passing') && !topic.includes('Al aprobar') && !isLongText;
                           return (
-                          <li key={topicIdx} className={`text-sm flex items-start gap-2 ${topicIdx === 0 ? 'text-primary font-semibold' : 'text-muted-foreground'} ${hasSpacing ? '!mt-8' : ''}`}>
-                            {topicIdx !== 0 && !topic.startsWith('**') && !topic.includes('Master modeling techniques in:') && !topic.includes('Domina técnicas de modelado en:') && !topic.includes('Learn to relax facial muscles to prevent and treat expression lines in:') && !topic.includes('Aprende a relajar los músculos faciales para prevenir y tratar líneas de expresión en:') && !topic.includes('Apply rejuvenation protocols with immediate lifting effect in:') && !topic.includes('Aplica protocolos de rejuvenecimiento con efecto lifting inmediato en:') && !topic.includes('Know the main biostimulators available in the market and their application in:') && !topic.includes('Conoce los principales bioestimuladores disponibles en el mercado y su aplicación en:') && !topic.includes('Learn about the main bio-stimulators available in the market and their application in:') && !topic.includes('Demonstrative Practice') && !topic.includes('Práctica Demostrativa') && !topic.includes('Delivery of Certificates') && !topic.includes('Entrega de Certificados') && !topic.includes('Photographic record') && !topic.includes('Registro fotográfico') && !topic.includes('Final Exam') && !topic.includes('Examen Final') && !topic.includes('Upon passing') && !topic.includes('Al aprobar') && <span className="text-primary">•</span>}
-                            <span className={`${topicIdx === 0 ? '' : ''} whitespace-pre-line`}>{formatText(topic)}</span>
+                          <li key={topicIdx} className={`text-sm ${isLongText ? 'block' : 'flex items-start gap-2'} ${topicIdx === 0 && !isLongText ? 'text-primary font-semibold' : 'text-muted-foreground'} ${hasSpacing ? '!mt-8' : ''}`}>
+                            {showBullet && <span className="text-primary">•</span>}
+                            <span className={`${topicIdx === 0 && !isLongText ? '' : ''} whitespace-pre-line`}>{formatText(topic)}</span>
                           </li>
                           );
                         })}
