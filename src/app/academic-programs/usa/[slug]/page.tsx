@@ -147,7 +147,7 @@ export default function CourseDetailPage() {
                   <div className="flex items-start gap-3">
                     <Award className="h-5 w-5 text-primary mt-0.5" />
                     <div>
-                      <p className="text-sm font-semibold">{language === 'es' ? 'Certificación upon completion:' : 'Certification upon completion:'}</p>
+                      <p className="text-sm font-semibold">{language === 'es' ? 'Certificación al completar:' : 'Certification upon completion:'}</p>
                       <p className="text-sm text-muted-foreground">{(courseDetails as any).certification}</p>
                     </div>
                   </div>

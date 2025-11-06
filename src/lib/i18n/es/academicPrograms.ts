@@ -57,26 +57,26 @@ title: 'Programas Académicos',
                   {
                     title: 'Día 1',
                     topics: [
-                      'Adquiere conocimientos completos sobre protocolos, indicaciones, contraindicaciones y manejo de eventos adversos en cada una de las técnicas más innovadoras en medicina estética:',
+                      'Adquiere conocimientos completos sobre protocolos, indicaciones, contraindicaciones y manejo de eventos adversos en cada una de las técnicas más innovadoras en medicina estética:\n',
                       '**Ácido Hialurónico**',
                       'Domina técnicas de modelado en:',
                       'Rinomodelación',
                       'Pómulos',
                       'Surcos nasogenianos',
-                      'Labios',
+                      'Labios\n',
                       '**Toxina Botulínica**',
                       'Aprende a relajar los músculos faciales para prevenir y tratar líneas de expresión en:',
                       'Frente',
                       'Entrecejo',
                       'Contorno de ojos',
-                      'Bunny lines',
+                      'Bunny lines\n',
                       '**Hilos PDO Liso o Mono**',
                       'Aplica protocolos de rejuvenecimiento con efecto lifting inmediato en:',
                       'Contorno mandibular',
                       'Papada',
                       'Abdomen',
                       'Glúteos',
-                      'Otras zonas corporales',
+                      'Otras zonas corporales\n',
                       '**Bioestimuladores de Colágeno**',
                       'Conoce los principales bioestimuladores disponibles en el mercado y su aplicación en:',
                       'Brazos',
@@ -99,7 +99,7 @@ title: 'Programas Académicos',
                   }
                 ],
                 includes: [
-                  '**Material de Apoyo Digital**\nAl finalizar el curso, los participantes recibirán un paquete de material de referencia y estudio, que incluye:',
+                  '**Material de Apoyo Digital**\n\nAl finalizar el curso, los participantes recibirán un paquete de material de referencia y estudio, que incluye:',
                   'Libros y artículos especializados',
                   'Formatos de consentimiento informado',
                   'Videos instructivos',
@@ -115,7 +115,7 @@ title: 'Programas Académicos',
                 ],
                 productQuality: {
                   title: 'Productos de Calidad y Seguridad Garantizada',
-                  description: '**Productos de Calidad y Seguridad Garantizada:**\nEn la medicina estética, la elección del producto es tan importante como la técnica, ya que de ello dependen la seguridad del paciente y la eficacia del tratamiento.\nPor esta razón, **Instituto Mex-Col-USA** trabaja exclusivamente con los tres mejores laboratorios a nivel mundial, reconocidos por su innovación, experiencia y altos estándares de calidad.\nTodos nuestros productos cuentan con registro y certificaciones oficiales de las principales entidades regulatorias internacionales, tales como:\n• INVIMA (Colombia)\n• FDA (Estados Unidos)\n• COFEPRIS (México)\n• Y otras autoridades sanitarias competentes a nivel global\nEsto garantiza que cada procedimiento se realice con insumos seguros, confiables y aprobados, brindando a estudiantes y pacientes la tranquilidad de utilizar los mejores productos del mercado.\n\n**Productos Incluidos:**\n• Ácido Hialurónico "Juvederm – Allergan"\n• Toxina Botulínica "Botox – Allergan"\n• Hilos PDO "Smooth o Mono"\n• Bioestimulador "Harminyca o Radiesse"'
+                  description: 'En la medicina estética, la elección del producto es tan importante como la técnica, ya que de ello dependen la seguridad del paciente y la eficacia del tratamiento.\nPor esta razón, **Instituto Mex-Col-USA** trabaja exclusivamente con los tres mejores laboratorios a nivel mundial, reconocidos por su innovación, experiencia y altos estándares de calidad.\nTodos nuestros productos cuentan con registro y certificaciones oficiales de las principales entidades regulatorias internacionales, tales como:\n\n• INVIMA (Colombia)\n• FDA (Estados Unidos)\n• COFEPRIS (México)\n• Y otras autoridades sanitarias competentes a nivel global\n\nEsto garantiza que cada procedimiento se realice con insumos seguros, confiables y aprobados, brindando a estudiantes y pacientes la tranquilidad de utilizar los mejores productos del mercado.\n\n**Productos Incluidos:**\n• Ácido Hialurónico "Juvederm – Allergan"\n• Toxina Botulínica "Botox – Allergan"\n• Hilos PDO "Smooth o Mono"\n• Bioestimulador "Harminyca o Radiesse"'
                 }
               },
               'intravenous-therapy-chelation': {
@@ -196,9 +196,7 @@ title: 'Programas Académicos',
                   'Insumos y materiales de practicas'
                 ],
                 accreditations: [
-                  'Los cursos y actualizaciones que impartimos al ser educación continua están registrados en la secretaria del trabajo y previsión social (En Mexico). Al finalizar la práctica de su capacitación le será aplicada una evaluación de conocimiento, habilidades y destreza, la cual está sujeta al puntaje mínimo para obtener su certificado el cual se expide después de que INSTITUTO MEX-COL-USA haya evaluado y reportado que la evaluación fue aprobada por cada asistente. Misma que deberá ser aprobada con el porcentaje mínimo del 80%',
-                  'Constancia de asistencia y participación: Emitida por el INSTITUTO MEX-COL-USA, certifica la participación activa y el cumplimiento de los módulos teórico-prácticos del curso, brindando respaldo académico y formativo.',
-                  'Diploma: Emitido por la Alianza Americana de Medicina Estética y SOPEME (Asociación de Medicina Estética de los Estados Unidos), válido para autenticar la formación en Estados Unidos, Latinoamérica, Caribe y España como educación continua reconocida.'
+                  'Al finalizar la capacitación práctica, los participantes serán evaluados en conocimientos, habilidades y destreza. Se requiere un puntaje mínimo para recibir el certificado, el cual será emitido después de que **INSTITUTO MEX-COL-USA** evalúe y confirme que cada participante aprobó con un puntaje mínimo del 80%.\n\n**Constancia de Asistencia y Participación:**\nEmitida por **INSTITUTO MEX-COL-USA**, certificando la participación activa y el cumplimiento de los módulos teórico-prácticos del curso, brindando reconocimiento académico y profesional.\n\n**Diploma:**\nEmitido por la Alianza Americana de Medicina Estética y SOPEME (Asociación de Medicina Estética de los Estados Unidos), válido para certificar la formación en Estados Unidos, Latinoamérica, el Caribe y España como educación continua reconocida.'
                 ],
                 productQuality: {
                   title: 'Productos insumos e instalaciones de Calidad y Seguridad Garantizada',
@@ -211,8 +209,8 @@ title: 'Programas Académicos',
                 description: 'Capacitación práctica en técnicas de extracción de sangre seguras y profesionales.',
                 heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop',
                 format: 'Presencial',
-                duration: '2 días Teorico - Practico',
-                schedule: '9:00 am - 5:00 pm Aprox',
+                duration: '2 días – Teorico & Practico',
+                schedule: '9:00 am – 5:00 pm aprox.',
                 location: 'Los Angeles, CA',
                 price: 'Contactar para precios',
                 capacity: 'Inscripción limitada',
@@ -228,10 +226,10 @@ title: 'Programas Académicos',
                     title: 'Contenido del curso',
                     topics: [
                       'El Curso de Flebotomía está diseñado para proporcionar a los participantes los conocimientos teóricos y prácticos necesarios para realizar extracciones sanguíneas de manera segura, eficiente y profesional. A lo largo del programa, los estudiantes aprenderán los principios fundamentales de la flebotomía, las técnicas de punción y las normas éticas y de seguridad que deben seguirse en el entorno clínico.',
-                      'Durante el curso se abordarán temas esenciales como la introducción a la flebotomía, los aspectos anatómicos del sistema venoso y los requisitos generales de seguridad en el área de trabajo. Los participantes conocerán los protocolos y procedimientos paso a paso, así como las indicaciones y contraindicaciones más comunes en la práctica diaria.',
-                      'También se estudiará la preparación del material e instrumental, junto con la técnica correcta de punción venosa, garantizando una práctica segura tanto para el profesional como para el paciente. Además, se tratarán los cuidados generales del paciente después de la venopunción, las posibles complicaciones que pueden presentarse y el rol del flebotomista dentro del equipo de salud.',
-                      'El programa incluye ejercicios guiados y prácticas en vivo, donde los estudiantes podrán aplicar los conocimientos adquiridos bajo la supervisión de instructores especializados. Finalmente, se realizará un examen evaluativo para certificar las competencias adquiridas durante el curso.',
-                      'Este curso está orientado a profesionales y estudiantes del área de la salud que deseen ampliar sus habilidades clínicas y fortalecer su perfil profesional en el ámbito médico y hospitalario.'
+                      '\nDurante el curso se abordarán temas esenciales como la introducción a la flebotomía, los aspectos anatómicos del sistema venoso y los requisitos generales de seguridad en el área de trabajo. Los participantes conocerán los protocolos y procedimientos paso a paso, así como las indicaciones y contraindicaciones más comunes en la práctica diaria.',
+                      '\nTambién se estudiará la preparación del material e instrumental, junto con la técnica correcta de punción venosa, garantizando una práctica segura tanto para el profesional como para el paciente. Además, se tratarán los cuidados generales del paciente después de la venopunción, las posibles complicaciones que pueden presentarse y el rol del flebotomista dentro del equipo de salud.',
+                      '\nEl programa incluye ejercicios guiados y prácticas en vivo, donde los estudiantes podrán aplicar los conocimientos adquiridos bajo la supervisión de instructores especializados. Finalmente, se realizará un examen evaluativo para certificar las competencias adquiridas durante el curso.',
+                      '\nEste curso está orientado a profesionales y estudiantes del área de la salud que deseen ampliar sus habilidades clínicas y fortalecer su perfil profesional en el ámbito médico y hospitalario.'
                     ]
                   }
                 ],
@@ -242,11 +240,7 @@ title: 'Programas Académicos',
                   'Practica personalizada'
                 ],
                 accreditations: [
-                  'Al finalizar satisfactoriamente el Curso de Flebotomía, el participante recibe una triple certificación que respalda su formación y le permite ejercer con reconocimiento a nivel nacional dentro de los Estados Unidos.',
-                  'Certificado de Técnico en Flebotomía - Acredita las competencias teóricas y prácticas adquiridas durante el programa, certificando que el participante está capacitado para realizar procedimientos de extracción sanguínea de manera profesional y segura.',
-                  'ID Card válida por 2 años a nivel nacional - Identificación oficial que avala al egresado como técnico certificado en flebotomía, reconocida en todo el territorio estadounidense y requerida por diversas instituciones médicas, clínicas y laboratorios.',
-                  'Constancia de asistencia y participación - Emitida por el INSTITUTO MEX-COL-USA, certifica la participación activa y el cumplimiento de los módulos teórico-prácticos del curso, brindando respaldo académico y formativo.',
-                  'Esta combinación de documentos garantiza al egresado una formación sólida, avalada y reconocida, abriendo la posibilidad de laborar en hospitales, clínicas, laboratorios y centros de salud en todo Estados Unidos, con la confianza y respaldo de una institución comprometida con la excelencia profesional.'
+                  '**Avales y Respaldos Institucionales:**\n\nAl finalizar satisfactoriamente el Curso de Flebotomía, los participantes reciben **triple certificación**, respaldando su formación y permitiéndoles trabajar con reconocimiento\ncredenciales en todo Estados Unidos.\n\n•   **Certificado de Técnico en Flebotomía:** Confirma las competencias teóricas y prácticas adquiridas durante el programa, certificando que el participante está calificado para\n    realizar procedimientos de extracción de sangre de manera profesional y segura.\n•   **ID Card válida por 2 años a nivel nacional:** Identificación oficial que certifica al egresado como técnico certificado en flebotomía, reconocida en todo Estados Unidos\n    y requerida por diversas instituciones médicas, clínicas y laboratorios.\n•   **Constancia de Asistencia y Participación:** Emitida por **INSTITUTO MEX-COL-USA**, certifica la participación activa y el cumplimiento de los módulos teóricos y\n    prácticos del curso, brindando respaldo académico y formativo.\n\nEsta combinación de documentos garantiza a los egresados una formación sólida y reconocida, abriendo oportunidades para trabajar en hospitales, clínicas, laboratorios y centros de salud\na lo largo de Estados Unidos, con la confianza y el respaldo de una institución comprometida con la excelencia profesional.'
                 ]
               },
             },
@@ -288,7 +282,7 @@ title: 'Programas Académicos',
                 targetAudience: {
                   title: 'Curso Dirigido:',
                   highlighted: 'Médicos y odontólogos',
-                  description: 'A nivel mundial, se han presentado numerosas complicaciones en tratamientos de medicina estética, muchas de ellas ocasionadas por ser realizados por personal no idóneo ni capacitado para llevar a cabo estos procedimientos.\n\nEn el INSTITUTO MEX-COL-USA asumimos con responsabilidad el reto de contribuir a que estas negligencias no ocurran en ninguna parte del mundo.\n\nPor ello, estamos comprometidos en la formación y capacitación de profesionales médicos, sus diferentes especialidades y odontólogos, garantizando que cada tratamiento sea realizado con los más altos estándares de seguridad, ética y conocimiento científico.\n\nNuestro objetivo es claro: formar especialistas preparados que cuiden la salud, la seguridad y el bienestar de los pacientes en cada procedimiento estético.'
+                  description: 'A nivel mundial, se han presentado numerosas complicaciones en tratamientos de medicina estética, a menudo debido a procedimientos realizados por personal no calificado o insuficientemente capacitado.\n\nEn el **INSTITUTO MEX-COL-USA**, asumimos con responsabilidad el reto de contribuir a que estas situaciones no ocurran en ninguna parte del mundo.\n\nEstamos comprometidos en la formación y capacitación de profesionales médicos, de diferentes especialidades y odontólogos, garantizando que cada tratamiento sea realizado con los más altos estándares de seguridad, ética y conocimiento científico.\n\nNuestro objetivo es claro: formar especialistas que prioricen la salud, la seguridad y el bienestar de los pacientes en cada procedimiento estético.'
                 },
                 objectives: [
                   'Adquiere conocimientos completos sobre protocolos, indicaciones, contraindicaciones y manejo de eventos adversos en cada una de las técnicas más innovadoras en medicina estética:'
@@ -339,21 +333,24 @@ title: 'Programas Académicos',
                   }
                 ],
                 accreditations: [
-                  'Los cursos y actualizaciones que impartimos al ser educación continua están registrados en la secretaria del trabajo y previsión social (En Mexico). Al finalizar la práctica de su capacitación le será aplicada una evaluación de conocimiento, habilidades y destreza, la cual está sujeta al puntaje mínimo para obtener su certificado el cual se expide después de que INSTITUTO MEX-COL-USA haya evaluado y reportado que la evaluación fue aprobada por cada asistente. Misma que deberá ser aprobada con el porcentaje mínimo del 80%',
-                  'Constancia de asistencia y participación: Emitida por el INSTITUTO MEX-COL-USA, certifica la participación activa y el cumplimiento de los módulos teórico-prácticos del curso, brindando respaldo académico y formativo.',
-                  'Constancia con valor curricular: Emitida y registrada ante la Secretaría del Trabajo y Previsión Social (STPS), avalando la formación del participante como educación formal y reconocida en México.(Valido solo para nativos mexicanos).',
-                  'Diploma: Emitido por la Alianza Americana de Medicina Estética y SOPEME (Asociación de Medicina Estética de los Estados Unidos), válido para autenticar la formación en Estados Unidos, Latinoamérica, Caribe y España como educación continua reconocida.'
+                  '**Avales y Respaldos Institucionales:**\n\nTodos los programas de educación continua están registrados ante la **Secretaría del Trabajo y Previsión Social (STPS) en México**. Al finalizar tu capacitación, realizarás una evaluación de conocimientos y habilidades. Se requiere un puntaje mínimo de **80%** para obtener la certificación.\n\n**Constancia de Asistencia y Participación:**\nEmitida por **INSTITUTO MEX-COL-USA**, certificando la participación activa y el cumplimiento de los módulos teóricos y prácticos.\n\n**Constancia con Valor Curricular (STPS):**\nRegistrada ante la **Secretaría del Trabajo y Previsión Social (STPS)**.\n*Válido solo para nativos mexicanos.*\n\n**Diploma:**\nEmitido por la **Alianza Americana de Medicina Estética** y **SOPEME (Sociedad de Medicina Estética de los Estados Unidos)**, válido en **Estados Unidos, Latinoamérica, el Caribe y España** como educación continua reconocida.'
                 ],
                 productQuality: {
-                  title: 'Incluye Productos de Calidad y Seguridad Garantizada',
-                  description: 'En la medicina estética, la elección del producto es tan importante como la técnica aplicada, ya que de ello dependen la seguridad del paciente y la efectividad de los resultados.\n\nPor esta razón, en el Instituto Mex-Col-Usa trabajamos exclusivamente con los tres mejores laboratorios a nivel mundial, reconocidos por su innovación, trayectoria y altos estándares de calidad.',
+                  title: 'Productos Premium - Calidad y Seguridad Garantizada',
+                  description: 'En la medicina estética, la calidad del producto es tan crucial como la habilidad del profesional.\n\nPor eso, **INSTITUTO MEX-COL-USA** trabaja solo con los **tres principales laboratorios a nivel mundial**, reconocidos por su innovación y seguridad.\n\nTodos los productos están certificados por las principales autoridades sanitarias globales:\n\n• **INVIMA (Colombia)**\n• **FDA (Estados Unidos)**\n• **COFEPRIS (México)**\n\n✅ Productos incluidos para práctica:\n\n• **Ácido Hialurónico:** Juvederm (Allergan)\n• **Toxina Botulínica:** Botox (Allergan)\n• **Hilos PDO:** Smooth o Mono\n• **Bioestimulador:** Harmonyca o Radiesse',
                   certifications: [
+                    'Todos los productos están certificados por las principales autoridades sanitarias globales:',
                     'INVIMA (Colombia)',
                     'FDA (Estados Unidos)',
-                    'COFEPRIS (México)',
-                    'Y otras autoridades sanitarias competentes a nivel global'
+                    'COFEPRIS (México)'
                   ],
-                  footer: 'De esta manera, garantizamos que cada procedimiento se realice con insumos seguros, confiables y aprobados, ofreciendo a nuestros estudiantes y pacientes la tranquilidad de trabajar con lo mejor del mercado.'
+                  includedProducts: [
+                    '✅ Productos incluidos para práctica:',
+                    'Ácido Hialurónico: Juvederm (Allergan)',
+                    'Toxina Botulínica: Botox (Allergan)',
+                    'Hilos PDO: Smooth o Mono',
+                    'Bioestimulador: Harmonyca o Radiesse'
+                  ]
                 },
                 testimonial: {
                   title: 'Testimonio Real',
@@ -405,14 +402,22 @@ title: 'Programas Académicos',
                   'Incluye Material de apoyo digital'
                 ],
                 accreditations: [
-                  'Los cursos y actualizaciones que impartimos al ser educación continua están registrados en la secretaria del trabajo y previsión social (En Mexico). Al finalizar la práctica de su capacitación le será aplicada una evaluación de conocimiento, habilidades y destreza, la cual está sujeta al puntaje mínimo para obtener su certificado el cual se expide después de que INSTITUTO MEX-COL-USA haya evaluado y reportado que la evaluación fue aprobada por cada asistente. Misma que deberá ser aprobada con el porcentaje mínimo del 80%',
-                  'Constancia de asistencia y participación: Emitida por el INSTITUTO MEX-COL-USA, certifica la participación activa y el cumplimiento de los módulos teórico-prácticos del curso, brindando respaldo académico y formativo.',
-                  'Constancia con valor curricular: Emitida y registrada ante la Secretaría del Trabajo y Previsión Social (STPS), avalando la formación del participante como educación formal y reconocida en México.(Valido solo para nativos mexicanos).',
-                  'Diploma: Emitido por la Alianza Americana de Medicina Estética y SOPEME (Asociación de Medicina Estética de los Estados Unidos), válido para autenticar la formación en Estados Unidos, Latinoamérica, Caribe y España como educación continua reconocida.'
+                  '**Avales y Respaldos Institucionales:**\n\nTodos los programas de educación continua están registrados ante la **Secretaría del Trabajo y Previsión Social (STPS) en México**. Al finalizar tu capacitación, realizarás una evaluación de conocimientos y habilidades. Se requiere un puntaje mínimo de **80%** para obtener la certificación.\n\n**Constancia de Asistencia y Participación:**\nEmitida por **INSTITUTO MEX-COL-USA**, certificando la participación activa y el cumplimiento de los módulos teóricos y prácticos.\n\n**Constancia con Valor Curricular (STPS):**\nRegistrada ante la **Secretaría del Trabajo y Previsión Social (STPS)**.\n*Válido solo para nativos mexicanos.*\n\n**Diploma:**\nEmitido por la **Alianza Americana de Medicina Estética** y **SOPEME (Sociedad de Medicina Estética de los Estados Unidos)**, válido en **Estados Unidos, Latinoamérica, el Caribe y España** como educación continua reconocida.'
                 ],
                 productQuality: {
-                  title: 'Productos de Calidad y Seguridad Garantizada',
-                  description: 'El INSTITUTO MEX-COL-USA trabaja con laboratorios que respaldan la garantía y confianza en sus productos, asegurando la calidad en cada una de las prácticas realizadas, y compartiendo información sobre estos proveedores en nuestras sedes.\n\nEs importante destacar que no vendemos productos en nuestras instalaciones ni promocionamos marcas específicas, ya que la elección de adquisición debe ser libre y responsable por parte del alumno. Cada participante es responsable de verificar con quién comprar, así como de revisar permisos, registros, regulaciones locales y cualquier otro aspecto legal vigente en su ciudad o país antes de adquirir cualquier producto.\n\nEl curso incluye los productos necesarios para la práctica, como los utilizados en Sueroterapia y un implante de placenta, garantizando que los alumnos puedan aplicar los procedimientos de manera segura y efectiva durante las sesiones prácticas.'
+                  title: 'Productos Premium - Calidad y Seguridad Garantizada',
+                  description: 'En la medicina estética, la calidad del producto es tan crucial como la habilidad del profesional.\n\nPor eso, **INSTITUTO MEX-COL-USA** trabaja solo con los **tres principales laboratorios a nivel mundial**, reconocidos por su innovación y seguridad.\n\nTodos los productos están certificados por las principales autoridades sanitarias globales:\n\n• **INVIMA (Colombia)**\n• **FDA (Estados Unidos)**\n• **COFEPRIS (México)**\n\n✅ Productos incluidos para práctica:\n\n• Productos utilizados en Sueroterapia\n• Implante de placenta',
+                  certifications: [
+                    'Todos los productos están certificados por las principales autoridades sanitarias globales:',
+                    'INVIMA (Colombia)',
+                    'FDA (Estados Unidos)',
+                    'COFEPRIS (México)'
+                  ],
+                  includedProducts: [
+                    '✅ Productos incluidos para práctica:',
+                    'Productos utilizados en Sueroterapia',
+                    'Implante de placenta'
+                  ]
                 }
               },
               'mini-lifting-techniques': {
@@ -450,13 +455,18 @@ title: 'Programas Académicos',
                   'Insumos y materiales de practicas'
                 ],
                 accreditations: [
-                  'Al finalizar la práctica de su capacitación le será aplicada una evaluación de conocimiento, habilidades y destreza, la cual está sujeta al puntaje mínimo para obtener su certificado el cual se expide después de que INSTITUTO MEX-COL-USA haya evaluado y reportado que la evaluación fue aprobada por cada asistente. Misma que deberá ser aprobada con el porcentaje mínimo del 80%',
-                  'Constancia de asistencia y participación: Emitida por el INSTITUTO MEX-COL-USA, certifica la participación activa y el cumplimiento de los módulos teórico-prácticos del curso, brindando respaldo académico y formativo.',
-                  'Diploma: Emitido por la Alianza Americana de Medicina Estética y SOPEME (Asociación de Medicina Estética de los Estados Unidos), válido para autenticar la formación en Estados Unidos, Latinoamérica, Caribe y España como educación continua reconocida.'
+                  '**Avales y Respaldos Institucionales:**\n\nTodos los programas de educación continua están registrados ante la **Secretaría del Trabajo y Previsión Social (STPS) en México**. Al finalizar tu capacitación, realizarás una evaluación de conocimientos y habilidades. Se requiere un puntaje mínimo de **80%** para obtener la certificación.\n\n**Constancia de Asistencia y Participación:**\nEmitida por **INSTITUTO MEX-COL-USA**, certificando la participación activa y el cumplimiento de los módulos teóricos y prácticos.\n\n**Constancia con Valor Curricular (STPS):**\nRegistrada ante la **Secretaría del Trabajo y Previsión Social (STPS)**.\n*Válido solo para nativos mexicanos.*\n\n**Diploma:**\nEmitido por la **Alianza Americana de Medicina Estética** y **SOPEME (Sociedad de Medicina Estética de los Estados Unidos)**, válido en **Estados Unidos, Latinoamérica, el Caribe y España** como educación continua reconocida.'
                 ],
                 productQuality: {
-                  title: 'Productos insumos e instalaciones de Calidad y Seguridad Garantizada',
-                  description: 'En el INSTITUTO MEX-COL-USA contamos con instalaciones de primer nivel, diseñadas para ofrecer un entorno seguro, higiénico y profesional, donde cada práctica y procedimiento se realiza bajo los más altos estándares de calidad y seguridad.\n\nNuestro compromiso es garantizar que cada alumno pueda aprender y practicar en un espacio confiable, equipado y preparado para brindar la mejor experiencia educativa. Así, aseguramos que la formación se desarrolle en un ambiente seguro, profesional y de excelencia, fortaleciendo el aprendizaje y la confianza de cada participante.'
+                  title: 'Productos Premium - Calidad y Seguridad Garantizada',
+                  description: 'En la medicina estética, la calidad del producto es tan crucial como la habilidad del profesional.\n\nPor eso, **INSTITUTO MEX-COL-USA** trabaja solo con los **tres principales laboratorios a nivel mundial**, reconocidos por su innovación y seguridad.\n\nTodos los productos están certificados por las principales autoridades sanitarias globales:\n\n• **INVIMA (Colombia)**\n• **FDA (Estados Unidos)**\n• **COFEPRIS (México)**',
+                  certifications: [
+                    'Todos los productos están certificados por las principales autoridades sanitarias globales:',
+                    'INVIMA (Colombia)',
+                    'FDA (Estados Unidos)',
+                    'COFEPRIS (México)'
+                  ],
+                  includedProducts: []
                 }
               },
             },

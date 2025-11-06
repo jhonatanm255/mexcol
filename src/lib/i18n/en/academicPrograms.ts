@@ -264,12 +264,12 @@ title: 'Academic Programs',
             ],
             courseDetails: {
               'facial-harmonization-course': {
-                title: 'Course in Modeling, Profiling, and Facial Harmonization with "Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads"',
+                title: 'Facial Modeling, Profiling, and Harmonization with Botulinum Toxin, Hyaluronic Acid, Biostimulators, and PDO Threads"',
                 subtitle: 'Advanced Aesthetic Medicine Training',
                 description: 'Comprehensive training in facial harmonization techniques with the highest standards of safety, ethics, and scientific knowledge.',
                 heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop',
                 format: 'In-person',
-                duration: '2 theoretical days 2 intensive practice days',
+                duration: '2 theoretical days + 2 intensive practical days',
                 schedule: '9:00 am - 7:00 pm Approx',
                 location: 'Mexico City, Mexico',
                 price: 'Contact for pricing',
@@ -278,18 +278,18 @@ title: 'Academic Programs',
                 targetAudience: {
                   title: 'Course Directed To:',
                   highlighted: 'Physicians and Dentists',
-                  description: 'Worldwide, numerous complications have occurred in aesthetic medicine treatments, many of them caused by being performed by personnel who are not suitable or trained to carry out these procedures.\n\nAt INSTITUTO MEX-COL-USA we assume with responsibility the challenge of contributing so that these negligences do not occur anywhere in the world.\n\nTherefore, we are committed to the training and education of medical professionals, their different specialties and dentists, guaranteeing that each treatment is performed with the highest standards of safety, ethics and scientific knowledge.\n\nOur objective is clear: to train prepared specialists who care for the health, safety and well-being of patients in each aesthetic procedure.'
+                  description: 'Around the world, numerous complications have arisen from aesthetic medicine procedures—many performed by individuals who are not properly qualified or trained.\n\nAt **INSTITUTO MEX-COL-USA**, we take seriously the responsibility to prevent such negligence from happening anywhere.\n\nWe are committed to training and educating medical professionals and dentists in various specialties, ensuring that every aesthetic procedure is performed with the highest standards of **safety, ethics, and scientific knowledge**.\n\nOur mission is clear: **to prepare specialists who protect the health, safety, and well-being of their patients in every treatment**.'
                 },
                 objectives: [
-                  'Acquire comprehensive knowledge about protocols, indications, contraindications, and adverse event management in each of the most innovative aesthetic medicine techniques:'
+                  'Gain comprehensive knowledge on protocols, indications, contraindications, and management of adverse events in the latest aesthetic medicine techniques:'
                 ],
                 curriculum: [
                   {
                     title: 'Hyaluronic Acid',
                     topics: [
-                      'Master modeling techniques in:',
-                      'Rhinoplasty',
-                      'Cheekbones',
+                      'Master modeling techniques for:',
+                      'Non-surgical rhinoplasty',
+                      'Cheek enhancement',
                       'Nasolabial folds',
                       'Lips'
                     ]
@@ -299,16 +299,16 @@ title: 'Academic Programs',
                     topics: [
                       'Learn to relax facial muscles to prevent and treat expression lines in:',
                       'Forehead',
-                      'Between eyebrows',
-                      'Eye contour',
+                      'Glabella',
+                      'Crow’s feet',
                       'Bunny lines'
                     ]
                   },
                   {
-                    title: 'PDO Smooth or Mono Threads',
+                    title: 'PDO Threads (Smooth or Mono)',
                     topics: [
-                      'Apply rejuvenation protocols with immediate lifting effect in:',
-                      'Mandibular contour',
+                      'Apply rejuvenation protocols with immediate lifting effect for:',
+                      'Jawline',
                       'Double chin',
                       'Abdomen',
                       'Buttocks',
@@ -318,7 +318,7 @@ title: 'Academic Programs',
                   {
                     title: 'Collagen Biostimulators',
                     topics: [
-                      'Know the main biostimulators available in the market and their application in:',
+                      'Discover the main biostimulators available on the market and their applications for:',
                       'Arms',
                       'Abdomen',
                       'Legs',
@@ -329,21 +329,24 @@ title: 'Academic Programs',
                   }
                 ],
                 accreditations: [
-                  'The courses and updates we teach as continuing education are registered with the Secretariat of Labor and Social Welfare (In Mexico). Upon completion of your training practice, an evaluation of knowledge, skills and dexterity will be applied, which is subject to the minimum score to obtain your certificate which is issued after INSTITUTO MEX-COL-USA has evaluated and reported that the evaluation was approved by each attendee. This must be approved with a minimum percentage of 80%',
-                  'Attendance and participation certificate: Issued by INSTITUTO MEX-COL-USA, certifies active participation and compliance with the theoretical-practical modules of the course, providing academic and training support.',
-                  'Certificate with curricular value: Issued and registered with the Secretariat of Labor and Social Welfare (STPS), endorsing the participant\'s training as formal and recognized education in Mexico. (Valid only for Mexican natives).',
-                  'Diploma: Issued by the American Alliance of Aesthetic Medicine and SOPEME (Aesthetic Medicine Association of the United States), valid to authenticate training in the United States, Latin America, Caribbean and Spain as recognized continuing education.'
+                  '**Accreditations and Institutional Support:**\n\nAll continuing education programs are registered with the **Secretariat of Labor and Social Welfare (STPS) in Mexico**. At the end of your training, you will take a knowledge and skills assessment. A minimum score of **80%** is required to obtain certification.\n\n**Certificate of Attendance and Participation:**\nIssued by **INSTITUTO MEX-COL-USA**, certifying active participation and completion of the theoretical and practical modules.\n\n**Certificate with Curricular Value (STPS):**\nRegistered with the **Secretariat of Labor and Social Welfare (STPS)**.\n*Valid only for Mexican nationals.*\n\n**Diploma:**\nIssued by the **American Alliance of Aesthetic Medicine** and **SOPEME (Aesthetic Medicine Society of the United States)**, valid throughout the **U.S., Latin America, the Caribbean, and Spain** as recognized continuing education.'
                 ],
                 productQuality: {
-                  title: 'Includes Quality Products and Guaranteed Safety',
-                  description: 'In aesthetic medicine, the choice of product is as important as the applied technique, since the safety of the patient and the effectiveness of the results depend on it.\n\nFor this reason, at Instituto Mex-Col-Usa we work exclusively with the three best laboratories worldwide, recognized for their innovation, trajectory and high quality standards.',
+                  title: 'Premium Products - Quality & Safety Guaranteed',
+                  description: 'In aesthetic medicine, the product\'s quality is as crucial as the practitioner\'s skill.\n\nThat\'s why **INSTITUTO MEX-COL-USA** works only with the **three leading laboratories worldwide**, known for innovation and safety.\n\nAll products are certified by major global health authorities:\n\n• **INVIMA (Colombia)**\n• **FDA (United States)**\n• **COFEPRIS (Mexico)**\n\nIncluded products for hands-on training:\n\n• **Hyaluronic Acid:** Juvederm (Allergan)\n• **Botulinum Toxin:** Botox (Allergan)\n• **PDO Threads:** Smooth or Mono\n• **Biostimulator:** Harmonyca or Radiesse',
                   certifications: [
+                    'All products are certified by major global health authorities:',
                     'INVIMA (Colombia)',
                     'FDA (United States)',
-                    'COFEPRIS (Mexico)',
-                    'And other competent health authorities globally'
+                    'COFEPRIS (Mexico)'
                   ],
-                  footer: 'In this way, we guarantee that each procedure is performed with safe, reliable and approved supplies, offering our students and patients the peace of mind of working with the best on the market.'
+                  includedProducts: [
+                    'Included products for hands-on training:',
+                    'Hyaluronic Acid: Juvederm (Allergan)',
+                    'Botulinum Toxin: Botox (Allergan)',
+                    'PDO Threads: Smooth or Mono',
+                    'Biostimulator: Harmonyca or Radiesse'
+                  ]
                 },
                 testimonial: {
                   title: 'Real Testimonial',
@@ -395,14 +398,22 @@ title: 'Academic Programs',
                   'Includes Digital support material'
                 ],
                 accreditations: [
-                  'The courses and updates we teach as continuing education are registered with the Secretariat of Labor and Social Welfare (In Mexico). Upon completion of your training practice, an evaluation of knowledge, skills and dexterity will be applied, which is subject to the minimum score to obtain your certificate which is issued after INSTITUTO MEX-COL-USA has evaluated and reported that the evaluation was approved by each attendee. This must be approved with a minimum percentage of 80%',
-                  'Attendance and participation certificate: Issued by INSTITUTO MEX-COL-USA, certifies active participation and compliance with the theoretical-practical modules of the course, providing academic and training support.',
-                  'Certificate with curricular value: Issued and registered with the Secretariat of Labor and Social Welfare (STPS), endorsing the participant\'s training as formal and recognized education in Mexico. (Valid only for Mexican natives).',
-                  'Diploma: Issued by the American Alliance of Aesthetic Medicine and SOPEME (Aesthetic Medicine Association of the United States), valid to authenticate training in the United States, Latin America, Caribbean and Spain as recognized continuing education.'
+                  '**Accreditations and Institutional Support:**\n\nAll continuing education programs are registered with the **Secretariat of Labor and Social Welfare (STPS) in Mexico**. At the end of your training, you will take a knowledge and skills assessment. A minimum score of **80%** is required to obtain certification.\n\n**Certificate of Attendance and Participation:**\nIssued by **INSTITUTO MEX-COL-USA**, certifying active participation and completion of the theoretical and practical modules.\n\n**Certificate with Curricular Value (STPS):**\nRegistered with the **Secretariat of Labor and Social Welfare (STPS)**.\n*Valid only for Mexican nationals.*\n\n**Diploma:**\nIssued by the **American Alliance of Aesthetic Medicine** and **SOPEME (Aesthetic Medicine Society of the United States)**, valid throughout the **U.S., Latin America, the Caribbean, and Spain** as recognized continuing education.'
                 ],
                 productQuality: {
-                  title: 'Quality Products and Guaranteed Safety',
-                  description: 'INSTITUTO MEX-COL-USA works with laboratories that support the guarantee and confidence in their products, ensuring quality in each of the practices carried out, and sharing information about these suppliers in our venues.\n\nIt is important to note that we do not sell products in our facilities or promote specific brands, since the acquisition choice must be free and responsible by the student. Each participant is responsible for verifying with whom to buy, as well as reviewing permits, records, local regulations and any other legal aspect in force in their city or country before acquiring any product.\n\nThe course includes the products necessary for practice, such as those used in Serum Therapy and a placenta implant, ensuring that students can apply the procedures safely and effectively during practical sessions.'
+                  title: 'Premium Products - Quality & Safety Guaranteed',
+                  description: 'In aesthetic medicine, the product\'s quality is as crucial as the practitioner\'s skill.\n\nThat\'s why **INSTITUTO MEX-COL-USA** works only with the **three leading laboratories worldwide**, known for innovation and safety.\n\nAll products are certified by major global health authorities:\n\n• **INVIMA (Colombia)**\n• **FDA (United States)**\n• **COFEPRIS (Mexico)**\n\n✅ Included products for hands-on training:\n\n• Products used in Serum Therapy\n• Placenta implant',
+                  certifications: [
+                    'All products are certified by major global health authorities:',
+                    'INVIMA (Colombia)',
+                    'FDA (United States)',
+                    'COFEPRIS (Mexico)'
+                  ],
+                  includedProducts: [
+                    '✅ Included products for hands-on training:',
+                    'Products used in Serum Therapy',
+                    'Placenta implant'
+                  ]
                 }
               },
               'mini-lifting-techniques': {
@@ -440,13 +451,18 @@ title: 'Academic Programs',
                   'Practice supplies and materials'
                 ],
                 accreditations: [
-                  'Upon completion of your training practice, an evaluation of knowledge, skills and dexterity will be applied, which is subject to the minimum score to obtain your certificate which is issued after INSTITUTO MEX-COL-USA has evaluated and reported that the evaluation was approved by each attendee. This must be approved with a minimum percentage of 80%',
-                  'Attendance and participation certificate: Issued by INSTITUTO MEX-COL-USA, certifies active participation and compliance with the theoretical-practical modules of the course, providing academic and training support.',
-                  'Diploma: Issued by the American Alliance of Aesthetic Medicine and SOPEME (Aesthetic Medicine Association of the United States), valid to authenticate training in the United States, Latin America, Caribbean and Spain as recognized continuing education.'
+                  '**Accreditations and Institutional Support:**\n\nAll continuing education programs are registered with the **Secretariat of Labor and Social Welfare (STPS) in Mexico**. At the end of your training, you will take a knowledge and skills assessment. A minimum score of **80%** is required to obtain certification.\n\n**Certificate of Attendance and Participation:**\nIssued by **INSTITUTO MEX-COL-USA**, certifying active participation and completion of the theoretical and practical modules.\n\n**Certificate with Curricular Value (STPS):**\nRegistered with the **Secretariat of Labor and Social Welfare (STPS)**.\n*Valid only for Mexican nationals.*\n\n**Diploma:**\nIssued by the **American Alliance of Aesthetic Medicine** and **SOPEME (Aesthetic Medicine Society of the United States)**, valid throughout the **U.S., Latin America, the Caribbean, and Spain** as recognized continuing education.'
                 ],
                 productQuality: {
-                  title: 'Quality Products, Supplies and Facilities with Guaranteed Safety',
-                  description: 'At INSTITUTO MEX-COL-USA we have first-class facilities, designed to offer a safe, hygienic and professional environment, where each practice and procedure is performed under the highest standards of quality and safety.\n\nOur commitment is to guarantee that each student can learn and practice in a reliable, equipped and prepared space to provide the best educational experience. Thus, we ensure that training takes place in a safe, professional and excellent environment, strengthening the learning and confidence of each participant.'
+                  title: 'Premium Products - Quality & Safety Guaranteed',
+                  description: 'In aesthetic medicine, the product\'s quality is as crucial as the practitioner\'s skill.\n\nThat\'s why **INSTITUTO MEX-COL-USA** works only with the **three leading laboratories worldwide**, known for innovation and safety.\n\nAll products are certified by major global health authorities:\n\n• **INVIMA (Colombia)**\n• **FDA (United States)**\n• **COFEPRIS (Mexico)**',
+                  certifications: [
+                    'All products are certified by major global health authorities:',
+                    'INVIMA (Colombia)',
+                    'FDA (United States)',
+                    'COFEPRIS (Mexico)'
+                  ],
+                  includedProducts: []
                 }
               },
             },

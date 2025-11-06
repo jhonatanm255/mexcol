@@ -209,7 +209,7 @@ export default function CourseDetailPage() {
                   <div className="space-y-3">
                     {(courseDetails as any).targetAudience.description.split('\n\n').map((paragraph: string, idx: number) => (
                       <p key={idx} className="text-sm text-muted-foreground leading-relaxed">
-                        {paragraph}
+                        {formatText(paragraph)}
                       </p>
                     ))}
                   </div>
@@ -223,7 +223,7 @@ export default function CourseDetailPage() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Target className="h-6 w-6 text-primary" />
-                    {language === 'es' ? 'Objetivos de Aprendizaje' : 'Learning Objectives'}
+                    {language === 'es' ? 'Objetivos de Aprendizaje' : 'What This Course Offers'}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
