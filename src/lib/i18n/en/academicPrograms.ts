@@ -287,44 +287,25 @@ title: 'Academic Programs',
                   {
                     title: 'Hyaluronic Acid',
                     topics: [
-                      'Master modeling techniques for:',
-                      'Non-surgical rhinoplasty',
-                      'Cheek enhancement',
-                      'Nasolabial folds',
-                      'Lips'
+                      'Master modeling techniques for: Non-surgical rhinoplasty, Cheek enhancement, Nasolabial folds, Lips'
                     ]
                   },
                   {
                     title: 'Botulinum Toxin',
                     topics: [
-                      'Learn to relax facial muscles to prevent and treat expression lines in:',
-                      'Forehead',
-                      'Glabella',
-                      'Crow’s feet',
-                      'Bunny lines'
+                      'Learn to relax facial muscles to prevent and treat expression lines in: Forehead, Glabella, Crow\'s feet, Bunny lines'
                     ]
                   },
                   {
                     title: 'PDO Threads (Smooth or Mono)',
                     topics: [
-                      'Apply rejuvenation protocols with immediate lifting effect for:',
-                      'Jawline',
-                      'Double chin',
-                      'Abdomen',
-                      'Buttocks',
-                      'Other body areas'
+                      'Apply rejuvenation protocols with immediate lifting effect for: Jawline, Double chin, Abdomen, Buttocks, Other body areas'
                     ]
                   },
                   {
                     title: 'Collagen Biostimulators',
                     topics: [
-                      'Discover the main biostimulators available on the market and their applications for:',
-                      'Arms',
-                      'Abdomen',
-                      'Legs',
-                      'Buttocks',
-                      'Neck',
-                      'Face and more'
+                      'Discover the main biostimulators available on the market and their applications for: Arms, Abdomen, Legs, Buttocks, Neck, Face and more'
                     ]
                   }
                 ],
@@ -355,7 +336,7 @@ title: 'Academic Programs',
                 }
               },
               'intravenous-therapy-mexico': {
-                title: 'Serum Therapy-Chelation and Principles of Applied Regenerative Medicine Course',
+                title: 'Intravenous Therapy, Chelation, and Principles of Applied Regenerative Medicine',
                 subtitle: 'Regenerative Medicine Training',
                 description: 'Master chelation and regenerative medicine fundamentals applied to aesthetic treatments.',
                 heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop',
@@ -369,40 +350,31 @@ title: 'Academic Programs',
                 targetAudience: {
                   title: 'Course Directed To:',
                   highlighted: 'Health professionals',
-                  description: 'Regenerative Medicine and Serum Therapy have proven to be areas of great impact on patient health and well-being. However, worldwide complications have occurred due to inadequate practice of these treatments, often performed by personnel without sufficient training.\n\nTherefore, our program is designed for health professionals, providing them with the tools and knowledge necessary to apply these therapies safely and effectively.\n\nAt INSTITUTO MEX-COL-USA we assume with responsibility the challenge of contributing so that these situations do not occur, promoting the proper training of all specialists involved in these practices.\n\nWe focus on preparing professionals who apply Regenerative Medicine and Serum Therapy with safety, ethics and excellence, always caring for the health and well-being of patients.'
+                  description: '**Regenerative Medicine** and **Intravenous Therapy** have proven to be areas of great impact on patient health and overall well-being. However, worldwide, complications have arisen from the improper practice of these treatments—often performed by individuals without adequate training.\n\nFor this reason, our program is specifically designed for **health professionals**, providing them with the tools and knowledge necessary to apply these therapies safely and effectively.\n\nAt the **INSTITUTO MEX-COL-USA**, we take seriously the responsibility of preventing such situations by promoting proper education and training for all professionals involved in these practices.\n\nOur focus is to prepare healthcare providers who practice **Regenerative Medicine and Intravenous Therapy** with **safety, ethics, and excellence**, always safeguarding the health and well-being of their patients.'
                 },
                 curriculum: [
                   {
-                    title: 'Day 1 in Serum Therapy',
+                    title: 'Day 1 – Intravenous Therapy:',
                     topics: [
-                      'In this Serum Therapy course, participants will acquire comprehensive knowledge about advanced techniques to optimize patient health, energy and well-being.',
-                      'You will learn to apply therapies that favor neurostimulation, cellular oxygenation and general revitalization, as well as specific treatments to strengthen the immune system, stimulate metabolism and combat signs of aging.',
-                      'In addition, you will learn the safe and effective use of key active principles, from vitamins and minerals to specialized compounds, understanding their biochemical, pharmacological properties and their therapeutic applications in conditions such as obesity, overweight, psoriasis, osteoarticular pain and autoimmune diseases.',
-                      'The course will also provide you with tools for heavy metal elimination, atheroma plaque reduction and cardiovascular health optimization, all with a focus on safety, ethics and clinical efficacy.',
-                      'Upon completion, you will be prepared to implement Serum Therapy protocols with a professional, safe approach oriented to the integral well-being of your patients.'
+                      'In this Intravenous Therapy course, participants will gain comprehensive knowledge of advanced techniques to optimize patient health, energy, and overall well-being.\n\nYou will learn therapies that support neurostimulation, cellular oxygenation, and general revitalization, as well as specific treatments to strengthen the immune system, stimulate metabolism, and combat signs of aging.\n\nYou will also learn the safe and effective use of key active ingredients, from vitamins and minerals to specialized compounds, understanding their biochemical and pharmacological properties and their therapeutic applications for conditions such as obesity, overweight, psoriasis, osteoarticular pain, and autoimmune diseases.\n\nThe course will also provide tools for heavy metal elimination, reduction of atheroma plaque, and optimization of cardiovascular health, all with a focus on safety, ethics, and clinical efficacy.\n\nBy the end of this day, you will be prepared to implement Intravenous Therapy protocols in a professional, safe, and patient-centered manner.'
                     ]
                   },
                   {
-                    title: 'Day 2 in Regenerative Medicine',
+                    title: 'Day 2 - Regenerative Medicine',
                     topics: [
-                      'In this second day, you will deepen the principles, processing and biological functions of regenerative therapies, learning their indications, medical uses, appropriate doses and safety considerations.',
-                      'You will learn the fundamentals of cell differentiation, angiogenesis and immunomodulation, as well as the practical application of Mesenchymal Stem Cells through audiovisual material.',
-                      'You will explore the biological functions of exosomes, their indications and safe use, and observe practical application examples through instructional videos.',
-                      'Likewise, you will familiarize yourself with placenta implants, understanding their principles, indications, doses and safety profile, accompanied by practical demonstrations on video.',
-                      'The day also includes Serum Therapy sessions, addressing revitalizing, immunostimulating therapies, focused on obesity and overweight, and basic chelation for metal elimination, allowing you to integrate these protocols safely and effectively into your professional practice.',
-                      'Upon completion of this module, you will be prepared to apply advanced Regenerative Medicine and Serum Therapy techniques, combining theoretical and practical knowledge to offer safe, effective treatments oriented to the integral well-being of your patients.'
+                      'On the second day, you will delve into the principles, processing, and biological functions of regenerative therapies, learning their indications, medical uses, proper dosages, and safety considerations.\n\nYou will explore the biological foundations of cellular differentiation, angiogenesis, and immunomodulation, as well as the practical application of Mesenchymal Stem Cells through audiovisual material.\n\nYou will also examine the biological functions of exosomes, their indications and safe usage, and watch practical application examples via instructional videos. In addition, you will become familiar with placenta implants, understanding their principles, indications, dosage, and safety profile, accompanied by video demonstrations.\n\nThe day also includes Intravenous Therapy sessions covering revitalizing, immune-stimulating therapies focused on obesity and overweight, and basic chelation for metal elimination, allowing you to safely and effectively integrate these protocols into your professional practice.\n\nUpon completion of this module, you will be prepared to apply advanced Regenerative Medicine and Intravenous Therapy techniques, combining theoretical and practical knowledge to deliver safe, effective, and patient-centered treatments.'
                     ]
                   }
                 ],
                 includes: [
-                  'Includes Digital support material'
+                  'Digital reference and study materials'
                 ],
                 accreditations: [
                   '**Accreditations and Institutional Support:**\n\nAll continuing education programs are registered with the **Secretariat of Labor and Social Welfare (STPS) in Mexico**. At the end of your training, you will take a knowledge and skills assessment. A minimum score of **80%** is required to obtain certification.\n\n**Certificate of Attendance and Participation:**\nIssued by **INSTITUTO MEX-COL-USA**, certifying active participation and completion of the theoretical and practical modules.\n\n**Certificate with Curricular Value (STPS):**\nRegistered with the **Secretariat of Labor and Social Welfare (STPS)**.\n*Valid only for Mexican nationals.*\n\n**Diploma:**\nIssued by the **American Alliance of Aesthetic Medicine** and **SOPEME (Aesthetic Medicine Society of the United States)**, valid throughout the **U.S., Latin America, the Caribbean, and Spain** as recognized continuing education.'
                 ],
                 productQuality: {
-                  title: 'Premium Products - Quality & Safety Guaranteed',
-                  description: 'In aesthetic medicine, the product\'s quality is as crucial as the practitioner\'s skill.\n\nThat\'s why **INSTITUTO MEX-COL-USA** works only with the **three leading laboratories worldwide**, known for innovation and safety.\n\nAll products are certified by major global health authorities:\n\n• **INVIMA (Colombia)**\n• **FDA (United States)**\n• **COFEPRIS (Mexico)**\n\n✅ Included products for hands-on training:\n\n• Products used in Serum Therapy\n• Placenta implant',
+                  title: 'Products of Guaranteed Quality and Safety:',
+                  description: '**INSTITUTO MEX-COL-USA** collaborates with laboratories that guarantee reliability and quality of products, ensuring safety in every practice, while sharing information about these suppliers at our campuses.\n\nIt is important to note that we do not sell products on-site or promote specific brands, as the acquisition choice is the sole responsibility of the student. Each participant must verify purchase sources and comply with local permits, registrations, regulations, and legal requirements in their city or country before acquiring any product.\n\nThe course includes all products necessary for practical sessions, such as those used in Intravenous Therapy and a placenta implant, ensuring students can safely and effectively apply procedures during hands-on practice.',
                   certifications: [
                     'All products are certified by major global health authorities:',
                     'INVIMA (Colombia)',
@@ -410,8 +382,8 @@ title: 'Academic Programs',
                     'COFEPRIS (Mexico)'
                   ],
                   includedProducts: [
-                    '✅ Included products for hands-on training:',
-                    'Products used in Serum Therapy',
+                    'Included products for hands-on training:',
+                    'Products used in Intravenous Therapy',
                     'Placenta implant'
                   ]
                 }

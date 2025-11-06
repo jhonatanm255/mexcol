@@ -291,44 +291,25 @@ title: 'Programas Académicos',
                   {
                     title: 'Ácido Hialurónico',
                     topics: [
-                      'Domina técnicas de modelado en:',
-                      'Rinomodelación',
-                      'Pómulos',
-                      'Surcos nasogenianos',
-                      'Labios'
+                      'Domina técnicas de modelado en: Rinomodelación, Pómulos, Surcos nasogenianos, Labios'
                     ]
                   },
                   {
                     title: 'Toxina Botulínica',
                     topics: [
-                      'Aprende a relajar los músculos faciales para prevenir y tratar líneas de expresión en:',
-                      'Frente',
-                      'Entrecejo',
-                      'Contorno de ojos',
-                      'Bunny lines'
+                      'Aprende a relajar los músculos faciales para prevenir y tratar líneas de expresión en: Frente, Entrecejo, Contorno de ojos, Bunny lines'
                     ]
                   },
                   {
                     title: 'Hilos PDO Liso o Mono',
                     topics: [
-                      'Aplica protocolos de rejuvenecimiento con efecto lifting inmediato en:',
-                      'Contorno mandibular',
-                      'Papada',
-                      'Abdomen',
-                      'Glúteos',
-                      'Otras zonas corporales'
+                      'Aplica protocolos de rejuvenecimiento con efecto lifting inmediato en: Contorno mandibular, Papada, Abdomen, Glúteos, Otras zonas corporales'
                     ]
                   },
                   {
                     title: 'Bioestimuladores de Colágeno',
                     topics: [
-                      'Conoce los principales bioestimuladores disponibles en el mercado y su aplicación en:',
-                      'Brazos',
-                      'Abdomen',
-                      'Piernas',
-                      'Glúteos',
-                      'Cuello',
-                      'Rostro y más'
+                      'Conoce los principales bioestimuladores disponibles en el mercado y su aplicación en: Brazos, Abdomen, Piernas, Glúteos, Cuello, Rostro y más'
                     ]
                   }
                 ],
@@ -379,22 +360,13 @@ title: 'Programas Académicos',
                   {
                     title: 'Día 1 en Sueroterapia',
                     topics: [
-                      'En este curso de Sueroterapia, los participantes adquirirán conocimientos integrales sobre técnicas avanzadas para optimizar la salud, la energía y el bienestar de los pacientes.',
-                      'Aprenderás a aplicar terapias que favorecen la neuroestimulación, la oxigenación celular y la revitalización general, así como tratamientos específicos para fortalecer el sistema inmunológico, estimular el metabolismo y combatir los signos del envejecimiento.',
-                      'Además, conocerás el uso seguro y efectivo de principios activos clave, desde vitaminas y minerales hasta compuestos especializados, comprendiendo sus propiedades bioquímicas, farmacológicas y sus aplicaciones terapéuticas en condiciones como obesidad, sobrepeso, psoriasis, dolor osteoarticular y enfermedades autoinmunes.',
-                      'El curso también te brindará herramientas para la eliminación de metales pesados, la reducción de placa de ateroma y la optimización de la salud cardiovascular, todo con un enfoque en la seguridad, ética y eficacia clínica.',
-                      'Al finalizar, estarás preparado para implementar protocolos de Sueroterapia con un enfoque profesional, seguro y orientado al bienestar integral de tus pacientes.'
+                      'En este curso de Sueroterapia, los participantes adquirirán conocimientos integrales sobre técnicas avanzadas para optimizar la salud, la energía y el bienestar de los pacientes.\n\nAprenderás a aplicar terapias que favorecen la neuroestimulación, la oxigenación celular y la revitalización general, así como tratamientos específicos para fortalecer el sistema inmunológico, estimular el metabolismo y combatir los signos del envejecimiento.\n\nAdemás, conocerás el uso seguro y efectivo de principios activos clave, desde vitaminas y minerales hasta compuestos especializados, comprendiendo sus propiedades bioquímicas, farmacológicas y sus aplicaciones terapéuticas en condiciones como obesidad, sobrepeso, psoriasis, dolor osteoarticular y enfermedades autoinmunes.\n\nEl curso también te brindará herramientas para la eliminación de metales pesados, la reducción de placa de ateroma y la optimización de la salud cardiovascular, todo con un enfoque en la seguridad, ética y eficacia clínica.\n\nAl finalizar, estarás preparado para implementar protocolos de Sueroterapia con un enfoque profesional, seguro y orientado al bienestar integral de tus pacientes.'
                     ]
                   },
                   {
                     title: 'Día 2 en Medicina Regenerativa',
                     topics: [
-                      'En esta segunda jornada, profundizarás en los principios, procesamiento y funciones biológicas de las terapias regenerativas, aprendiendo sus indicaciones, usos en medicina, dosis adecuadas y consideraciones de seguridad.',
-                      'Conocerás los fundamentos de la diferenciación celular, angiogénesis e inmunomodulación, así como la aplicación práctica de Celulas Madre Mesenquimales a través de material audiovisual.',
-                      'Explorarás las funciones biológicas de los exosomas, sus indicaciones y uso seguro, y observarás ejemplos prácticos de aplicación mediante videos instructivos.',
-                      'Asimismo, te familiarizarás con los implantes de placenta, comprendiendo sus principios, indicaciones, dosis y perfil de seguridad, acompañados de demostraciones prácticas en video.',
-                      'El día incluye también sesiones de Sueroterapia, abordando terapias revitalizantes, inmunoestimulantes, enfocadas en obesidad y sobrepeso, y quelación básica para la eliminación de metales, permitiéndote integrar estos protocolos de manera segura y efectiva en tu práctica profesional.',
-                      'Al finalizar este módulo, estarás preparado para aplicar técnicas avanzadas de Medicina Regenerativa y Sueroterapia, combinando conocimiento teórico y práctico para ofrecer tratamientos seguros, eficaces y orientados al bienestar integral de tus pacientes.'
+                      'En esta segunda jornada, profundizarás en los principios, procesamiento y funciones biológicas de las terapias regenerativas, aprendiendo sus indicaciones, usos en medicina, dosis adecuadas y consideraciones de seguridad.\n\nConocerás los fundamentos de la diferenciación celular, angiogénesis e inmunomodulación, así como la aplicación práctica de Celulas Madre Mesenquimales a través de material audiovisual.\n\nExplorarás las funciones biológicas de los exosomas, sus indicaciones y uso seguro, y observarás ejemplos prácticos de aplicación mediante videos instructivos.\n\nAsimismo, te familiarizarás con los implantes de placenta, comprendiendo sus principios, indicaciones, dosis y perfil de seguridad, acompañados de demostraciones prácticas en video.\n\nEl día incluye también sesiones de Sueroterapia, abordando terapias revitalizantes, inmunoestimulantes, enfocadas en obesidad y sobrepeso, y quelación básica para la eliminación de metales, permitiéndote integrar estos protocolos de manera segura y efectiva en tu práctica profesional.\n\nAl finalizar este módulo, estarás preparado para aplicar técnicas avanzadas de Medicina Regenerativa y Sueroterapia, combinando conocimiento teórico y práctico para ofrecer tratamientos seguros, eficaces y orientados al bienestar integral de tus pacientes.'
                     ]
                   }
                 ],
@@ -405,8 +377,8 @@ title: 'Programas Académicos',
                   '**Avales y Respaldos Institucionales:**\n\nTodos los programas de educación continua están registrados ante la **Secretaría del Trabajo y Previsión Social (STPS) en México**. Al finalizar tu capacitación, realizarás una evaluación de conocimientos y habilidades. Se requiere un puntaje mínimo de **80%** para obtener la certificación.\n\n**Constancia de Asistencia y Participación:**\nEmitida por **INSTITUTO MEX-COL-USA**, certificando la participación activa y el cumplimiento de los módulos teóricos y prácticos.\n\n**Constancia con Valor Curricular (STPS):**\nRegistrada ante la **Secretaría del Trabajo y Previsión Social (STPS)**.\n*Válido solo para nativos mexicanos.*\n\n**Diploma:**\nEmitido por la **Alianza Americana de Medicina Estética** y **SOPEME (Sociedad de Medicina Estética de los Estados Unidos)**, válido en **Estados Unidos, Latinoamérica, el Caribe y España** como educación continua reconocida.'
                 ],
                 productQuality: {
-                  title: 'Productos Premium - Calidad y Seguridad Garantizada',
-                  description: 'En la medicina estética, la calidad del producto es tan crucial como la habilidad del profesional.\n\nPor eso, **INSTITUTO MEX-COL-USA** trabaja solo con los **tres principales laboratorios a nivel mundial**, reconocidos por su innovación y seguridad.\n\nTodos los productos están certificados por las principales autoridades sanitarias globales:\n\n• **INVIMA (Colombia)**\n• **FDA (Estados Unidos)**\n• **COFEPRIS (México)**\n\n✅ Productos incluidos para práctica:\n\n• Productos utilizados en Sueroterapia\n• Implante de placenta',
+                  title: 'Productos de Calidad y Seguridad Garantizada:',
+                  description: '**INSTITUTO MEX-COL-USA** colabora con laboratorios que garantizan la confiabilidad y calidad de los productos, asegurando la seguridad en cada práctica, mientras compartimos información sobre estos proveedores en nuestros campus.\n\nEs importante destacar que no vendemos productos en nuestras instalaciones ni promocionamos marcas específicas, ya que la elección de adquisición es responsabilidad exclusiva del estudiante. Cada participante debe verificar las fuentes de compra y cumplir con los permisos locales, registros, regulaciones y requisitos legales en su ciudad o país antes de adquirir cualquier producto.\n\nEl curso incluye todos los productos necesarios para las sesiones prácticas, como los utilizados en Terapia Intravenosa y un implante de placenta, garantizando que los estudiantes puedan aplicar los procedimientos de manera segura y efectiva durante la práctica.',
                   certifications: [
                     'Todos los productos están certificados por las principales autoridades sanitarias globales:',
                     'INVIMA (Colombia)',
@@ -414,8 +386,8 @@ title: 'Programas Académicos',
                     'COFEPRIS (México)'
                   ],
                   includedProducts: [
-                    '✅ Productos incluidos para práctica:',
-                    'Productos utilizados en Sueroterapia',
+                    'Productos incluidos para práctica:',
+                    'Productos utilizados en Terapia Intravenosa',
                     'Implante de placenta'
                   ]
                 }
