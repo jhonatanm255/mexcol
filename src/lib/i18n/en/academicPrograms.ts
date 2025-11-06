@@ -205,8 +205,8 @@ title: 'Academic Programs',
                 description: 'Hands-on training in safe, professional blood extraction techniques.',
                 heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop',
                 format: 'In-person',
-                duration: '2 days Theoretical - Practical',
-                schedule: '9:00 am - 5:00 pm Approx',
+                duration: '2 days – Theoretical & Practical',
+                schedule: '9:00 am – 5:00 pm approx.',
                 location: 'Los Angeles, CA',
                 price: 'Contact for pricing',
                 capacity: 'Limited enrollment',
@@ -215,32 +215,28 @@ title: 'Academic Programs',
                 targetAudience: {
                   title: 'Course Directed To:',
                   highlighted: 'Health professionals',
-                  description: 'The phlebotomy course in the United States is aimed at all health professionals who wish to expand their knowledge and skills in blood sample extraction and handling. Nurses, doctors, laboratory technicians, medical assistants, paramedics, health science students and other professionals related to patient care can participate.\n\nThis program is ideal for those seeking to strengthen their professional profile, meet job requirements in clinics, hospitals or laboratories, or start a technical career within the American health system. No previous experience in phlebotomy is required, but having training or practice in clinical areas is valued.'
+                  description: 'The Phlebotomy course in the United States is designed for all healthcare professionals who wish to expand their knowledge and skills in blood collection and sample handling. Nurses, doctors, laboratory technicians, medical assistants, paramedics, health sciences students, and other patient care professionals are welcome to participate.\n\nThis program is ideal for those looking to strengthen their professional profile, meet job requirements in clinics, hospitals, or laboratories, or start a technical career within the U.S. healthcare system. No prior phlebotomy experience is required, but previous clinical training or practice is valued.'
                 },
                 curriculum: [
                   {
                     title: 'Course Content',
                     topics: [
-                      'The Phlebotomy Course is designed to provide participants with the theoretical and practical knowledge necessary to perform blood extractions safely, efficiently and professionally. Throughout the program, students will learn the fundamental principles of phlebotomy, puncture techniques and ethical and safety standards that must be followed in the clinical environment.',
-                      'During the course, essential topics such as introduction to phlebotomy, anatomical aspects of the venous system and general safety requirements in the work area will be addressed. Participants will learn step-by-step protocols and procedures, as well as the most common indications and contraindications in daily practice.',
-                      'The preparation of materials and instruments will also be studied, along with the correct venous puncture technique, ensuring safe practice for both the professional and the patient. In addition, general patient care after venipuncture, possible complications that may arise and the role of the phlebotomist within the health team will be addressed.',
-                      'The program includes guided exercises and live practices, where students will be able to apply the knowledge acquired under the supervision of specialized instructors. Finally, an evaluative exam will be carried out to certify the competencies acquired during the course.',
-                      'This course is aimed at professionals and students in the health area who wish to expand their clinical skills and strengthen their professional profile in the medical and hospital field.'
+                      'The Phlebotomy Course is designed to provide participants with the theoretical and practical knowledge necessary to perform blood draws safely, efficiently, and professionally. Throughout the program, students will learn the fundamental principles of phlebotomy, venipuncture techniques, and the ethical and safety standards to be followed in a clinical environment.',
+                      '\nThe course will cover essential topics such as an introduction to phlebotomy, the anatomical aspects of the venous system, and general safety requirements in the workplace. Participants will become familiar with step-by-step protocols and procedures, as well as the most common indications and contraindications in daily practice.',
+                      '\nThe preparation of materials and instruments will also be studied, along with the correct venipuncture technique, ensuring safe practice for both the professional and the patient. Additionally, general patient care after venipuncture, possible complications, and the phlebotomist’s role within the healthcare team will be discussed.',
+                      '\nThe program includes guided exercises and live practice sessions, allowing students to apply the acquired knowledge under the supervision of specialized instructors. Finally, an evaluation exam will be conducted to certify the competencies acquired during the course.',
+                      '\nThis course is aimed at healthcare professionals and students who wish to expand their clinical skills and strengthen their professional profile in medical and hospital settings.'
                     ]
                   }
                 ],
                 includes: [
-                  'Copy of the presentation in physical format',
-                  'Phlebotomy technician certificate',
-                  'ID Card valid for 2 years nationally',
+                  'Physical copy of the presentation',
+                  'Phlebotomy Technician Certificate',
+                  'ID Card valid for 2 years  nationwide',
                   'Personalized practice'
                 ],
                 accreditations: [
-                  'Upon successful completion of the Phlebotomy Course, the participant receives triple certification that supports their training and allows them to practice with national recognition within the United States.',
-                  'Phlebotomy Technician Certificate - Accredits the theoretical and practical competencies acquired during the program, certifying that the participant is trained to perform blood extraction procedures professionally and safely.',
-                  'ID Card valid for 2 years nationally - Official identification that endorses the graduate as a certified phlebotomy technician, recognized throughout the United States territory and required by various medical institutions, clinics and laboratories.',
-                  'Attendance and participation certificate - Issued by INSTITUTO MEX-COL-USA, certifies active participation and compliance with the theoretical-practical modules of the course, providing academic and training support.',
-                  'This combination of documents guarantees the graduate solid, endorsed and recognized training, opening the possibility of working in hospitals, clinics, laboratories and health centers throughout the United States, with the confidence and support of an institution committed to professional excellence.'
+                  '**Accreditations and Institutional Support:**\n\nUpon successful completion of the Phlebotomy Course, participants receive **triple certification**, supporting their training and allowing them to work with recognized\ncredentials throughout the United States.\n\n•   **Phlebotomy Technician Certificate:** Confirms the theoretical and practical competencies acquired during the program, certifying that the participant is qualified to\n    perform blood collection procedures professionally and safely.\n•   **ID Card valid for 2 years nationwide:** Official identification that certifies the graduate as a certified phlebotomy technician, recognized throughout the United States\n    and required by various medical institutions, clinics, and laboratories.\n•   **Certificate of Attendance and Participation:** Issued by **INSTITUTO MEX-COL-USA**, certifying active participation and completion of the course\'s theoretical and\n    practical modules, providing academic and formative support.\n\nThis combination of documents guarantees graduates a solid, recognized training, opening opportunities to work in hospitals, clinics, laboratories, and healthcare centers\nacross the United States, with the confidence and backing of an institution committed to professional excellence.'
                 ]
               },
             },
