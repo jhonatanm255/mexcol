@@ -29,6 +29,7 @@ import { useLanguage } from '@/hooks/use-language';
 import { translations } from '@/lib/i18n';
 import { formatText } from '@/lib/utils/text-formatting';
 import ProductsMarquee from '@/components/shared/ProductsMarquee';
+import LogoUSAVerde from '@/assets/Logo-USA-Blanco.png';
 
 export default function CourseDetailPage() {
   const params = useParams();
@@ -54,7 +55,10 @@ export default function CourseDetailPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section
+        className="relative overflow-hidden"
+        style={{ minHeight: '458.14px' }}
+      >
         <div className="absolute inset-0">
           <Image
             src={courseDetails.heroImage || 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop'}
@@ -65,28 +69,37 @@ export default function CourseDetailPage() {
           />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="pt-2">
-            <Button 
-              asChild 
-              variant="ghost" 
-              className="mb-6 text-white hover:text-white hover:bg-white/20 border border-white/20 hover:border-white/40 transition-all duration-300"
+        <div className="container mx-auto px-4 relative z-10 h-full flex flex-col">
+          <div className="flex items-start justify-between pt-4 md:pt-6">
+            <Button
+              asChild
+              variant="ghost"
+              className="text-white hover:text-white hover:bg-white/20 border border-white/20 hover:border-white/40 transition-all duration-300"
             >
               <Link href="/academic-programs?country=mexico">
                 <ArrowLeft className="h-4 w-4" />
                 {language === 'es' ? 'Volver a Programas' : 'Back to Programs'}
               </Link>
             </Button>
+            <div className="relative w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32">
+              <Image
+                src={LogoUSAVerde}
+                alt="Instituto MexCol USA Logo"
+                fill
+                className="object-contain drop-shadow-2xl"
+                priority
+              />
+            </div>
           </div>
-          <div className="max-w-4xl">
-            <Badge className="mb-4 bg-primary text-primary-foreground">
+          <div className="mt-auto flex flex-col text-white gap-4 pb-8 md:pb-14 lg:pb-16 md:pl-6 lg:pl-12">
+            <Badge className="w-fit bg-primary text-primary-foreground">
               <MapPin className="mr-1 h-3 w-3" />
               México
             </Badge>
-            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight mb-6 text-white">
+            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight">
               {courseDetails.title}
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 font-medium">
+            <p className="text-base md:text-2xl text-white/90 leading-relaxed md:max-w-3xl">
               {courseDetails.subtitle}
             </p>
           </div>

@@ -73,37 +73,32 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/30" />
         </div>
         
-        <div className="relative z-10 h-full container mx-auto px-4">
-          <div className="h-full flex flex-col justify-start py-4">
-            {/* Logo - izquierda y arriba */}
-            <div className="flex justify-start ml-12">
-              <div className="relative w-full max-w-xs h-72">
-                <Image 
-                  src={LogoUSAVerde} 
-                  alt="Instituto MexCol USA Logo" 
-                  fill
-                  className="object-contain drop-shadow-2xl"
-                  priority
-                />
-              </div>
+        <div className="relative z-10 h-full container mx-auto px-4 flex flex-col">
+          <div className="flex justify-center md:justify-end pt-6 md:pt-10 lg:pt-12">
+            <div className="relative w-24 h-24 md:w-32 md:h-32 lg:w-36 lg:h-36">
+              <Image
+                src={LogoUSAVerde}
+                alt="Instituto MexCol USA Logo"
+                fill
+                className="object-contain drop-shadow-2xl"
+                priority
+              />
             </div>
-            
-            {/* Contenido de texto - izquierda y abajo */}
-            <div className="text-left max-w-2xl mt-6">
-              <h1 className="font-headline text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl text-white mb-3 drop-shadow-lg">
-                {th.hero.main}
-              </h1>
-              <p className="mt-3 text-base md:text-lg text-white/90 leading-relaxed drop-shadow-md max-w-xl">
-                {th.hero.sub}
-              </p>
-              <div className="mt-6 flex flex-wrap gap-4">
-                <Button asChild size="lg" className="btn-modern px-8 py-4 text-lg">
-                  <PrefetchLink href="/academic-programs">{t.hero.explorePrograms}</PrefetchLink>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="px-8 py-4 text-lg borde-none text-[#1f2937] hover:bg-white">
-                  <PrefetchLink href="/contact">{t.hero.contactUs}</PrefetchLink>
-                </Button>
-              </div>
+          </div>
+          <div className="mt-auto flex flex-col items-center text-center md:items-start md:text-left text-white gap-4 pb-8 md:pb-14 lg:pb-16 md:pl-12 lg:pl-20">
+            <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight drop-shadow-lg">
+              {th.hero.main}
+            </h1>
+            <p className="text-base md:text-lg text-white/90 leading-relaxed drop-shadow-md max-w-xl md:max-w-2xl">
+              {th.hero.sub}
+            </p>
+            <div className="mt-4 flex flex-wrap justify-center md:justify-start gap-4">
+              <Button asChild size="lg" className="btn-modern px-8 py-4 text-lg">
+                <PrefetchLink href="/academic-programs">{t.hero.explorePrograms}</PrefetchLink>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="px-8 py-4 text-lg borde-none text-[#1f2937] hover:bg-white">
+                <PrefetchLink href="/contact">{t.hero.contactUs}</PrefetchLink>
+              </Button>
             </div>
           </div>
         </div>

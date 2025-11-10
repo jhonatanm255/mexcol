@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import PrefetchLink from '@/components/shared/PrefetchLink';
 import Image from 'next/image';
+import LogoUSAVerde from '@/assets/Logo-USA-Blanco.png';
 import { 
   MapPin, 
   Award, 
@@ -43,17 +44,26 @@ export default function CongressPage() {
           />
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
-        <div className="container mx-auto px-4 relative z-10 h-full flex items-center justify-center">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <div className="flex justify-center mb-6">
-              <div className="p-4 bg-white/10 rounded-full backdrop-blur-sm">
-                <Presentation className="h-12 w-12 text-white" />
-              </div>
+        <div className="container mx-auto px-4 relative z-10 h-full flex flex-col">
+          <div className="flex justify-center md:justify-end pt-6 md:pt-10 lg:pt-12">
+            <div className="relative w-24 h-24 md:w-32 md:h-32 lg:w-36 lg:h-36">
+              <Image
+                src={LogoUSAVerde}
+                alt="Instituto MexCol USA Logo"
+                fill
+                className="object-contain drop-shadow-2xl"
+                priority
+              />
             </div>
-            <h1 className="font-headline text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+          </div>
+          <div className="mt-auto flex flex-col items-center text-center md:items-start md:text-left text-white gap-4 pb-8 md:pb-14 lg:pb-16 md:pl-12 lg:pl-20">
+            <div className="p-4 bg-white/10 rounded-full backdrop-blur-sm inline-flex items-center justify-center">
+              <Presentation className="h-10 w-10 md:h-12 md:w-12 text-white" />
+            </div>
+            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight">
               {t.title}
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-base md:text-2xl text-white/90 leading-relaxed md:max-w-3xl">
               {t.subtitle}
             </p>
             <Button asChild size="lg" className="btn-modern bg-white text-white hover:bg-white/90 px-8 py-4 text-lg">
