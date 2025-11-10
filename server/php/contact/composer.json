@@ -1,0 +1,8 @@
+{
+  "name": "mexcol/contact-mailer",
+  "description": "Servidor SMTP para formulario de contacto de Instituto MexCol",
+  "require": {
+    "phpmailer/phpmailer": "^6.9"
+  }
+}
+

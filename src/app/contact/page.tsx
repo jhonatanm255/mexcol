@@ -20,14 +20,14 @@ export default function ContactPage() {
       { 
         city: language === 'es' ? 'Bogotá - oficinas administrativas' : 'Bogotá - Administrative Offices', 
         address: 'Carrera 4 este # 14-04 Segundo piso Sector la Esmeralda Tocancipá-cundinamarca', 
-        phone: '-', 
+        phone: '+57 322 432 4933', 
         email: 'gerencia@institutomexcol.com' 
       },
     ],
     mexico: [
       { 
         city: language === 'es' ? 'Ciudad de México' : 'Mexico City', 
-        address: 'Av. Uno #18 Colonia San Pedro de los Pinos Delegación Benito Juárez Código Postal 03800', 
+        address: 'Av. Insurgentes sur 546. Piso 7', 
         phone: '+52 55 6630 8602 - +52 55 2593 6885', 
         email: 'gerencia@institutomexcol.com' 
       },

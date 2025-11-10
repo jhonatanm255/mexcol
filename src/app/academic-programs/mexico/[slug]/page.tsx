@@ -109,7 +109,41 @@ export default function CourseDetailPage() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Sidebar - First on mobile, second on desktop */}
-          <div className="lg:col-span-1 order-1 lg:order-2">
+          <div className="lg:col-span-1 order-1 lg:order-2 space-y-8">
+            {slug === 'intravenous-therapy-mexico' && (
+              <div className="overflow-hidden rounded-2xl border border-primary/20 shadow-lg">
+                <video
+                  key={slug}
+                  autoPlay
+                  playsInline
+                  controls
+                  preload="metadata"
+                  className="w-full h-full object-cover bg-black"
+                >
+                  <source src="/video-cursos/mex-col-suero.mp4" type="video/mp4" />
+                  {language === 'es'
+                    ? 'Tu navegador no soporta la reproducción de video.'
+                    : 'Your browser does not support video playback.'}
+                </video>
+              </div>
+            )}
+            {slug === 'facial-harmonization-course' && (
+              <div className="overflow-hidden rounded-2xl border border-primary/20 shadow-lg">
+                <video
+                  key={slug}
+                  autoPlay
+                  playsInline
+                  controls
+                  preload="metadata"
+                  className="w-full h-full object-cover bg-black"
+                >
+                  <source src="/video-cursos/mex-col-master.mp4" type="video/mp4" />
+                  {language === 'es'
+                    ? 'Tu navegador no soporta la reproducción de video.'
+                    : 'Your browser does not support video playback.'}
+                </video>
+              </div>
+            )}
             <Card className="lg:sticky lg:top-4">
               <CardHeader>
                 <CardTitle>{language === 'es' ? 'Información del Curso' : 'Course Information'}</CardTitle>

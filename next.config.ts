@@ -30,6 +30,43 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(mp4|mov|webm|ogg)$/i,
+      type: 'asset/resource',
+    });
+    return config;
+  },
+  experimental: {
+    turbo: {
+      rules: {
+        '*.mp4': {
+          loaders: ['file-loader'],
+          options: {
+            name: 'static/media/[name].[contenthash].[ext]',
+          },
+        },
+        '*.mov': {
+          loaders: ['file-loader'],
+          options: {
+            name: 'static/media/[name].[contenthash].[ext]',
+          },
+        },
+        '*.webm': {
+          loaders: ['file-loader'],
+          options: {
+            name: 'static/media/[name].[contenthash].[ext]',
+          },
+        },
+        '*.ogg': {
+          loaders: ['file-loader'],
+          options: {
+            name: 'static/media/[name].[contenthash].[ext]',
+          },
+        },
+      },
+    },
+  },
 };
 
 export default nextConfig;
