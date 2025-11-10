@@ -23,8 +23,8 @@ export default function ProductsMarquee() {
   const items = React.useMemo(() => [...products, ...products, ...products], []);
   return (
     <div className="relative w-full overflow-hidden py-8">
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-background to-transparent z-10" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-background to-transparent z-10" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-background z-10" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-background z-10" />
       <div className="flex animate-marquee-products gap-8 will-change-transform items-center" aria-hidden>
         {items.map((img, idx) => (
           <div 

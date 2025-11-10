@@ -20,7 +20,7 @@ import Autoplay from 'embla-carousel-autoplay';
 import BrandMarquee from '@/components/shared/BrandMarquee';
 import { useLanguage } from '@/hooks/use-language';
 import { translations } from '@/lib/i18n';
-import InicioBanner from '@/assets/portada-medicos-eu.jpg';
+import InicioBanner from '@/assets/img-heros/Hero Home.png';
 import LogoUSAVerde from '@/assets/Logo-USA-Blanco.png';
 
 const CouponForm = dynamic(() => import('@/components/home/CouponForm'), {
@@ -70,7 +70,7 @@ export default function Home() {
             priority
             quality={100}
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/30" />
         </div>
         
         <div className="relative z-10 h-full container mx-auto px-4">
@@ -100,7 +100,7 @@ export default function Home() {
                 <Button asChild size="lg" className="btn-modern px-8 py-4 text-lg">
                   <PrefetchLink href="/academic-programs">{t.hero.explorePrograms}</PrefetchLink>
                 </Button>
-                <Button asChild size="lg" variant="secondary" className="btn-modern px-8 py-4 text-lg bg-black text-white hover:bg-black/90">
+                <Button asChild size="lg" variant="outline" className="px-8 py-4 text-lg borde-none text-[#1f2937] hover:bg-white">
                   <PrefetchLink href="/contact">{t.hero.contactUs}</PrefetchLink>
                 </Button>
               </div>
@@ -109,15 +109,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="online-training" className="py-20 md:py-28 section-modern" style={{backgroundColor: 'rgb(236 253 245)'}}>
+      <section id="online-training" className="py-20 md:py-28" style={{backgroundColor: '#285F65'}}>
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl text-center">
-            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl text-primary mb-6">
+            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl mb-6" style={{color: '#FFFFFF'}}>
               {th.onlineTraining.title}
             </h2>
-            <p className="mt-6 text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">{th.onlineTraining.intro}</p>
+            <p className="mt-6 text-xl leading-relaxed max-w-3xl mx-auto" style={{color: '#FFFFFF'}}>{th.onlineTraining.intro}</p>
             <div className="mt-10">
-              <Button asChild size="lg" className="btn-modern px-8 py-4 text-lg">
+              <Button asChild size="lg" className="border border-[#ECFDF5] text-[#FFFFFF] bg-transparent hover:text-white px-8 py-4 text-lg">
                 <PrefetchLink href="/online-training">{th.onlineTraining.viewRecorded}</PrefetchLink>
               </Button>
             </div>
@@ -130,7 +130,7 @@ export default function Home() {
       <section id="featured-programs" className="py-20 md:py-28 section-modern">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl text-primary mb-4">
+            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl mb-4" style={{color: '#285F65'}}>
               {th.featuredPrograms.title}
             </h2>
           </div>
@@ -139,7 +139,7 @@ export default function Home() {
               <Card key={i} className="modern-card overflow-hidden group">
                 <div className="relative h-56 w-full overflow-hidden">
                   <Image src={c.image} alt={c.country} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <CardHeader className="pb-4">
                   <div className="flex items-center justify-between mb-3">
@@ -164,10 +164,10 @@ export default function Home() {
       <section id="testimonials" className="py-20 md:py-28 section-modern" style={{backgroundColor: 'rgb(236 253 245)'}}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl text-primary mb-4">
+            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl text-[#1F2937] mb-4">
               {th.testimonials.title}
             </h2>
-            <p className="text-lg text-muted-foreground">{th.testimonials.sub}</p>
+            <p className="text-lg text-[#475569]">{th.testimonials.sub}</p>
           </div>
           <div className="bg-white rounded-2xl p-6 md:px-16 shadow-lg">
             <Carousel 
@@ -240,56 +240,50 @@ export default function Home() {
       <section id="brands" className="py-20 md:py-28 section-modern">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl text-primary mb-4">
+            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl text-[#285F65] mb-4">
               {th.brands.title}
             </h2>
-            <p className="text-lg text-muted-foreground">{th.brands.optional}</p>
+            <p className="text-lg text-[#475569]">{th.brands.optional}</p>
           </div>
           <BrandMarquee />
         </div>
       </section>
 
-      <section id="contact-home" className="py-20 md:py-28 section-modern" style={{backgroundColor: 'rgb(236 253 245)'}}>
+      <section id="contact-home" className="py-20 md:py-28 section-modern" style={{backgroundColor: '#285F65'}}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl text-primary mb-4">
+            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl text-[#FFFFFF] mb-4">
               {th.contact.title}
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">{th.contact.intro}</p>
+            <p className="text-lg text-[#FFFFFF] mb-8">{th.contact.intro}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-            <Card className="modern-card hover:shadow-lg transition-all duration-300">
+            <Card className="hover:shadow-lg transition-all duration-300" style={{backgroundColor: '#FFFFFF'}}>
               <CardHeader>
                 <div className="text-center">
-                  <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <CardTitle className="text-foreground font-semibold">{th.contact.locations.coBogota.title}</CardTitle>
+                  <MapPin className="h-8 w-8 mx-auto mb-2" style={{color: '#285F65'}} />
+                  <CardTitle className="font-semibold" style={{color: '#1F2937'}}>{th.contact.locations.coBogota.title}</CardTitle>
+                  <p className="text-sm mt-1" style={{color: '#475569'}}>{th.contact.locations.coBogota.subtitle}</p>
                 </div>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground leading-relaxed">{th.contact.locations.coBogota.address}</p>
-              </CardContent>
             </Card>
-            <Card className="modern-card hover:shadow-lg transition-all duration-300">
+            <Card className="hover:shadow-lg transition-all duration-300" style={{backgroundColor: '#FFFFFF'}}>
               <CardHeader>
                 <div className="text-center">
-                  <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <CardTitle className="text-foreground font-semibold">{th.contact.locations.mx.title}</CardTitle>
+                  <MapPin className="h-8 w-8 mx-auto mb-2" style={{color: '#285F65'}} />
+                  <CardTitle className="font-semibold" style={{color: '#1F2937'}}>{th.contact.locations.mx.title}</CardTitle>
+                  <p className="text-sm mt-1" style={{color: '#475569'}}>{th.contact.locations.mx.subtitle}</p>
                 </div>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground leading-relaxed">{th.contact.locations.mx.address}</p>
-              </CardContent>
             </Card>
-            <Card className="modern-card hover:shadow-lg transition-all duration-300">
+            <Card className="hover:shadow-lg transition-all duration-300" style={{backgroundColor: '#FFFFFF'}}>
               <CardHeader>
                 <div className="text-center">
-                  <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <CardTitle className="text-foreground font-semibold">{th.contact.locations.usaOrlando.title}</CardTitle>
+                  <MapPin className="h-8 w-8 mx-auto mb-2" style={{color: '#285F65'}} />
+                  <CardTitle className="font-semibold" style={{color: '#1F2937'}}>{th.contact.locations.usaOrlando.title}</CardTitle>
+                  <p className="text-sm mt-1" style={{color: '#475569'}}>{th.contact.locations.usaOrlando.subtitle}</p>
                 </div>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground leading-relaxed">{th.contact.locations.usaOrlando.address}</p>
-              </CardContent>
             </Card>
           </div>
           <div className="text-center">

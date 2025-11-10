@@ -33,8 +33,8 @@ export default function BrandMarquee() {
   const items = React.useMemo(() => [...logos, ...logos], []);
   return (
     <div className="relative w-full overflow-hidden">
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-secondary/30 to-transparent" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-secondary/30 to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-background" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-background" />
       <div className="flex animate-marquee gap-10 will-change-transform items-center" aria-hidden>
         {items.map((img, idx) => (
           <div key={idx} className="flex h-24 min-w-[220px] items-center justify-center rounded-md bg-muted px-6 py-3 border">

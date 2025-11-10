@@ -1,11 +1,11 @@
 export const home = {
   hero: {
-        main: 'Instituto Mex - Col - Usa',
+        main: 'Instituto Mex - Col - USA',
         sub: 'Educación continua en medicina estética.',
       },
       onlineTraining: {
         title: 'Formación en línea',
-        intro: 'Te invitamos a ser parte de esta experiencia única de aprendizaje, pensada para brindarte herramientas prácticas y aplicables de inmediato. Conéctate desde cualquier lugar y accede a contenidos exclusivos preparados por expertos.',
+        intro: 'Participa en una experiencia formativa diseñada para fortalecer tus competencias profesionales. Accede desde cualquier lugar a contenidos exclusivos creados por especialistas en medicina estética.',
         viewRecorded: 'Ver cursos Grabados',
       },
       featuredPrograms: {
@@ -86,12 +86,19 @@ export const home = {
         intro: 'Estamos en 3 países para atenderte',
         viewLocations: 'Ver todas nuestras sedes',
         locations: {
+          coBogota: {
+            title: 'Colombia',
+            subtitle: 'Bogotá',
+            address: 'Carrera 4 Este #14-04, Segundo piso, Sector La Esmeralda, Tocancipá, Cundinamarca',
+          },
           mx: {
-            title: 'Ciudad de México',
+            title: 'México',
+            subtitle: 'Ciudad de México',
             address: 'Av. Uno #18, Col. San Pedro de los Pinos, Benito Juárez, 03800',
           },
           usaOrlando: {
-            title: 'Orlando - Oficinas administrativas',
+            title: 'Estados Unidos',
+            subtitle: 'Los Ángeles – Houston',
             address: '2180 Central Florida Parkway, Suite A2, Orlando, FL 32837',
           },
           usaHouston: {
@@ -99,10 +106,6 @@ export const home = {
             address: '2307 S Texas 6, Houston, TX 77077',
           },
           usaPresence: 'Presencia: Los Angeles y Miami',
-          coBogota: {
-            title: 'Bogotá - Oficina administrativa',
-            address: 'Carrera 4 Este #14-04, Segundo piso, Sector La Esmeralda, Tocancipá, Cundinamarca',
-          },
         },
         followUs: {
           title: 'Síguenos',

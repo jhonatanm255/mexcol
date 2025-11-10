@@ -41,7 +41,7 @@ export default function CongressPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40"></div>
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10 h-full flex items-center justify-center">
           <div className="max-w-4xl mx-auto text-center text-white">
@@ -68,7 +68,7 @@ export default function CongressPage() {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+              <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6 text-foreground">
                 {t.title}
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
@@ -116,10 +116,10 @@ export default function CongressPage() {
       </section>
 
       {/* Presentations Section */}
-      <section className="py-20 md:py-28 section-modern gradient-bg">
+      <section className="py-20 md:py-28 section-modern">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4 text-foreground">
               {t.presentations}
             </h2>
           </div>
@@ -193,10 +193,10 @@ export default function CongressPage() {
       </section>
 
       {/* Raffle Section */}
-      <section className="py-20 md:py-28 section-modern gradient-bg">
+      <section className="py-20 md:py-28 section-modern">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4 text-foreground">
               {t.raffle}
             </h2>
           </div>
@@ -220,7 +220,7 @@ export default function CongressPage() {
       <section className="py-20 md:py-28 section-modern">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4 text-foreground">
               {t.preCongress}
             </h2>
           </div>
@@ -245,10 +245,10 @@ export default function CongressPage() {
       </section>
 
       {/* Location Section */}
-      <section className="py-20 md:py-28 section-modern gradient-bg">
+      <section className="py-20 md:py-28 section-modern">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4 text-foreground">
               {t.location}
             </h2>
           </div>
@@ -281,7 +281,7 @@ export default function CongressPage() {
       <section className="py-20 md:py-28 section-modern">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4 text-foreground">
               {t.tourism}
             </h2>
           </div>

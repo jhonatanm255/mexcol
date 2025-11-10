@@ -34,7 +34,7 @@ export default function WhatsAppFloatButton() {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+      className="fixed bottom-6 right-6 z-50 flex items-center gap-0 sm:gap-2 bg-[#25D366] hover:bg-[#20BA5A] text-white px-1 sm:px-1 sm:pr-2 py-1 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
       aria-label={language === 'es' ? 'Contáctanos por WhatsApp' : 'Contact us on WhatsApp'}
     >
       <div className="flex items-center justify-center w-10 h-10 bg-white rounded-full group-hover:scale-110 transition-transform">

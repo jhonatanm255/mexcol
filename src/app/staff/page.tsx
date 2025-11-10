@@ -1,15 +1,25 @@
 "use client";
 
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/hooks/use-language";
+import hero from "@/assets/img-heros/hero-directores.png";
+import DirectoraImage from "@/assets/img-ponentes/Directora.png";
+import RamosImage from "@/assets/img-ponentes/DR ramos.png";
+import AldoImage from "@/assets/img-ponentes/DR aldo.png";
+import BravoImage from "@/assets/img-ponentes/DR bravo.png";
+import HerreraImage from "@/assets/img-ponentes/DR juan herrera.png";
+import GenerImage from "@/assets/img-ponentes/Dr gener.png";
+import AlejandroBravoImage from "@/assets/img-ponentes/Dr Alejandro Bravo.png";
+import CarolinaImage from "@/assets/img-ponentes/DR carolina.png";
+import LogoUSAVerde from "@/assets/Logo-USA-Blanco.png";
 
 type Lang = "es" | "en";
 
 type Person = {
   name: string;
   role: string;
-  photo: string;
+  photo: string | StaticImageData;
   bio: string;
 };
 
@@ -36,13 +46,13 @@ export default function StaffPage() {
     es: {
       name: "Jenny Aragon",
       role: "Directora General",
-      photo: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop",
+      photo: DirectoraImage,
       bio: "", // Bio is now rendered inline in the component
     },
     en: {
       name: "Jenny Aragon",
       role: "General Director",
-      photo: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop",
+      photo: DirectoraImage,
       bio: "", // Bio is now rendered inline in the component
     },
   };
@@ -51,15 +61,25 @@ export default function StaffPage() {
     es: {
       name: "Dr. Carlos Alberto Ramos Corena",
       role: "Director Médico",
-      photo: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=1200&auto=format&fit=crop",
+      photo: RamosImage,
       bio: "", // Bio is now rendered inline in the component
     },
     en: {
       name: "Dr. Carlos Alberto Ramos Corena",
       role: "Medical Director",
-      photo: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=1200&auto=format&fit=crop",
+      photo: RamosImage,
       bio: "", // Bio is now rendered inline in the component
     },
+  };
+
+  const medicalDirectorLead: Record<Lang, string> = {
+    es: "Médico y cirujano egresado de la Universidad Metropolitana de Barranquilla, Colombia.",
+    en: "Medical Doctor graduated from Universidad Metropolitana de Barranquilla, Colombia.",
+  };
+
+  const medicalDirectorBio: Record<Lang, string> = {
+    es: `Cuenta con <strong>especialidad en Cirugía Plástica y Estética</strong> por el <strong>Centro Universitario Redentor de Brasil</strong>.<br /><br />Ha sido <strong>condecorado por el Congreso de la República de Colombia</strong> por su destacada <strong>trayectoria, integridad y ética profesional</strong>.<br /><br />Reconocido internacionalmente en <strong>Europa, Norteamérica y Latinoamérica</strong>, el Dr. Ramos es conocido por su <strong>enfoque innovador y su compromiso con la excelencia</strong>, lo que le ha valido el reconocimiento de sus pacientes y colegas como <strong>“El cirujano de las Barbies”.</strong><br /><br />Actualmente se desempeña como <strong>Director Médico de las sedes México y Colombia del INSTITUTO MEX-COL-USA</strong>, institución referente en <strong>formación médica estética, belleza y bienestar holístico</strong>, reconocida por su <strong>alto nivel académico, calidad de ponentes y alianzas con los mejores laboratorios del mundo</strong>.`,
+    en: `He holds a <strong>specialization in Plastic and Aesthetic Surgery</strong> from the <strong>Centro Universitario Redentor in Brazil</strong>.<br /><br />He has been <strong>honored by the Congress of the Republic of Colombia</strong> in recognition of his <strong>outstanding career, integrity, and professional ethics</strong>.<br /><br />Internationally recognized across <strong>Europe, North America, and Latin America</strong>, Dr. Ramos is known for his <strong>innovative approach and commitment to excellence</strong>, earning him the distinction among patients and colleagues as <strong>“The Barbie Surgeon.”</strong><br /><br />He currently serves as <strong>Medical Director for the Mexico and Colombia branches of the INSTITUTO MEX-COL-USA</strong>, an institution renowned for its <strong>excellence in medical-aesthetic education, beauty, and holistic wellness</strong>, and distinguished by its <strong>high academic standards, exceptional faculty, and partnerships with leading laboratories worldwide</strong>.`,
   };
 
   const speakers: Record<Lang, Person[]> = {
@@ -67,99 +87,128 @@ export default function StaffPage() {
       {
         name: "Dr. Aldo Rubén Rendón Gutiérrez",
         role: "Médico Cirujano · Estética y Longevidad",
-        photo: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=1200&auto=format&fit=crop",
+        photo: AldoImage,
         bio:
-          "Médico Cirujano egresado de la Universidad Nacional Autónoma de Mexico UNAM Especialista en Estética y Longevidad egresado del Instituto de Estudios Superiores en Medicina Director en Laser & Body Clinic en la ciudad de Querétaro Speaker nacional para Allergan Medical Institute y Allergan Aesthetics Speaker y docente en Instituto Mexcol de la Ciudad de México Miembro del consenso mexicano para el manejo de eventos adversos",
+          "Médico Cirujano egresado de la Universidad Nacional Autónoma de Mexico UNAM Especialista en Estética y Longevidad egresado del Instituto de Estudios Superiores en Medicina.\n\nDirector en Laser & Body Clinic en la ciudad de Querétaro y speaker nacional para Allergan Medical Institute y Allergan Aesthetics.\n\nSpeaker y docente en Instituto Mexcol de la Ciudad de México, miembro del consenso mexicano para el manejo de eventos adversos.",
       },
       {
         name: "Dra. Carolina Carvajal",
         role: "Médico Cirujano · Estética Facial",
-        photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop",
+        photo: CarolinaImage,
         bio:
-          "Médico Cirujano de la Universidad Central del Valle. Especialidad en estética del rostro de la Universidad COMPLUTENSE en Madrid España. Enfocada en la atención integral del paciente, la realización, prevención y el control de efectos adversos de procedimientos estéticos no quirúrgicos. Actualmente cuenta con más de 6 años de experiencia al lado de los mejores cirujanos plásticos de Colombia en ciudades como Cali, Bogotá y Medellín.",
+          "Médico Cirujano de la Universidad Central del Valle.\n\nEspecialista en estética del rostro por la Universidad COMPLUTENSE en Madrid, España.\n\nEnfocada en la atención integral del paciente, la prevención y el control de efectos adversos de procedimientos estéticos no quirúrgicos, con más de 6 años de experiencia junto a los mejores cirujanos plásticos de Colombia en ciudades como Cali, Bogotá y Medellín.",
       },
       {
         name: "Dr. Martín A. Bravo González",
         role: "Médico Cirujano · Inmunogenética y Biología Molecular",
-        photo: "https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=1200&auto=format&fit=crop",
+        photo: BravoImage,
         bio:
-          "Médico Cirujano con experiencia en medicina interna y medicina crítica. Maestría en ciencias e inmunogenética y Biología Molecular. Profesor invitado a Universidad Del Conde desde 2020. Investigador clínico con 12 publicaciones nacionales y 9 internacionales y ganador a 3 premios a la investigación clínica. Ponente internacional, asesor y docente, ha dictado más de 450 cursos de capacitación y al rededor de 600 pláticas científicas en Congresos Internacionales, nacionales y en foros dentro de la comunidad médica. 33 años de experiencia en la industria farmacéutica (Director médico de 13 laboratorios farmacéuticos). Certificación en Medicina Regenerativa y uso de Células Madre por el International Society for Stem Cell Application (ISSCA).",
+          "Médico Cirujano con experiencia en medicina interna y medicina crítica, con maestría en ciencias e inmunogenética y Biología Molecular.\n\nProfesor invitado a Universidad Del Conde desde 2020, investigador clínico con 12 publicaciones nacionales y 9 internacionales y ganador de 3 premios a la investigación clínica.\n\nPonente internacional, asesor y docente, ha dictado más de 450 cursos de capacitación y alrededor de 600 pláticas científicas en congresos internacionales, nacionales y foros médicos. Cuenta con 33 años de experiencia en la industria farmacéutica (director médico de 13 laboratorios) y certificación en Medicina Regenerativa y uso de Células Madre por el International Society for Stem Cell Application (ISSCA).",
+      },
+      {
+        name: "Dr. Alejandro Bravo",
+        role: "Odontólogo · Antropólogo Forense · Experto en Ciencias Forenses",
+        photo: AlejandroBravoImage,
+        bio:
+          "Profesional venezolano con formación en Odontología y Antropología Forense, especializado en el área de las Ciencias Forenses. Cuenta con un diplomado en Identificación Humana y Análisis de Restos Óseos, que respalda su experiencia en la aplicación de métodos científicos para la investigación forense y la identificación humana en contextos legales y académicos.\n\nPosee certificaciones internacionales como Phlebotomy Technician, Phlebotomy Instructor, Medical Assistant Instructor y ECG Instructor, que amplían su perfil en el ámbito clínico y docente.\n\nSu trayectoria combina la práctica forense, la salud y la educación, destacándose por su compromiso con la investigación científica, la formación de nuevos profesionales y la aplicación del conocimiento al servicio de la verdad y la justicia.",
       },
       {
         name: "Dr. Jorge Juan Herrera",
         role: "Médico Cirujano · Cirugía Estética y Docencia",
-        photo: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1200&auto=format&fit=crop",
+        photo: HerreraImage,
         bio:
-          "Médico Cirujano de la Universidad Autónoma de México UNAM. Especialidad Medicina y cirugía estética Universidad Montpellier, Francia. Maestría Cirugía Estética IESM Doctorado en Ciencias Biomédicas UNAM. Doctorado Honoris Causa Gobierno Federal México – UNAM Claustro Nacional. Doctorado Honoris Causa CNHD Francia. Colaborador de protocolos clínicos de regeneración y revitalización cutáneo del Hospital Shriners Docente en la Universidad la Salle, Anáhuac y Facultad de medicina de la UNAM. Speaker en: Allergan Aesthetics",
+          "Médico Cirujano de la Universidad Autónoma de México (UNAM).\n\nEspecialista en Medicina y Cirugía Estética por la Universidad Montpellier, Francia, con maestría en Cirugía Estética (IESM) y Doctorado en Ciencias Biomédicas por la UNAM.\n\nDoctor Honoris Causa por el Gobierno Federal de México – UNAM Claustro Nacional y por el CNHD Francia. Colaborador de protocolos clínicos de regeneración y revitalización cutánea del Hospital Shriners, docente en la Universidad La Salle, Anáhuac y Facultad de Medicina de la UNAM, y speaker en Allergan Aesthetics.",
       },
       {
         name: "Dr. Gener Alejandro Fajardo Ruiz",
         role: "Médico Cirujano · Medicina Estética y Cirugía Plástica",
-        photo: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1200&auto=format&fit=crop",
+        photo: GenerImage,
         bio:
-          "Médico cirujano de la Universidad Nacional de Colombia Especialista con maestría en medicina estética por la Universidad de las Islas Baleares-España. Especialidad en cirugía plástica, estética y reconstructiva de la Universidad de Almeida en Río de Janeiro-Brasil. Actualmente desempeña y lleva a cabo la práctica de su profesión. Participó como jurado en el certamen de belleza Miss Colombia 2021.",
+          "Médico Cirujano de la Universidad Nacional de Colombia, especialista con maestría en medicina estética por la Universidad de las Islas Baleares, España.\n\nEspecialista en cirugía plástica, estética y reconstructiva por la Universidad de Almeida en Río de Janeiro, Brasil.\n\nActualmente ejerce su profesión y participó como jurado en el certamen de belleza Miss Colombia 2021.",
       },
     ],
     en: [
       {
         name: "Dr. Aldo Rubén Rendón Gutiérrez",
-        role: "Surgeon · Aesthetics and Longevity",
-        photo: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?q=80&w=1200&auto=format&fit=crop",
+        role: "Physician and Surgeon · Aesthetic and Longevity Medicine",
+        photo: AldoImage,
         bio:
-          "Surgeon graduated from Universidad Nacional Autónoma de México (UNAM). Specialist in Aesthetics and Longevity from Instituto de Estudios Superiores en Medicina. Director at Laser & Body Clinic in Querétaro. National Speaker for Allergan Medical Institute and Allergan Aesthetics. Lecturer at Instituto MexCol in Mexico City. Member of the Mexican Consensus for Adverse Event Management.",
+          "Physician and Surgeon graduated from Universidad Nacional Autónoma de México (UNAM), with a specialization in Aesthetics and Longevity from Instituto de Estudios Superiores en Medicina.\n\nDirector at Laser & Body Clinic in Querétaro and national speaker for Allergan Medical Institute and Allergan Aesthetics.\n\nLecturer at Instituto MexCol in Mexico City and member of the Mexican Consensus for Adverse Event Management.",
       },
       {
         name: "Dr. Carolina Carvajal",
-        role: "Surgeon · Facial Aesthetics",
-        photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1200&auto=format&fit=crop",
+        role: "Physician and Surgeon · Facial Aesthetics",
+        photo: CarolinaImage,
         bio:
-          "Surgeon graduated from Universidad Central del Valle. Specialized in facial aesthetics at Universidad Complutense, Madrid, Spain. Focused on comprehensive patient care, prevention, and management of adverse effects from non-surgical aesthetic procedures. Over 6 years of experience alongside top plastic surgeons in Colombia, in cities such as Cali, Bogotá, and Medellín.",
+          "Physician and Surgeon graduated from Universidad Central del Valle.\n\nSpecialist in facial aesthetics at Universidad Complutense in Madrid, Spain.\n\nFocused on comprehensive patient care, prevention, and management of adverse effects from non-surgical aesthetic procedures, with over 6 years of experience working alongside leading plastic surgeons in Colombia in cities such as Cali, Bogotá, and Medellín.",
       },
       {
         name: "Dr. Martín A. Bravo González",
-        role: "Surgeon · Immunogenetics & Molecular Biology",
-        photo: "https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=1200&auto=format&fit=crop",
+        role: "Physician and Surgeon · Immunogenetics and Molecular Biology",
+        photo: BravoImage,
         bio:
-          "Surgeon with experience in internal and critical care medicine. Master's in Immunogenetics and Molecular Biology. Guest lecturer at Universidad del Conde since 2020. Clinical researcher with 12 national and 9 international publications, and 3 clinical research awards. International speaker, advisor, and lecturer, delivering over 450 training courses and around 600 scientific talks in international and national congresses and forums within the medical community. 33 years of experience in the pharmaceutical industry (Medical Director of 13 pharmaceutical laboratories). Certified in Regenerative Medicine and Stem Cell Therapy by the International Society for Stem Cell Application (ISSCA).",
+          "Physician and Surgeon with experience in internal and critical care medicine, holding a Master's in Immunogenetics and Molecular Biology.\n\nGuest lecturer at Universidad del Conde since 2020, clinical researcher with 12 national and 9 international publications, and recipient of 3 clinical research awards.\n\nInternational speaker, advisor, and lecturer, delivering over 450 training courses and approximately 600 scientific talks in international and national congresses and medical forums. Brings 33 years of experience in the pharmaceutical industry (Medical Director of 13 pharmaceutical laboratories) and certification in Regenerative Medicine and Stem Cell Therapy from the International Society for Stem Cell Application (ISSCA).",
+      },
+      {
+        name: "Dr. Alejandro Bravo",
+        role: "Dentist · Forensic Anthropologist · Expert in Forensic Sciences",
+        photo: AlejandroBravoImage,
+        bio:
+          "Venezuelan professional with degrees in Dentistry and Forensic Anthropology, specialized in the field of Forensic Sciences. He holds a diploma in Human Identification and Bone Remains Analysis, supporting his experience in applying scientific methods to forensic investigation and human identification within legal and academic contexts.\n\nHe also holds international certifications as a Phlebotomy Technician, Phlebotomy Instructor, Medical Assistant Instructor, and ECG Instructor, enhancing his professional background in both clinical and educational fields.\n\nHis career combines forensic practice, healthcare, and education, standing out for his commitment to scientific research, the training of new professionals, and the application of knowledge in the service of truth and justice.",
       },
       {
         name: "Dr. Jorge Juan Herrera",
-        role: "Surgeon · Aesthetic Surgery & Teaching",
-        photo: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1200&auto=format&fit=crop",
+        role: "Physician and Surgeon · Aesthetic Surgery and Teaching",
+        photo: HerreraImage,
         bio:
-          "Surgeon graduated from Universidad Autónoma de México (UNAM). Specialized in Aesthetic Medicine and Surgery at Université de Montpellier, France. Master's in Aesthetic Surgery, IESM. PhD in Biomedical Sciences, UNAM. Honorary Doctorate, Federal Government of Mexico – UNAM National Faculty. Honorary Doctorate, CNHD France. Collaborator on clinical protocols for skin regeneration and revitalization at Shriners Hospital. Lecturer at Universidad La Salle, Universidad Anáhuac, and the Faculty of Medicine, UNAM. Speaker at Allergan Aesthetics.",
+          "Physician and Surgeon graduated from Universidad Autónoma de México (UNAM).\n\nSpecialist in Aesthetic Medicine and Surgery at Université de Montpellier, France, with a Master's in Aesthetic Surgery (IESM) and a PhD in Biomedical Sciences from UNAM.\n\nHonorary Doctorate recipient from the Federal Government of Mexico – UNAM National Faculty and CNHD France. Collaborator on clinical protocols for skin regeneration and revitalization at Shriners Hospital, lecturer at Universidad La Salle, Universidad Anáhuac, and UNAM's Faculty of Medicine, and speaker at Allergan Aesthetics.",
       },
       {
         name: "Dr. Gener Alejandro Fajardo Ruiz",
-        role: "Surgeon · Aesthetic Medicine & Plastic Surgery",
-        photo: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1200&auto=format&fit=crop",
+        role: "Physician and Surgeon · Aesthetic Medicine and Plastic Surgery",
+        photo: GenerImage,
         bio:
-          "Surgeon graduated from Universidad Nacional de Colombia. Specialist with a Master's in Aesthetic Medicine from Universidad de las Islas Baleares, Spain. Specialized in Plastic, Aesthetic, and Reconstructive Surgery at Universidade de Almeida, Rio de Janeiro, Brazil. Currently practices and performs professional procedures in his field. Served as a judge in the Miss Colombia 2021 beauty pageant.",
+          "Physician and Surgeon graduated from Universidad Nacional de Colombia, with a Master's in Aesthetic Medicine from Universidad de las Islas Baleares, Spain.\n\nSpecialist in Plastic, Aesthetic, and Reconstructive Surgery at Universidade de Almeida in Rio de Janeiro, Brazil.\n\nCurrently practices in his field and served as a judge in the Miss Colombia 2021 beauty pageant.",
       },
     ],
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       {/* <section className="relative h-[calc(100vh-4rem)] overflow-hidden mb-10"> */}
-      <section className="relative py-20 overflow-hidden mb-10">
+      <section
+        className="relative overflow-hidden mb-10"
+        style={{ minHeight: "458.14px" }}
+      >
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop"
+            src={hero}
             alt="Staff hero"
             fill
             className="object-cover"
             priority
+            style={{ objectPosition: "center 15%" }}
           />
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight mb-6">
+        <div className="container mx-auto px-4 relative z-10 h-full flex flex-col">
+          <div className="flex justify-center md:justify-end pt-6 md:pt-10 lg:pt-12">
+            <div className="relative -mr-1 w-24 h-24 md:w-32 md:h-32 lg:w-36 lg:h-36">
+              <Image
+                src={LogoUSAVerde}
+                alt="Instituto MexCol USA Logo"
+                fill
+                className="object-contain drop-shadow-2xl"
+                priority
+              />
+            </div>
+          </div>
+          <div className="mt-auto flex flex-col items-center text-center md:items-start md:text-left text-white gap-3 pb-6 md:pb-12 lg:pb-16 md:pl-12 lg:pl-20">
+            <h1 className="font-headline mt-24 -ml-24 text-4xl md:text-6xl font-bold tracking-tight w-full md:max-w-4xl">
               {heroTitle[lang]}
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 font-medium">
+            <p className="text-base md:text-2xl -ml-24 text-white/90 font-medium md:max-w-2xl">
               {heroSubtitle[lang]}
             </p>
           </div>
@@ -184,17 +233,17 @@ export default function StaffPage() {
         {/* Director General */}
         <div className="w-full lg:max-w-4xl flex">
           <Card className="overflow-hidden w-full">
-            <div className="grid grid-cols-1 sm:grid-cols-3 h-full">
-              <div className="relative h-56 sm:h-full sm:col-span-1">
+            <div className="grid grid-cols-1 sm:grid-cols-5 h-full">
+              <div className="relative h-80 sm:h-full sm:col-span-2">
                 <Image
                   src={directorGeneral[lang].photo}
                   alt={directorGeneral[lang].name}
                   fill
-                  sizes="(max-width: 640px) 100vw, 33vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 45vw, 40vw"
                   className="object-cover"
                 />
               </div>
-              <div className="sm:col-span-2 flex flex-col">
+              <div className="sm:col-span-3 flex flex-col">
                 <CardHeader>
                   <CardTitle className="font-headline">
                     {directorGeneral[lang].name}
@@ -225,17 +274,17 @@ export default function StaffPage() {
         {/* Director Médico */}
         <div className="w-full lg:max-w-4xl flex">
           <Card className="overflow-hidden w-full">
-            <div className="grid grid-cols-1 sm:grid-cols-3 h-full">
-              <div className="relative h-56 sm:h-full sm:col-span-1">
+            <div className="grid grid-cols-1 sm:grid-cols-5 h-full">
+              <div className="relative h-80 sm:h-full sm:col-span-2">
                 <Image
                   src={medicalDirector[lang].photo}
                   alt={medicalDirector[lang].name}
                   fill
-                  sizes="(max-width: 640px) 100vw, 33vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 45vw, 40vw"
                   className="object-cover"
                 />
               </div>
-              <div className="sm:col-span-2 flex flex-col">
+              <div className="sm:col-span-3 flex flex-col">
                 <CardHeader>
                   <CardTitle className="font-headline">
                     {medicalDirector[lang].name}
@@ -243,20 +292,15 @@ export default function StaffPage() {
                   <span className="text-sm text-muted-foreground bg-primary/10 px-3 py-1 rounded-full inline-block w-fit">{medicalDirector[lang].role}</span>
                 </CardHeader>
                 <CardContent className="pt-0 pb-6 flex-1">
-                  <p className="text-sm leading-relaxed whitespace-pre-line">
+                  <div className="text-sm leading-relaxed whitespace-pre-line">
                     <span className="font-semibold text-teal-700 block mb-3">
-                      {lang === "es" 
-                        ? "Médico cirujano de la Universidad Metropolitana de Barranquilla, Colombia."
-                        : "Graduated as a surgeon from Universidad Metropolitana de Barranquilla, Colombia."
-                      }
+                      {medicalDirectorLead[lang]}
                     </span>
-                    <span className="text-muted-foreground">
-                      {lang === "es"
-                        ? "Especialista en cirugía plástica y estética por el Centro Universitario Redentor de Brasil. Reconocido internacionalmente en Europa, Norteamérica y Latinoamérica, conocido como 'El cirujano de las Barbies'. Director Médico sede México en Instituto Mex-Col-USA Profesionales en Medicina Estética, Belleza y Holística."
-                        : 'Specialized in Plastic and Aesthetic Surgery at Centro Universitario Redentor, Brazil. Recognized internationally in Europe, North America, and Latin America, known as "The Barbie Surgeon," attending high-profile personalities. Medical Director at the Mexico branch of Instituto Mex-Col-Usa Professionals in Aesthetic Medicine, Beauty, and Holistic Health.'
-                      }
-                    </span>
-                  </p>
+                    <div
+                      className="text-muted-foreground [&>strong]:font-semibold [&>strong]:text-foreground"
+                      dangerouslySetInnerHTML={{ __html: medicalDirectorBio[lang] }}
+                    />
+                  </div>
                 </CardContent>
               </div>
             </div>
@@ -273,7 +317,7 @@ export default function StaffPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {speakers[lang].map((s) => (
             <Card key={s.name} className="overflow-hidden">
-              <div className="relative h-48 w-full">
+              <div className="relative h-80 sm:h-56 md:h-64 w-full">
                 <Image
                   src={s.photo}
                   alt={s.name}

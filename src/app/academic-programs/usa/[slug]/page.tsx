@@ -53,7 +53,7 @@ export default function CourseDetailPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
@@ -370,7 +370,7 @@ export default function CourseDetailPage() {
 
             {/* Testimonial Video */}
             {(courseDetails as any).testimonial && (
-              <Card className="border-primary/20 overflow-hidden bg-gradient-to-br from-primary/5 to-background">
+              <Card className="border-primary/20 overflow-hidden bg-background">
                 <CardHeader className="text-center border-b bg-primary/10">
                   <div className="flex items-center justify-center gap-2 mb-2">
                     <Play className="h-6 w-6 text-primary animate-pulse" />

@@ -14,7 +14,7 @@ export default function AboutPage() {
   const t = translations[language].about;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden mb-16">
         <div className="absolute inset-0">

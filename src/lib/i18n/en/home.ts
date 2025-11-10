@@ -86,12 +86,19 @@ export const home = {
         intro: 'We are present in 3 countries to assist you',
         viewLocations: 'View All Locations',
         locations: {
+          coBogota: {
+            title: 'Colombia',
+            subtitle: 'Bogotá',
+            address: 'Carrera 4 Este #14-04, 2nd Floor, Sector La Esmeralda, Tocancipá, Cundinamarca',
+          },
           mx: {
-            title: 'Mexico City',
+            title: 'Mexico',
+            subtitle: 'Mexico City',
             address: 'Av. Uno #18, Colonia San Pedro de los Pinos, Benito Juárez, 03800',
           },
           usaOrlando: {
-            title: 'Orlando - Admin Office',
+            title: 'United States',
+            subtitle: 'Los Angeles – Houston',
             address: '2180 Central Florida Parkway, Suite A2, Orlando, FL 32837',
           },
           usaHouston: {
@@ -99,10 +106,6 @@ export const home = {
             address: '2307 S Texas 6, Houston, TX 77077',
           },
           usaPresence: 'Presence: Los Angeles and Miami',
-          coBogota: {
-            title: 'Bogotá - Admin Office',
-            address: 'Carrera 4 Este #14-04, 2nd Floor, Sector La Esmeralda, Tocancipá, Cundinamarca',
-          },
         },
         followUs: {
           title: 'Follow Us',

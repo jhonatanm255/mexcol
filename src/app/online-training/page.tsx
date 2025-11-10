@@ -25,7 +25,7 @@ export default function OnlineTrainingPage() {
   }));
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden mb-10">
         <div className="absolute inset-0">
