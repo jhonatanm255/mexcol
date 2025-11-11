@@ -13,7 +13,7 @@ export const home = {
         cards: [
           {
             country: 'USA',
-            course: 'Master Class – 4 Techniques: Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads',
+            course: 'Master Class – 4 Techniquess: Botulinum Toxin / Hyaluronic Acid / Biostimulators / PDO Threads',
             description: 'Learn advanced facial harmonization techniques with professional results through hands-on training.',
             image: 'https://picsum.photos/seed/usa/600/400',
           },

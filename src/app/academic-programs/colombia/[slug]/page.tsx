@@ -424,8 +424,11 @@ export default function CourseDetailPage() {
                     {(courseDetails as any).testimonial.subtitle}
                   </p>
                 </CardHeader>
-                <CardContent className="p-6 space-y-4">
-                  <div className="relative w-full overflow-hidden rounded-lg shadow-xl" style={{ paddingBottom: '56.25%' }}>
+                <CardContent className="p-6 space-y-6">
+                  {/* <div
+                    className="relative w-full overflow-hidden rounded-lg shadow-xl"
+                    style={{ paddingBottom: "56.25%" }}
+                  >
                     <iframe
                       className="absolute top-0 left-0 w-full h-full"
                       src={`https://www.youtube.com/embed/${(courseDetails as any).testimonial.videoId}`}
@@ -434,17 +437,51 @@ export default function CourseDetailPage() {
                       allowFullScreen
                       style={{ border: 0 }}
                     />
-                  </div>
+                  </div> */}
+
+                  {slug === "master-class-facial-modeling" && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {[
+                        "/video-testimonios/testimonios-armonizacion-col/armonizacion facial col.MP4",
+                        "/video-testimonios/testimonios-armonizacion-col/armonizacion facial col 2.MP4",
+                        "/video-testimonios/testimonios-armonizacion-col/armonizacion col 3.MP4",
+                        "/video-testimonios/testimonios-armonizacion-col/armonizacio - colombia.MP4",
+                      ].map((videoSrc, idx) => (
+                        <div
+                          key={idx}
+                          className="overflow-hidden rounded-lg border border-primary/10 shadow"
+                        >
+                          <video
+                            controls
+                            preload="metadata"
+                            className="w-full h-full object-cover bg-black"
+                          >
+                            <source src={videoSrc} type="video/mp4" />
+                            {language === "es"
+                              ? "Tu navegador no soporta la reproducción de video."
+                              : "Your browser does not support video playback."}
+                          </video>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
                   <div className="flex items-center justify-center gap-2 pt-4">
                     <div className="flex gap-1">
                       {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                        <svg
+                          key={i}
+                          className="w-5 h-5 text-yellow-400 fill-current"
+                          viewBox="0 0 20 20"
+                        >
                           <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                         </svg>
                       ))}
                     </div>
                     <span className="text-sm font-semibold text-muted-foreground">
-                      {language === 'es' ? 'Testimonio Verificado' : 'Verified Testimonial'}
+                      {language === "es"
+                        ? "Testimonio Verificado"
+                        : "Verified Testimonial"}
                     </span>
                   </div>
                 </CardContent>

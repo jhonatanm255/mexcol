@@ -418,8 +418,11 @@ export default function CourseDetailPage() {
                     {(courseDetails as any).testimonial.subtitle}
                   </p>
                 </CardHeader>
-                <CardContent className="p-6 space-y-4">
-                  <div className="relative w-full overflow-hidden rounded-lg shadow-xl" style={{ paddingBottom: '56.25%' }}>
+                <CardContent className="p-6 space-y-6">
+                  <div
+                    className="relative w-full overflow-hidden rounded-lg shadow-xl"
+                    style={{ paddingBottom: "56.25%" }}
+                  >
                     <iframe
                       className="absolute top-0 left-0 w-full h-full"
                       src={`https://www.youtube.com/embed/${(courseDetails as any).testimonial.videoId}`}
@@ -429,17 +432,88 @@ export default function CourseDetailPage() {
                       style={{ border: 0 }}
                     />
                   </div>
+
+                  {slug === "facial-harmonization-course" && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {[
+                        "/video-testimonios/testimonios-armonizacion-mx/armonizacion facial mx 2.MP4",
+                        "/video-testimonios/testimonios-armonizacion-mx/armonizacion facial mx 3.MP4",
+                        "/video-testimonios/testimonios-armonizacion-mx/armonizacion facial mx5.MP4",
+                        "/video-testimonios/testimonios-armonizacion-mx/armonizacion facial mx 6.MP4",
+                      ].map((videoSrc, idx) => (
+                        <div
+                          key={idx}
+                          className="overflow-hidden rounded-lg border border-primary/10 shadow"
+                        >
+                          <video
+                            controls
+                            preload="metadata"
+                            className="w-full h-full object-cover bg-black"
+                          >
+                            <source src={videoSrc} type="video/mp4" />
+                            {language === "es"
+                              ? "Tu navegador no soporta la reproducción de video."
+                              : "Your browser does not support video playback."}
+                          </video>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
                   <div className="flex items-center justify-center gap-2 pt-4">
                     <div className="flex gap-1">
                       {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                        <svg
+                          key={i}
+                          className="w-5 h-5 text-yellow-400 fill-current"
+                          viewBox="0 0 20 20"
+                        >
                           <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                         </svg>
                       ))}
                     </div>
                     <span className="text-sm font-semibold text-muted-foreground">
-                      {language === 'es' ? 'Testimonio Verificado' : 'Verified Testimonial'}
+                      {language === "es"
+                        ? "Testimonio Verificado"
+                        : "Verified Testimonial"}
                     </span>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
+            {slug === "intravenous-therapy-mexico" && (
+              <Card className="border-primary/20 overflow-hidden bg-background">
+                <CardHeader className="text-center border-b bg-primary/10">
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    <Play className="h-6 w-6 text-primary animate-pulse" />
+                    <CardTitle className="text-2xl">
+                      {language === "es"
+                        ? "Testimonio de Sueroterapia"
+                        : "Suerotherapy Testimonial"}
+                    </CardTitle>
+                  </div>
+                  <p className="text-sm font-semibold text-primary">
+                    {language === "es"
+                      ? "Experiencia real de nuestros alumnos"
+                      : "Real student experience"}
+                  </p>
+                </CardHeader>
+                <CardContent className="p-6">
+                  <div className="overflow-hidden rounded-lg border border-primary/10 shadow">
+                    <video
+                      controls
+                      preload="metadata"
+                      className="w-full h-full md:w-1/2 md:h-1/2 mx-auto object-cover bg-black"
+                    >
+                      <source
+                        src="/video-testimonios/testimonios-suero-mx/suero mx.MP4"
+                        type="video/mp4"
+                      />
+                      {language === "es"
+                        ? "Tu navegador no soporta la reproducción de video."
+                        : "Your browser does not support video playback."}
+                    </video>
                   </div>
                 </CardContent>
               </Card>
