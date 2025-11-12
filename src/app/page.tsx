@@ -59,7 +59,10 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      <section className="relative h-[70vh] min-h-[600px] w-full section-modern">
+      <section
+        className="relative w-full section-modern"
+        style={{ height: "458.14px" }}
+      >
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image 
@@ -85,7 +88,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="mt-auto flex flex-col items-center text-center md:items-start md:text-left text-white gap-4 pb-8 md:pb-14 lg:pb-16 md:pl-12 lg:pl-20">
+          <div className="mt-auto flex flex-col items-center text-center md:items-start md:text-left text-white gap-3 pb-6 md:pb-12 lg:pb-16 md:ml-5">
             <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight drop-shadow-lg">
               {th.hero.main}
             </h1>

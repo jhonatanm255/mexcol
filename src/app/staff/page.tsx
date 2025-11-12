@@ -12,7 +12,7 @@ import HerreraImage from "@/assets/img-ponentes/DR juan herrera.png";
 import GenerImage from "@/assets/img-ponentes/Dr gener.png";
 import AlejandroBravoImage from "@/assets/img-ponentes/Dr Alejandro Bravo.png";
 import CarolinaImage from "@/assets/img-ponentes/DR carolina.png";
-import LogoUSAVerde from "@/assets/Logo-USA-Blanco.png";
+import LogoUSAVerde from "@/assets/Logo-USA-gris.png";
 
 type Lang = "es" | "en";
 
@@ -179,7 +179,7 @@ export default function StaffPage() {
       {/* <section className="relative h-[calc(100vh-4rem)] overflow-hidden mb-10"> */}
       <section
         className="relative overflow-hidden mb-10"
-        style={{ minHeight: "458.14px" }}
+        style={{ height: "458.14px" }}
       >
         <div className="absolute inset-0">
           <Image
@@ -190,11 +190,11 @@ export default function StaffPage() {
             priority
             style={{ objectPosition: "center 15%" }}
           />
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col">
           <div className="flex justify-center md:justify-end pt-6 md:pt-10 lg:pt-12">
-            <div className="relative -mr-1 w-24 h-24 md:w-32 md:h-32 lg:w-36 lg:h-36">
+            <div className="relative mr-8 w-24 h-24 md:w-32 md:h-32 lg:w-36 lg:h-36">
               <Image
                 src={LogoUSAVerde}
                 alt="Instituto MexCol USA Logo"
@@ -204,11 +204,11 @@ export default function StaffPage() {
               />
             </div>
           </div>
-          <div className="mt-auto flex flex-col items-center text-center md:items-start md:text-left text-white gap-3 pb-6 md:pb-12 lg:pb-16 md:pl-12 lg:pl-20">
-            <h1 className="font-headline mt-24 -ml-24 text-4xl md:text-6xl font-bold tracking-tight w-full md:max-w-4xl">
+          <div className="mt-auto flex flex-col items-center text-center md:items-start md:text-left text-white gap-3 pb-6 md:pb-12 lg:pb-16 md:ml-5">
+            <h1 className="font-headline mt-24 text-4xl md:text-6xl font-bold tracking-tight w-full md:max-w-4xl">
               {heroTitle[lang]}
             </h1>
-            <p className="text-base md:text-2xl -ml-24 text-white/90 font-medium md:max-w-2xl">
+            <p className="text-base md:text-2xl text-white/90 font-medium md:max-w-2xl">
               {heroSubtitle[lang]}
             </p>
           </div>

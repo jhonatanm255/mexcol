@@ -61,7 +61,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section
         className="relative overflow-hidden mb-10"
-        style={{ minHeight: '458.14px' }}
+        style={{ height: "458.14px" }}
       >
         <div className="absolute inset-0">
           <Image
@@ -85,13 +85,15 @@ export default function ContactPage() {
               />
             </div>
           </div>
-          <div className="mt-auto flex flex-col items-center text-center md:items-start md:text-left text-white gap-4 pb-8 md:pb-14 lg:pb-16 md:pl-12 lg:pl-20">
-            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight">
-              {t.heroTitle}
-            </h1>
-            <p className="text-base md:text-2xl text-white/90 font-medium md:max-w-3xl">
-              {t.subtitle}
-            </p>
+          <div className="mt-auto flex flex-col items-center text-center md:items-start md:text-left text-white gap-3 pb-6 md:pb-12 lg:pb-16 md:ml-5">
+            <div className="flex flex-col gap-3 w-full md:max-w-3xl">
+              <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight">
+                {t.heroTitle}
+              </h1>
+              <p className="text-base md:text-2xl text-white/90 font-medium">
+                {t.subtitle}
+              </p>
+            </div>
           </div>
         </div>
       </section>

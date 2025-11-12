@@ -30,6 +30,7 @@ import { translations } from '@/lib/i18n';
 import { formatText } from '@/lib/utils/text-formatting';
 import ProductsMarquee from '@/components/shared/ProductsMarquee';
 import LogoUSAVerde from '@/assets/Logo-USA-Blanco.png';
+import { useAutoPauseVideos } from '@/hooks/use-auto-pause-videos';
 
 export default function CourseDetailPage() {
   const params = useParams();
@@ -37,6 +38,8 @@ export default function CourseDetailPage() {
   const { language } = useLanguage();
   const t = translations[language].academicPrograms;
   const courseDetails = (t.countries.mexico.courseDetails as any)?.[slug];
+
+  useAutoPauseVideos();
 
   if (!courseDetails) {
     return (
@@ -57,7 +60,7 @@ export default function CourseDetailPage() {
       {/* Hero Section */}
       <section
         className="relative overflow-hidden"
-        style={{ minHeight: '458.14px' }}
+        style={{ height: "458.14px" }}
       >
         <div className="absolute inset-0">
           <Image
@@ -91,17 +94,19 @@ export default function CourseDetailPage() {
               />
             </div>
           </div>
-          <div className="mt-auto flex flex-col text-white gap-4 pb-8 md:pb-14 lg:pb-16 md:pl-6 lg:pl-12">
+          <div className="mt-auto flex flex-col text-white gap-3 pb-6 md:pb-12 lg:pb-16 ml-5">
             <Badge className="w-fit bg-primary text-primary-foreground">
               <MapPin className="mr-1 h-3 w-3" />
               México
             </Badge>
-            <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight">
-              {courseDetails.title}
-            </h1>
-            <p className="text-base md:text-2xl text-white/90 leading-relaxed md:max-w-3xl">
-              {courseDetails.subtitle}
-            </p>
+            <div className="flex flex-col gap-3 w-full md:max-w-3xl">
+              <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tight">
+                {courseDetails.title}
+              </h1>
+              <p className="text-base md:text-2xl text-white/90 leading-relaxed">
+                {courseDetails.subtitle}
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -119,6 +124,7 @@ export default function CourseDetailPage() {
                   controls
                   preload="metadata"
                   className="w-full h-full object-cover bg-black"
+                  data-autopause-video
                 >
                   <source src="/video-cursos/mex-col-suero.mp4" type="video/mp4" />
                   {language === 'es'
@@ -136,6 +142,7 @@ export default function CourseDetailPage() {
                   controls
                   preload="metadata"
                   className="w-full h-full object-cover bg-black"
+                  data-autopause-video
                 >
                   <source src="/video-cursos/mex-col-master.mp4" type="video/mp4" />
                   {language === 'es'
