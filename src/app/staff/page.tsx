@@ -5,13 +5,21 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/hooks/use-language";
 import hero from "@/assets/img-heros/hero-directores.png";
 import DirectoraImage from "@/assets/img-ponentes/Directora.png";
+import DirectoraMovil from "@/assets/img-ponentes/Directora-movil.png";
 import RamosImage from "@/assets/img-ponentes/DR ramos.png";
+import RamosMovil from "@/assets/img-ponentes/DR ramos-movil.png";
 import AldoImage from "@/assets/img-ponentes/DR aldo.png";
+import AldoMovil from "@/assets/img-ponentes/DR aldo-movil.png";
 import BravoImage from "@/assets/img-ponentes/DR bravo.png";
+import BravoMovil from "@/assets/img-ponentes/DR bravo-movil.png";
 import HerreraImage from "@/assets/img-ponentes/DR juan herrera.png";
+import HerreraMovil from "@/assets/img-ponentes/DR juan herrera-movil.png";
 import GenerImage from "@/assets/img-ponentes/Dr gener.png";
+import GenerMovil from "@/assets/img-ponentes/Dr gener-movil.png";
 import AlejandroBravoImage from "@/assets/img-ponentes/Dr Alejandro Bravo.png";
+import AlejandroBravoMovil from "@/assets/img-ponentes/Dr Alejandro Bravo-movil.png";
 import CarolinaImage from "@/assets/img-ponentes/DR carolina.png";
+import CarolinaMovil from "@/assets/img-ponentes/DR carolina-movil.png";
 import LogoUSAVerde from "@/assets/logo-sello-blanco2.png";
 
 type Lang = "es" | "en";
@@ -236,11 +244,18 @@ export default function StaffPage() {
             <div className="grid grid-cols-1 sm:grid-cols-5 h-full">
               <div className="relative h-80 sm:h-full sm:col-span-2">
                 <Image
+                  src={DirectoraMovil}
+                  alt={directorGeneral[lang].name}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 45vw, 40vw"
+                  className="object-cover block md:hidden"
+                />
+                <Image
                   src={directorGeneral[lang].photo}
                   alt={directorGeneral[lang].name}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 45vw, 40vw"
-                  className="object-cover"
+                  className="object-cover hidden md:block"
                 />
               </div>
               <div className="sm:col-span-3 flex flex-col">
@@ -277,11 +292,18 @@ export default function StaffPage() {
             <div className="grid grid-cols-1 sm:grid-cols-5 h-full">
               <div className="relative h-80 sm:h-full sm:col-span-2">
                 <Image
+                  src={RamosMovil}
+                  alt={medicalDirector[lang].name}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 45vw, 40vw"
+                  className="object-cover block md:hidden"
+                />
+                <Image
                   src={medicalDirector[lang].photo}
                   alt={medicalDirector[lang].name}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 45vw, 40vw"
-                  className="object-cover"
+                  className="object-cover hidden md:block"
                 />
               </div>
               <div className="sm:col-span-3 flex flex-col">
@@ -315,26 +337,48 @@ export default function StaffPage() {
           {lang === "es" ? "Especialistas Médicos" : "Medical Specialists"}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {speakers[lang].map((s) => (
-            <Card key={s.name} className="overflow-hidden">
-              <div className="relative h-80 sm:h-56 md:h-64 w-full">
-                <Image
-                  src={s.photo}
-                  alt={s.name}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="font-headline text-lg">{s.name}</CardTitle>
-                <p className="text-sm text-teal-700">{s.role}</p>
-              </CardHeader>
-              <CardContent className="pt-0 pb-6">
-                <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{s.bio}</p>
-              </CardContent>
-            </Card>
-          ))}
+          {speakers[lang].map((s, index) => {
+            // Mapeo de imágenes móviles según el índice
+            const mobileImages = [
+              AldoMovil,
+              CarolinaMovil,
+              BravoMovil,
+              AlejandroBravoMovil,
+              HerreraMovil,
+              GenerMovil,
+            ];
+            const mobileImage = mobileImages[index];
+            
+            return (
+              <Card key={s.name} className="overflow-hidden">
+                <div className="relative h-80 sm:h-56 md:h-64 w-full">
+                  {mobileImage && (
+                    <Image
+                      src={mobileImage}
+                      alt={`${s.name} móvil`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover block md:hidden"
+                    />
+                  )}
+                  <Image
+                    src={s.photo}
+                    alt={s.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className={`object-cover ${mobileImage ? 'hidden md:block' : ''}`}
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="font-headline text-lg">{s.name}</CardTitle>
+                  <p className="text-sm text-teal-700">{s.role}</p>
+                </CardHeader>
+                <CardContent className="pt-0 pb-6">
+                  <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{s.bio}</p>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
       </section>
       </div>

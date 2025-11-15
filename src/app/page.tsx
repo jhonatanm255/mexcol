@@ -174,18 +174,18 @@ export default function Home() {
             >
               <CarouselContent className="items-center">
                 {Array.from({ length: 11 }, (_, idx) => (
-                  <CarouselItem key={idx} className="p-2 sm:basis-1/2 lg:basis-1/3 flex items-center">
-                    <div className="relative w-full h-full group flex items-center justify-center">
-                      <div className="relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 bg-white w-full flex items-center justify-center">
+                  <CarouselItem key={idx} className="sm:basis-1/2 lg:basis-1/3">
+                    <div className="relative w-full h-full group flex items-center justify-center min-h-[400px] px-2">
+                      <div className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 bg-white w-full flex items-center justify-center">
                         <Image
                           src={`/testimonios-inicio/testimonio-${idx + 1}.png`}
                           alt={`Testimonio ${idx + 1}`}
                           width={600}
                           height={400}
-                          className="w-full h-auto object-contain rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
+                          className="w-full h-auto max-h-[500px] object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                           quality={95}
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </div>
                     </div>
                   </CarouselItem>
