@@ -21,7 +21,7 @@ import BrandMarquee from '@/components/shared/BrandMarquee';
 import { useLanguage } from '@/hooks/use-language';
 import { translations } from '@/lib/i18n';
 import InicioBanner from '@/assets/img-heros/Hero Home.png';
-import LogoUSAVerde from '@/assets/Logo-USA-Blanco.png';
+import LogoUSAVerde from '@/assets/logo-sello-blanco2.png';
 
 const CouponForm = dynamic(() => import('@/components/home/CouponForm'), {
   ssr: false,
@@ -73,12 +73,12 @@ export default function Home() {
             priority
             quality={100}
           />
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         
         <div className="relative z-10 h-full container mx-auto px-4 flex flex-col">
-          <div className="flex justify-center md:justify-end pt-6 md:pt-10 lg:pt-12">
-            <div className="relative w-24 h-24 md:w-32 md:h-32 lg:w-36 lg:h-36">
+          <div className="flex justify-end pt-4 md:pt-8 lg:pt-6 pr-4 md:pr-4 lg:pr-6">
+            <div className="relative w-20 h-20 md:w-32 md:h-32 lg:w-36 lg:h-36">
               <Image
                 src={LogoUSAVerde}
                 alt="Instituto MexCol USA Logo"
@@ -172,29 +172,27 @@ export default function Home() {
               opts={{ align: 'start', loop: true }} 
               plugins={[Autoplay({ delay: 4000 })]}
             >
-              <CarouselContent>
-                {th.testimonials.items.map((it, idx) => (
-                  <CarouselItem key={idx} className="p-2 sm:basis-1/2 lg:basis-1/3">
-                    <Card className="h-full border-0 shadow-sm hover:shadow-md transition-shadow duration-300 relative bg-white">
-                      {/* Quote icon */}
-                      <Quote className="absolute top-4 right-4 h-8 w-8 text-primary/20" />
-                      
-                      <CardHeader className="pb-3">
-                        <div className="flex items-center gap-1 mb-2">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                          ))}
-                        </div>
-                        <CardTitle className="font-headline text-base text-foreground font-semibold">{it.name} · {it.location}</CardTitle>
-                        <CardDescription className="text-xs font-medium text-primary">{it.program}</CardDescription>
-                      </CardHeader>
-                      <CardContent className="pt-0">
-                        <p className="text-sm leading-relaxed text-muted-foreground italic">{it.text}</p>
-                      </CardContent>
-                    </Card>
+              <CarouselContent className="items-center">
+                {Array.from({ length: 11 }, (_, idx) => (
+                  <CarouselItem key={idx} className="p-2 sm:basis-1/2 lg:basis-1/3 flex items-center">
+                    <div className="relative w-full h-full group flex items-center justify-center">
+                      <div className="relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 bg-white w-full flex items-center justify-center">
+                        <Image
+                          src={`/testimonios-inicio/testimonio-${idx + 1}.png`}
+                          alt={`Testimonio ${idx + 1}`}
+                          width={600}
+                          height={400}
+                          className="w-full h-auto object-contain rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
+                          quality={95}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                      </div>
+                    </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
+              <CarouselPrevious className="hidden md:flex -left-12 bg-white border-2 border-primary/20 hover:border-primary/40 text-primary hover:bg-primary/5" />
+              <CarouselNext className="hidden md:flex -right-12 bg-white border-2 border-primary/20 hover:border-primary/40 text-primary hover:bg-primary/5" />
             </Carousel>
             <div className="mt-8 text-center mb-4">
               <p className="text-lg font-medium text-primary">

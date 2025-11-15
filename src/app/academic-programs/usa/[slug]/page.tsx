@@ -30,7 +30,7 @@ import { useLanguage } from '@/hooks/use-language';
 import { translations } from '@/lib/i18n';
 import { formatText } from '@/lib/utils/text-formatting';
 import ProductsMarquee from '@/components/shared/ProductsMarquee';
-import LogoUSAVerde from '@/assets/Logo-USA-Blanco.png';
+import LogoUSAVerde from '@/assets/logo-sello-blanco2.png';
 import { useAutoPauseVideos } from '@/hooks/use-auto-pause-videos';
 
 export default function CourseDetailPage() {
@@ -71,7 +71,7 @@ export default function CourseDetailPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col">
           <div className="flex items-start justify-between pt-4 md:pt-6">

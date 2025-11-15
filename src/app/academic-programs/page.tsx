@@ -9,7 +9,7 @@ import { useLanguage } from '@/hooks/use-language';
 import { translations } from '@/lib/i18n';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import LogoUSAVerde from '@/assets/Logo-USA-Blanco.png';
+import LogoUSAVerde from '@/assets/logo-sello-blanco2.png';
 
 export default function AcademicProgramsPage() {
   const { language } = useLanguage();
@@ -53,8 +53,8 @@ export default function AcademicProgramsPage() {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col">
-          <div className="flex justify-center md:justify-end pt-6 md:pt-10 lg:pt-12">
-            <div className="relative w-24 h-24 md:w-32 md:h-32 lg:w-36 lg:h-36">
+          <div className="flex justify-end pt-4 md:pt-8 lg:pt-6 pr-4 md:pr-4 lg:pr-6">
+            <div className="relative w-20 h-20 md:w-32 md:h-32 lg:w-36 lg:h-36">
               <Image
                 src={LogoUSAVerde}
                 alt="Instituto MexCol USA Logo"
