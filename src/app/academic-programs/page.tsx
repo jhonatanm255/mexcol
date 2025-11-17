@@ -10,6 +10,7 @@ import { translations } from '@/lib/i18n';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import LogoUSAVerde from '@/assets/logo-sello-blanco2.png';
+import heroimg from '@/assets/img-heros/hero programas academico .png';
 
 export default function AcademicProgramsPage() {
   const { language } = useLanguage();
@@ -44,11 +45,12 @@ export default function AcademicProgramsPage() {
       >
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600&auto=format&fit=crop"
+            src={heroimg}
             alt="Academic Programs hero"
             fill
             className="object-cover"
             priority
+            style={{ objectPosition: 'center 15%' }}
           />
           <div className="absolute inset-0 bg-black/50"></div>
         </div>

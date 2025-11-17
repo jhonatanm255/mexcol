@@ -161,7 +161,7 @@ export default function CourseDetailPage() {
                     <BookOpen className="h-5 w-5 text-primary mt-0.5" />
                     <div>
                       <p className="text-sm font-semibold">{language === 'es' ? 'Formato' : 'Format'}</p>
-                      <p className="text-sm text-muted-foreground">{(courseDetails as any).format}</p>
+                      <p className="text-sm text-[#475569]">{(courseDetails as any).format}</p>
                     </div>
                   </div>
                 )}
@@ -171,7 +171,7 @@ export default function CourseDetailPage() {
                     <Clock className="h-5 w-5 text-primary mt-0.5" />
                     <div>
                       <p className="text-sm font-semibold">{language === 'es' ? 'Duración' : 'Duration'}</p>
-                      <p className="text-sm text-muted-foreground">{courseDetails.duration}</p>
+                      <p className="text-sm text-[#475569]">{courseDetails.duration}</p>
                     </div>
                   </div>
                 )}
@@ -181,7 +181,7 @@ export default function CourseDetailPage() {
                     <Calendar className="h-5 w-5 text-primary mt-0.5" />
                     <div>
                       <p className="text-sm font-semibold">{language === 'es' ? 'Horario' : 'Schedule'}</p>
-                      <p className="text-sm text-muted-foreground">{courseDetails.schedule}</p>
+                      <p className="text-sm text-[#475569]">{courseDetails.schedule}</p>
                     </div>
                   </div>
                 )}
@@ -191,7 +191,7 @@ export default function CourseDetailPage() {
                     <MapPin className="h-5 w-5 text-primary mt-0.5" />
                     <div>
                       <p className="text-sm font-semibold">{language === 'es' ? 'Ubicación' : 'Location'}</p>
-                      <p className="text-sm text-muted-foreground">{courseDetails.location}</p>
+                      <p className="text-sm text-[#475569]">{courseDetails.location}</p>
                     </div>
                   </div>
                 )}
@@ -201,7 +201,7 @@ export default function CourseDetailPage() {
                     <Award className="h-5 w-5 text-primary mt-0.5" />
                     <div>
                       <p className="text-sm font-semibold">{language === 'es' ? 'Certificación' : 'Certification'}</p>
-                      <p className="text-sm text-muted-foreground">{(courseDetails as any).certification}</p>
+                      <p className="text-sm text-[#475569]">{(courseDetails as any).certification}</p>
                     </div>
                   </div>
                 )}
@@ -256,19 +256,19 @@ export default function CourseDetailPage() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="p-4 bg-primary/10 rounded-lg">
-                    <p className="text-2xl font-bold text-primary text-center">
+                    <p className="text-2xl font-bold text-[#1F2937] text-center">
                       {(courseDetails as any).targetAudience.highlighted}
                     </p>
                   </div>
                   <div className="space-y-3">
                     {Array.isArray((courseDetails as any).targetAudience.description) ? (
                       (courseDetails as any).targetAudience.description.map((paragraph: string, idx: number) => (
-                        <p key={idx} className="text-sm text-muted-foreground leading-relaxed">
+                        <p key={idx} className="text-sm text-[#475569] leading-relaxed">
                           {paragraph}
                         </p>
                       ))
                     ) : (
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-[#475569] leading-relaxed">
                         {(courseDetails as any).targetAudience.description}
                       </p>
                     )}
@@ -290,7 +290,7 @@ export default function CourseDetailPage() {
                   <ul className="space-y-3">
                     {courseDetails.objectives.map((objective: string, idx: number) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <span className="text-sm pt-0.5">{objective}</span>
+                        <span className="text-sm text-[#475569] pt-0.5">{objective}</span>
                       </li>
                     ))}
                   </ul>
@@ -310,7 +310,7 @@ export default function CourseDetailPage() {
                 <CardContent className="space-y-4">
                   {courseDetails.curriculum.map((module: any, idx: number) => (
                     <div key={idx} className="border-l-2 border-primary/30 pl-4">
-                      <h4 className="font-semibold mb-2">{module.title.startsWith('**') ? formatText(module.title) : module.title}</h4>
+                      <h4 className="font-semibold text-[#475569] mb-2">{module.title.startsWith('**') ? formatText(module.title) : module.title}</h4>
                       <ul className="space-y-1">
                         {module.topics.map((topic: string, topicIdx: number) => {
                           const previousTopic = topicIdx > 0 ? module.topics[topicIdx - 1] : '';
@@ -318,10 +318,13 @@ export default function CourseDetailPage() {
                           const isNewSection = topic.startsWith('**') && topicIdx > 0;
                           const hasSpacing = hasNewLines || isNewSection;
                           const isLongText = topic.includes('\n') && topic.length > 200;
-                          const showBullet = topicIdx !== 0 && !topic.startsWith('**') && !topic.includes('Master modeling techniques in:') && !topic.includes('Domina técnicas de modelado en:') && !topic.includes('Learn to relax facial muscles to prevent and treat expression lines in:') && !topic.includes('Aprende a relajar los músculos faciales para prevenir y tratar líneas de expresión en:') && !topic.includes('Apply rejuvenation protocols with immediate lifting effect in:') && !topic.includes('Aplica protocolos de rejuvenecimiento con efecto lifting inmediato en:') && !topic.includes('Know the main biostimulators available in the market and their application in:') && !topic.includes('Conoce los principales bioestimuladores disponibles en el mercado y su aplicación en:') && !topic.includes('Learn about the main bio-stimulators available in the market and their application in:') && !topic.includes('Demonstrative Practice') && !topic.includes('Práctica Demostrativa') && !topic.includes('Delivery of Certificates') && !topic.includes('Entrega de Certificados') && !topic.includes('Photographic record') && !topic.includes('Registro fotográfico') && !topic.includes('Final Exam') && !topic.includes('Examen Final') && !topic.includes('Upon passing') && !topic.includes('Al aprobar') && !isLongText;
+                          const isLongParagraph = topic.length > 200 && !topic.includes('\n');
+                          const startsWithNewline = topic.startsWith('\n');
+                          const startsWithNumber = /^\d+\./.test(topic.trim());
+                          const showBullet = topicIdx !== 0 && !topic.startsWith('**') && !topic.includes('Master modeling techniques in:') && !topic.includes('Domina técnicas de modelado en:') && !topic.includes('Learn to relax facial muscles to prevent and treat expression lines in:') && !topic.includes('Aprende a relajar los músculos faciales para prevenir y tratar líneas de expresión en:') && !topic.includes('Apply rejuvenation protocols with immediate lifting effect in:') && !topic.includes('Aplica protocolos de rejuvenecimiento con efecto lifting inmediato en:') && !topic.includes('Know the main biostimulators available in the market and their application in:') && !topic.includes('Conoce los principales bioestimuladores disponibles en el mercado y su aplicación en:') && !topic.includes('Learn about the main bio-stimulators available in the market and their application in:') && !topic.includes('Demonstrative Practice') && !topic.includes('Práctica Demostrativa') && !topic.includes('Delivery of Certificates') && !topic.includes('Entrega de Certificados') && !topic.includes('Photographic record') && !topic.includes('Registro fotográfico') && !topic.includes('Final Exam') && !topic.includes('Examen Final') && !topic.includes('Upon passing') && !topic.includes('Al aprobar') && !isLongText && !isLongParagraph && !startsWithNewline && !startsWithNumber;
                           return (
-                          <li key={topicIdx} className={`text-sm ${isLongText ? 'block' : 'flex items-start gap-2'} ${topicIdx === 0 && !isLongText ? 'text-primary font-semibold' : 'text-muted-foreground'} ${hasSpacing ? '!mt-8' : ''}`}>
-                            {showBullet && <span className="text-primary">•</span>}
+                          <li key={topicIdx} className={`text-sm ${isLongText || isLongParagraph ? 'block' : 'flex items-start gap-2'} ${topicIdx === 0 && !isLongText && !isLongParagraph ? 'text-[#475569] font-semibold' : 'text-[#475569]'} ${hasSpacing ? '!mt-8' : ''} ${startsWithNumber || isLongParagraph ? 'list-none' : ''}`}>
+                            {showBullet && <span className="text-[#475569]">•</span>}
                             <span className={`${topicIdx === 0 && !isLongText ? '' : ''} whitespace-pre-line`}>{formatText(topic)}</span>
                           </li>
                           );
@@ -356,12 +359,12 @@ export default function CourseDetailPage() {
                       return (
                         <li key={idx} className={isBulletItem ? "flex items-start gap-2 text-sm ml-6" : isTitle ? "flex items-start gap-2 text-sm font-semibold" : "flex items-start gap-2 text-sm"}>
                           {isBulletItem && (
-                            <span className="text-primary mt-0.5 flex-shrink-0 font-bold">•</span>
+                            <span className="text-[#475569] mt-0.5 flex-shrink-0 font-bold">•</span>
                           )}
                           {showIcon && (
                             <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
                           )}
-                          <span className={isTitle || isIntroText || isFinalText ? "whitespace-pre-line" : ""}>{formatText(displayText)}</span>
+                          <span className={`text-[#475569] ${isTitle || isIntroText || isFinalText ? "whitespace-pre-line" : ""}`}>{formatText(displayText)}</span>
                         </li>
                       );
                     })}
@@ -382,7 +385,7 @@ export default function CourseDetailPage() {
                 <CardContent>
                   <div className="space-y-3">
                     {(courseDetails as any).accreditations.map((accr: string, idx: number) => (
-                      <div key={idx} className="text-sm whitespace-pre-line">
+                      <div key={idx} className="text-sm text-[#475569] whitespace-pre-line">
                         {formatText(accr)}
                       </div>
                     ))}
@@ -402,7 +405,7 @@ export default function CourseDetailPage() {
                 </CardHeader>
                 <CardContent className="space-y-6 pt-6">
                   {(courseDetails as any).productQuality.description && (
-                    <div className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
+                    <div className="text-sm text-[#475569] leading-relaxed whitespace-pre-line">
                       {formatText((courseDetails as any).productQuality.description)}
                     </div>
                   )}
@@ -427,7 +430,7 @@ export default function CourseDetailPage() {
                       {(courseDetails as any).testimonial.title}
                     </CardTitle>
                   </div>
-                  <p className="text-sm font-semibold text-primary">
+                  <p className="text-sm font-semibold text-[#475569]">
                     {(courseDetails as any).testimonial.subtitle}
                   </p>
                 </CardHeader>
@@ -485,7 +488,7 @@ export default function CourseDetailPage() {
                         </svg>
                       ))}
                     </div>
-                    <span className="text-sm font-semibold text-muted-foreground">
+                    <span className="text-sm font-semibold text-[#475569]">
                       {language === "es"
                         ? "Testimonio Verificado"
                         : "Verified Testimonial"}

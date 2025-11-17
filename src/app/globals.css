@@ -18,7 +18,7 @@
     --secondary-foreground: 6 78 59; /* #064e3b - dark teal */
     --muted: 248 250 252; /* #f8fafc - very light blue-gray */
     --muted-foreground: 71 85 105; /* #475569 - medium gray */
-    --accent: 99 102 241; /* #6366f1 - modern indigo */
+    --accent: #475569; /* #6366f1 - modern indigo */
     --accent-foreground: 255 255 255;
     --destructive: 239 68 68; /* #ef4444 - modern red */
     --destructive-foreground: 255 255 255;
