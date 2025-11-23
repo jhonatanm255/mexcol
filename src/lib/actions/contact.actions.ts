@@ -3,6 +3,7 @@
 
 import { z } from "zod";
 import { translations } from "@/lib/i18n";
+import { sendContactEmail } from "@/lib/email";
 
 const contactSchema = z.object({
   name: z.string().min(2),
@@ -15,7 +16,6 @@ const contactSchema = z.object({
 
 export async function submitContactForm(prevState: any, formData: FormData) {
   const lang = formData.get("language") === "es" ? "es" : "en";
-  const t = translations[lang].contact.form;
 
   const validatedFields = contactSchema.safeParse({
     name: formData.get("name"),
@@ -29,65 +29,41 @@ export async function submitContactForm(prevState: any, formData: FormData) {
   if (!validatedFields.success) {
     return {
       errors: validatedFields.error.flatten().fieldErrors,
-      message: t.errorMessage,
-    };
-  }
-
-  const endpoint = process.env.CONTACT_FORM_ENDPOINT;
-
-  if (!endpoint) {
-    return {
-      errors: {},
       message:
         lang === "es"
-          ? "El servidor de correo no está configurado. Define la variable CONTACT_FORM_ENDPOINT."
-          : "The mail server is not configured. Please set CONTACT_FORM_ENDPOINT.",
+          ? "Por favor, completa todos los campos correctamente."
+          : "Please fill all fields correctly.",
     };
   }
 
   try {
-    const response = await fetch(endpoint, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        ...validatedFields.data,
-      }),
-    });
+    // Enviar el correo directamente usando la función de email
+    await sendContactEmail(validatedFields.data);
 
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
-
-    const data = (await response.json()) as {
-      success?: boolean;
-      message?: string;
-      errors?: Record<string, string>;
-    };
-
-    if (data?.success) {
-      return {
-        errors: {},
-        message: data.message ?? t.successMessage,
-        success: true,
-      };
-    }
-
-    return {
-      errors: data?.errors ?? {},
-      message: data?.message ?? t.errorMessage,
-    };
-  } catch (error) {
-    console.error("Error enviando formulario de contacto:", error);
     return {
       errors: {},
       message:
         lang === "es"
-          ? "No pudimos enviar tu mensaje en este momento. Intenta más tarde."
-          : "We could not send your message right now. Please try again later.",
+          ? "Tu mensaje fue enviado correctamente."
+          : "Your message has been sent successfully.",
+      success: true,
+    };
+  } catch (error) {
+    console.error("Error enviando formulario de contacto:", error);
+    
+    let errorMessage: string;
+    
+    if (error instanceof Error && error.message) {
+      errorMessage = error.message;
+    } else {
+      errorMessage = lang === "es"
+        ? "No pudimos enviar tu mensaje en este momento. Intenta más tarde."
+        : "We could not send your message right now. Please try again later.";
+    }
+
+    return {
+      errors: {},
+      message: errorMessage,
     };
   }
-
 }

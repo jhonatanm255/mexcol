@@ -62,6 +62,7 @@ export default function Home() {
       <section
         className="relative w-full section-modern"
         style={{ height: "458.14px" }}
+        /* className="relative w-full section-modern h-screen" */
       >
         {/* Background Image */}
         <div className="absolute inset-0">

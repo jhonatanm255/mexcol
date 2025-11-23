@@ -1,6 +1,6 @@
 export const hero = {
 title: 'Instituto Mex - Col - Usa',
-        subtitle: 'Educación continua en medicina estética.',
-        explorePrograms: 'Explorar Programas',
+        subtitle: 'Educación continua internacional en medicina estética.',
+        explorePrograms: 'Ver Programas Académicos',
         contactUs: 'Contáctanos',
 };

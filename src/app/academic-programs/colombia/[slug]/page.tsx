@@ -217,7 +217,7 @@ export default function CourseDetailPage() {
                   <a 
                     href={`https://wa.me/${language === 'es' ? '5215566308602' : '14074540524'}?text=${encodeURIComponent(
                       language === 'es' 
-                        ? `¡Hola! Me encantaría recibir más información sobre el ${courseDetails.title} desde Colombia`
+                        ? `¡Hola! estoy interesado en el ${courseDetails.title} de Colombia`
                         : `Hello! I would love to receive more information about the ${courseDetails.title} from Colombia`
                     )}`}
                     target="_blank"
@@ -264,12 +264,12 @@ export default function CourseDetailPage() {
                     {Array.isArray((courseDetails as any).targetAudience.description) ? (
                       (courseDetails as any).targetAudience.description.map((paragraph: string, idx: number) => (
                         <p key={idx} className="text-sm text-[#475569] leading-relaxed">
-                          {paragraph}
+                          {formatText(paragraph)}
                         </p>
                       ))
                     ) : (
                       <p className="text-sm text-[#475569] leading-relaxed">
-                        {(courseDetails as any).targetAudience.description}
+                        {formatText((courseDetails as any).targetAudience.description)}
                       </p>
                     )}
                   </div>
@@ -384,11 +384,18 @@ export default function CourseDetailPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
-                    {(courseDetails as any).accreditations.map((accr: string, idx: number) => (
-                      <div key={idx} className="text-sm text-[#475569] whitespace-pre-line">
-                        {formatText(accr)}
-                      </div>
-                    ))}
+                    {(courseDetails as any).accreditations.map((accr: string, idx: number) => {
+                      const isBulletItem = accr.startsWith('•');
+                      const displayText = isBulletItem ? accr.substring(1).trim() : accr;
+                      return (
+                        <div key={idx} className={`text-sm text-[#475569] whitespace-pre-line ${isBulletItem ? 'flex items-start gap-2' : ''}`}>
+                          {isBulletItem && (
+                            <span className="text-[#475569] mt-0.5 flex-shrink-0 font-bold">•</span>
+                          )}
+                          <span>{formatText(displayText)}</span>
+                        </div>
+                      );
+                    })}
                   </div>
                 </CardContent>
               </Card>
@@ -512,7 +519,7 @@ export default function CourseDetailPage() {
                 <a 
                   href={`https://wa.me/${language === 'es' ? '5215566308602' : '14074540524'}?text=${encodeURIComponent(
                     language === 'es' 
-                      ? `¡Hola! Me encantaría recibir más información sobre el curso: ${courseDetails.title} desde Colombia`
+                      ? `¡Hola! estoy interesado en el ${courseDetails.title} de Colombia`
                       : `Hello! I would love to receive more information about the course: ${courseDetails.title} from Colombia`
                   )}`}
                   target="_blank"

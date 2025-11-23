@@ -1,7 +1,7 @@
 export const home = {
   hero: {
         main: 'Instituto Mex - Col - USA',
-        sub: 'Educación continua en medicina estética.',
+        sub: 'Educación continua internacional en medicina estética.',
       },
       onlineTraining: {
         title: 'Formación en línea',
