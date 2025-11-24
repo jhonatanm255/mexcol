@@ -115,7 +115,13 @@ title: 'Programas Académicos',
                 ],
                 productQuality: {
                   title: 'Productos de Calidad y Seguridad Garantizada',
-                  description: 'En la medicina estética, **la elección del producto es tan importante como la técnica aplicada**, ya que de ello dependen la seguridad del paciente y la eficacia del tratamiento.\nPor esta razón, en el **Instituto Mex-Col-USA** trabaja exclusivamente con los **tres mejores laboratorios a nivel mundial**, reconocidos por su innovación, trayectoria y altos estándares de calidad.\nTodos nuestros productos cuentan con registro y certificaciones oficiales de las principales entidades regulatorias internacionales, tales como:\n\n• INVIMA (Colombia)\n• FDA (Estados Unidos)\n• COFEPRIS (México)\n• Y otras autoridades sanitarias competentes a nivel global\n\nEsto garantiza que cada procedimiento se realice con insumos seguros, confiables y aprobados, brindando a estudiantes y pacientes la tranquilidad de utilizar los mejores productos del mercado.\n\n**Productos Incluidos:**\n• Ácido Hialurónico "Juvederm – Allergan"\n• Toxina Botulínica "Botox – Allergan"\n• Hilos PDO "Smooth o Mono"\n• Bioestimulador "Harminyca o Radiesse"'
+                  description: 'En la medicina estética, **la elección del producto es tan importante como la técnica aplicada**, ya que de ello dependen la seguridad del paciente y la eficacia del tratamiento.\nPor esta razón, en el **Instituto Mex-Col-USA** trabaja exclusivamente con los **tres mejores laboratorios a nivel mundial**, reconocidos por su innovación, trayectoria y altos estándares de calidad.\nTodos nuestros productos cuentan con registro y certificaciones oficiales de las principales entidades regulatorias internacionales, tales como:\n\n• **INVIMA (Colombia)**\n• **FDA (Estados Unidos)**\n• **COFEPRIS (México)**\n• Y otras autoridades sanitarias competentes a nivel global\n\nEsto garantiza que cada procedimiento se realice con insumos seguros, confiables y aprobados, brindando a estudiantes y pacientes la tranquilidad de utilizar los mejores productos del mercado.\n\n**Productos Incluidos:**\n• **Ácido Hialurónico** "Juvederm – Allergan"\n• **Toxina Botulínica** "Botox – Allergan"\n• **Hilos PDO** "Smooth o Mono"\n• **Bioestimulador** "Harminyca o Radiesse"',
+                  certifications: [
+                    'Todos los productos están certificados por las principales autoridades sanitarias globales:',
+                    'INVIMA (Colombia)',
+                    'FDA (Estados Unidos)',
+                    'COFEPRIS (México)'
+                  ]
                 }
               },
               'intravenous-therapy-chelation': {
@@ -268,7 +274,7 @@ title: 'Programas Académicos',
             ],
             courseDetails: {
               'facial-harmonization-course': {
-                title: 'Curso de modelación, perfilación y armonización facial con "toxina botulinica/acido aluronico / bioestimuladores / hilos pdo"',
+                title: 'Curso de Master class 4 técnicas armonización, moderación y perfilación facial con "toxina botulinica/acido aluronico / bioestimuladores / hilos pdo"',
                 subtitle: 'Capacitación Avanzada en Medicina Estética',
                 description: 'Capacitación integral en técnicas de armonización facial con los más altos estándares de seguridad, ética y conocimiento científico.',
                 heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop',
@@ -332,20 +338,18 @@ title: 'Programas Académicos',
                   '**Avales y Respaldos Institucionales:**\n\nLos cursos y actualizaciones que impartimos al ser educación continua están registrados en la secretaria del trabajo y previsión social (En Mexico). Al finalizar la práctica de su capacitación le será aplicada una evaluación de conocimiento, habilidades y destreza, la cual está sujeta al puntaje mínimo para obtener su certificado el cual se expide después de que **INSTITUTO MEX-COL-USA** haya evaluado y reportado que la evaluación fue aprobada por cada asistente. Misma que deberá ser aprobada con el porcentaje mínimo del **80%**\n\n• **Constancia de Asistencia y Participación:**\nEmitida por **INSTITUTO MEX-COL-USA**,  certifica la participación activa y el cumplimiento de los módulos teórico-prácticos del curso, brindando respaldo académico y formativo.\n\n• **Constancia con Valor Curricular:**\n Emitida y registrada ante la **Secretaría del Trabajo y Previsión Social (STPS)**, avalando la formación del participante como educación formal y reconocida en México.(Valido solo para nativos mexicanos).\n\n• **Diploma:**\nEmitido por la **Alianza Americana de Medicina Estética y SOPEME** (Asociación de Medicina Estética de los Estados Unidos), válido para **autenticar la formación en Estados Unidos, Latinoamérica, Caribe y España** como educación continua reconocida.'
                 ],
                 productQuality: {
-                  title: 'Productos de Calidad y Seguridad Garantizada',
-                  description: 'En la medicina estética, **la elección del producto es tan importante como la técnica aplicada**, ya que de ello dependen la seguridad del paciente y la efectividad de los resultados.\n\nPor esta razón, en el **Instituto Mex-Col-Usa** trabajamos exclusivamente con los **tres mejores laboratorios a nivel mundial**, reconocidos por su innovación, trayectoria y altos estándares de calidad.\n\nTodos nuestros productos cuentan con registro y certificaciones oficiales de las principales entidades regulatorias internacionales, tales como:\n\n• **INVIMA (Colombia)**\n• **FDA (Estados Unidos)**\n• **COFEPRIS (México)**\n\n✅ Productos incluidos para práctica:\n\n• **Ácido Hialurónico:** Juvederm (Allergan)\n• **Toxina Botulínica:** Botox (Allergan)\n• **Hilos PDO:** Smooth o Mono\n• **Bioestimulador:** Harmonyca o Radiesse',
+                  title: 'Incluye Productos de Calidad y Seguridad Garantizada',
+                  description: 'En la medicina estética, **la elección del producto es tan importante como la técnica aplicada**, ya que de ello dependen la seguridad del paciente y la efectividad de los resultados.\n\nPor esta razón, en el **Instituto Mex-Col-Usa** trabajamos exclusivamente con los **tres mejores laboratorios a nivel mundial**, reconocidos por su innovación, trayectoria y altos estándares de calidad.\n\nTodos nuestros productos cuentan con registro y certificaciones oficiales de las principales entidades regulatorias internacionales, tales como:\n\n• **INVIMA** (Colombia)\n• **FDA** (Estados Unidos)\n• **COFEPRIS** (México)\n• Y otras autoridades sanitarias competentes a nivel global\n\nDe esta manera, garantizamos que cada procedimiento se realice con insumos seguros, confiables y aprobados, ofreciendo a nuestros estudiantes y pacientes la tranquilidad de trabajar con lo mejor del mercado.',
                   certifications: [
                     'Todos los productos están certificados por las principales autoridades sanitarias globales:',
-                    'INVIMA (Colombia)',
-                    'FDA (Estados Unidos)',
-                    'COFEPRIS (México)'
+                    '**INVIMA** (Colombia)',
+                    '**FDA** (Estados Unidos)',
+                    '**COFEPRIS** (México)',
+                    '	Y otras autoridades sanitarias competentes a nivel global'
                   ],
                   includedProducts: [
-                    '✅ Productos incluidos para práctica:',
-                    'Ácido Hialurónico: Juvederm (Allergan)',
-                    'Toxina Botulínica: Botox (Allergan)',
-                    'Hilos PDO: Smooth o Mono',
-                    'Bioestimulador: Harmonyca o Radiesse'
+                    'De esta manera, garantizamos que cada procedimiento se realice con insumos seguros, confiables y aprobados, ofreciendo a nuestros estudiantes y pacientes la tranquilidad de trabajar con lo mejor del mercado.',
+                    ''
                   ]
                 },
                 testimonial: {
@@ -375,7 +379,7 @@ title: 'Programas Académicos',
                   {
                     title: 'Día 1 en Sueroterapia',
                     topics: [
-                      'En este curso de **Sueroterapia**, los participantes adquirirán conocimientos integrales sobre técnicas avanzadas para optimizar la salud, la energía y el bienestar de los pacientes. Aprenderás a aplicar terapias que favorecen la **neuroestimulación, la oxigenación celular y la revitalización general**, así como tratamientos específicos para **fortalecer el sistema inmunológico, estimular el metabolismo y combatir los signos del envejecimiento.**\n\nAdemás, conocerás el uso seguro y efectivo de **principios activos clave**, desde vitaminas y minerales hasta compuestos especializados, comprendiendo sus propiedades bioquímicas, farmacológicas y sus aplicaciones terapéuticas en condiciones como **obesidad, sobrepeso, psoriasis, dolor osteoarticular y enfermedades autoinmunes.**\n\nEl curso también te brindará herramientas para la eliminación de metales pesados, la reducción de placa de ateroma y la optimización de la salud cardiovascular, todo con un enfoque en la **seguridad, ética y eficacia clínica.**\n\nAl finalizar, estarás preparado para **implementar protocolos de Sueroterapia** con un enfoque profesional, seguro y orientado al bienestar integral de tus pacientes.'
+                      'En este curso de **Sueroterapia**, los participantes adquirirán conocimientos integrales sobre técnicas avanzadas para optimizar la salud, la energía y el bienestar de los pacientes. Aprenderás a aplicar terapias que favorecen la **neuroestimulación, la oxigenación celular y la revitalización general**, así como tratamientos específicos para **fortalecer el sistema inmunológico, estimular el metabolismo y combatir los signos del envejecimiento.**\n\nAdemás, conocerás el uso seguro y efectivo de **principios activos clave**, desde vitaminas y minerales hasta compuestos especializados, comprendiendo sus propiedades bioquímicas, farmacológicas y sus aplicaciones terapéuticas en condiciones como **obesidad, sobrepeso, psoriasis, dolor osteoarticular y enfermedades autoinmunes.**\n\nEl curso también te brindará herramientas para la **eliminación de metales pesados, la reducción de placa de ateroma y la optimización de la salud cardiovascular**, todo con un enfoque en la **seguridad, ética y eficacia clínica.**\n\nAl finalizar, estarás preparado para **implementar protocolos de Sueroterapia** con un enfoque profesional, seguro y orientado al bienestar integral de tus pacientes.'
                     ]
                   },
                   {
@@ -394,12 +398,6 @@ title: 'Programas Académicos',
                 productQuality: {
                   title: 'Productos de Calidad y Seguridad Garantizada:',
                   description: 'El **INSTITUTO MEX-COL-USA** trabaja con laboratorios que **respaldan la garantía y confianza en sus productos**, asegurando la calidad en cada una de las prácticas realizadas, y compartiendo información sobre estos proveedores en nuestras sedes.\n\nEs importante destacar que **no vendemos productos en nuestras instalaciones ni promocionamos marcas específicas**, ya que la elección de adquisición debe ser **libre y responsable por parte del alumno**. Cada participante es responsable de verificar con quién comprar, así como de revisar permisos, registros, regulaciones locales y cualquier otro aspecto legal vigente en su ciudad o país antes de adquirir cualquier producto.\n\nEl curso **incluye los productos necesarios para la práctica**, como los utilizados en **Sueroterapia** y un **implante de placenta**, garantizando que los alumnos puedan aplicar los procedimientos de manera segura y efectiva durante las sesiones prácticas.',
-                  certifications: [
-                    'Todos los productos están certificados por las principales autoridades sanitarias globales:',
-                    'INVIMA (Colombia)',
-                    'FDA (Estados Unidos)',
-                    'COFEPRIS (México)'
-                  ],
                   includedProducts: [
                     'Productos incluidos para práctica:',
                     'Productos utilizados en Terapia Intravenosa',
@@ -582,7 +580,7 @@ title: 'Programas Académicos',
                 ],
                 productQuality: {
                   title: 'Productos de Calidad y Seguridad Garantizada',
-                  description: 'En la medicina estética, **la elección del producto es tan importante como la técnica aplicada**, ya que de ello dependen la seguridad del paciente y la efectividad de los resultados.\n\nPor esta razón, en el **Instituto Mex-Col-Usa** trabajamos exclusivamente con los **tres mejores laboratorios a nivel mundial**, reconocidos por su innovación, trayectoria y altos estándares de calidad.\n\nTodos nuestros productos cuentan con registro y certificaciones oficiales de las principales entidades regulatorias internacionales, tales como:',
+                  description: 'En la medicina estética, **la elección del producto es tan importante como la técnica aplicada**, ya que de ello dependen la seguridad del paciente y la efectividad de los resultados.\n\nPor esta razón, en el **Instituto Mex-Col-Usa** trabajamos exclusivamente con los **tres mejores laboratorios a nivel mundial**, reconocidos por su innovación, trayectoria y altos estándares de calidad.\n\nTodos nuestros productos cuentan con registro y certificaciones oficiales de las principales entidades regulatorias internacionales, tales como:\n\n• **INVIMA** (Colombia)\n• **FDA** (Estados Unidos)\n• **COFEPRIS** (México)\n• Y otras autoridades sanitarias competentes a nivel global\n\nDe esta manera, garantizamos que cada procedimiento se realice con insumos seguros, confiables y aprobados, ofreciendo a nuestros estudiantes y pacientes la tranquilidad de trabajar con lo mejor del mercado.',
                   certifications: [
                     '**INVIMA (Colombia)**',
                     '**FDA (Estados Unidos)**',

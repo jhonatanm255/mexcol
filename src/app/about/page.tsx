@@ -4,10 +4,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/hooks/use-language';
 import { translations } from '@/lib/i18n';
+import { formatText } from '@/lib/utils/text-formatting';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import LogoUSAVerde from '@/assets/logo-sello-blanco2.png';
+import ConocenosHero from '@/assets/img-heros/conocenos opcion 2.png';
 import { CheckCircle, Users, Globe, Award, ShieldCheck, GraduationCap, FileCheck, BadgeCheck } from 'lucide-react';
 
 export default function AboutPage() {
@@ -23,7 +25,7 @@ export default function AboutPage() {
       >
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=1600&auto=format&fit=crop"
+            src={ConocenosHero}
             alt="Medical professionals in training"
             fill
             className="object-cover"
@@ -43,7 +45,7 @@ export default function AboutPage() {
               />
             </div>
           </div>
-          <div className="mt-auto flex flex-col items-center text-center md:items-start md:text-left text-white gap-3 pb-6 md:pb-12 lg:pb-16 md:ml-5">
+          <div className="mt-auto flex flex-col items-center text-center md:items-start md:text-left text-white gap-3 pb-12 md:pb-16 lg:pb-20 md:ml-5" style={{ transform: 'translateY(-50px)' }}>
             <div className="flex flex-col gap-3 w-full md:max-w-3xl">
               <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight">
                 {t.hero.title}
@@ -52,7 +54,7 @@ export default function AboutPage() {
                 {t.hero.subtitle}
               </p>
             </div>
-            <Button asChild size="lg" className="btn-modern bg-white text-white hover:bg-white/90 px-8 py-4 text-lg">
+            <Button asChild size="lg" className="btn-modern px-8 py-4 text-lg">
               <Link href="/academic-programs">
                 {t.hero.cta}
               </Link>
@@ -69,8 +71,8 @@ export default function AboutPage() {
           <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6">
             {t.whoWeAre.title}
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            {t.whoWeAre.content}
+          <p className="text-lg text-muted-foreground leading-relaxed whitespace-pre-line">
+            {formatText(t.whoWeAre.content)}
           </p>
         </div>
       </section>
@@ -83,11 +85,11 @@ export default function AboutPage() {
           </h2>
           
           {/* Primer párrafo descriptivo */}
-          <p className="text-muted-foreground leading-relaxed mb-6">
-            {t.endorsements.items[0]}
+          <p className="text-muted-foreground leading-relaxed mb-6 whitespace-pre-line">
+            {formatText(t.endorsements.items[0])}
           </p>
 
-          {/* Cards del medio (índices 1, 2, 3) sin borde izquierdo */}
+          {/* Cards del medio (índices 1, 2, 3) */}
           <div className="grid gap-4 mb-6">
             {t.endorsements.items.slice(1, 4).map((item, index) => {
               const icons = [Award, Award, Award];
@@ -99,7 +101,9 @@ export default function AboutPage() {
                       <div className="bg-primary/10 p-3 rounded-full">
                         <Icon className="h-6 w-6 text-primary flex-shrink-0" />
                       </div>
-                      <p className="text-muted-foreground leading-relaxed flex-1">{item}</p>
+                      <p className="text-muted-foreground leading-relaxed flex-1">
+                        {formatText(item)}
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -107,10 +111,12 @@ export default function AboutPage() {
             })}
           </div>
 
-          {/* Último párrafo descriptivo */}
-          <p className="text-primary leading-relaxed italic">
-            {t.endorsements.items[4]}
-          </p>
+          {/* Texto de compromiso debajo de las cards */}
+          {t.endorsements.commitment && (
+            <p className="text-muted-foreground leading-relaxed text-center">
+              {formatText(t.endorsements.commitment)}
+            </p>
+          )}
         </div>
       </section>
 
@@ -126,8 +132,8 @@ export default function AboutPage() {
                 <h3 className="font-headline text-2xl font-bold mb-4 text-primary">
                   {t.missionVision.mission.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {t.missionVision.mission.content}
+                <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                  {formatText(t.missionVision.mission.content)}
                 </p>
               </CardContent>
             </Card>
@@ -136,8 +142,8 @@ export default function AboutPage() {
                 <h3 className="font-headline text-2xl font-bold mb-4 text-primary">
                   {t.missionVision.vision.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {t.missionVision.vision.content}
+                <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                  {formatText(t.missionVision.vision.content)}
                 </p>
               </CardContent>
             </Card>

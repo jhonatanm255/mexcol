@@ -446,10 +446,10 @@ export default function CourseDetailPage() {
                   {slug === "facial-harmonization-course" && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {[
-                        "/video-testimonios/testimonios-armonizacion-mx/armonizacion facial mx 2.MP4",
-                        "/video-testimonios/testimonios-armonizacion-mx/armonizacion facial mx 3.MP4",
-                        "/video-testimonios/testimonios-armonizacion-mx/armonizacion facial mx5.MP4",
-                        "/video-testimonios/testimonios-armonizacion-mx/armonizacion facial mx 6.MP4",
+                        "/video-testimonios/testimonios-armonizacion-mx/armonizacion facial mx 2.mp4",
+                        "/video-testimonios/testimonios-armonizacion-mx/armonizacion facial mx 3.mp4",
+                        "/video-testimonios/testimonios-armonizacion-mx/armonizacion facial mx5.mp4",
+                        "/video-testimonios/testimonios-armonizacion-mx/armonizacion facial mx 6.mp4",
                       ].map((videoSrc, idx) => (
                         <div
                           key={idx}
@@ -517,7 +517,7 @@ export default function CourseDetailPage() {
                       className="w-full h-full md:w-1/2 md:h-1/2 mx-auto object-cover bg-black"
                     >
                       <source
-                        src="/video-testimonios/testimonios-suero-mx/suero mx.MP4"
+                        src="/video-testimonios/testimonios-suero-mx/suero mx.mp4"
                         type="video/mp4"
                       />
                       {language === "es"

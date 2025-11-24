@@ -115,7 +115,13 @@ title: 'Academic Programs',
                 ],
                 productQuality: {
                   title: 'Quality Products and Guaranteed Safety',
-                  description: 'In aesthetic medicine, product choice is as important as technique since patient safety and treatment efficacy depend on it.\nFor this reason, **Instituto Mex-Col-USA** works exclusively with the three best laboratories worldwide, recognized for innovation, experience, and high-quality standards.\nAll our products have official registration and certifications from major international regulatory entities, such as:\n\n• INVIMA (Colombia)\n• FDA (United States)\n• COFEPRIS (Mexico)\n• And other competent global health authorities\n\nThis ensures that every procedure is performed with safe, reliable, and approved supplies, providing students and patients peace of mind in using the best products on the market.\n\n**Included Products:**\n• Hyaluronic Acid "Juvederm – Allergan"\n• Botulinum Toxin "Botox – Allergan"\n• PDO Threads "Smooth or Mono"\n• Bio-Stimulator "Harminyca or Radiesse"'
+                  description: 'In aesthetic medicine, product choice is as important as technique since patient safety and treatment efficacy depend on it.\nFor this reason, **Instituto Mex-Col-USA** works exclusively with the three best laboratories worldwide, recognized for innovation, experience, and high-quality standards.\nAll our products have official registration and certifications from major international regulatory entities, such as:\n\n• INVIMA (Colombia)\n• FDA (United States)\n• COFEPRIS (Mexico)\n• And other competent global health authorities\n\nThis ensures that every procedure is performed with safe, reliable, and approved supplies, providing students and patients peace of mind in using the best products on the market.\n\n**Included Products:**\n• Hyaluronic Acid "Juvederm – Allergan"\n• Botulinum Toxin "Botox – Allergan"\n• PDO Threads "Smooth or Mono"\n• Bio-Stimulator "Harminyca or Radiesse"',
+                  certifications: [
+                    'All products are certified by major global health authorities:',
+                    'INVIMA (Colombia)',
+                    'FDA (United States)',
+                    'COFEPRIS (Mexico)'
+                  ]
                 }
               },
               'intravenous-therapy-chelation': {
@@ -375,12 +381,6 @@ title: 'Academic Programs',
                 productQuality: {
                   title: 'Products of Guaranteed Quality and Safety:',
                   description: '**INSTITUTO MEX-COL-USA** collaborates with laboratories that guarantee reliability and quality of products, ensuring safety in every practice, while sharing information about these suppliers at our campuses.\n\nIt is important to note that we do not sell products on-site or promote specific brands, as the acquisition choice is the sole responsibility of the student. Each participant must verify purchase sources and comply with local permits, registrations, regulations, and legal requirements in their city or country before acquiring any product.\n\nThe course includes all products necessary for practical sessions, such as those used in Intravenous Therapy and a placenta implant, ensuring students can safely and effectively apply procedures during hands-on practice.',
-                  certifications: [
-                    'All products are certified by major global health authorities:',
-                    'INVIMA (Colombia)',
-                    'FDA (United States)',
-                    'COFEPRIS (Mexico)'
-                  ],
                   includedProducts: [
                     'Included products for hands-on training:',
                     'Products used in Intravenous Therapy',

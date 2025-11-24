@@ -3,32 +3,32 @@ title: 'Conócenos',
         subtitle: 'Nuestra misión es cerrar brechas de conocimiento a través de una educación en línea innovadora y accesible, conectando a expertos con estudiantes de todo el mundo.',
         hero: {
             title: 'Formamos a los mejores profesionales en medicina estética',
-            subtitle: 'Más de 14 años capacitando médicos en 3 países con programas innovadores y práctica clínica real',
+            subtitle: 'Más de 15 años capacitando médicos en 3 países con programas innovadores y práctica clínica real',
             cta: 'Explorar Programas Académicos'
         },
         whoWeAre: {
             title: 'Quiénes Somos',
-            content: 'Contamos con especialistas internacionales en medicina estética e inteligencia emocional, que brindan conocimiento actualizado en técnicas médicas de belleza. Instituto MexCol, con sede en México, Colombia y ahora Estados Unidos, ofrece capacitaciones, talleres, diplomados y seminarios impartidos por expertos internacionales en cada área.'
+            content: 'Contamos con especialistas internacionales en medicina estética e inteligencia emocional, que brindan conocimiento actualizado en técnicas médicas de belleza.\n**INSTITUTO MEX-COL-USA**, con sede en México, Colombia y ahora Estados Unidos, ofrece capacitaciones, talleres, diplomados y seminarios impartidos por expertos internacionales en cada área.'
         },
         endorsements: {
             title: 'Avales y Respaldos',
             items: [
-                'Nuestros cursos de educación continua están registrados en la Secretaría del Trabajo y Previsión Social (STPS) y cuentan con convenio con la Alianza Americana de Medicina Estética en EE. UU.',
-                'Diploma avalado por Alianza Americana de Medicina Estética y SOPEME, válido en USA, Latinoamérica, Caribe y España.',
-                'Constancia con valor curricular emitida y registrada ante STPS (México).',
-                'Constancia de asistencia emitida por Instituto MexCol.',
-                'Nos comprometemos con tu desarrollo profesional y garantizamos la calidad de nuestros programas.'
-            ]
+                'En el **INSTITUTO MEX-COL-USA** garantizamos la calidad académica y el reconocimiento oficial de cada uno de nuestros programas de **educación continua**, los cuales están **registrados ante la Secretaría del Trabajo y Previsión Social (STPS)** en México y cuentan con **convenio con la Alianza Americana de Medicina Estética** en Estados Unidos.\n\nNuestros egresados reciben:',
+                '**Diploma** avalado por la Alianza Americana de Medicina Estética y SOPEME (Sociedad de Medicina Estética de los Estados Unidos), con validez en **EE. UU., Latinoamérica, el Caribe y España**.',
+                '**Constancia con valor curricular**, emitida y registrada ante la **STPS (México)**.',
+                '**Constancia de asistencia y participación**, emitida por el **INSTITUTO MEX-COL-USA**, que acredita la formación teórico-práctica del participante.'
+            ],
+            commitment: 'Nos comprometemos con tu **crecimiento profesional** y con la **excelencia académica**, ofreciendo programas que cumplen con altos estándares de calidad, validez y respaldo internacional.'
         },
         missionVision: {
             title: 'Nuestra Misión y Visión',
             mission: {
                 title: 'Nuestra Misión',
-                content: 'INSTITUTO MEXCOL PROFESIONALES EN MEDICINA ESTÉTICA, BELLEZA Y HOLISTICA CON SEDE EN MÉXICO, EEUU Y COLOMBIA es una institución especializada en educación continúa para profesionales de las diferentes áreas de Medicina Estética, Belleza y Holistica que buscan estar a la vanguardia en tecnología y conocimientos en tratamientos de belleza facial y corporal. En nuestro instituto el alumno es lo más importante ya que nos ocupamos de que adquieran los conocimientos con exactitud para llevarlos a cabo en sus consultorios cabinas o spa, y así brindar a cada paciente las mejores técnicas de medicina estética y belleza siendo profesionales actualizados en estos tratamientos, por tal motivo instituto se siente responsable de la enseñanza en el ámbito de los profesionales y de la sociedad en general, mismo que nos lleva a proporcionar los conocimientos imprescindibles para una mejor formación personal, académica y profesional.'
+                content: '**INSTITUTO MEXCOL PROFESIONALES EN MEDICINA ESTÉTICA, BELLEZA Y HOLISTICA CON SEDE EN MÉXICO, EEUU Y COLOMBIA** es una institución especializada en educación continúa para profesionales de las diferentes áreas de Medicina Estética, Belleza y Holistica que buscan estar a la vanguardia en tecnología y conocimientos en tratamientos de belleza facial y corporal.\n\nEn nuestro instituto el alumno es lo más importante ya que nos ocupamos de que adquieran los conocimientos con exactitud para llevarlos a cabo en sus consultorios cabinas o spa, y así brindar a cada paciente las mejores técnicas de medicina estética y belleza siendo profesionales actualizados en estos tratamientos.\n\nPor tal motivo, el instituto se siente responsable de la enseñanza en el ámbito de los profesionales y de la sociedad en general, mismo que nos lleva a proporcionar los conocimientos imprescindibles para una mejor formación personal, académica y profesional.'
             },
             vision: {
                 title: 'Nuestra Visión',
-                content: 'Ser un Instituto líder y competitivo en la enseñanza en Medicina Estética Belleza y Holistica, comprometido con la excelencia académica y la calidad de todos nuestros servicios, actualizando al personal docente continuamente e incluso incorporando nuevos docentes para estar a la vanguardia en cada programa ofrecido, así siendo referente de calidad a nivel nacional e internacional, y lograr hacer presencia en América del sur, centro América, América del Norte y Europa.'
+                content: 'Ser un **Instituto líder y competitivo** en la enseñanza en Medicina Estética, Belleza y Holistica, comprometido con la excelencia académica y la calidad de todos nuestros servicios.\n\nActualizando al personal docente continuamente e incluso incorporando nuevos docentes para estar a la vanguardia en cada programa ofrecido, así siendo **referente de calidad a nivel nacional e internacional**, y lograr hacer presencia en **América del sur, centro América, América del Norte y Europa**.'
             }
         },
         impact: {

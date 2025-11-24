@@ -95,13 +95,13 @@ export default function CourseDetailPage() {
               />
             </div>
           </div>
-          <div className="mt-auto flex flex-col text-white gap-3 pb-6 md:pb-12 lg:pb-16 ml-5">
+          <div className="mt-auto flex flex-col text-white gap-3 pb-8 md:pb-16 lg:pb-20 ml-5">
             <Badge className="w-fit bg-primary text-primary-foreground">
               <MapPin className="mr-1 h-3 w-3" />
               USA
             </Badge>
-            <div className="flex flex-col gap-3 w-full md:max-w-3xl">
-              <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight">
+            <div className="flex flex-col gap-3 w-full md:max-w-4xl">
+              <h1 className="font-headline text-3xl md:text-5xl font-bold tracking-tight">
                 {courseDetails.title}
               </h1>
               <p className="text-base md:text-2xl text-white/90 leading-relaxed">
@@ -201,7 +201,7 @@ export default function CourseDetailPage() {
                   <div className="flex items-start gap-3">
                     <Award className="h-5 w-5 text-primary mt-0.5" />
                     <div>
-                      <p className="text-sm font-semibold">{language === 'es' ? 'Certificación al completar:' : 'Certification upon completion:'}</p>
+                      <p className="text-sm font-semibold">{language === 'es' ? 'Certificación' : 'Certification'}</p>
                       <p className="text-sm text-[#475569]">{(courseDetails as any).certification}</p>
                     </div>
                   </div>

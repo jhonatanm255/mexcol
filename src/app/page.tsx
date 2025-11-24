@@ -22,6 +22,9 @@ import { useLanguage } from '@/hooks/use-language';
 import { translations } from '@/lib/i18n';
 import InicioBanner from '@/assets/img-heros/Hero Home.png';
 import LogoUSAVerde from '@/assets/logo-sello-blanco2.png';
+import MasterclassUSA from '@/assets/img-heros/masterclass-usa.png';
+import SueroMexico from '@/assets/img-heros/suero mexico .png';
+import MiniLiftingColombia from '@/assets/img-heros/mini lifting colombia.png';
 
 const CouponForm = dynamic(() => import('@/components/home/CouponForm'), {
   ssr: false,
@@ -137,7 +140,17 @@ export default function Home() {
             {th.featuredPrograms.cards.map((c, i) => (
               <Card key={i} className="modern-card overflow-hidden group">
                 <div className="relative h-56 w-full overflow-hidden">
-                  <Image src={c.image} alt={c.country} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
+                  <Image 
+                    src={
+                      c.country === 'USA' ? MasterclassUSA : 
+                      c.country === 'México' || c.country === 'Mexico' ? SueroMexico : 
+                      c.country === 'Colombia' ? MiniLiftingColombia :
+                      c.image
+                    } 
+                    alt={c.country} 
+                    fill 
+                    className="object-cover transition-transform duration-500 group-hover:scale-110" 
+                  />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <CardHeader className="pb-4">

@@ -459,10 +459,10 @@ export default function CourseDetailPage() {
                   {slug === "master-class-facial-modeling" && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {[
-                        "/video-testimonios/testimonios-armonizacion-col/armonizacion-colombia-1.MP4",
-                        "/video-testimonios/testimonios-armonizacion-col/armonizacion-colombia-2.MP4",
-                        "/video-testimonios/testimonios-armonizacion-col/armonizacion-colombia-3.MP4",
-                        "/video-testimonios/testimonios-armonizacion-col/armonizacion-colombia-4.MP4",
+                        "/video-testimonios/testimonios-armonizacion-col/armonizacion-colombia-1.mp4",
+                        "/video-testimonios/testimonios-armonizacion-col/armonizacion-colombia-2.mp4",
+                        "/video-testimonios/testimonios-armonizacion-col/armonizacion-colombia-3.mp4",
+                        "/video-testimonios/testimonios-armonizacion-col/armonizacion-colombia-4.mp4",
                       ].map((videoSrc, idx) => (
                         <div
                           key={idx}
