@@ -1,28 +1,24 @@
 export const onlineTraining = {
   title: 'Online Training',
-  subtitle: 'Join this unique learning experience designed to provide you with practical tools you can immediately apply. Connect from anywhere and access exclusive content prepared by experts.',
-  intro: 'Join this unique learning experience designed to provide you with practical tools you can immediately apply. Connect from anywhere and access exclusive content prepared by experts.',
-  viewRecorded: 'View Recorded Courses',
-  categories: [
+  subtitle: 'Practical, expert-guided courses available from anywhere.',
+  description: 'Join a professional learning experience designed to strengthen your skills. Access exclusive content created by experts in aesthetic medicine — anytime, anywhere.',
+  howToAccess: {
+    title: 'How to Access Your Course',
+    text: 'Getting access to your course is simple:\n\nClick the WhatsApp button.\n\nOur team will provide you with pricing details.\n\nReceive your access and start your online training.'
+  },
+  courses: [
     {
-      title: 'Aesthetic Medicine',
-      description: 'Learn advanced techniques in aesthetic medicine from industry experts.',
+      name: 'Beyond Hydration (Skinvive - HarmonyCA - Botox)',
+      speaker: 'Dr. Luigi Palermo',
+      duration: '5 hours',
+      image: '/placeholder-course-1.jpg'
     },
     {
-      title: 'Regenerative Medicine',
-      description: 'Explore the latest advances in regenerative medicine and therapy.',
-    },
-    {
-      title: 'Clinical Practice',
-      description: 'Master clinical applications with hands-on training and real cases.',
-    },
-    {
-      title: 'Continuing Education',
-      description: 'Stay updated with the latest knowledge and certifications.',
-    },
+      name: 'Intravenous Therapy, Chelation, and Principles of Applied Regenerative Medicine',
+      speaker: 'Dr. Martin Bravo',
+      duration: '16 hours',
+      image: '/placeholder-course-2.jpg'
+    }
   ],
-  readyToStart: 'Ready to Start Your Training?',
-  readySubtitle: 'Explore our complete programs and find the perfect course for your professional development.',
-  viewAllPrograms: 'View All Programs',
-  requestInfo: 'Request Information',
+  ctaButton: '👉 Request Access via WhatsApp'
 };

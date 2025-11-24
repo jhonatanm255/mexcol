@@ -1,28 +1,24 @@
 export const onlineTraining = {
-  title: 'Formación en línea',
-  subtitle: 'Te invitamos a ser parte de esta experiencia única de aprendizaje, pensada para brindarte herramientas prácticas y aplicables de inmediato. Conéctate desde cualquier lugar y accede a contenidos exclusivos preparados por expertos.',
-  intro: 'Te invitamos a ser parte de esta experiencia única de aprendizaje, pensada para brindarte herramientas prácticas y aplicables de inmediato. Conéctate desde cualquier lugar y accede a contenidos exclusivos preparados por expertos.',
-  viewRecorded: 'Ver cursos Grabados',
-  categories: [
+  title: 'Formación en Línea',
+  subtitle: 'Formaciones prácticas y guiadas por expertos, disponibles desde cualquier lugar.',
+  description: 'Participa en una experiencia formativa diseñada para fortalecer tus competencias profesionales. Accede desde cualquier lugar a contenidos exclusivos creados por especialistas en medicina estética.',
+  howToAccess: {
+    title: '¿Cómo acceder a tu curso?',
+    text: 'Acceder a tu curso es muy fácil:\n\nHaz clic en el botón de WhatsApp.\n\nNuestro equipo te dará la información del costo.\n\nRecibe tu acceso y comienza tu formación en línea.'
+  },
+  courses: [
     {
-      title: 'Medicina Estética',
-      description: 'Aprende técnicas avanzadas en medicina estética de expertos de la industria.',
+      name: 'Beyond hydration (skinvive-harmonyca-botox)',
+      speaker: 'Dr Luigi Palermo',
+      duration: '5 horas',
+      image: '/placeholder-course-1.jpg'
     },
     {
-      title: 'Medicina Regenerativa',
-      description: 'Explora los últimos avances en medicina regenerativa y terapia.',
-    },
-    {
-      title: 'Práctica Clínica',
-      description: 'Domina las aplicaciones clínicas con capacitación práctica y casos reales.',
-    },
-    {
-      title: 'Educación Continua',
-      description: 'Mantente actualizado con los últimos conocimientos y certificaciones.',
-    },
+      name: 'sueroterapia-quelación y principios de medicina regenerativa aplicada',
+      speaker: 'Dr Martin Bravo',
+      duration: '16 horas',
+      image: '/placeholder-course-2.jpg'
+    }
   ],
-  readyToStart: '¿Listo para Comenzar tu Capacitación?',
-  readySubtitle: 'Explora nuestros programas completos y encuentra el curso perfecto para tu desarrollo profesional.',
-  viewAllPrograms: 'Ver Todos los Programas',
-  requestInfo: 'Solicitar Información',
+  ctaButton: '👉 Request Access via WhatsApp'
 };

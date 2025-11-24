@@ -2,28 +2,18 @@
 'use client';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BookOpen, BrainCircuit, HeartPulse, Microscope } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { useLanguage } from '@/hooks/use-language';
 import { translations } from '@/lib/i18n';
 import LogoUSAVerde from '@/assets/logo-sello-blanco2.png';
-
-const icons = [
-    <HeartPulse className="w-10 h-10 text-primary" />,
-    <BrainCircuit className="w-10 h-10 text-primary" />,
-    <Microscope className="w-10 h-10 text-primary" />,
-    <BookOpen className="w-10 h-10 text-primary" />,
-];
+import { FaWhatsapp } from 'react-icons/fa';
+import { formatText } from '@/lib/utils/text-formatting';
+import Curso1Image from '@/assets/logos-cursos/formacion en linea curso 1.png';
+import Curso2Image from '@/assets/logos-cursos/formacion en linea curso 2.png';
 
 export default function OnlineTrainingPage() {
   const { language } = useLanguage();
   const t = translations[language].onlineTraining;
-  
-  const categories = t.categories.map((category, index) => ({
-      ...category,
-      icon: icons[index]
-  }));
 
   return (
     <div className="min-h-screen bg-background">
@@ -69,48 +59,76 @@ export default function OnlineTrainingPage() {
       
       <div className="container mx-auto px-4 pb-10">
 
+      {/* Descripción de la sección */}
       <section className="my-16">
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {categories.map((category) => (
-            <Card key={category.title} className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader className="items-center">
-                <div className="p-4 bg-primary/10 rounded-full">
-                    {category.icon}
-                </div>
-                <CardTitle className="pt-4">{category.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{category.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="max-w-4xl mx-auto">
+          <p className="text-lg text-muted-foreground leading-relaxed text-center">
+            {t.description}
+          </p>
         </div>
       </section>
-      
-      <section className="my-16 bg-secondary p-6 md:p-8 rounded-lg">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="text-center md:text-left">
-                <h2 className="font-headline text-2xl md:text-3xl font-bold">{t.readyToStart}</h2>
-                <p className="mt-4 text-muted-foreground">{t.readySubtitle}</p>
-                <div className='mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start'>
-                    <Button asChild className="w-full sm:w-auto">
-                        <Link href="/academic-programs">{t.viewAllPrograms}</Link>
-                    </Button>
-                    <Button asChild variant="outline" className="w-full sm:w-auto">
-                        <Link href="/contact">{t.requestInfo}</Link>
-                    </Button>
-                </div>
-            </div>
-            <div className="relative h-64 w-full rounded-lg overflow-hidden order-first md:order-last">
-                <Image 
-                    src="https://picsum.photos/600/400?random=15" 
-                    alt="Persona estudiando en linea" 
-                    data-ai-hint="online learning"
-                    width={600}
-                    height={400}
+
+      {/* Explicación de funcionamiento */}
+      <section className="my-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6 text-center">
+            {t.howToAccess.title}
+          </h2>
+          <div className="bg-primary/5 p-6 md:p-8 rounded-lg">
+            <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
+              {t.howToAccess.text}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Listado de Cursos */}
+      <section className="my-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {t.courses.map((course, index) => {
+              const courseImages = [Curso1Image, Curso2Image];
+              return (
+              <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+                <div className="relative h-48 w-full overflow-hidden">
+                  <Image
+                    src={courseImages[index]}
+                    alt={course.name}
+                    fill
                     className="object-cover"
-                />
-            </div>
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="font-headline text-xl mb-2">{course.name}</CardTitle>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <p><strong>Ponente:</strong> {course.speaker}</p>
+                    <p><strong>Duración:</strong> {course.duration}</p>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <Button 
+                    className="w-full btn-modern" 
+                    size="lg"
+                    asChild
+                  >
+                    <a 
+                      href={`https://wa.me/${language === 'es' ? '5215566308602' : '14074540524'}?text=${encodeURIComponent(
+                        language === 'es' 
+                          ? `Hola, estoy interesado en el curso: ${course.name}`
+                          : `Hello, I'm interested in the course: ${course.name}`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaWhatsapp className="w-5 h-5 mr-2" />
+                      {t.ctaButton}
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+              );
+            })}
+          </div>
         </div>
       </section>
       </div>
