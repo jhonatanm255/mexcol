@@ -73,9 +73,6 @@ export default function AcademicProgramsPage() {
                 <br className="hidden md:block" />
                 <span className="block md:inline">{t.heroHeadlineBottom}</span>
               </h1>
-              <p className="text-base md:text-2xl text-white/90 font-medium">
-                {t.heroSubheadline}
-              </p>
             </div>
           </div>
         </div>

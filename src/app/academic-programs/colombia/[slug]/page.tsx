@@ -103,9 +103,6 @@ export default function CourseDetailPage() {
               <h1 className="font-headline text-2xl md:text-4xl font-semibold tracking-tight">
                 {courseDetails.title}
               </h1>
-              <p className="text-base md:text-xl italic text-white/80 leading-relaxed">
-                {courseDetails.subtitle}
-              </p>
             </div>
           </div>
         </div>

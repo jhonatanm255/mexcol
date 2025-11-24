@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import PrefetchLink from '@/components/shared/PrefetchLink';
 import Image from 'next/image';
 import LogoUSAVerde from '@/assets/logo-sello-blanco2.png';
+import HeroConferencias from '@/assets/img-heros/Hero conferencias.png';
 import { 
   MapPin, 
   Award, 
@@ -39,7 +40,7 @@ export default function CongressPage() {
       >
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1600&auto=format&fit=crop"
+            src={HeroConferencias}
             alt="Congreso Médico"
             fill
             className="object-cover"
@@ -60,20 +61,11 @@ export default function CongressPage() {
             </div>
           </div>
           <div className="mt-auto flex flex-col items-center text-center md:items-start md:text-left text-white gap-3 pb-6 md:pb-12 lg:pb-16 md:ml-5">
-            <div className="p-4 bg-white/10 rounded-full backdrop-blur-sm inline-flex items-center justify-center">
-              <Presentation className="h-10 w-10 md:h-12 md:w-12 text-white" />
-            </div>
             <div className="flex flex-col gap-3 w-full md:max-w-3xl">
               <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight">
                 {t.title}
               </h1>
-              <p className="text-base md:text-2xl text-white/90 leading-relaxed">
-                {t.subtitle}
-              </p>
             </div>
-            <Button asChild size="lg" className="btn-modern bg-white text-white hover:bg-white/90 px-8 py-4 text-lg">
-              <PrefetchLink href="/contact">{t.registerNow}</PrefetchLink>
-            </Button>
           </div>
         </div>
       </section>

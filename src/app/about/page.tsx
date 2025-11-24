@@ -10,7 +10,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import LogoUSAVerde from '@/assets/logo-sello-blanco2.png';
 import ConocenosHero from '@/assets/img-heros/conocenos opcion 2.png';
-import { CheckCircle, Users, Globe, Award, ShieldCheck, GraduationCap, FileCheck, BadgeCheck } from 'lucide-react';
+import { CheckCircle, Users, Globe, Award, ShieldCheck, GraduationCap, FileCheck, BadgeCheck, ArrowLeft } from 'lucide-react';
 
 export default function AboutPage() {
   const { language } = useLanguage();
@@ -45,20 +45,12 @@ export default function AboutPage() {
               />
             </div>
           </div>
-          <div className="mt-auto flex flex-col items-center text-center md:items-start md:text-left text-white gap-3 pb-12 md:pb-16 lg:pb-20 md:ml-5" style={{ transform: 'translateY(-50px)' }}>
+          <div className="mt-auto flex flex-col text-white gap-3 pb-6 md:pb-12 lg:pb-16 ml-5">
             <div className="flex flex-col gap-3 w-full md:max-w-3xl">
-              <h1 className="font-headline text-4xl md:text-6xl font-bold tracking-tight">
+              <h1 className="font-headline text-2xl md:text-4xl font-semibold tracking-tight">
                 {t.hero.title}
               </h1>
-              <p className="text-base md:text-2xl text-white/90 font-medium">
-                {t.hero.subtitle}
-              </p>
             </div>
-            <Button asChild size="lg" className="btn-modern px-8 py-4 text-lg">
-              <Link href="/academic-programs">
-                {t.hero.cta}
-              </Link>
-            </Button>
           </div>
         </div>
       </section>

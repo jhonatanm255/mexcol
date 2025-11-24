@@ -95,18 +95,15 @@ export default function CourseDetailPage() {
               />
             </div>
           </div>
-          <div className="mt-auto flex flex-col text-white gap-3 pb-8 md:pb-16 lg:pb-20 ml-5">
+          <div className="mt-auto flex flex-col text-white gap-3 pb-6 md:pb-12 lg:pb-16 ml-5">
             <Badge className="w-fit bg-primary text-primary-foreground">
               <MapPin className="mr-1 h-3 w-3" />
               USA
             </Badge>
-            <div className="flex flex-col gap-3 w-full md:max-w-4xl">
-              <h1 className="font-headline text-3xl md:text-5xl font-bold tracking-tight">
+            <div className="flex flex-col gap-3 w-full md:max-w-3xl">
+              <h1 className="font-headline text-2xl md:text-4xl font-semibold tracking-tight">
                 {courseDetails.title}
               </h1>
-              <p className="text-base md:text-2xl text-white/90 leading-relaxed">
-                {courseDetails.subtitle}
-              </p>
             </div>
           </div>
         </div>

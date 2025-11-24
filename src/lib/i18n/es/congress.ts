@@ -1,7 +1,7 @@
 export const congress = {
 title: 'Congreso Internacional en Medicina Estética y Holística',
         subtitle: '¡Estamos encantados de recibirte!',
-        description: 'En nuestro primer encuentro internacional en medicina estética y holística es organizado por Instituto Mex-Col-EEUU Profesionales en Medicina estética y Holísticas siendo pioneros en el área, es un honor presentar a ponentes con amplia experiencia internacional para aportar y retroalimentar al profesional en esta nueva era.',
+        description: 'En nuestro primer encuentro internacional en medicina estética y holística es organizado por Instituto Mex-Col-Usa Profesionales en Medicina estética y Holísticas siendo pioneros en el área, es un honor presentar a ponentes con amplia experiencia internacional para aportar y retroalimentar al profesional en esta nueva era.',
         mission: 'Teniendo como misión nutrir y atender una educación continua a nuestros alumnos desde las distintas sedes en México, Estados Unidos y Colombia, obteniendo los conocimientos profesionales para poder atender la parte integral, emocional y física del paciente.',
         targetAudience: 'Dirigido a: Médicos generales - Especialistas estéticos - Odontólogos - Dermatólogos - Médico Cirujano - Médico estético',
         commitment: 'Nuestro compromiso: Actualizar a todos los profesionales en el área de medicina estética y holística, interesados en satisfacer la fuerte demanda en pacientes del día de hoy, optimizando los procesos e integrando diversas terapias de la nueva era',

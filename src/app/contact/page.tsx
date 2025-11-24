@@ -9,6 +9,7 @@ import { translations } from '@/lib/i18n';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import LogoUSAVerde from '@/assets/logo-sello-blanco2.png';
+import ContactanosHero from '@/assets/img-heros/contactanos.png';
 
 export default function ContactPage() {
   const { language } = useLanguage();
@@ -65,7 +66,7 @@ export default function ContactPage() {
       >
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=1600&auto=format&fit=crop"
+            src={ContactanosHero}
             alt="Contact hero"
             fill
             className="object-cover"

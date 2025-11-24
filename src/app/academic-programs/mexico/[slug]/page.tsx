@@ -100,12 +100,9 @@ export default function CourseDetailPage() {
               México
             </Badge>
             <div className="flex flex-col gap-3 w-full md:max-w-3xl">
-              <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tight">
+              <h1 className="font-headline text-2xl md:text-4xl font-semibold tracking-tight">
                 {courseDetails.title}
               </h1>
-              <p className="text-base md:text-2xl text-white/90 leading-relaxed">
-                {courseDetails.subtitle}
-              </p>
             </div>
           </div>
         </div>
