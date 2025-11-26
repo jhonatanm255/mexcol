@@ -61,8 +61,9 @@ export default function ContactPage() {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section
-        className="relative overflow-hidden mb-10"
-        style={{ height: "458.14px" }}
+        /* className="relative overflow-hidden mb-10"
+        style={{ height: "458.14px" }} */
+        className="relative w-full section-modern h-screen -mt-16"
       >
         <div className="absolute inset-0">
           <Image
@@ -72,11 +73,11 @@ export default function ContactPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col">
           <div className="flex justify-end pt-4 md:pt-8 lg:pt-6 pr-4 md:pr-4 lg:pr-6">
-            <div className="relative w-20 h-20 md:w-32 md:h-32 lg:w-36 lg:h-36">
+            <div className="relative w-20 h-20 mt-12 md:w-32 md:h-32 lg:w-36 lg:h-36">
               <Image
                 src={LogoUSAVerde}
                 alt="Instituto MexCol USA Logo"
@@ -99,7 +100,7 @@ export default function ContactPage() {
         </div>
       </section>
       
-      <div className="container mx-auto px-4 pb-10">
+      <div className="container mx-auto px-4 pb-10 pt-20">
 
       <section>
         <Tabs

@@ -30,7 +30,17 @@ import { translations } from '@/lib/i18n';
 import { formatText } from '@/lib/utils/text-formatting';
 import ProductsMarquee from '@/components/shared/ProductsMarquee';
 import LogoUSAVerde from '@/assets/logo-sello-blanco2.png';
+import MasterClassCol from '@/assets/img-heros/img-hero-cursos/master-class-col.png';
+import SueroCol from '@/assets/img-heros/img-hero-cursos/suero-col.png';
+import MiniLiftingCol from '@/assets/img-heros/img-hero-cursos/mini-lifting-Col.png';
 import { useAutoPauseVideos } from '@/hooks/use-auto-pause-videos';
+
+// Mapeo de rutas de imágenes a imports
+const imageMap: Record<string, any> = {
+  '@/assets/img-heros/img-hero-cursos/master-class-col.png': MasterClassCol,
+  '@/assets/img-heros/img-hero-cursos/suero-col.png': SueroCol,
+  '@/assets/img-heros/img-hero-cursos/mini-lifting-Col.png': MiniLiftingCol,
+};
 
 export default function CourseDetailPage() {
   const params = useParams();
@@ -59,21 +69,22 @@ export default function CourseDetailPage() {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section
-        className="relative overflow-hidden"
-        style={{ height: "458.14px" }}
+        /* className="relative overflow-hidden"
+        style={{ height: "458.14px" }} */
+        className="relative w-full section-modern h-screen -mt-16"
       >
         <div className="absolute inset-0">
           <Image
-            src={courseDetails.heroImage || 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop'}
+            src={imageMap[courseDetails.heroImage] || courseDetails.heroImage || 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop'}
             alt={courseDetails.title}
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col">
-          <div className="flex items-start justify-between pt-4 md:pt-6">
+          <div className="flex items-start justify-between pt-20 md:pt-24 lg:pt-28">
             <Button
               asChild
               variant="ghost"

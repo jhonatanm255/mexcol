@@ -63,9 +63,9 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <section
-        className="relative w-full section-modern"
-        style={{ height: "458.14px" }}
-        /* className="relative w-full section-modern h-screen" */
+        /* className="relative w-full section-modern"
+        style={{ height: "458.14px" }} */
+        className="relative w-full section-modern h-screen -mt-16"
       >
         {/* Background Image */}
         <div className="absolute inset-0">
@@ -77,12 +77,12 @@ export default function Home() {
             priority
             quality={100}
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/30" />
         </div>
         
         <div className="relative z-10 h-full container mx-auto px-4 flex flex-col">
           <div className="flex justify-end pt-4 md:pt-8 lg:pt-6 pr-4 md:pr-4 lg:pr-6">
-            <div className="relative w-20 h-20 md:w-32 md:h-32 lg:w-36 lg:h-36">
+            <div className="relative w-20 h-20 mt-12 md:w-32 md:h-32 lg:w-36 lg:h-36">
               <Image
                 src={LogoUSAVerde}
                 alt="Instituto MexCol USA Logo"

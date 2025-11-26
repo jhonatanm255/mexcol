@@ -10,6 +10,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { formatText } from '@/lib/utils/text-formatting';
 import Curso1Image from '@/assets/logos-cursos/formacion en linea curso 1.png';
 import Curso2Image from '@/assets/logos-cursos/formacion en linea curso 2.png';
+import HeroFormacionEnLinea from '@/assets/img-heros/hero-formacion-en-linea.png';
 
 export default function OnlineTrainingPage() {
   const { language } = useLanguage();
@@ -19,22 +20,23 @@ export default function OnlineTrainingPage() {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section
-        className="relative overflow-hidden mb-10"
-        style={{ height: "458.14px" }}
+        /* className="relative overflow-hidden mb-10"
+        style={{ height: "458.14px" }} */
+        className="relative w-full section-modern h-screen -mt-16"
       >
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1600&auto=format&fit=crop"
+            src={HeroFormacionEnLinea}
             alt="Capacitación en línea"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col">
           <div className="flex justify-end pt-4 md:pt-8 lg:pt-6 pr-4 md:pr-4 lg:pr-6">
-            <div className="relative w-20 h-20 md:w-32 md:h-32 lg:w-36 lg:h-36">
+            <div className="relative w-20 h-20 mt-12 md:w-32 md:h-32 lg:w-36 lg:h-36">
               <Image
                 src={LogoUSAVerde}
                 alt="Instituto MexCol USA Logo"

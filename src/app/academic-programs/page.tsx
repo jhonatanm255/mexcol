@@ -10,7 +10,31 @@ import { translations } from '@/lib/i18n';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import LogoUSAVerde from '@/assets/logo-sello-blanco2.png';
-import heroimg from '@/assets/img-heros/hero programas academico .png';
+import heroimg from '@/assets/img-heros/hero-programas-academico.png';
+import MasterClassUSA from '@/assets/img-heros/img-hero-cursos/master-class-USA.png';
+import MasterClassMX from '@/assets/img-heros/img-hero-cursos/master-class-MX.png';
+import MasterClassCol from '@/assets/img-heros/img-hero-cursos/master-class-col.png';
+import SueroUSA from '@/assets/img-heros/img-hero-cursos/suero-USA.png';
+import SueroMX from '@/assets/img-heros/img-hero-cursos/suero-MX.png';
+import SueroCol from '@/assets/img-heros/img-hero-cursos/suero-col.png';
+import MiniLiftingUSA from '@/assets/img-heros/img-hero-cursos/mini-lifting-USA.png';
+import MiniLiftingMX from '@/assets/img-heros/img-hero-cursos/mini-lifting-MX.png';
+import MiniLiftingCol from '@/assets/img-heros/img-hero-cursos/mini-lifting-Col.png';
+import FlebotomiaUSA from '@/assets/img-heros/img-hero-cursos/flebotomia-USA.png';
+
+// Mapeo de rutas de imágenes a imports
+const imageMap: Record<string, any> = {
+  '@/assets/img-heros/img-hero-cursos/master-class-USA.png': MasterClassUSA,
+  '@/assets/img-heros/img-hero-cursos/master-class-MX.png': MasterClassMX,
+  '@/assets/img-heros/img-hero-cursos/master-class-col.png': MasterClassCol,
+  '@/assets/img-heros/img-hero-cursos/suero-USA.png': SueroUSA,
+  '@/assets/img-heros/img-hero-cursos/suero-MX.png': SueroMX,
+  '@/assets/img-heros/img-hero-cursos/suero-col.png': SueroCol,
+  '@/assets/img-heros/img-hero-cursos/mini-lifting-USA.png': MiniLiftingUSA,
+  '@/assets/img-heros/img-hero-cursos/mini-lifting-MX.png': MiniLiftingMX,
+  '@/assets/img-heros/img-hero-cursos/mini-lifting-Col.png': MiniLiftingCol,
+  '@/assets/img-heros/img-hero-cursos/flebotomia-USA.png': FlebotomiaUSA,
+};
 
 export default function AcademicProgramsPage() {
   const { language } = useLanguage();
@@ -40,8 +64,9 @@ export default function AcademicProgramsPage() {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section
-        className="relative overflow-hidden mb-10"
-        style={{ height: "458.14px" }}
+        /* className="relative overflow-hidden mb-10"
+        style={{ height: "458.14px" }} */
+        className="relative w-full section-modern h-screen -mt-16"
       >
         <div className="absolute inset-0">
           <Image
@@ -52,11 +77,11 @@ export default function AcademicProgramsPage() {
             priority
             style={{ objectPosition: 'center 15%' }}
           />
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col">
           <div className="flex justify-end pt-4 md:pt-8 lg:pt-6 pr-4 md:pr-4 lg:pr-6">
-            <div className="relative w-20 h-20 md:w-32 md:h-32 lg:w-36 lg:h-36">
+            <div className="relative w-20 h-20 mt-12 md:w-32 md:h-32 lg:w-36 lg:h-36">
               <Image
                 src={LogoUSAVerde}
                 alt="Instituto MexCol USA Logo"
@@ -78,7 +103,7 @@ export default function AcademicProgramsPage() {
         </div>
       </section>
       
-      <div className="container mx-auto px-4 pb-10">
+      <div className="container mx-auto px-4 pb-10 pt-20">
 
       <Tabs value={selectedTab} onValueChange={(value) => setSelectedTab(value as 'usa' | 'mexico' | 'colombia')} className="w-full">
         <div className="flex justify-center">
@@ -98,7 +123,7 @@ export default function AcademicProgramsPage() {
                   <Card key={course.title} className="h-full flex flex-col overflow-hidden group">
                     <div className="relative h-48 w-full overflow-hidden">
                       <Image 
-                        src={course.image || 'https://picsum.photos/400/300'} 
+                        src={imageMap[course.image || ''] || course.image || 'https://picsum.photos/400/300'} 
                         alt={course.title} 
                         fill 
                         className="object-cover transition-transform duration-500 group-hover:scale-110" 

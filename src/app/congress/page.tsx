@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import PrefetchLink from '@/components/shared/PrefetchLink';
 import Image from 'next/image';
 import LogoUSAVerde from '@/assets/logo-sello-blanco2.png';
-import HeroConferencias from '@/assets/img-heros/Hero conferencias.png';
+import HeroConferencias from '@/assets/img-heros/hero-conferencias.png';
 import { 
   MapPin, 
   Award, 
@@ -35,8 +35,9 @@ export default function CongressPage() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section
-        className="relative w-full overflow-hidden"
-        style={{ height: "458.14px" }}
+        /*   className="relative w-full overflow-hidden"
+          style={{ height: "458.14px" }} */
+          className="relative w-full section-modern h-screen -mt-16"
       >
         <div className="absolute inset-0">
           <Image
@@ -46,11 +47,11 @@ export default function CongressPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col">
           <div className="flex justify-end pt-4 md:pt-8 lg:pt-6 pr-4 md:pr-4 lg:pr-6">
-            <div className="relative w-20 h-20 md:w-32 md:h-32 lg:w-36 lg:h-36">
+            <div className="relative w-20 h-20 mt-12 md:w-32 md:h-32 lg:w-36 lg:h-36">
               <Image
                 src={LogoUSAVerde}
                 alt="Instituto MexCol USA Logo"
