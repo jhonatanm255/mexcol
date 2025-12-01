@@ -8,6 +8,11 @@ import PrefetchLink from '@/components/shared/PrefetchLink';
 import Image from 'next/image';
 import LogoUSAVerde from '@/assets/logo-sello-blanco2.png';
 import HeroConferencias from '@/assets/img-heros/hero-conferencias.png';
+import Turismo1 from '@/assets/img-congreso/turismo-1.jpg';
+import Turismo2 from '@/assets/img-congreso/turismo-2.jpg';
+import Turismo3 from '@/assets/img-congreso/turismo-3.jpg';
+import Salon1 from '@/assets/img-congreso/salon-1.webp';
+import Salon2 from '@/assets/img-congreso/salon-2.jpg';
 import { 
   MapPin, 
   Award, 
@@ -254,7 +259,7 @@ export default function CongressPage() {
 
       {/* Location Section */}
       <section className="py-20 md:py-28 section-modern">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4 text-foreground">
               {t.location}
@@ -262,12 +267,12 @@ export default function CongressPage() {
           </div>
           
           <Card className="modern-card overflow-hidden">
-            <CardContent className="p-8 text-center">
-              <div className="flex flex-col items-center gap-4">
+            <CardContent className="p-8">
+              <div className="flex flex-col items-center gap-4 mb-8">
                 <div className="p-4 bg-primary/10 rounded-lg">
                   <MapPin className="h-8 w-8 text-primary" />
                 </div>
-                <div>
+                <div className="text-center">
                   <h3 className="font-headline text-xl font-bold mb-2 text-foreground">
                     {t.hotelName}
                   </h3>
@@ -280,6 +285,26 @@ export default function CongressPage() {
                   </div>
                 </div>
               </div>
+              
+              {/* Salon Images */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                <div className="relative h-[300px] rounded-lg overflow-hidden">
+                  <Image
+                    src={Salon1}
+                    alt="Salón 1"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative h-[300px] rounded-lg overflow-hidden">
+                  <Image
+                    src={Salon2}
+                    alt="Salón 2"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>
@@ -287,7 +312,7 @@ export default function CongressPage() {
 
       {/* Tourism Section */}
       <section className="py-20 md:py-28 section-modern">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4 text-foreground">
               {t.tourism}
@@ -295,15 +320,48 @@ export default function CongressPage() {
           </div>
           
           <Card className="modern-card">
-            <CardContent className="p-8 text-center">
-              <div className="flex flex-col items-center gap-4">
+            <CardContent className="p-8">
+              <div className="flex flex-col items-center gap-6 mb-8">
                 <div className="p-4 bg-primary/10 rounded-lg">
                   <Camera className="h-8 w-8 text-primary" />
                 </div>
                 <div>
-                  <p className="text-muted-foreground text-lg leading-relaxed">
+                  <p className="text-muted-foreground text-lg leading-relaxed text-center">
                     {t.tourismDescription}
                   </p>
+                </div>
+              </div>
+              
+              {/* Bento Layout for Images */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+                {/* Primera imagen - vertical, ocupa toda la altura */}
+                <div className="relative h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+                  <Image
+                    src={Turismo1}
+                    alt="Turismo 1"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                
+                {/* Segunda y tercera imagen - una encima de la otra, dividen equitativamente el espacio */}
+                <div className="flex flex-col md:col-span-2 gap-4 h-[400px] md:h-[600px]">
+                  <div className="relative flex-1 rounded-lg overflow-hidden">
+                    <Image
+                      src={Turismo2}
+                      alt="Turismo 2"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="relative flex-1 rounded-lg overflow-hidden">
+                    <Image
+                      src={Turismo3}
+                      alt="Turismo 3"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </CardContent>

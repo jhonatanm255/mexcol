@@ -78,7 +78,7 @@ export default function OnlineTrainingPage() {
           </h2>
           <div className="bg-primary/5 p-6 md:p-8 rounded-lg">
             <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
-              {t.howToAccess.text}
+              {formatText(t.howToAccess.text)}
             </p>
           </div>
         </div>
@@ -103,8 +103,8 @@ export default function OnlineTrainingPage() {
                 <CardHeader>
                   <CardTitle className="font-headline text-xl mb-2">{course.name}</CardTitle>
                   <div className="space-y-2 text-sm text-muted-foreground">
-                    <p><strong>Ponente:</strong> {course.speaker}</p>
-                    <p><strong>Duración:</strong> {course.duration}</p>
+                    <p><strong>{t.labels.speaker}</strong> {course.speaker}</p>
+                    <p><strong>{t.labels.duration}</strong> {course.duration}</p>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -122,7 +122,7 @@ export default function OnlineTrainingPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FaWhatsapp className="w-5 h-5 mr-2" />
+                      <FaWhatsapp className="w-5 h-5 mr-1" />
                       {t.ctaButton}
                     </a>
                   </Button>

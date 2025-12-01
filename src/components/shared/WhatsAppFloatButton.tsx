@@ -8,9 +8,10 @@ export default function WhatsAppFloatButton() {
   const { language } = useLanguage();
   const pathname = usePathname();
 
-  // Ocultar en rutas de programas académicos
+  // Ocultar en rutas de programas académicos y formación en línea
   const isAcademicProgramsRoute = pathname?.startsWith('/academic-programs');
-  if (isAcademicProgramsRoute) {
+  const isOnlineTrainingRoute = pathname?.startsWith('/online-training');
+  if (isAcademicProgramsRoute || isOnlineTrainingRoute) {
     return null;
   }
 

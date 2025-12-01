@@ -269,16 +269,16 @@ export function Navbar() {
                   <span className="sr-only">Toggle Menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="left" className="bg-white">
+              <SheetContent side="left" className="bg-white flex flex-col">
                 <PrefetchLink
                   href="/"
                   className="flex items-center"
                   onClick={() => setOpen(false)}
                 >
                   <Image className='h-8 w-8 mr-2' src={logo} alt="Instituto MEXCOL"/>
-                  <span className="font-bold text-foreground">Instituto MEXCOL</span>
+                  <span className="font-bold text-foreground">Instituto Mex - Col - Usa</span>
                 </PrefetchLink>
-                <div className="mt-6 flex flex-col space-y-2">
+                <div className="mt-6 flex flex-col space-y-2 flex-1">
                   {firstTwoLinks.map((item) => (
                     <PrefetchLink
                       key={item.href}
@@ -318,6 +318,35 @@ export function Navbar() {
                       {item.label}
                     </PrefetchLink>
                   ))}
+                </div>
+                <div className="mt-auto pt-2 border-t border-border/50 space-y-1">
+                  <p className="text-sm text-muted-foreground font-medium text-center pb-2">
+                    © 2025 Instituto Mex - Col - Usa. Todos los derechos reservados.
+                  </p>
+                  <div className='block justify-center items-center space-x-3'>
+                  <PrefetchLink
+                    href="/terms"
+                    onClick={() => setOpen(false)}
+                    className={cn(
+                      'block text-center text-xs transition-colors duration-200',
+                      'hover:text-primary',
+                      pathname === '/terms' ? 'text-primary font-semibold' : 'text-muted-foreground'
+                    )}
+                  >
+                    Términos y Condiciones
+                  </PrefetchLink>
+                  <PrefetchLink
+                    href="/privacy"
+                    onClick={() => setOpen(false)}
+                    className={cn(
+                      'block text-center text-xs transition-colors duration-200',
+                      'hover:text-primary',
+                      pathname === '/privacy' ? 'text-primary font-semibold' : 'text-muted-foreground'
+                    )}
+                  >
+                    Aviso de Privacidad
+                  </PrefetchLink>
+                  </div>
                 </div>
               </SheetContent>
             </Sheet>

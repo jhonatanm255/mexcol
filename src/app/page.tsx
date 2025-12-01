@@ -19,6 +19,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import Autoplay from 'embla-carousel-autoplay';
 import BrandMarquee from '@/components/shared/BrandMarquee';
 import { useLanguage } from '@/hooks/use-language';
+import { useAutoPauseVideos } from '@/hooks/use-auto-pause-videos';
 import { translations } from '@/lib/i18n';
 import InicioBanner from '@/assets/img-heros/Hero Home.png';
 import LogoUSAVerde from '@/assets/logo-sello-blanco2.png';
@@ -36,6 +37,8 @@ export default function Home() {
   const { language } = useLanguage();
   const t = translations[language];
   const th = t.home;
+  
+  useAutoPauseVideos();
   
   const features = [
     {
@@ -82,7 +85,7 @@ export default function Home() {
         
         <div className="relative z-10 h-full container mx-auto px-4 flex flex-col">
           <div className="flex justify-end pt-4 md:pt-8 lg:pt-6 pr-4 md:pr-4 lg:pr-6">
-            <div className="relative w-20 h-20 mt-12 md:w-32 md:h-32 lg:w-36 lg:h-36">
+            <div className="relative w-20 h-20 mt-16 md:w-32 md:h-32 lg:w-36 lg:h-36">
               <Image
                 src={LogoUSAVerde}
                 alt="Instituto MexCol USA Logo"
@@ -92,7 +95,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="mt-auto flex flex-col items-center text-center md:items-start md:text-left text-white gap-3 pb-6 md:pb-12 lg:pb-16 md:ml-5">
+          <div className="mt-60 flex flex-col items-center text-center md:items-start md:text-left text-white gap-3 pb-6 md:pb-12 lg:pb-16 md:ml-5">
             <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight drop-shadow-lg">
               {th.hero.main}
             </h1>
@@ -173,13 +176,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="testimonials" className="py-20 md:py-28 section-modern" style={{backgroundColor: 'rgb(236 253 245)'}}>
+      <section id="testimonials" className="py-20 md:py-28 section-modern section-testimonials">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl text-[#1F2937] mb-4">
+            <h2 className="font-headline text-4xl font-bold tracking-tight sm:text-5xl text-white mb-4">
               {th.testimonials.title}
             </h2>
-            <p className="text-lg text-[#475569]">{th.testimonials.sub}</p>
+            <p className="text-lg text-white">{th.testimonials.sub}</p>
           </div>
           <div className="bg-white rounded-2xl p-6 md:px-16 shadow-lg">
             <Carousel 
@@ -214,13 +217,13 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Button asChild size="sm" variant="outline" className="hover:bg-blue-50 focus-modern border">
+              <Button asChild size="sm" variant="outline" className="text-gray-600 hover:bg-blue-50 focus-modern border">
                 <a href="https://web.facebook.com/profile.php?id=100064823553168&sk=reviews&_rdc=1&_rdr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <Facebook className="h-4 w-4 text-blue-600" />
                   {th.testimonials.facebook}
                 </a>
               </Button>
-              <Button asChild size="sm" variant="outline" className="hover:bg-red-50 focus-modern border">
+              <Button asChild size="sm" variant="outline" className="text-gray-600 hover:bg-red-50 focus-modern border">
                 <a href="https://www.google.com/maps/place/Instituto+MexCol/@19.3953309,-99.1871588,16z/data=!4m8!3m7!1s0x85d1ff6a4e5eaaab:0x6d6262102c03bff3!8m2!3d19.3953309!4d-99.1845839!9m1!1b1!16s%2Fg%2F11flrplb83?entry=ttu&g_ep=EgoyMDI1MTAwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <svg className="h-4 w-4" viewBox="0 0 24 24">
                     <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -231,7 +234,7 @@ export default function Home() {
                   {th.testimonials.googleMx}
                 </a>
               </Button>
-              <Button asChild size="sm" variant="outline" className="hover:bg-red-50 focus-modern border">
+              <Button asChild size="sm" variant="outline" className="text-gray-600 hover:bg-red-50 focus-modern border">
                 <a href="https://www.google.com/maps/place/Instituto+Mexcol+Medicina+Est%C3%A9tica,+Belleza+y+Hol%C3%ADstica/@28.4500233,-81.3990457,17z/data=!4m17!1m10!3m9!1s0x88e77da778543991:0xbaca64c81f95f8b6!2sInstituto+Mexcol+Medicina+Est%C3%A9tica,+Belleza+y+Hol%C3%ADstica!8m2!3d28.4497642!4d-81.399351!10e5!14m1!1BCgIgAQ!16s%2Fg%2F11rvg6gl56!3m5!1s0x88e77da778543991:0xbaca64c81f95f8b6!8m2!3d28.4497642!4d-81.399351!16s%2Fg%2F11rvg6gl56?entry=ttu&g_ep=EgoyMDI1MTAwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <svg className="h-4 w-4" viewBox="0 0 24 24">
                     <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -242,6 +245,21 @@ export default function Home() {
                   {th.testimonials.googleUsa}
                 </a>
               </Button>
+            </div>
+            
+            {/* Video Section */}
+            <div className="mt-8 flex justify-center">
+              <div className="w-full max-w-2xl">
+                <video 
+                  controls 
+                  className="w-full rounded-lg shadow-lg"
+                  preload="metadata"
+                  data-autopause-video
+                >
+                  <source src="/Ponentes.mp4" type="video/mp4" />
+                  Tu navegador no soporta el elemento de video.
+                </video>
+              </div>
             </div>
           </div>
         </div>
@@ -297,7 +315,7 @@ export default function Home() {
             </Card>
           </div>
           <div className="text-center">
-            <Button asChild size="lg" className="btn-modern px-8 py-4 text-lg">
+            <Button asChild size="lg" className="border border-[#ECFDF5] text-[#FFFFFF] bg-transparent">
               <PrefetchLink href="/contact">{th.contact.viewLocations}</PrefetchLink>
             </Button>
           </div>

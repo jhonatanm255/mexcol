@@ -9,5 +9,5 @@ description: 'Empowering students worldwide with accessible, high-quality online
         privacy: 'Privacy Notice'
       },
       followUs: 'Follow Us',
-      copyright: '© {year} Instituto MEXCOL. All rights reserved.'
+      copyright: '© {year} Instituto Mex - Col - Usa. All rights reserved.'
 };

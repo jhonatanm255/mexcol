@@ -115,7 +115,7 @@ title: 'Programas Académicos',
                 ],
                 productQuality: {
                   title: 'Productos de Calidad y Seguridad Garantizada',
-                  description: 'En la medicina estética, **la elección del producto es tan importante como la técnica aplicada**, ya que de ello dependen la seguridad del paciente y la eficacia del tratamiento.\nPor esta razón, en el **Instituto Mex-Col-USA** trabaja exclusivamente con los **tres mejores laboratorios a nivel mundial**, reconocidos por su innovación, trayectoria y altos estándares de calidad.\nTodos nuestros productos cuentan con registro y certificaciones oficiales de las principales entidades regulatorias internacionales, tales como:\n\n• **INVIMA (Colombia)**\n• **FDA (Estados Unidos)**\n• **COFEPRIS (México)**\n• Y otras autoridades sanitarias competentes a nivel global\n\nEsto garantiza que cada procedimiento se realice con insumos seguros, confiables y aprobados, brindando a estudiantes y pacientes la tranquilidad de utilizar los mejores productos del mercado.\n\n**Productos Incluidos:**\n• **Ácido Hialurónico** "Juvederm – Allergan"\n• **Toxina Botulínica** "Botox – Allergan"\n• **Hilos PDO** "Smooth o Mono"\n• **Bioestimulador** "Harminyca o Radiesse"',
+                  description: 'En la medicina estética, **la elección del producto es tan importante como la técnica aplicada**, ya que de ello dependen la seguridad del paciente y la eficacia del tratamiento.\nPor esta razón, en el **Instituto Mex-Col-USA** trabaja exclusivamente con los **tres mejores laboratorios a nivel mundial**, reconocidos por su innovación, trayectoria y altos estándares de calidad.\nTodos nuestros productos cuentan con registro y certificaciones oficiales de las principales entidades regulatorias internacionales, tales como:\n\n• **INVIMA (Colombia)**\n• **FDA (Estados Unidos)**\n• **COFEPRIS (México)**\n• Y otras autoridades sanitarias competentes a nivel global\n\nEsto garantiza que cada procedimiento se realice con insumos seguros, confiables y aprobados, brindando a estudiantes y pacientes la tranquilidad de utilizar los mejores productos del mercado.',
                   certifications: [
                     'Todos los productos están certificados por las principales autoridades sanitarias globales:',
                     'INVIMA (Colombia)',
@@ -444,13 +444,8 @@ title: 'Programas Académicos',
                 ],
                 productQuality: {
                   title: 'Productos de Calidad y Seguridad Garantizada',
-                  description: 'En el **INSTITUTO MEX-COL-USA** contamos con **instalaciones de primer nivel**, diseñadas para ofrecer un entorno seguro, higiénico y profesional, donde cada práctica y procedimiento se realiza bajo los más altos estándares de calidad y seguridad.\n\nNuestro compromiso es garantizar que cada alumno pueda **aprender y practicar en un espacio confiable**, equipado y preparado para brindar la mejor experiencia educativa. Así, aseguramos que la formación se desarrolle en un **ambiente seguro, profesional y de excelencia**, fortaleciendo el aprendizaje y la confianza de cada participante.\n\nTodos los productos están certificados por las principales autoridades sanitarias globales:\n\n• **INVIMA (Colombia)**\n• **FDA (Estados Unidos)**\n• **COFEPRIS (México)**',
-                  certifications: [
-                    'Todos los productos están certificados por las principales autoridades sanitarias globales:',
-                    'INVIMA (Colombia)',
-                    'FDA (Estados Unidos)',
-                    'COFEPRIS (México)'
-                  ],
+                  description: 'En el **INSTITUTO MEX-COL-USA** contamos con **instalaciones de primer nivel**, diseñadas para ofrecer un entorno seguro, higiénico y profesional, donde cada práctica y procedimiento se realiza bajo los más altos estándares de calidad y seguridad.\n\nNuestro compromiso es garantizar que cada alumno pueda **aprender y practicar en un espacio confiable**, equipado y preparado para brindar la mejor experiencia educativa. Así, aseguramos que la formación se desarrolle en un **ambiente seguro, profesional y de excelencia**, fortaleciendo el aprendizaje y la confianza de cada participante.',
+                  certifications: [],
                   includedProducts: []
                 }
               },

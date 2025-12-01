@@ -4,7 +4,11 @@ export const onlineTraining = {
   description: 'Join a professional learning experience designed to strengthen your skills. Access exclusive content created by experts in aesthetic medicine — anytime, anywhere.',
   howToAccess: {
     title: 'How to Access Your Course',
-    text: 'Getting access to your course is simple:\n\nClick the WhatsApp button.\n\nOur team will provide you with pricing details.\n\nReceive your access and start your online training.'
+    text: '**Getting access to your course is simple:**\n\nClick the WhatsApp button.\nOur team will provide you with pricing details.\nReceive your access and start your online training.'
+  },
+  labels: {
+    speaker: 'Speaker:',
+    duration: 'Duration:'
   },
   courses: [
     {
@@ -20,5 +24,5 @@ export const onlineTraining = {
       image: '/placeholder-course-2.jpg'
     }
   ],
-  ctaButton: '👉 Request Access via WhatsApp'
+  ctaButton: 'Request Access via WhatsApp'
 };

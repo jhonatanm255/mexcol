@@ -525,7 +525,7 @@ export default function CourseDetailPage() {
                       className="w-full h-full md:w-1/2 md:h-1/2 mx-auto object-cover bg-black"
                     >
                       <source
-                        src="/video-testimonios/testimonios-suero-mx/suero mx.mp4"
+                        src="/video-testimonios/testimonios-suero-mx/suero%20mx.mp4"
                         type="video/mp4"
                       />
                       {language === "es"

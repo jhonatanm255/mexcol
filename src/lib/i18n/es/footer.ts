@@ -9,5 +9,5 @@ description: 'Empoderando a estudiantes de todo el mundo con educación en líne
         privacy: 'Aviso de Privacidad'
       },
       followUs: 'Síguenos',
-      copyright: '© {year} Instituto MEXCOL. Todos los derechos reservados.'
+      copyright: '© {year} Instituto Mex - Col - Usa. Todos los derechos reservados.'
 };

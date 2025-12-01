@@ -4,7 +4,11 @@ export const onlineTraining = {
   description: 'Participa en una experiencia formativa diseñada para fortalecer tus competencias profesionales. Accede desde cualquier lugar a contenidos exclusivos creados por especialistas en medicina estética.',
   howToAccess: {
     title: '¿Cómo acceder a tu curso?',
-    text: 'Acceder a tu curso es muy fácil:\n\nHaz clic en el botón de WhatsApp.\n\nNuestro equipo te dará la información del costo.\n\nRecibe tu acceso y comienza tu formación en línea.'
+    text: '**Acceder a tu curso es muy fácil:**\n\nHaz clic en el botón de WhatsApp.\nNuestro equipo te dará la información del costo.\nRecibe tu acceso y comienza tu formación en línea.'
+  },
+  labels: {
+    speaker: 'Ponente:',
+    duration: 'Duración:'
   },
   courses: [
     {
@@ -20,5 +24,5 @@ export const onlineTraining = {
       image: '/placeholder-course-2.jpg'
     }
   ],
-  ctaButton: '👉 Request Access via WhatsApp'
+  ctaButton: 'Solicitar acceso via WhatsApp'
 };
